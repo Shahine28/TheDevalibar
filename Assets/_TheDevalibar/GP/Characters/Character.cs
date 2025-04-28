@@ -13,9 +13,9 @@ public class Character : ScriptableObject
 
     [Header("Character Information")]
     public string CharacterName;
-    
-    [SerializedDictionary("LanguageCode", "Description")]
-    public SerializedDictionary<CodeLanguage, DescriptionTextArea> DescriptionFromCodeLanguage;
+    public string CharacterPseudo;
+    public Sprite CharacterProfilePicture;
+    public Sprite CharacterSprite;
     
     public int Affinity;
 
@@ -27,18 +27,16 @@ public class Character : ScriptableObject
     public SerializedDictionary<CodeLanguage, DialogueContainer> FirstDialogueContainerFromLanguageCode;
     public Sprite FirstDialogueSprite;
 
-    [Header("Sprites & Days Dialogues")]
-    public List<CharacterSpriteFromAffinity> CharacterSprites;
-    public List<Day> DaysDialogue;
+    [FormerlySerializedAs("DaysDialogue")] [Header("Days Dialogues")]
+    public List<Day> Dialogues;
     
-
-
+    
     public Sprite GetCharacterSprite()
     {
         return null;
     }
 
-    public DialogueContainer GetCharacterDialogue(int DayIndex, CodeLanguage language = CodeLanguage.English )
+    public DialogueContainer GetCharacterDialogue(int DialogueIndex, CodeLanguage language = CodeLanguage.English )
     {
         if (!AffinityManager)
         {
@@ -46,9 +44,9 @@ public class Character : ScriptableObject
             return null;
         }
 
-        if (DayIndex - 1 >= DaysDialogue.Count || DayIndex - 1 < 0) 
+        if (DialogueIndex - 1 >= Dialogues.Count || DialogueIndex - 1 < 0) 
         {
-            Debug.LogWarning($"DayIndex {DayIndex} is out of range!");
+            Debug.LogWarning($"DayIndex {DialogueIndex} is out of range!");
             return null;
         }
 
@@ -56,7 +54,7 @@ public class Character : ScriptableObject
         {
             if (IsInRange(Affinity, mood.Range))
             {
-                DialogueAffinity dialogueAffinity = DaysDialogue[DayIndex - 1].Dialogues.FirstOrDefault(x => x.AffinityName == mood.Name);
+                DialogueAffinity dialogueAffinity = Dialogues[DialogueIndex - 1].Dialogues.FirstOrDefault(x => x.AffinityName == mood.Name);
                 if (dialogueAffinity.DialogueContainerFromLanguageCode.ContainsKey(language))
                 {
                     DialogueContainer dialogueContainer = dialogueAffinity.DialogueContainerFromLanguageCode[language];
@@ -69,12 +67,8 @@ public class Character : ScriptableObject
 
     private bool IsInRange(int affinity, Vector2 moodRange)
     {
-        throw new NotImplementedException();
+        return affinity >= moodRange.x && affinity <= moodRange.y;
     }
-}
-
-public class CharacterSpriteFromAffinity
-{
 }
 
 [Serializable]

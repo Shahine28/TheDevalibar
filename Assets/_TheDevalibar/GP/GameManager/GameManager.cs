@@ -26,8 +26,7 @@ public class GameManager : MonoBehaviour
 
 
     [Header("Localization")] private bool active;
-
-    public bool isConnectedToGPS;
+    
     public event Action OnLanguageChanged;
 
     

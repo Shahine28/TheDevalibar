@@ -6,14 +6,16 @@ using TMPro;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using NaughtyAttributes;
+using UnityEngine.Serialization;
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("Character")]
     [SerializeField] private Character character;
 
-    [SerializeField] private int _dayIndex;
-    [SerializeField] private Image _characterSprite;
+    [SerializeField] private int _dialogueIndex;
+    [SerializeField] private Image _character1Sprite;
+    [SerializeField] private Image _character2Sprite;
     
     // [Header("File")]
     // [SerializeField] private string filePath = "Assets/_NarrativeProject/Prog/Scripts/DialogueGraph/Resources";
@@ -24,7 +26,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private List<TextMeshProUGUI> _dialogueButtonTexts = new List<TextMeshProUGUI>();
     [SerializeField] private List<Button> _buttons = new List<Button>();
     [SerializeField] private Button _continueButton;
-    [SerializeField] private Canvas _buttonsContainer;
+    [SerializeField] private GameObject _buttonsContainer;
     
     private Dictionary<Button, string> _NodeGUIDFromButton= new Dictionary<Button, string>();
     [SerializeField] private bool _randomizeButtonsOrder = true;
@@ -61,6 +63,8 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.LogError("Game manager not found!");
         }
+
+        InitDialogue(false, CodeLanguage.English);
     }
 
     private void OnEnable()
@@ -94,8 +98,6 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         
-        
-        
         if (character.IsFirstDialogue)
         {
             if (character.FirstDialogueContainerFromLanguageCode.TryGetValue(currentLanguage, out _containerCache))
@@ -115,10 +117,10 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            _containerCache = character.GetCharacterDialogue(_dayIndex, currentLanguage);
+            _containerCache = character.GetCharacterDialogue(_dialogueIndex, currentLanguage);
             if (_containerCache == null)
             {
-                Debug.LogError($"[DialogueManager] No character dialogue found for day {_dayIndex} in {currentLanguage}!");
+                Debug.LogError($"[DialogueManager] No character dialogue found for day {_dialogueIndex} in {currentLanguage}!");
                 return;
             }
         }
@@ -178,7 +180,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            _containerCache = character.GetCharacterDialogue(_dayIndex, languageCode);
+            _containerCache = character.GetCharacterDialogue(_dialogueIndex, languageCode);
         }
         
         if (!_containerCache)
@@ -228,9 +230,9 @@ public class DialogueManager : MonoBehaviour
 
         character.NextAffinityValue += dialogueNodeData.StatModifier;
         Sprite NewSprite = dialogueNodeData.CharacterMoodSprite;
-        if (NewSprite != null && _characterSprite.sprite != NewSprite)
+        if (NewSprite != null && _character1Sprite.sprite != NewSprite)
         {
-            _characterSprite.sprite = NewSprite;
+            _character1Sprite.sprite = NewSprite;
         }
     }
     
