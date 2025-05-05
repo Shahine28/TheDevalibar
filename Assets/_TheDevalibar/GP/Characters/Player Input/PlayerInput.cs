@@ -1,44 +1,57 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
-public class PlayerInput : MonoBehaviour
+public class PlayerInput : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] PlayerInput _playerController;
     [SerializeField] InputActionReference _click;
+    [SerializeField] InputActionReference _joystickMove;
 
-    [SerializeField] NavMeshAgent _agent;
+    [Header("Player Param")]
+    [SerializeField] float speed;
 
-    [Header("clickable")]
-    [SerializeField] LayerMask _Clickablelayers;
+    [Header("Cursor")]
+    [SerializeField] GameObject _cursor;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Vector2 _moveInputValue;
+
     void Start()
     {
         _click.action.performed += OnClick;
         _click.action.canceled += OnClick;
 
-        _agent = GetComponent<NavMeshAgent>();
-        OnClick(new());
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("coucou");
+        OnClick(new());
+    }
+
     private void OnClick(InputAction.CallbackContext ctx)
     {
         var dir = ctx.ReadValue<Vector3>();
-
         RaycastHit hit;
-        if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100, _Clickablelayers))
+        if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
         {
-            _agent.destination = hit.point;
-            
+            //_agent.destination = hit.point;
         }
+    }
+
+    private void OnMove(InputAction.CallbackContext ctx , InputValue val)
+    {
+        _moveInputValue = val.Get<Vector2>();
+        Debug.Log(_moveInputValue);
+        Vector2 result = _moveInputValue * speed * Time.fixedDeltaTime;
+        _cursor.transform.position = result;
     }
 
 }
