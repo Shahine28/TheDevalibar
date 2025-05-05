@@ -7,11 +7,14 @@ using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using NaughtyAttributes;
 using UnityEngine.Serialization;
+using MyUtilities;
 
 public class DialogueManager : MonoBehaviour
 {
+    [FormerlySerializedAs("character")]
     [Header("Character")]
-    [SerializeField] private Character character;
+    [SerializeField, ReadOnly] private Character _character;
+    [SerializeField, ReadOnly] private CharacterBehavior _characterBehavior;
 
     [SerializeField] private int _dialogueIndex;
     [SerializeField] private Image _character1Sprite;
@@ -49,11 +52,16 @@ public class DialogueManager : MonoBehaviour
 
     private GameManager _gameManager;
     
-    
-    
-    void Start()
+    [Header("Dialogue Canvas")]
+    [SerializeField] private Canvas _dialogueCanvas;
+
+    void Awake()
     {
         ServiceLocator.Register(this);
+    }
+    void Start()
+    {
+        
         _gameManager = ServiceLocator.Get<GameManager>();
         if (_gameManager != null)
         {
@@ -64,7 +72,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError("Game manager not found!");
         }
 
-        InitDialogue(false, CodeLanguage.English);
+        
     }
 
     private void OnEnable()
@@ -88,26 +96,35 @@ public class DialogueManager : MonoBehaviour
         _continueButton.onClick.RemoveListener(() => OnChoiceButtonClicked(_continueButton));
         _skipTextMachineEffectButton.onClick.RemoveListener(SkipTypingEffect);
     }
-    
+
+    public void InitCharacterDialogue(CharacterBehavior characterBehavior, bool isEventDialogue,
+        CodeLanguage currentLanguage)
+    {
+        if (!characterBehavior) return;
+        _characterBehavior = characterBehavior;
+        _character = _characterBehavior.Character;
+        InitDialogue(isEventDialogue, currentLanguage);
+    }
 
     private void InitDialogue(bool isEventDialogue, CodeLanguage currentLanguage)
     {
-        if (character == null)
+        if (_character == null)
         {
             Debug.LogError("[DialogueManager] Character is null!");
             return;
         }
+        if (!_dialogueCanvas.gameObject.activeSelf) _dialogueCanvas.gameObject.SetActive(true);
         
-        if (character.IsFirstDialogue)
+        if (_character.IsFirstDialogue)
         {
-            if (character.FirstDialogueContainerFromLanguageCode.TryGetValue(currentLanguage, out _containerCache))
+            if (_character.FirstDialogueContainerFromLanguageCode.TryGetValue(currentLanguage, out _containerCache))
             {
                 if (_containerCache == null)
                 {
                     Debug.LogError($"[DialogueManager] First Dialogue container is null in {currentLanguage}!");
                     return;
                 }
-                character.IsFirstDialogue = false;
+                _character.IsFirstDialogue = false;
             }
             else
             {
@@ -117,7 +134,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            _containerCache = character.GetCharacterDialogue(_dialogueIndex, currentLanguage);
+            _containerCache = _character.GetCharacterDialogue(_dialogueIndex, currentLanguage);
             if (_containerCache == null)
             {
                 Debug.LogError($"[DialogueManager] No character dialogue found for day {_dialogueIndex} in {currentLanguage}!");
@@ -160,7 +177,7 @@ public class DialogueManager : MonoBehaviour
     
     public void OnLanguageChanged()
     {
-        if (character == null)
+        if (_character == null)
         {
             Debug.LogError("[DialogueManager] Character is null!");
             return;
@@ -174,13 +191,13 @@ public class DialogueManager : MonoBehaviour
         
         
         CodeLanguage languageCode = _gameManager.gameData.LanguageCode;
-        if (character.FirstDialogueContainerFromLanguageCode.ContainsValue(_containerCache)) // Si le dialogue à changer est le premier dialogue alors 
+        if (_character.FirstDialogueContainerFromLanguageCode.ContainsValue(_containerCache)) // Si le dialogue à changer est le premier dialogue alors 
         {
-            _containerCache = character.FirstDialogueContainerFromLanguageCode[languageCode];
+            _containerCache = _character.FirstDialogueContainerFromLanguageCode[languageCode];
         }
         else
         {
-            _containerCache = character.GetCharacterDialogue(_dialogueIndex, languageCode);
+            _containerCache = _character.GetCharacterDialogue(_dialogueIndex, languageCode);
         }
         
         if (!_containerCache)
@@ -228,7 +245,7 @@ public class DialogueManager : MonoBehaviour
         SetupDialogueButtons(Ports);
         
 
-        character.NextAffinityValue += dialogueNodeData.StatModifier;
+        _character.NextAffinityValue += dialogueNodeData.StatModifier;
         Sprite NewSprite = dialogueNodeData.CharacterMoodSprite;
         if (NewSprite != null && _character1Sprite.sprite != NewSprite)
         {
@@ -326,9 +343,10 @@ public class DialogueManager : MonoBehaviour
     {
         if (!_containerCache.NodeLinks.Any(x => x.BaseNodeGuid == _nodesPathHistory.Last().NodeGUID)) // Si jamais ce node n'est lié à aucun prochain node alors c'est le node finale.
         {
-            Vector2 AffinityRange = character.AffinityManager.GetRange();
-            character.NextAffinityValue = (int)Mathf.Clamp(character.NextAffinityValue, AffinityRange.x, AffinityRange.y); // On clamp la proichaine affinité entre la valeur de mood min et la valeur de mood max
-            Debug.Log($"Dialogue ended with '{character.NextAffinityValue}' of affinity");
+            Vector2 AffinityRange = _character.AffinityManager.GetRange();
+            _character.NextAffinityValue = (int)Mathf.Clamp(_character.NextAffinityValue, AffinityRange.x, AffinityRange.y); // On clamp la proichaine affinité entre la valeur de mood min et la valeur de mood max
+            Debug.Log($"Dialogue ended with '{_character.NextAffinityValue}' of affinity");
+            EndDialogue();
             //_gameManager.GoToPhase(GamePhase.Hub1);
             return;
         } 
@@ -342,14 +360,17 @@ public class DialogueManager : MonoBehaviour
         if (nextDialogueNode == null)
         {
             Debug.LogError("Dialogue Node Not Found");
+            EndDialogue();
             return;
         }
         
         SetDialogueCanvas(nextDialogueNode);
     }
 
-    public void GoToNextDialoguePhase()
+    public void EndDialogue()
     {
+        _dialogueCanvas.gameObject.SetActive(false);
+        _characterBehavior.OnDialogueEnd();
         
     }
 }

@@ -31,6 +31,8 @@ public class Character : ScriptableObject
     public List<Day> Dialogues;
     
     
+    public ConstraintBoolDictionary constraintDict = new ConstraintBoolDictionary();
+    
     public Sprite GetCharacterSprite()
     {
         return null;

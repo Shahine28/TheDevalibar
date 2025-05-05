@@ -133,7 +133,7 @@ Transform:
   m_GameObject: {fileID: 2300169172975595319}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.20000005, z: 0.4}
+  m_LocalPosition: {x: 0, y: -0.276, z: 0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -150,6 +150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8785699763701547413}
+  - component: {fileID: 194364402038393385}
   m_Layer: 0
   m_Name: Table&Chairs
   m_TagString: Untagged
@@ -175,6 +176,20 @@ Transform:
   - {fileID: 9065893218090590074}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &194364402038393385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3617300709660714605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c952c034f0ec7344f9068c8e32539f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TableGameObject: {fileID: 3617300709660714605}
+  TableNumber: 0
 --- !u!1 &5372267329750594499
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +218,7 @@ Transform:
   m_GameObject: {fileID: 5372267329750594499}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.16900003, z: -0.09}
+  m_LocalPosition: {x: 0, y: 0.207, z: -0.09}
   m_LocalScale: {x: 0.2178135, y: 0.2178135, z: 0.040770333}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -301,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5342456381192799866, guid: 0de61a59b79495449b8ed04f1efc36b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.20000005
+      value: -0.276
       objectReference: {fileID: 0}
     - target: {fileID: 5342456381192799866, guid: 0de61a59b79495449b8ed04f1efc36b2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -334,6 +349,10 @@ PrefabInstance:
     - target: {fileID: 5342456381192799866, guid: 0de61a59b79495449b8ed04f1efc36b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8432853961550235510, guid: 0de61a59b79495449b8ed04f1efc36b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.207
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
