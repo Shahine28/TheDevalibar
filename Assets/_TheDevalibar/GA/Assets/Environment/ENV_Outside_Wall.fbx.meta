@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 828d67462dbdbfb43b294df9bbdfe495
+guid: afd531221751fa547a54a766788fa06f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Brick_Placeholder
-    second: {fileID: 2100000, guid: 094f02de5fb3d9148addcb40c51aa4e3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: carpet
-    second: {fileID: 2100000, guid: a5ed264695c7a1148ac2211d37179325, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: 12237e7e00e622b46b8051aab543f3d3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -55,7 +50,7 @@ ModelImporter:
     importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
-    swapUVChannels: 0
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
