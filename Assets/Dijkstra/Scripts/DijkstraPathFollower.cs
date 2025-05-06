@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using MyUtilities;
 using UnityEngine;
 
 public class DijkstraPathFollower : MonoBehaviour
@@ -12,12 +13,15 @@ public class DijkstraPathFollower : MonoBehaviour
     public event Action OnFollowPathEnd;
     private void Start()
     {
-        
+        if (!dijkstraManager)
+        {
+            dijkstraManager = ServiceLocator.Get<DijkstraManager>();
+        }
     }
 
     public void FollowPath()
     {
-        if (dijkstraManager == null)
+        if (!dijkstraManager)
         {
             Debug.LogError("DijkstraManager is null");
             return;
