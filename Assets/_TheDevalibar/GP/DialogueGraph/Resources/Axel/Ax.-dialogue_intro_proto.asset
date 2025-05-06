@@ -13,14 +13,10 @@ MonoBehaviour:
   m_Name: Ax.-dialogue_intro_proto
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: bfa6ebbc-2e8d-4e20-85ce-36fa742945c3
+  - BaseNodeGuid: 19ec37e8-e405-47bd-8995-f8642eb81bb0
     PortName: StartPointNode
     TargetNodeGuid: d03dfe1c-0843-484c-be44-cf45304ad321
     IsNullNode: 0
-  - BaseNodeGuid: d03dfe1c-0843-484c-be44-cf45304ad321
-    PortName: Null Port
-    TargetNodeGuid: 63466a38-9c2f-40d0-8c30-e8d68538969c
-    IsNullNode: 1
   - BaseNodeGuid: 63466a38-9c2f-40d0-8c30-e8d68538969c
     PortName: Null Port
     TargetNodeGuid: adb0b62c-1f6c-4a22-b774-533d2d09a3c3
@@ -53,11 +49,15 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: c71531ad-10db-433c-924e-4afb130c95fe
     IsNullNode: 1
+  - BaseNodeGuid: d03dfe1c-0843-484c-be44-cf45304ad321
+    PortName: Null Port
+    TargetNodeGuid: 63466a38-9c2f-40d0-8c30-e8d68538969c
+    IsNullNode: 1
   DialogueNodeData:
   - NodeGUID: 63466a38-9c2f-40d0-8c30-e8d68538969c
     DialogueText: "C'est cool, on va enfin pouvoir se la mettre sans avoir \xE0 aller
       jusqu'au centre ville."
-    Position: {x: 705, y: 191}
+    Position: {x: 704.8, y: 190.40001}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -68,7 +68,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
   - NodeGUID: adb0b62c-1f6c-4a22-b774-533d2d09a3c3
     DialogueText: Hey mais attends, on se connait non ?
-    Position: {x: 1418.5, y: 191.5}
+    Position: {x: 1418.4, y: 191.20001}
     StatModifier: 0
     Ports:
     - PortName: Non, je t'ai jamais vu de ma vie.
@@ -83,7 +83,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
   - NodeGUID: 207e77ce-91df-4ea5-82cb-9008e366650f
     DialogueText: "Ah, j'ai d\xFB confondre alors..."
-    Position: {x: 1922.5, y: 97.5}
+    Position: {x: 1922.4, y: 96.799995}
     StatModifier: -10
     Ports:
     - PortName: Null Port
@@ -94,7 +94,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
   - NodeGUID: 9ddc020b-24d5-4be6-9ba9-c58cce6103cf
     DialogueText: "Putain ouais, depuis le lyc\xE9e haha"
-    Position: {x: 1925.5, y: 297.5}
+    Position: {x: 1925.6, y: 296.80002}
     StatModifier: 10
     Ports:
     - PortName: Null Port
@@ -105,15 +105,19 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
   - NodeGUID: c5462026-8fcf-4013-82b9-fbbb0edd343b
     DialogueText: Je vais te prendre une limonade s'il te plait.
-    Position: {x: 2540.5, y: 76}
+    Position: {x: 2540.8, y: 76}
     StatModifier: 0
-    Ports: []
+    Ports:
+    - PortName: "Je te pr\xE9pare \xE7a"
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
   - NodeGUID: a0b16146-f4bc-4020-b804-f50f42efc3cf
     DialogueText: "Tu te rappel des cours de chimie de madame Lou ? t'avais foutu
       le feu \xE0 ta blouse !"
-    Position: {x: 2392, y: 301}
+    Position: {x: 2392, y: 300.80002}
     StatModifier: 0
     Ports:
     - PortName: "Ouais, j'avais eu la peur de ma vie, h\xE9h\xE9h\xE9"
@@ -129,7 +133,7 @@ MonoBehaviour:
   - NodeGUID: c28e8ecd-c56e-4104-8c5a-9851917104b4
     DialogueText: "Tu m'\xE9tonnes, en tout cas c'est cool de te revoir dans le coin
       !"
-    Position: {x: 3149, y: 298}
+    Position: {x: 3148.8, y: 297.6}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -141,14 +145,18 @@ MonoBehaviour:
   - NodeGUID: c71531ad-10db-433c-924e-4afb130c95fe
     DialogueText: "Je vais aller m'asseoir, mais j'esp\xE8re qu'on pourra reparler
       !"
-    Position: {x: 3759, y: 301}
+    Position: {x: 3759.2, y: 300.80002}
     StatModifier: 0
-    Ports: []
+    Ports:
+    - PortName: Avec Plaisir !
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
   - NodeGUID: d03dfe1c-0843-484c-be44-cf45304ad321
     DialogueText: "Salut ! c'est toi qui \xE0 repris le bar ?"
-    Position: {x: 282, y: 192}
+    Position: {x: 282.4, y: 192}
     StatModifier: 0
     Ports:
     - PortName: Null Port
