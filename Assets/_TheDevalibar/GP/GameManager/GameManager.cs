@@ -5,6 +5,7 @@ using AYellowpaper.SerializedCollections;
 using NaughtyAttributes;
 using UnityEditor;
 using UnityEngine;
+using MyUtilities;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -26,8 +27,7 @@ public class GameManager : MonoBehaviour
 
 
     [Header("Localization")] private bool active;
-
-    public bool isConnectedToGPS;
+    
     public event Action OnLanguageChanged;
 
     

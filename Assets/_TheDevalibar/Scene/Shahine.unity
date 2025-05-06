@@ -1,0 +1,5946 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 10
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 1
+    m_PVRFilteringGaussRadiusAO: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1001 &76055591
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1661304285}
+    m_Modifications:
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[1]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[3]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617300709660714605, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_Name
+      value: Table&Chairs (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.266888
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+--- !u!4 &76055592 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 76055591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &118068270 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4986935192407009350, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &141281824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 271331358332592071, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+  m_PrefabInstance: {fileID: 6177181364433263977}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9b713c996fd2041a99233761a3ed15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &258648675 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2231564538342248018, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &298127514 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+  m_PrefabInstance: {fileID: 6177181364433263977}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &304655995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 304655998}
+  - component: {fileID: 304655997}
+  - component: {fileID: 304655996}
+  m_Layer: 0
+  m_Name: Point Light (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &304655996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304655995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &304655997
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304655995}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 0.9622642, g: 0.82449144, b: 0.5492168, a: 1}
+  m_Intensity: 10
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &304655998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304655995}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.4910574, y: -4.776888, z: 10.14435}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2105491736}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &405476523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 405476527}
+  - component: {fileID: 405476526}
+  - component: {fileID: 405476525}
+  - component: {fileID: 405476524}
+  m_Layer: 0
+  m_Name: Plane (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &405476524
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405476523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &405476525
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405476523}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &405476526
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405476523}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &405476527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405476523}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.07, y: 1.24, z: 3.53}
+  m_LocalScale: {x: 0.34780467, y: 0.9215078, z: 0.19791411}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &446001669 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7668353816354253613, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &479767034
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 33.478237
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 33.478237
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 33.478237
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.057
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.161
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.61
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.51100826
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.51100755
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.48874474
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4887438
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -87.448
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f71d33a931d0fe54387082b47aaef4ff, type: 2}
+    - target: {fileID: 919132149155446097, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+      propertyPath: m_Name
+      value: M_Bar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8e542e467b4f5841b0a5663a43b0f5c, type: 3}
+--- !u!1 &481201181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 481201184}
+  - component: {fileID: 481201183}
+  - component: {fileID: 481201182}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &481201182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481201181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &481201183
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481201181}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 0.9622642, g: 0.82449144, b: 0.5492168, a: 1}
+  m_Intensity: 20
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &481201184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481201181}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.0830574, y: -5.2268877, z: 8.02435}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2105491736}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &487544270 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4767100891011353164, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &533398986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1814156636939741563, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &589853948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589853950}
+  - component: {fileID: 589853949}
+  m_Layer: 0
+  m_Name: DijkstraManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &589853949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589853948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b53ef9dd4a52745b4f856a812910af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeManager: {fileID: 1552646588}
+  TakeNodeWaitTimeIntoAccount: 1
+  constraintDict:
+    keys:
+    - "Mobilit\xE9"
+    - "D\xE9ficience visuelle"
+    - "Fatigabilit\xE9 chronique"
+    - "D\xE9ficience auditive s\xE9v\xE8re"
+    - "Troubles de l\u2019\xE9quilibre / vertiges"
+    - "Hypersensibilit\xE9 sensorielle"
+    - Douleurs chroniques
+    - "Allergies s\xE9v\xE8res"
+    - "Troubles cognitifs l\xE9gers"
+    - Troubles dermatologiques
+    values: 00000000000000000000
+--- !u!4 &589853950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589853948}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.378965, y: 0.48330593, z: 5.536889}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 938042634}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &702296246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702296250}
+  - component: {fileID: 702296249}
+  - component: {fileID: 702296248}
+  - component: {fileID: 702296247}
+  m_Layer: 0
+  m_Name: Plane (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &702296247
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702296246}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &702296248
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702296246}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &702296249
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702296246}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &702296250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702296246}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.39214966, w: 0.91990143}
+  m_LocalPosition: {x: 13.922, y: 0.997, z: 3.86}
+  m_LocalScale: {x: 0.07243788, y: 0.9215078, z: 0.106571}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 46.177}
+--- !u!1 &808651594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 808651597}
+  - component: {fileID: 808651596}
+  - component: {fileID: 808651595}
+  - component: {fileID: 808651598}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &808651595
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808651594}
+  m_Enabled: 1
+--- !u!20 &808651596
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808651594}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 3.43
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &808651597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808651594}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.2369371, y: 0.38916433, z: -0.10430175, w: 0.88404363}
+  m_LocalPosition: {x: 10.97, y: 3.82, z: -2.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 30.007, y: 47.519, z: 0}
+--- !u!114 &808651598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808651594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+--- !u!1001 &878000838
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1290506751}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.689999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.557524
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.640003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+      propertyPath: m_Name
+      value: ENV_Pillar (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+--- !u!4 &878000839 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 778ff08fdb661a14798cca20be7a26ab, type: 3}
+  m_PrefabInstance: {fileID: 878000838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &881881430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 881881434}
+  - component: {fileID: 881881433}
+  - component: {fileID: 881881432}
+  - component: {fileID: 881881431}
+  m_Layer: 0
+  m_Name: Plane (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &881881431
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881881430}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &881881432
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881881430}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &881881433
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881881430}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &881881434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881881430}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.3763747, w: 0.9264676}
+  m_LocalPosition: {x: 12.886, y: 0.528, z: 3.86}
+  m_LocalScale: {x: 0.06271135, y: 0.9215078, z: 0.106571}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 44.219}
+--- !u!1 &885174242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 885174246}
+  - component: {fileID: 885174245}
+  - component: {fileID: 885174244}
+  - component: {fileID: 885174243}
+  m_Layer: 0
+  m_Name: Plane (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &885174243
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885174242}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &885174244
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885174242}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &885174245
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885174242}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &885174246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885174242}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 16.98, y: 1.24, z: 1.43}
+  m_LocalScale: {x: 0.34780467, y: 0.9215078, z: 0.19791411}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &938042633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 938042634}
+  m_Layer: 0
+  m_Name: Dijkstra
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &938042634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938042633}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.251415, y: 1.9289918, z: -5.158079}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 589853950}
+  - {fileID: 1552646589}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &959906256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959906260}
+  - component: {fileID: 959906259}
+  - component: {fileID: 959906258}
+  - component: {fileID: 959906257}
+  m_Layer: 0
+  m_Name: Plane (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &959906257
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959906256}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &959906258
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959906256}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &959906259
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959906256}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &959906260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959906256}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.398, y: 0.711, z: 3.86}
+  m_LocalScale: {x: 0.06271135, y: 0.9215078, z: 0.106571}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &988896917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2647623317704243497, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!223 &1016690416 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7960259861658346633, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1053362946 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 535766453920003335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1097546994
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1661304285}
+    m_Modifications:
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[3]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617300709660714605, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_Name
+      value: Table&Chairs (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.253
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+--- !u!4 &1097546995 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 1097546994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1097546996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 1097546994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c952c034f0ec7344f9068c8e32539f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1123804494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123804498}
+  - component: {fileID: 1123804497}
+  - component: {fileID: 1123804496}
+  - component: {fileID: 1123804495}
+  m_Layer: 0
+  m_Name: Plane (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1123804495
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123804494}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1123804496
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123804494}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1123804497
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123804494}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1123804498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123804494}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 17.91, y: 2.73, z: 1.44}
+  m_LocalScale: {x: 0.9215078, y: 0.9215078, z: 0.9215078}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
+--- !u!1 &1212423188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212423190}
+  - component: {fileID: 1212423189}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1212423189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212423188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f039716e0d22d364aaa3d29c39bd2b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _character: {fileID: 0}
+  _characterBehavior: {fileID: 0}
+  _dialogueIndex: 0
+  _character1Sprite: {fileID: 0}
+  _characterNameText: {fileID: 0}
+  _dialogueText: {fileID: 1553601553}
+  _dialogueButtonTexts:
+  - {fileID: 2111039810}
+  - {fileID: 1987525982}
+  - {fileID: 533398986}
+  _buttons:
+  - {fileID: 446001669}
+  - {fileID: 988896917}
+  - {fileID: 487544270}
+  _continueButton: {fileID: 258648675}
+  _buttonsContainer: {fileID: 1430725072}
+  _randomizeButtonsOrder: 1
+  _skipTextMachineEffectButton: {fileID: 1653581045}
+  typingSpeed: 0.05
+  _backgroundImage: {fileID: 118068270}
+  _foregroundImage: {fileID: 118068270}
+  _dialogueCanvas: {fileID: 1016690416}
+--- !u!4 &1212423190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212423188}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 480.87634, y: 254.99825, z: 376.45386}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1229805604
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1661304285}
+    m_Modifications:
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[1]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[3]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617300709660714605, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_Name
+      value: Table&Chairs (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.266888
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.8499994
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+--- !u!4 &1229805605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 1229805604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1229805606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 1229805604}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c952c034f0ec7344f9068c8e32539f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1236988399
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1661304285}
+    m_Modifications:
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[3]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617300709660714605, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_Name
+      value: Table&Chairs (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.177
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.145
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+--- !u!4 &1236988400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 1236988399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1236988401 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 1236988399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c952c034f0ec7344f9068c8e32539f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1290506750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4772610890679674795, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_Name
+      value: Devalibar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151691895915349164, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151691895915349164, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.71372753
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7004235
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -88.922
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853289119527482820, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 9222707323664574211, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5087600293598437408, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+      insertIndex: 10
+      addedObject: {fileID: 878000839}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+--- !u!4 &1290506751 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5087600293598437408, guid: bddd567aed85e154d8fe5b93bbaf66a9, type: 3}
+  m_PrefabInstance: {fileID: 1290506750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1354419864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354419868}
+  - component: {fileID: 1354419867}
+  - component: {fileID: 1354419866}
+  - component: {fileID: 1354419865}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1354419865
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354419864}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1354419866
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354419864}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1354419867
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354419864}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1354419868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354419864}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.42, y: 0.26, z: 1.12}
+  m_LocalScale: {x: 0.9215078, y: 0.9215078, z: 0.9215078}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1419867866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 535766453920003335}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c952c034f0ec7344f9068c8e32539f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1430725072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3515286726895207131, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1552646587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552646589}
+  - component: {fileID: 1552646588}
+  m_Layer: 0
+  m_Name: NodeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1552646588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552646587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6290c25245947474495415c21e824720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  constraints:
+  - name: "Mobilit\xE9"
+    type: 1
+    IsBlockingConstraint: 1
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+  - name: "D\xE9ficience visuelle"
+    type: 1
+    IsBlockingConstraint: 1
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+  - name: "D\xE9ficience auditive s\xE9v\xE8re"
+    type: 1
+    IsBlockingConstraint: 1
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+  - name: "Fatigabilit\xE9 chronique"
+    type: 1
+    IsBlockingConstraint: 1
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+  - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+    type: 1
+    IsBlockingConstraint: 1
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+  - name: "Hypersensibilit\xE9 sensorielle"
+    type: 1
+    IsBlockingConstraint: 0
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+  - name: Douleurs chroniques
+    type: 1
+    IsBlockingConstraint: 0
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+  - name: "Allergies s\xE9v\xE8res"
+    type: 1
+    IsBlockingConstraint: 0
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+  - name: "Troubles cognitifs l\xE9gers"
+    type: 1
+    IsBlockingConstraint: 0
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+  - name: Troubles dermatologiques
+    type: 1
+    IsBlockingConstraint: 0
+    boolValue: 0
+    intValue: 0
+    floatValue: 0
+    vector3Value: {x: 0, y: 0, z: 0}
+  nodes:
+  - NodeID: 0
+    position: {x: 10.785132, y: 0.26, z: 1.9666739}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 1
+    position: {x: 14.928166, y: 0.26, z: -2.7549658}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 2
+    position: {x: 11.985461, y: 0.26, z: 1.9342515}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 3
+    position: {x: 13.003761, y: 0.26, z: 1.9106364}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 4
+    position: {x: 14.6525135, y: 0.26, z: 1.5059075}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 5
+    position: {x: 15.182372, y: 0.26, z: 0.51909745}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 6
+    position: {x: 14.510376, y: 0.26, z: -0.40115225}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 7
+    position: {x: 12.85983, y: 0.26, z: -0.48884332}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 8
+    position: {x: 12.957686, y: 0.26, z: 0.42262095}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 9
+    position: {x: 12.87659, y: 0.26, z: -1.4513379}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 10
+    position: {x: 11.969799, y: 0.26, z: 3.8663168}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 11
+    position: {x: 12.712353, y: 0.35902646, z: 3.8749752}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 12
+    position: {x: 13.094181, y: 0.7305792, z: 3.8641145}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 13
+    position: {x: 13.665096, y: 0.76168287, z: 3.872641}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 14
+    position: {x: 14.402354, y: 1.24, z: 3.8890266}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 15
+    position: {x: 16.52191, y: 1.24, z: 3.8535042}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 16
+    position: {x: 16.42424, y: 1.24, z: 0.1884917}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 17
+    position: {x: 16.514883, y: 1.24, z: 1.9493786}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 18
+    position: {x: 14.522175, y: 0.26, z: -1.5833126}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 19
+    position: {x: 15.570386, y: 0.26, z: -1.4380492}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 20
+    position: {x: 11.685648, y: 0.26, z: 0.10708296}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 21
+    position: {x: 11.582597, y: 0.26, z: -1.025647}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 22
+    position: {x: 13.62153, y: 0.26, z: 0.84452415}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 23
+    position: {x: 13.720636, y: 0.26, z: -0.9269413}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 24
+    position: {x: 16.941927, y: 1.24, z: 0.57746905}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 25
+    position: {x: 17.210743, y: 1.24, z: 3.75655}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 26
+    position: {x: 16.043737, y: 1.24, z: 2.9628084}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  connections:
+  - label: 
+    StartNodeNumber: 0
+    EndNodeNumber: 2
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 2
+    EndNodeNumber: 3
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 3
+    EndNodeNumber: 4
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 4
+    EndNodeNumber: 5
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 4
+    EndNodeNumber: 6
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 5
+    EndNodeNumber: 6
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 6
+    EndNodeNumber: 18
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 18
+    EndNodeNumber: 19
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 18
+    EndNodeNumber: 1
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 19
+    EndNodeNumber: 1
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 6
+    EndNodeNumber: 19
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 6
+    EndNodeNumber: 7
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 7
+    EndNodeNumber: 9
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 6
+    EndNodeNumber: 23
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 9
+    EndNodeNumber: 23
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 8
+    EndNodeNumber: 7
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 8
+    EndNodeNumber: 22
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 4
+    EndNodeNumber: 22
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 7
+    EndNodeNumber: 21
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 7
+    EndNodeNumber: 20
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 2
+    EndNodeNumber: 10
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 10
+    EndNodeNumber: 11
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 11
+    EndNodeNumber: 12
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 13
+    EndNodeNumber: 12
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 14
+    EndNodeNumber: 13
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 14
+    EndNodeNumber: 15
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 15
+    EndNodeNumber: 17
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 16
+    EndNodeNumber: 17
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 15
+    EndNodeNumber: 25
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 15
+    EndNodeNumber: 26
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 16
+    EndNodeNumber: 24
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 3
+    EndNodeNumber: 8
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Fatigabilit\xE9 chronique"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles de l\u2019\xE9quilibre / vertiges"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Hypersensibilit\xE9 sensorielle"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Douleurs chroniques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Allergies s\xE9v\xE8res"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9gers"
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: Troubles dermatologiques
+      type: 1
+      IsBlockingConstraint: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  dijkstraManager: {fileID: 589853949}
+--- !u!4 &1552646589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552646587}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.5914154, y: 1, z: -0.8019209}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 938042634}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1553601553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2910202032347847620, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1554030913
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1661304285}
+    m_Modifications:
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[3]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617300709660714605, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_Name
+      value: Table&Chairs (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.266888
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+--- !u!4 &1554030914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 1554030913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1554030915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 1554030913}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c952c034f0ec7344f9068c8e32539f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1653581045 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8585544570382077563, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1661304284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661304285}
+  - component: {fileID: 1661304286}
+  m_Layer: 0
+  m_Name: Tables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661304285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661304284}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.728943, y: 8.866888, z: -9.1643505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1053362946}
+  - {fileID: 76055592}
+  - {fileID: 1554030914}
+  - {fileID: 1229805605}
+  - {fileID: 1097546995}
+  - {fileID: 1236988400}
+  - {fileID: 2080307300}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1661304286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661304284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35cdcae3c49b743a34035e402f6aef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tables:
+  - {fileID: 1419867866}
+  - {fileID: 1722811770}
+  - {fileID: 1554030915}
+  - {fileID: 1229805606}
+  - {fileID: 1097546996}
+  - {fileID: 1236988401}
+  - {fileID: 2080307301}
+--- !u!114 &1722811770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 76055591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c952c034f0ec7344f9068c8e32539f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1737055024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737055025}
+  m_Layer: 0
+  m_Name: CharacterSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1737055025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737055024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -4.739, y: -1.2789918, z: 7.101}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014900796}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &1753934115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753934117}
+  - component: {fileID: 1753934116}
+  - component: {fileID: 1753934118}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!108 &1753934116
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753934115}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &1753934117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753934115}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 6.41, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1753934118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753934115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!1 &1842089176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1842089180}
+  - component: {fileID: 1842089179}
+  - component: {fileID: 1842089178}
+  - component: {fileID: 1842089177}
+  m_Layer: 0
+  m_Name: Plane (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1842089177
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842089176}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1842089178
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842089176}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1842089179
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842089176}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1842089180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842089176}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 14.42, y: 2.73, z: 4.47}
+  m_LocalScale: {x: 0.9215078, y: 0.9215078, z: 0.9215078}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1956632059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956632062}
+  - component: {fileID: 1956632061}
+  - component: {fileID: 1956632060}
+  m_Layer: 0
+  m_Name: Point Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1956632060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956632059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &1956632061
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956632059}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 0.9622642, g: 0.82449144, b: 0.5492168, a: 1}
+  m_Intensity: 10
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &1956632062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956632059}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.231057, y: -4.456888, z: 5.4543505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2105491736}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987525982 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6307743259489468021, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2014900794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014900796}
+  - component: {fileID: 2014900795}
+  m_Layer: 0
+  m_Name: CharacterSpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2014900795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014900794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ef5ddae5da3914fb10325f5c4bc7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dayShifts:
+  - DailyCustomers:
+    - {fileID: 11400000, guid: a7be277518237114f947382c94114930, type: 2}
+    - {fileID: 11400000, guid: 4a2e7faf69bb11d489ed29e4871fa4ef, type: 2}
+    NPCToSpawnThisDay: 3
+  _dayIndex: 0
+  _characterGameObject: {fileID: 2123197945782874481, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+  _NPCGameObject: {fileID: 6742652457405017559, guid: 5ad368c1dfa2dd54c92d09caead4a3ef, type: 3}
+  _characterSpawnPoint: {fileID: 1737055025}
+  _characterSpawnDelayInSeconds: 5
+--- !u!4 &2014900796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014900794}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.251415, y: 1.9289918, z: -5.158079}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 298127514}
+  - {fileID: 1737055025}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2064419607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2064419610}
+  - component: {fileID: 2064419609}
+  - component: {fileID: 2064419608}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2064419608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064419607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
+--- !u!114 &2064419609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064419607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &2064419610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064419607}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2080307299
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1661304285}
+    m_Modifications:
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[3]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617300709660714605, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_Name
+      value: Table&Chairs (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+--- !u!4 &2080307300 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 2080307299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2080307301 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+  m_PrefabInstance: {fileID: 2080307299}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c952c034f0ec7344f9068c8e32539f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2105491735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2105491736}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2105491736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105491735}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.728943, y: 8.866888, z: -9.1643505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 481201184}
+  - {fileID: 1956632062}
+  - {fileID: 304655998}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111039810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3678151642517997114, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 372164468992308219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &372164468992308219
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3570899399634836936, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570899399634836936, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570899399634836936, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570899399634836936, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -48.333332
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449234753802294011, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449234753802294011, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449234753802294011, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449234753802294011, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.666664
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358116441639954712, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952983270219427355, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952983270219427355, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319053479805007097, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319053479805007097, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319053479805007097, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319053479805007097, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 3327202901117461162, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+--- !u!1001 &535766453920003335
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1661304285}
+    m_Modifications:
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[2]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[3]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194364402038393385, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[4]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617300709660714605, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_Name
+      value: Table&Chairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.266888
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785699763701547413, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9941c9a4cac20ce4f9948b2ed79e4f0b, type: 3}
+--- !u!1001 &6177181364433263977
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2014900796}
+    m_Modifications:
+    - target: {fileID: 271331358332592071, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: dijkstraManager
+      value: 
+      objectReference: {fileID: 589853949}
+    - target: {fileID: 2123197945782874481, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_Name
+      value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123197945782874481, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.1264153
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2789918
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.49192095
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266263251199399064, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998204692670426951, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 808651596}
+    - target: {fileID: 7218737290905152009, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: _nodeManager
+      value: 
+      objectReference: {fileID: 1552646588}
+    - target: {fileID: 7218737290905152009, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: _dialogueManager
+      value: 
+      objectReference: {fileID: 1212423189}
+    - target: {fileID: 7218737290905152009, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: _dijkstraManager
+      value: 
+      objectReference: {fileID: 589853949}
+    - target: {fileID: 7218737290905152009, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: _dijkstraPathFollower
+      value: 
+      objectReference: {fileID: 141281824}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 808651597}
+  - {fileID: 1753934117}
+  - {fileID: 372164468992308219}
+  - {fileID: 2064419610}
+  - {fileID: 1212423190}
+  - {fileID: 1661304285}
+  - {fileID: 2105491736}
+  - {fileID: 938042634}
+  - {fileID: 2014900796}
+  - {fileID: 1290506750}
+  - {fileID: 479767034}
+  - {fileID: 1354419868}
+  - {fileID: 405476527}
+  - {fileID: 959906260}
+  - {fileID: 881881434}
+  - {fileID: 702296250}
+  - {fileID: 885174246}
+  - {fileID: 1842089180}
+  - {fileID: 1123804498}

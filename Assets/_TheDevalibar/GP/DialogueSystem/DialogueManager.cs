@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,25 +7,30 @@ using TMPro;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using NaughtyAttributes;
+using UnityEngine.Serialization;
+using MyUtilities;
 
 public class DialogueManager : MonoBehaviour
 {
+    [FormerlySerializedAs("character")]
     [Header("Character")]
-    [SerializeField] private Character character;
+    [SerializeField, ReadOnly] private Character _character;
+    [SerializeField, ReadOnly] private CharacterBehavior _characterBehavior;
 
-    [SerializeField] private int _dayIndex;
-    [SerializeField] private Image _characterSprite;
+    [SerializeField] private int _dialogueIndex;
+    [SerializeField] private Image _character1Sprite;
     
     // [Header("File")]
     // [SerializeField] private string filePath = "Assets/_NarrativeProject/Prog/Scripts/DialogueGraph/Resources";
     // [SerializeField] private string fileName = "DialogueGraph";
     
     [Header("Dialogue Canvas")]
+    [SerializeField] private TextMeshProUGUI _characterNameText;
     [SerializeField] private TextMeshProUGUI _dialogueText;
     [SerializeField] private List<TextMeshProUGUI> _dialogueButtonTexts = new List<TextMeshProUGUI>();
     [SerializeField] private List<Button> _buttons = new List<Button>();
     [SerializeField] private Button _continueButton;
-    [SerializeField] private Canvas _buttonsContainer;
+    [SerializeField] private GameObject _buttonsContainer;
     
     private Dictionary<Button, string> _NodeGUIDFromButton= new Dictionary<Button, string>();
     [SerializeField] private bool _randomizeButtonsOrder = true;
@@ -47,11 +53,21 @@ public class DialogueManager : MonoBehaviour
 
     private GameManager _gameManager;
     
+    [Header("Dialogue Canvas")]
+    [SerializeField] private Canvas _dialogueCanvas;
+
     
+    public event Action _onDialogueStart;
+    public event Action _onDialogueEnd;
     
-    void Start()
+
+    void Awake()
     {
         ServiceLocator.Register(this);
+    }
+    void Start()
+    {
+        
         _gameManager = ServiceLocator.Get<GameManager>();
         if (_gameManager != null)
         {
@@ -61,6 +77,8 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.LogError("Game manager not found!");
         }
+
+        
     }
 
     private void OnEnable()
@@ -84,44 +102,33 @@ public class DialogueManager : MonoBehaviour
         _continueButton.onClick.RemoveListener(() => OnChoiceButtonClicked(_continueButton));
         _skipTextMachineEffectButton.onClick.RemoveListener(SkipTypingEffect);
     }
-    
+
+    public void InitCharacterDialogue(CharacterBehavior characterBehavior, bool isEventDialogue,
+        CodeLanguage currentLanguage)
+    {
+        if (!characterBehavior) return;
+        _characterBehavior = characterBehavior;
+        _character = _characterBehavior.Character;
+        InitDialogue(isEventDialogue, currentLanguage);
+    }
 
     private void InitDialogue(bool isEventDialogue, CodeLanguage currentLanguage)
     {
-        if (character == null)
+        if (_character == null)
         {
             Debug.LogError("[DialogueManager] Character is null!");
             return;
         }
+        if (!_dialogueCanvas.gameObject.activeSelf) _dialogueCanvas.gameObject.SetActive(true);
         
         
-        
-        if (character.IsFirstDialogue)
+        _containerCache = _character.GetCharacterDialogue(currentLanguage);
+        if (_containerCache == null)
         {
-            if (character.FirstDialogueContainerFromLanguageCode.TryGetValue(currentLanguage, out _containerCache))
-            {
-                if (_containerCache == null)
-                {
-                    Debug.LogError($"[DialogueManager] First Dialogue container is null in {currentLanguage}!");
-                    return;
-                }
-                character.IsFirstDialogue = false;
-            }
-            else
-            {
-                Debug.LogError($"[DialogueManager] No First Dialogue found for language code: {currentLanguage}");
-                return;
-            }
+            Debug.LogError($"[DialogueManager] No character dialogue found for day {_dialogueIndex} in {currentLanguage}!");
+            return;
         }
-        else
-        {
-            _containerCache = character.GetCharacterDialogue(_dayIndex, currentLanguage);
-            if (_containerCache == null)
-            {
-                Debug.LogError($"[DialogueManager] No character dialogue found for day {_dayIndex} in {currentLanguage}!");
-                return;
-            }
-        }
+        
         
 
         if (_containerCache == null)
@@ -147,6 +154,9 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError("First Dialogue Node Not Found");
             return;
         }
+        _onDialogueStart?.Invoke();
+        if (!_characterNameText) Debug.LogWarning("_characterNameText is null!");
+        else _characterNameText.text = _character.CharacterName;
         SetDialogueCanvas(firstDialogueNode);
     }
 
@@ -158,7 +168,7 @@ public class DialogueManager : MonoBehaviour
     
     public void OnLanguageChanged()
     {
-        if (character == null)
+        if (_character == null)
         {
             Debug.LogError("[DialogueManager] Character is null!");
             return;
@@ -172,14 +182,10 @@ public class DialogueManager : MonoBehaviour
         
         
         CodeLanguage languageCode = _gameManager.gameData.LanguageCode;
-        if (character.FirstDialogueContainerFromLanguageCode.ContainsValue(_containerCache)) // Si le dialogue à changer est le premier dialogue alors 
-        {
-            _containerCache = character.FirstDialogueContainerFromLanguageCode[languageCode];
-        }
-        else
-        {
-            _containerCache = character.GetCharacterDialogue(_dayIndex, languageCode);
-        }
+        
+        
+        _containerCache = _character.GetCharacterDialogue(languageCode);
+        
         
         if (!_containerCache)
         {
@@ -226,11 +232,11 @@ public class DialogueManager : MonoBehaviour
         SetupDialogueButtons(Ports);
         
 
-        character.NextAffinityValue += dialogueNodeData.StatModifier;
+        _character.NextAffinityValue += dialogueNodeData.StatModifier;
         Sprite NewSprite = dialogueNodeData.CharacterMoodSprite;
-        if (NewSprite != null && _characterSprite.sprite != NewSprite)
+        if (NewSprite != null && _character1Sprite.sprite != NewSprite)
         {
-            _characterSprite.sprite = NewSprite;
+            _character1Sprite.sprite = NewSprite;
         }
     }
     
@@ -324,9 +330,10 @@ public class DialogueManager : MonoBehaviour
     {
         if (!_containerCache.NodeLinks.Any(x => x.BaseNodeGuid == _nodesPathHistory.Last().NodeGUID)) // Si jamais ce node n'est lié à aucun prochain node alors c'est le node finale.
         {
-            Vector2 AffinityRange = character.AffinityManager.GetRange();
-            character.NextAffinityValue = (int)Mathf.Clamp(character.NextAffinityValue, AffinityRange.x, AffinityRange.y); // On clamp la proichaine affinité entre la valeur de mood min et la valeur de mood max
-            Debug.Log($"Dialogue ended with '{character.NextAffinityValue}' of affinity");
+            Vector2 AffinityRange = _character.AffinityManager.GetRange();
+            _character.NextAffinityValue = (int)Mathf.Clamp(_character.NextAffinityValue, AffinityRange.x, AffinityRange.y); // On clamp la proichaine affinité entre la valeur de mood min et la valeur de mood max
+            Debug.Log($"Dialogue ended with '{_character.NextAffinityValue}' of affinity");
+            EndDialogue();
             //_gameManager.GoToPhase(GamePhase.Hub1);
             return;
         } 
@@ -340,14 +347,18 @@ public class DialogueManager : MonoBehaviour
         if (nextDialogueNode == null)
         {
             Debug.LogError("Dialogue Node Not Found");
+            EndDialogue();
             return;
         }
         
         SetDialogueCanvas(nextDialogueNode);
     }
 
-    public void GoToNextDialoguePhase()
+    public void EndDialogue()
     {
-        
+        _character.DialogueIndex++;
+        _dialogueCanvas.gameObject.SetActive(false);
+        _characterBehavior.OnDialogueEnd();
+        _onDialogueEnd?.Invoke();
     }
 }

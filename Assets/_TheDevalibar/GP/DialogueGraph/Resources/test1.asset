@@ -10,24 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18e3a317d118bc94dbb48fe0d762e73f, type: 3}
-  m_Name: test
+  m_Name: test1
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 9d9d57b1-aa8f-474e-ab24-7102f88c17ab
+  - BaseNodeGuid: 66e47b2f-06bf-42da-84b1-93e35453db37
     PortName: StartPointNode
     TargetNodeGuid: e9575ac2-efac-4702-aa91-49600134a2dd
-    IsNullNode: 0
-  - BaseNodeGuid: 4c52517d-2174-4dca-abab-4e2f65ed05cf
-    PortName: Mais si je te jure je t'aime
-    TargetNodeGuid: e1cb4546-25cf-4b08-9534-0e25e95f7657
-    IsNullNode: 0
-  - BaseNodeGuid: 1b84a277-ed98-4425-8c49-f72a43ff5fae
-    PortName: Oui pardon je m'excuse
-    TargetNodeGuid: e1cb4546-25cf-4b08-9534-0e25e95f7657
-    IsNullNode: 0
-  - BaseNodeGuid: dbd83f89-e635-4889-a6bd-1d7b3d520a31
-    PortName: Option 1
-    TargetNodeGuid: e1cb4546-25cf-4b08-9534-0e25e95f7657
     IsNullNode: 0
   - BaseNodeGuid: e9575ac2-efac-4702-aa91-49600134a2dd
     PortName: 'Mais t''es fada cagole '
@@ -37,66 +25,29 @@ MonoBehaviour:
     PortName: "Bah bien s\xFBr"
     TargetNodeGuid: 4d6b41e9-b514-4eb7-a32a-8c236e9f4b74
     IsNullNode: 0
+  - BaseNodeGuid: 1b84a277-ed98-4425-8c49-f72a43ff5fae
+    PortName: Oui pardon je m'excuse
+    TargetNodeGuid: e1cb4546-25cf-4b08-9534-0e25e95f7657
+    IsNullNode: 0
+  - BaseNodeGuid: dbd83f89-e635-4889-a6bd-1d7b3d520a31
+    PortName: Option 1
+    TargetNodeGuid: e1cb4546-25cf-4b08-9534-0e25e95f7657
+    IsNullNode: 0
+  - BaseNodeGuid: 4c52517d-2174-4dca-abab-4e2f65ed05cf
+    PortName: Mais si je te jure je t'aime
+    TargetNodeGuid: e1cb4546-25cf-4b08-9534-0e25e95f7657
+    IsNullNode: 0
   - BaseNodeGuid: 4d6b41e9-b514-4eb7-a32a-8c236e9f4b74
     PortName: Null Port
     TargetNodeGuid: 4c52517d-2174-4dca-abab-4e2f65ed05cf
     IsNullNode: 1
+  - BaseNodeGuid: e9575ac2-efac-4702-aa91-49600134a2dd
+    PortName: Niskaa
+    TargetNodeGuid: dbd83f89-e635-4889-a6bd-1d7b3d520a31
+    IsNullNode: 0
   DialogueNodeData:
-  - NodeGUID: 4c52517d-2174-4dca-abab-4e2f65ed05cf
-    DialogueText: Mais Nan c'est pas vrai
-    Position: {x: 1152.8, y: 70.4}
-    StatModifier: 10
-    Ports:
-    - PortName: Mais si je te jure je t'aime
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    - PortName: Nan j'avoue j'ai menti
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 1
-    CharacterMoodSprite: {fileID: 5030090135707435272, guid: 0d013b5262e410f458497f1c8ba0972c,
-      type: 3}
-  - NodeGUID: e1cb4546-25cf-4b08-9534-0e25e95f7657
-    DialogueText: Enfin bon c'est pas grave
-    Position: {x: 1680.8, y: 232.80002}
-    StatModifier: 0
-    Ports:
-    - PortName: 'Allezzzz '
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
-  - NodeGUID: 1b84a277-ed98-4425-8c49-f72a43ff5fae
-    DialogueText: "Mais c'est pas gentil \xE7a"
-    Position: {x: 696.8, y: 327.2}
-    StatModifier: -10
-    Ports:
-    - PortName: Oui pardon je m'excuse
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    - PortName: Oue et ?
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  - NodeGUID: dbd83f89-e635-4889-a6bd-1d7b3d520a31
-    DialogueText: Dialogue Node
-    Position: {x: 696.8, y: 516}
-    StatModifier: 0
-    Ports:
-    - PortName: Option 1
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
   - NodeGUID: e9575ac2-efac-4702-aa91-49600134a2dd
-    DialogueText: Bonjour tu m'aimes !
+    DialogueText: Bonjour c'est mon premier dialogue !
     Position: {x: 242.4, y: 200}
     StatModifier: 0
     Ports:
@@ -113,11 +64,25 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: -3163324310699783514, guid: 0d013b5262e410f458497f1c8ba0972c,
-      type: 3}
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 1b84a277-ed98-4425-8c49-f72a43ff5fae
+    DialogueText: "Mais c'est pas gentil \xE7a"
+    Position: {x: 724.8, y: 308}
+    StatModifier: -10
+    Ports:
+    - PortName: Oui pardon je m'excuse
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: Oue et ?
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
   - NodeGUID: 4d6b41e9-b514-4eb7-a32a-8c236e9f4b74
     DialogueText: "Tfa\xE7on je sais que nan... attend t'as dit quoi l\xE0 "
-    Position: {x: 696.8, y: 70.4}
+    Position: {x: 724.8, y: 68.799995}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -125,8 +90,44 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 4780513752901412829, guid: 0d013b5262e410f458497f1c8ba0972c,
-      type: 3}
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 4c52517d-2174-4dca-abab-4e2f65ed05cf
+    DialogueText: Mais Nan c'est pas vrai
+    Position: {x: 1201.6, y: 68.799995}
+    StatModifier: 10
+    Ports:
+    - PortName: Mais si je te jure je t'aime
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: Nan j'avoue j'ai menti
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: e1cb4546-25cf-4b08-9534-0e25e95f7657
+    DialogueText: Enfin bon c'est pas grave
+    Position: {x: 1681.6, y: 242.4}
+    StatModifier: 0
+    Ports:
+    - PortName: 'Allezzzz '
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: dbd83f89-e635-4889-a6bd-1d7b3d520a31
+    DialogueText: J'aime me beurrer la biscotte
+    Position: {x: 747.2, y: 486.4}
+    StatModifier: 0
+    Ports:
+    - PortName: Option 1
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
   ExposedProperties: []
   CommentBlockData:
   - ChildNodes: []
