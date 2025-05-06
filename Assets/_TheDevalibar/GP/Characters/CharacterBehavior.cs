@@ -36,7 +36,10 @@ public class CharacterBehavior : MonoBehaviour
     private Coroutine _waitRoutine;
     private bool _interrupted = false;
 
-    [Header("Movement")] [SerializeField] private int _BarNodeId = 40;
+    [Header("Movement")] 
+    [SerializeField] private int _BarNodeId = 40;
+
+    [SerializeField] private int _BarExitNodeId = 1;
     [SerializeField, ReadOnly] private  int _startNodeIndex;
     [SerializeField, ReadOnly] private  int _lastNodeIndex;
     [SerializeField, ReadOnly] private  int _nextNodeIndex;
@@ -210,8 +213,8 @@ public class CharacterBehavior : MonoBehaviour
     
     private void MoveToBarExit()
     {
-        _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex, _startNodeIndex);
-        _lastNodeIndex = _startNodeIndex;
+        _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex, _BarExitNodeId);
+        _lastNodeIndex = _BarExitNodeId;
         _dijkstraPathFollower.FollowPath();
         FeedBackImage.gameObject.SetActive(true);
     }
@@ -225,16 +228,7 @@ public class CharacterBehavior : MonoBehaviour
         {
             Debug.Log("No tables found, customers need to leave");
             SetCustomerFeedback(null);
-            if (!_character)
-            {
-                FeedBackImage.gameObject.SetActive(true);
-                Destroy(gameObject, 5f);
-            }
-            else
-            {
-                MoveToBarExit();
-            }
-            
+            MoveToBarExit();
             return;
         }
 
@@ -328,7 +322,7 @@ public class CharacterBehavior : MonoBehaviour
             _dialogueManager.InitCharacterDialogue(this, false, CodeLanguage.English);
             
         }
-        else if (_lastNodeIndex == _startNodeIndex)
+        else if (_lastNodeIndex == _BarExitNodeId)
         {
             _characterState = CharacterState.Idle;
             Destroy(gameObject);
