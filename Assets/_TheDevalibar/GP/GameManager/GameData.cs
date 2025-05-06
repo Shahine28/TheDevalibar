@@ -9,7 +9,7 @@ public class GameData : ScriptableObject
     
     public int DayIndex = 1;
     public CodeLanguage LanguageCode = CodeLanguage.English;
-    
+    public int Gold = 750;
 
     // Stockage des valeurs initiales
     private int initialGold;

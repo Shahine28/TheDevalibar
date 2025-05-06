@@ -14,6 +14,9 @@ namespace _TheDevalibar.GP.Characters
         public Texture GoodFeedbackSprite;
         public Texture AverageFeedbackSprite;
         public Texture BadFeedbackSprite;
-        
+
+        public int GoodTipsValue = 20;
+        public int AverageTipsValue = 10;
+        public int BadTipsValue = 0;
     }
 }

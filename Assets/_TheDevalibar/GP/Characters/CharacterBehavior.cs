@@ -331,6 +331,23 @@ public class CharacterBehavior : MonoBehaviour
         }
     }
 
+    private int GetTipValue()
+    {
+        switch (_customerFeedback)
+        {
+            case CustomersFeedback.Good:
+                return _characterFeedback.GoodTipsValue;
+            case CustomersFeedback.Average:
+                return _characterFeedback.AverageTipsValue;
+            case CustomersFeedback.Bad:
+                return _characterFeedback.BadTipsValue;
+            default:
+                break;
+        }
+
+        return 0;
+    }
+
 
     private void HandlePathEnd()
     {
@@ -345,6 +362,17 @@ public class CharacterBehavior : MonoBehaviour
         else if (_lastNodeIndex == _BarExitNodeId)
         {
             _characterState = CharacterState.Idle;
+            CharacterSpawnManager spawnManager = ServiceLocator.Get<CharacterSpawnManager>();
+            if (spawnManager && spawnManager.HaveAllCharactersAndNCPBeenSpawned && spawnManager.CharacterSpawnPoint.childCount.Equals(1))
+            {
+                _tablesManager.ShowUpgradeButtonTables();
+            }
+            GameManager gameManager = ServiceLocator.Get<GameManager>();
+            if (gameManager)
+            {
+                gameManager.gameData.Gold += GetTipValue();
+                gameManager.UpdateGoldValue();
+            }
             Destroy(gameObject);
         }
         else

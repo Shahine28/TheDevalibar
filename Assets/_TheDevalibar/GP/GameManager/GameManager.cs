@@ -6,6 +6,7 @@ using NaughtyAttributes;
 using UnityEditor;
 using UnityEngine;
 using MyUtilities;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
     private bool _isSceneReady;
     private bool _allowSceneActivation;
     private bool _isNextSceneRequested;
+
+    [SerializeField] private TextMeshProUGUI _goldText;
     [SerializeField] private bool _loadSceneDirectly;
     public event Action<string> OnSceneReady;
     public event Action<string> OnStartLoadingScene;
@@ -44,6 +47,22 @@ public class GameManager : MonoBehaviour
         }
 
         ServiceLocator.Register(this);
+    }
+
+    public void UpdateGoldValue()
+    {
+        UpdateGoldValue(gameData.Gold);
+    }
+    public void UpdateGoldValue(int gold)
+    {
+        _goldText.text = gold.ToString();
+    }
+    private void Start()
+    {
+        if (gameData && _goldText)
+        {
+            UpdateGoldValue(gameData.Gold);
+        }
     }
    
 }
