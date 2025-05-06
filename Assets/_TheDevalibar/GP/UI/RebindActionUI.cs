@@ -1,17 +1,13 @@
 using System;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-
 ////TODO: localization support
-
 ////TODO: deal with composites that have parts bound in different control schemes
 
 namespace UnityEngine.InputSystem.Samples.RebindUI
 {
-
     /// <summary>
     /// A reusable component with a self-contained UI for rebinding a single action.
     /// </summary>
@@ -87,7 +83,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         /// </summary>
         /// <seealso cref="startRebindEvent"/>
         /// <seealso cref="rebindOverlay"/>
-        public TMP_Text rebindPrompt
+        public Text rebindPrompt
         {
             get => m_RebindText;
             set => m_RebindText = value;
@@ -399,7 +395,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
 
         [Tooltip("Optional text label that will be updated with prompt for user input.")]
         [SerializeField]
-        private TMP_Text m_RebindText;
+        private Text m_RebindText;
 
         [Tooltip("Event that is triggered when the way the binding is display should be updated. This allows displaying "
             + "bindings in custom ways, e.g. using images instead of text.")]
