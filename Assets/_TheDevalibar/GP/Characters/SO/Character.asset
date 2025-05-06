@@ -14,39 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AffinityManager: {fileID: 11400000, guid: 23b23b1f68a494d4d8c5ef607d2d0298, type: 2}
   CharacterName: Jonathan Mader
-  DescriptionFromCodeLanguage:
-    _serializedList:
-    - Key: 0
-      Value:
-        Description: grgef
-  Affinity: 0
-  NextAffinityValue: 75
-  IsFirstDialogue: 1
-  FirstDialogueContainerFromLanguageCode:
-    _serializedList:
-    - Key: 0
-      Value: {fileID: 11400000, guid: 7ad4c484632c3dc4480d3ad51883a6fd, type: 2}
-  FirstDialogueSprite: {fileID: 0}
-  DaysDialogue:
+  CharacterPseudo: JoMa92
+  CharacterProfilePicture: {fileID: 0}
+  CharacterSprite: {fileID: 0}
+  Affinity: 50
+  NextAffinityValue: 45
+  Dialogues:
   - Dialogues:
     - AffinityName: Angry
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
         - Key: 1
           Value: {fileID: 0}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
         - Key: 1
           Value: {fileID: 0}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
         - Key: 1
           Value: {fileID: 0}
+  DialogueIndex: 0
+  constraintDict:
+    keys:
+    - "Mobilit\xE9"
+    - "D\xE9ficience visuelle"
+    - "Fatigabilit\xE9 chronique"
+    - "D\xE9ficience auditive s\xE9v\xE8re"
+    - "Troubles de l\u2019\xE9quilibre / vertiges"
+    - "Hypersensibilit\xE9 sensorielle"
+    - Douleurs chroniques
+    - "Allergies s\xE9v\xE8res"
+    - "Troubles cognitifs l\xE9gers"
+    - Troubles dermatologiques
+    values: 01000000000000000000
