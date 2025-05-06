@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,13 +19,13 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private int _dialogueIndex;
     [SerializeField] private Image _character1Sprite;
-    [SerializeField] private Image _character2Sprite;
     
     // [Header("File")]
     // [SerializeField] private string filePath = "Assets/_NarrativeProject/Prog/Scripts/DialogueGraph/Resources";
     // [SerializeField] private string fileName = "DialogueGraph";
     
     [Header("Dialogue Canvas")]
+    [SerializeField] private TextMeshProUGUI _characterNameText;
     [SerializeField] private TextMeshProUGUI _dialogueText;
     [SerializeField] private List<TextMeshProUGUI> _dialogueButtonTexts = new List<TextMeshProUGUI>();
     [SerializeField] private List<Button> _buttons = new List<Button>();
@@ -54,6 +55,11 @@ public class DialogueManager : MonoBehaviour
     
     [Header("Dialogue Canvas")]
     [SerializeField] private Canvas _dialogueCanvas;
+
+    
+    public event Action _onDialogueStart;
+    public event Action _onDialogueEnd;
+    
 
     void Awake()
     {
@@ -115,32 +121,14 @@ public class DialogueManager : MonoBehaviour
         }
         if (!_dialogueCanvas.gameObject.activeSelf) _dialogueCanvas.gameObject.SetActive(true);
         
-        if (_character.IsFirstDialogue)
+        
+        _containerCache = _character.GetCharacterDialogue(currentLanguage);
+        if (_containerCache == null)
         {
-            if (_character.FirstDialogueContainerFromLanguageCode.TryGetValue(currentLanguage, out _containerCache))
-            {
-                if (_containerCache == null)
-                {
-                    Debug.LogError($"[DialogueManager] First Dialogue container is null in {currentLanguage}!");
-                    return;
-                }
-                _character.IsFirstDialogue = false;
-            }
-            else
-            {
-                Debug.LogError($"[DialogueManager] No First Dialogue found for language code: {currentLanguage}");
-                return;
-            }
+            Debug.LogError($"[DialogueManager] No character dialogue found for day {_dialogueIndex} in {currentLanguage}!");
+            return;
         }
-        else
-        {
-            _containerCache = _character.GetCharacterDialogue(_dialogueIndex, currentLanguage);
-            if (_containerCache == null)
-            {
-                Debug.LogError($"[DialogueManager] No character dialogue found for day {_dialogueIndex} in {currentLanguage}!");
-                return;
-            }
-        }
+        
         
 
         if (_containerCache == null)
@@ -166,6 +154,9 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError("First Dialogue Node Not Found");
             return;
         }
+        _onDialogueStart?.Invoke();
+        if (!_characterNameText) Debug.LogWarning("_characterNameText is null!");
+        else _characterNameText.text = _character.CharacterName;
         SetDialogueCanvas(firstDialogueNode);
     }
 
@@ -191,14 +182,10 @@ public class DialogueManager : MonoBehaviour
         
         
         CodeLanguage languageCode = _gameManager.gameData.LanguageCode;
-        if (_character.FirstDialogueContainerFromLanguageCode.ContainsValue(_containerCache)) // Si le dialogue à changer est le premier dialogue alors 
-        {
-            _containerCache = _character.FirstDialogueContainerFromLanguageCode[languageCode];
-        }
-        else
-        {
-            _containerCache = _character.GetCharacterDialogue(_dialogueIndex, languageCode);
-        }
+        
+        
+        _containerCache = _character.GetCharacterDialogue(languageCode);
+        
         
         if (!_containerCache)
         {
@@ -369,8 +356,9 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        _character.DialogueIndex++;
         _dialogueCanvas.gameObject.SetActive(false);
         _characterBehavior.OnDialogueEnd();
-        
+        _onDialogueEnd?.Invoke();
     }
 }

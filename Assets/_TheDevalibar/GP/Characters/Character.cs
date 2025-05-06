@@ -20,16 +20,10 @@ public class Character : ScriptableObject
     public int Affinity;
 
     [HideInInspector] public int NextAffinityValue = 75;
-
-    [Header("First Dialogue")]
-    public bool IsFirstDialogue = true;
-    [SerializedDictionary("LanguageCode", "DialogueContainer")]
-    public SerializedDictionary<CodeLanguage, DialogueContainer> FirstDialogueContainerFromLanguageCode;
-    public Sprite FirstDialogueSprite;
-
-    [FormerlySerializedAs("DaysDialogue")] [Header("Days Dialogues")]
-    public List<Day> Dialogues;
     
+    [Header("Dialogues")]
+    public List<Day> Dialogues;
+    public int DialogueIndex = 0;
     
     public ConstraintBoolDictionary constraintDict = new ConstraintBoolDictionary();
     
@@ -38,7 +32,7 @@ public class Character : ScriptableObject
         return null;
     }
 
-    public DialogueContainer GetCharacterDialogue(int DialogueIndex, CodeLanguage language = CodeLanguage.English )
+    public DialogueContainer GetCharacterDialogue(CodeLanguage language = CodeLanguage.English )
     {
         if (!AffinityManager)
         {
@@ -46,7 +40,7 @@ public class Character : ScriptableObject
             return null;
         }
 
-        if (DialogueIndex - 1 >= Dialogues.Count || DialogueIndex - 1 < 0) 
+        if (DialogueIndex >= Dialogues.Count || DialogueIndex < 0) 
         {
             Debug.LogWarning($"DayIndex {DialogueIndex} is out of range!");
             return null;
@@ -56,7 +50,7 @@ public class Character : ScriptableObject
         {
             if (IsInRange(Affinity, mood.Range))
             {
-                DialogueAffinity dialogueAffinity = Dialogues[DialogueIndex - 1].Dialogues.FirstOrDefault(x => x.AffinityName == mood.Name);
+                DialogueAffinity dialogueAffinity = Dialogues[DialogueIndex].Dialogues.FirstOrDefault(x => x.AffinityName == mood.Name);
                 if (dialogueAffinity.DialogueContainerFromLanguageCode.ContainsKey(language))
                 {
                     DialogueContainer dialogueContainer = dialogueAffinity.DialogueContainerFromLanguageCode[language];

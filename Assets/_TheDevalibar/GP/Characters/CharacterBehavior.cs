@@ -5,6 +5,7 @@ using System.Linq;
 using _TheDevalibar.GP.Characters;
 using AYellowpaper.SerializedCollections;
 using MyUtilities;
+using NaughtyAttributes;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -15,24 +16,35 @@ public class CharacterBehavior : MonoBehaviour
 {
 
 
-    [SerializeField] private Character character;
-    public Character Character => character;
+    [FormerlySerializedAs("character")]
+    [Header("Character Behavior")]
+    [SerializeField] private Character _character;
+    public Character Character => _character;
+    [SerializeField, ReadOnly] private string _characterDisability;
+    private bool _isCharacterAssigned => _character != null;
+
+    [SerializeField, Range(0, 100), HideIf("_isCharacterAssigned")]
+    private float _disabilityChance = 20;
     
     [Header("Dijkstra")]
-    [SerializeField] private NodeManager nodeManager;
-    [SerializeField] private DijkstraManager dijkstraManager;
-    [SerializeField] private DijkstraPathFollower dijkstraPathFollower;
+    [SerializeField] private NodeManager _nodeManager;
+    [SerializeField] private DijkstraManager _dijkstraManager;
+    [SerializeField] private DijkstraPathFollower _dijkstraPathFollower;
 
     [Header("WaitingTime")] 
     [SerializeField] private Vector2 _waitingTimeRange;
     private Coroutine _waitRoutine;
     private bool _interrupted = false;
 
-    [Header("Movement")] [SerializeField] private int _BarNodeId = 40;
+    [Header("Movement")] 
+    [SerializeField] private int _BarNodeId = 40;
+
+    [SerializeField] private int _BarExitNodeId = 1;
     [SerializeField, ReadOnly] private  int _startNodeIndex;
     [SerializeField, ReadOnly] private  int _lastNodeIndex;
     [SerializeField, ReadOnly] private  int _nextNodeIndex;
     private TablesManager _tablesManager;
+    private Table _usedTable;
     
     
     [Header("CharacterState")]
@@ -49,39 +61,63 @@ public class CharacterBehavior : MonoBehaviour
 #region OnEnable/OnDisable
     public void OnEnable()
     {
-        if (dijkstraPathFollower)
+        if (_dijkstraPathFollower)
         {
-            dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
+            _dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
         }
     }
 
     public void OnDisable()
     {
-        if (dijkstraPathFollower)
+        if (_dijkstraPathFollower)
         {
-            dijkstraPathFollower.OnFollowPathEnd -= HandlePathEnd;
+            _dijkstraPathFollower.OnFollowPathEnd -= HandlePathEnd;
         }
     }
 #endregion
 
-    void Start()
+    public void Initialize(Character character)
     {
-        if (!dijkstraManager)
+        _character = character;
+    }
+
+    public void SetCharacterDisabilities()
+    {
+        if (_character)
         {
-            dijkstraManager = ServiceLocator.Get<DijkstraManager>();
-            if (dijkstraPathFollower)
+            _characterDisability = _character.constraintDict.keys
+                .Select((key, i) => new { key, isActive = _character.constraintDict.values[i] })
+                .FirstOrDefault(x => x.isActive)?.key ?? "";
+        }
+        else
+        {
+            float randomNumber = UnityEngine.Random.Range(0, 100);
+            if (randomNumber <= _disabilityChance)
             {
-                dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
+                if (!_nodeManager) _nodeManager = ServiceLocator.Get<NodeManager>();
+                int randomDisabiltyIndex = UnityEngine.Random.Range(0, _nodeManager.constraints.Count-1);
+                _characterDisability = _nodeManager.constraints[randomDisabiltyIndex].name;
             }
         }
-        if (!nodeManager)
+    }
+    void Start()
+    {
+        if (!_dijkstraManager)
         {
-            nodeManager = ServiceLocator.Get<NodeManager>();
+            _dijkstraManager = ServiceLocator.Get<DijkstraManager>();
+            if (_dijkstraPathFollower)
+            {
+                _dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
+            }
+        }
+        if (!_nodeManager)
+        {
+            _nodeManager = ServiceLocator.Get<NodeManager>();
         }
 
-        if (!dijkstraPathFollower)
+        if (!_dijkstraPathFollower)
         {
-            dijkstraPathFollower = GetComponent<DijkstraPathFollower>();
+            _dijkstraPathFollower = GetComponent<DijkstraPathFollower>();
         }
 
         if (!_dialogueManager)
@@ -93,7 +129,8 @@ public class CharacterBehavior : MonoBehaviour
         _lastNodeIndex = _startNodeIndex;
         FeedBackImage.gameObject.SetActive(false);
         UpdateFeedBackImage();
-        if (character)
+        SetCharacterDisabilities();
+        if (_character)
         {
             MoveToBar();
         }
@@ -146,43 +183,46 @@ public class CharacterBehavior : MonoBehaviour
             {
                 Debug.Log("Waiting at the bar was interrupted.");
                 MoveToBarExit();
+                if (_usedTable)
+                {
+                    _usedTable.IsUsedByCustomer = false;
+                    _usedTable = null;
+                }
                 yield break;
             }
-
             elapsed += Time.deltaTime;
             yield return null;
         }
 
         Debug.Log("Finished waiting at the bar.");
         MoveToBarExit();
+        if (_usedTable)
+        {
+            _usedTable.IsUsedByCustomer = false;
+            _usedTable = null;
+        }
     }
-
 #endregion
     
     private void MoveToBar()
     {
-        nodeManager.SetNewStartAndEndNodes(_lastNodeIndex, _BarNodeId);
+        _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex, _BarNodeId);
         _lastNodeIndex = _BarNodeId;
-        dijkstraPathFollower.FollowPath();
+        _dijkstraPathFollower.FollowPath();
     }
+    
     private void MoveToBarExit()
     {
-        nodeManager.SetNewStartAndEndNodes(_lastNodeIndex, _startNodeIndex);
-        _lastNodeIndex = _startNodeIndex;
-        dijkstraPathFollower.FollowPath();
+        _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex, _BarExitNodeId);
+        _lastNodeIndex = _BarExitNodeId;
+        _dijkstraPathFollower.FollowPath();
         FeedBackImage.gameObject.SetActive(true);
     }
     
-    
     private void MoveToBestTable()
     {
-        // 1. Récupère le handicap actif (ou "" s’il n’y en a pas)
-        string characterDisability = character.constraintDict.keys
-            .Select((key, i) => new { key, isActive = character.constraintDict.values[i] })
-            .FirstOrDefault(x => x.isActive)?.key ?? "";
-
         //Récupère les tables accessibles (déjà triées par priorité)
-        List<Table> bestTables = _tablesManager.GetAccessibleTables(characterDisability);
+        List<Table> bestTables = _tablesManager.GetAccessibleTables(_characterDisability);
 
         if (bestTables.Count == 0)
         {
@@ -194,17 +234,18 @@ public class CharacterBehavior : MonoBehaviour
 
         // 3. Détermine la meilleure table selon la distance
         Table bestTable = bestTables
-            .OrderBy(t => Vector3.Distance(transform.position, nodeManager.nodes[t.TableNumber].position))
+            .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNumber].position))
             .First();
         SetCustomerFeedback(bestTable);
         Debug.Log($"Best table chosen: {bestTable.name}");
 
         // Ex : déplacement vers la table
         _nextNodeIndex = bestTable.TableNumber;
-        dijkstraManager.EnableConstraint(characterDisability);
-        nodeManager.SetNewStartAndEndNodes(_lastNodeIndex,  _nextNodeIndex);
-        dijkstraPathFollower.FollowPath();
-        bestTable.IsUsedByCustomer = true;
+        _dijkstraManager.EnableConstraint(_characterDisability);
+        _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex,  _nextNodeIndex);
+        _dijkstraPathFollower.FollowPath();
+        _usedTable = bestTable;
+        _usedTable.IsUsedByCustomer = true;
         _lastNodeIndex = _nextNodeIndex;
     }
 
@@ -217,19 +258,15 @@ public class CharacterBehavior : MonoBehaviour
             return;
         }
 
-        string characterDisability = character.constraintDict.keys
-            .Select((key, i) => new { key, isActive = character.constraintDict.values[i] })
-            .FirstOrDefault(x => x.isActive)?.key ?? "";
-
         // Aucun handicap → satisfait
-        if (string.IsNullOrEmpty(characterDisability))
+        if (string.IsNullOrEmpty(_characterDisability))
         {
             _customerFeedback = CustomersFeedback.Good;
             return;
         }
 
         // Handicap présent → vérifie si table adaptée
-        bool isTableAdapted = table.constraintDict.ContainsKey(characterDisability) && table.constraintDict[characterDisability];
+        bool isTableAdapted = table.constraintDict.ContainsKey(_characterDisability) && table.constraintDict[_characterDisability];
 
         _customerFeedback = isTableAdapted ? CustomersFeedback.Good : CustomersFeedback.Average;
         UpdateFeedBackImage();
@@ -285,9 +322,10 @@ public class CharacterBehavior : MonoBehaviour
             _dialogueManager.InitCharacterDialogue(this, false, CodeLanguage.English);
             
         }
-        else if (_lastNodeIndex == _startNodeIndex)
+        else if (_lastNodeIndex == _BarExitNodeId)
         {
             _characterState = CharacterState.Idle;
+            Destroy(gameObject);
         }
         else
         {
