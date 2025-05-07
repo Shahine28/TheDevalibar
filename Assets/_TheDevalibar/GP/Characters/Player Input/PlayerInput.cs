@@ -10,8 +10,8 @@ public class PlayerInput : MonoBehaviour, IPointerDownHandler
     [SerializeField] InputActionReference _click;
     [SerializeField] InputActionReference _joystickMove;
 
-    [Header("Player Param")]
-    [SerializeField] float speed;
+    //[Header("Player Param")]
+    //[SerializeField] float speed;
 
     [Header("Cursor")]
     [SerializeField] GameObject _cursor;
@@ -38,11 +38,12 @@ public class PlayerInput : MonoBehaviour, IPointerDownHandler
 
     private void OnClick(InputAction.CallbackContext ctx)
     {
-        var dir = ctx.ReadValue<Vector3>();
+        var dir = ctx.ReadValue<Vector2>();
         RaycastHit hit;
         if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
         {
             //_agent.destination = hit.point;
+            Debug.Log("test");
         }
     }
 
