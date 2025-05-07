@@ -130,8 +130,9 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _HighlightBrightness: 1
-    - _HighlightRange: 32
-    - _IfHighLight: 1
+    - _HighlightRange: 16
+    - _IfHighLight: 0
+    - _IfLineShadow: 1
     - _LayerCounts: 4
     - _Metallic: 0
     - _OcclusionStrength: 1
@@ -152,7 +153,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
-    - _ShadowDensity: {r: 4, g: 4, b: 0, a: 0}
+    - _ShadowDensity: {r: 8, g: 8, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
