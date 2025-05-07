@@ -35,6 +35,7 @@ public class CharacterBehavior : MonoBehaviour
     [SerializeField] private Vector2 _waitingTimeRange;
     private Coroutine _waitRoutine;
     private bool _interrupted = false;
+    private bool _isPaused = false;
 
     [Header("Movement")] 
     [SerializeField] private int _BarNodeId = 40;
@@ -123,6 +124,8 @@ public class CharacterBehavior : MonoBehaviour
         if (!_dialogueManager)
         {
             _dialogueManager = ServiceLocator.Get<DialogueManager>();
+            _dialogueManager._onDialogueStart += PauseWaiting;
+            _dialogueManager._onDialogueEnd += ResumeWaiting;
         }
         _tablesManager = ServiceLocator.Get<TablesManager>();
         _startNodeIndex = GetClosestNode();
@@ -138,6 +141,7 @@ public class CharacterBehavior : MonoBehaviour
         {
             MoveToBestTable();
         }
+        
     }
     
     private int GetClosestNode()
@@ -164,6 +168,21 @@ public class CharacterBehavior : MonoBehaviour
         _waitRoutine = StartCoroutine(WaitAtTheBar());
     }
 
+    public void PauseWaiting()
+    {
+        if (_waitRoutine != null)
+        {
+            _isPaused = true;
+        }
+    }
+
+    public void ResumeWaiting()
+    {
+        if (_waitRoutine != null && _isPaused)
+        {
+            _isPaused = false;
+        }
+    }
     public void CancelWaiting()
     {
         _interrupted = true;
@@ -179,6 +198,7 @@ public class CharacterBehavior : MonoBehaviour
 
         while (elapsed < waitTime)
         {
+            while (_isPaused) yield return null;
             if (_interrupted)
             {
                 Debug.Log("Waiting at the bar was interrupted.");
@@ -311,6 +331,23 @@ public class CharacterBehavior : MonoBehaviour
         }
     }
 
+    private int GetTipValue()
+    {
+        switch (_customerFeedback)
+        {
+            case CustomersFeedback.Good:
+                return _characterFeedback.GoodTipsValue;
+            case CustomersFeedback.Average:
+                return _characterFeedback.AverageTipsValue;
+            case CustomersFeedback.Bad:
+                return _characterFeedback.BadTipsValue;
+            default:
+                break;
+        }
+
+        return 0;
+    }
+
 
     private void HandlePathEnd()
     {
@@ -325,6 +362,17 @@ public class CharacterBehavior : MonoBehaviour
         else if (_lastNodeIndex == _BarExitNodeId)
         {
             _characterState = CharacterState.Idle;
+            CharacterSpawnManager spawnManager = ServiceLocator.Get<CharacterSpawnManager>();
+            if (spawnManager && spawnManager.HaveAllCharactersAndNCPBeenSpawned && spawnManager.CharacterSpawnPoint.childCount.Equals(1))
+            {
+                _tablesManager.ShowUpgradeButtonTables();
+            }
+            GameManager gameManager = ServiceLocator.Get<GameManager>();
+            if (gameManager)
+            {
+                gameManager.gameData.Gold += GetTipValue();
+                gameManager.UpdateGoldValue();
+            }
             Destroy(gameObject);
         }
         else

@@ -15,8 +15,10 @@ public class CharacterSpawnManager : MonoBehaviour
     [Header("Character & NPC GameObjects")]
     [SerializeField] private GameObject _characterGameObject;
     [SerializeField] private GameObject _NPCGameObject;
-    
+    private bool _haveAllCharactersAndNCPBeenSpawned;
+    public bool HaveAllCharactersAndNCPBeenSpawned => _haveAllCharactersAndNCPBeenSpawned;
     [SerializeField] private Transform _characterSpawnPoint;
+    public Transform CharacterSpawnPoint => _characterSpawnPoint;
 
     [Header("Delay between spawning")]
     [SerializeField] private float _characterSpawnDelayInSeconds;
@@ -24,6 +26,8 @@ public class CharacterSpawnManager : MonoBehaviour
     private bool _isPaused;
     
     public event Action OnSpawnFinished;
+    
+    
 
     void Awake()
     {
@@ -51,6 +55,7 @@ public class CharacterSpawnManager : MonoBehaviour
         if (_delayCoroutine == null)
         {
             _isPaused = false;
+            _haveAllCharactersAndNCPBeenSpawned = false;
             _delayCoroutine = StartCoroutine(SpawningCharacterAndNPC());
         }
     }
@@ -94,6 +99,7 @@ public class CharacterSpawnManager : MonoBehaviour
         }
 
         _delayCoroutine = null; // Permet de redémarrer plus tard si besoin
+        _haveAllCharactersAndNCPBeenSpawned = true;
         Debug.Log("All characters and NPCs spawned for this day.");
     }
 
@@ -131,7 +137,7 @@ public class CharacterSpawnManager : MonoBehaviour
             return;
         }
 
-        GameObject characterInstance = Instantiate(_characterGameObject, _characterSpawnPoint.position, _characterSpawnPoint.rotation);
+        GameObject characterInstance = Instantiate(_characterGameObject, _characterSpawnPoint.position, _characterSpawnPoint.rotation,  _characterSpawnPoint);
         CharacterBehavior characterBehavior = characterInstance.GetComponent<CharacterBehavior>();
         if (characterBehavior != null)
         {
@@ -149,7 +155,7 @@ public class CharacterSpawnManager : MonoBehaviour
             return;
         }
 
-        Instantiate(_NPCGameObject, _characterSpawnPoint.position, _characterSpawnPoint.rotation);
+        Instantiate(_NPCGameObject, _characterSpawnPoint.position, _characterSpawnPoint.rotation,  _characterSpawnPoint);
         _NPCCount++;
         Debug.Log("NPC spawned.");
     }

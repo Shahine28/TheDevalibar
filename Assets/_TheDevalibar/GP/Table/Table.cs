@@ -2,6 +2,7 @@ using System;
 using MyUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Table : MonoBehaviour
 {
@@ -10,11 +11,14 @@ public class Table : MonoBehaviour
     [SerializeField, ReadOnly] private int _tableNumber = -1;
     
     public int TableNumber => _tableNumber;
-    
+
+    [SerializeField] private Button _upgradeButton;
     // Dictionnaire pour gérer les contraintes activées/désactivées
     public ConstraintBoolDictionary constraintDict = new ConstraintBoolDictionary();
     
     public bool IsUsedByCustomer  = false;
+    
+    
 
     void Awake()
     {
@@ -23,6 +27,7 @@ public class Table : MonoBehaviour
     void Start()
     {
         SetTableNode();
+        HideUpgradeButton();
     }
 
     // Update is called once per frame
@@ -31,7 +36,15 @@ public class Table : MonoBehaviour
         
     }
 
+    public void ShowUpgradeButton()
+    {
+        _upgradeButton?.gameObject.SetActive(true);
+    }
 
+    public void HideUpgradeButton()
+    {
+        _upgradeButton?.gameObject.SetActive(false);
+    }
     public void SetTableNode()
     {
         NodeManager nodeManager = ServiceLocator.Get<NodeManager>();

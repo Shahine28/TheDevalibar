@@ -25,6 +25,21 @@ public class TablesManager : MonoBehaviour
         
     }
 
+    public void HideUpgradeButtonTables()
+    {
+        foreach (Table table in Tables)
+        {
+           table.HideUpgradeButton(); 
+        }
+    }
+
+    public void ShowUpgradeButtonTables()
+    {
+        foreach (Table table in Tables)
+        {
+            table.ShowUpgradeButton();
+        }
+    }
     public List<Table> GetAccessibleTables(string CharacterDisability = "")
     {
         if (Tables[0].TableNumber == -1)

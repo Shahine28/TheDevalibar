@@ -10,7 +10,6 @@ using Event = UnityEngine.Event;
 #if UNITY_EDITOR
 using UnityEditor;
 
-
 [CustomEditor(typeof(NodeManager))]
 public class NodeEditor : Editor
 {
@@ -195,8 +194,14 @@ public class NodeEditor : Editor
             }
 
             // Gizmo : sphère bleue pour représenter le nœud
+            float zoomScale = HandleUtility.GetHandleSize(n.position);
+            float baseSize = 0.7f;
+
+            // Limite la taille min et max pour ne pas disparaître ou devenir géant
+            float clampedSize = Mathf.Clamp(baseSize / zoomScale, 0.8f, 0.2f);
+
             Handles.color = n.isStartNode ? Color.green : n.isEndNode ? Color.red : Color.blue;
-            Handles.SphereHandleCap(0, n.position, Quaternion.identity, 0.7f, EventType.Repaint);
+            Handles.SphereHandleCap(0, n.position, Quaternion.identity, clampedSize, EventType.Repaint);
             
             // Initialisation de l'identifiant unique du Node si pas déjà fait
             if (n.NodeID == -1)
