@@ -49,16 +49,40 @@ public class TablesManager : MonoBehaviour
                 table.SetTableNode();
             }
         }
+        NodeManager nodeManager = ServiceLocator.Get<NodeManager>();
         // 0. Aucun handicap ➜ règle classique
         if (CharacterDisability == "")
         {
             return Tables
                 .Where(t => !t.IsUsedByCustomer)
-                .OrderBy(t => t.constraintDict.values.Any(v => !v)) // tables sans contrainte d'abord
+                .OrderBy(t =>
+                {
+                    int blockingCount = 0;
+                    int nonBlockingCount = 0;
+
+                    foreach (var key in t.constraintDict.keys)
+                    {
+                        var constraint = nodeManager.constraints.FirstOrDefault(c => c.name == key);
+                        if (constraint != null)
+                        {
+                            if (constraint.IsBlockingConstraint)
+                                blockingCount++;
+                            else
+                                nonBlockingCount++;
+                        }
+                    }
+
+                    return (
+                        blockingCount > 0 ? 2 : nonBlockingCount > 0 ? 1 : 0, // 0: aucune contrainte, 1: non bloquantes, 2: bloquantes
+                        blockingCount,
+                        nonBlockingCount
+                    );
+                })
                 .ToList();
         }
 
-        NodeManager nodeManager = ServiceLocator.Get<NodeManager>();
+
+        
         if (!nodeManager) return null;
         Constraint constraint = nodeManager.constraints
             .FirstOrDefault(c => c.name == CharacterDisability);
@@ -108,7 +132,4 @@ public class TablesManager : MonoBehaviour
             .ToList();
         
     }
-
-
-
 }

@@ -8,4 +8,5 @@ public class Upgrade : ScriptableObject
     [TextArea] public string UpgradeDescription;
     public int UpgradeCost;
     public ConstraintBoolDictionary AccessibiltiesToAddWithUpgrade;
+    public bool IsPurchased;
 }
