@@ -208,6 +208,8 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             if (m_BindingText != null)
                 m_BindingText.text = displayString;
 
+
+
             // Give listeners a chance to configure UI in response.
             m_UpdateBindingUIEvent?.Invoke(this, displayString, deviceLayoutName, controlPath);
         }

@@ -2,53 +2,115 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using NaughtyAttributes;
+using UnityEngine.TextCore.Text;
+using FontStyles = TMPro.FontStyles;
 
 public class TextResizer : MonoBehaviour
 {
     [Header("UI Text")]
     [SerializeField] TextMeshProUGUI _UIText;
+    [SerializeField] Color _UITextColor;
+
+    [Header("UI Text param")]
     [RangeAttribute(0,100)]
     [SerializeField] int _UITextSize;
+    [SerializeField] float _UIspaceInbetweenLetter;
+    [SerializeField] float _UISpaceBetweenWord;
 
     [Header("World Text")]
-    [SerializeField] TextMeshPro _WorldText;
-    [RangeAttribute(0, 100)]
-    [SerializeField] int _WorldTextSize;
-   
+    [SerializeField] TextMeshPro _worldText;
 
+    [Header("World Text param")]
+    [RangeAttribute(0, 100)]
+    [SerializeField] int _worldTextSize;
+    [SerializeField] float _worldSpaceInbetweenLetter;
+    [SerializeField] float _worldSpaceBetweenWord;
+
+    [Header("FontStyle")]
+    [SerializeField] TMP_FontAsset _openDys;
+    [SerializeField] TMP_FontAsset _robotCondensed;
 
     void Start()
     {
-        _WorldText.fontSize = _WorldTextSize;
+        _worldText.fontSize = _worldTextSize;
         _UIText.fontSize = _UITextSize;
     }
 
     void Update()
     {
-        if (_WorldText.fontSize != _WorldTextSize || _UIText.fontSize != _UITextSize)
+        var allUIText = FindObjectsByType<TextMeshProUGUI>(FindObjectsInactive.Include, FindObjectsSortMode.None); //get all TextMeshProUGUI
+        foreach (var text in allUIText)
         {
-            _WorldText.fontSize = _WorldTextSize;
-            _UIText.fontSize = _UITextSize;
+            text.fontSize = _UITextSize; //change UI text size
         }
-        else if (_WorldTextSize > 100 || _WorldTextSize < 0 || _UITextSize > 100 || _UITextSize < 0)
+
+        var allWorldText = FindObjectsByType<TextMeshPro>(FindObjectsInactive.Include, FindObjectsSortMode.None); // get all TextMeshPro
+        foreach (var text in allWorldText)
         {
-            _WorldTextSize = Mathf.Clamp(_WorldTextSize, 0, 100);
+            text.fontSize = _worldTextSize; // change non UI Text size
+        }
+
+        //----- clamp the max and min size of a text -----//
+        if (_worldTextSize > 100 || _worldTextSize < 0 || _UITextSize > 100 || _UITextSize < 0)
+        {
+            _worldTextSize = Mathf.Clamp(_worldTextSize, 0, 100);
             _UITextSize = Mathf.Clamp(_UITextSize, 0, 100);
         }
+
+        //----- Text Color ----//
+        //_UITextColor
+        //---- Text Spacing settings ----//
+        _UIText.characterSpacing = _UIspaceInbetweenLetter;
+        _UIText.wordSpacing = _UISpaceBetweenWord;
+        _worldText.characterSpacing = _worldSpaceInbetweenLetter;
+        _worldText.wordSpacing = _worldSpaceBetweenWord;
     }
 
     [Button]
     public void OnBoldText()
     {
-        if (_WorldText.fontStyle != FontStyles.Bold || _UIText.fontStyle != FontStyles.Bold) 
+        var allUIText = FindObjectsByType<TextMeshProUGUI>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (var text in allUIText)
         {
-            _WorldText.fontStyle = FontStyles.Bold;
-            _UIText.fontStyle = FontStyles.Bold;
+            text.fontStyle = FontStyles.Bold;
+            if(text.fontStyle == FontStyles.Bold) { text.fontStyle = FontStyles.Normal; }
         }
-        else
+
+        var allWorldText = FindObjectsByType<TextMeshPro>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (var text in allWorldText)
         {
-            _WorldText.fontStyle = FontStyles.Normal;
-            _UIText.fontStyle = FontStyles.Normal;
+            text.fontStyle = FontStyles.Bold;
+            if (text.fontStyle == FontStyles.Bold) { text.fontStyle = FontStyles.Normal; }
+        }
+    }
+
+    [Button]
+    public void ChangeFontToOpenDyslexique()
+    {
+        var allUIText = FindObjectsByType<TextMeshPro>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (var text in allUIText)
+        {
+            text.font = _openDys; // change non UI Text font style
+        }
+        var allWorldText = FindObjectsByType<TextMeshPro>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach(var text in allWorldText)
+        {
+            text.font = _openDys; // change non UI Text font style
+        }        
+    }
+
+    [Button]
+    public void ChangeFontToRoboCondensed()
+    {
+        var allUIText = FindObjectsByType<TextMeshPro>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (var text in allUIText)
+        {
+            text.font = _robotCondensed;
+        }
+        var allWorldText = FindObjectsByType<TextMeshPro>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (var text in allWorldText)
+        {
+            text.font = _robotCondensed;
         }
     }
 }
