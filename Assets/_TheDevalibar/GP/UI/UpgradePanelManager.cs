@@ -1,17 +1,21 @@
 using System.Collections.Generic;
+using System.Linq;
 using MyUtilities;
 using UnityEngine;
 
 public class UpgradePanelManager : MonoBehaviour
 {
-    [SerializeField, ReadOnly] private List<UpgradePanel> upgradePanels = new List<UpgradePanel>();
+    [SerializeField, ReadOnly] private List<UpgradePanel> _upgradePanels = new List<UpgradePanel>();
 
     private UpgradePanel currentUpgradePanel;
     private Coroutine _currentUpgradePanelCoroutine;
+    [SerializeField] private GameObject _upgradePanelPrefab;
+    private TablesManager _tablesManager;
+    
     void Awake()
     {
         ServiceLocator.Register(this);
-        upgradePanels.Clear();
+        ClearUpgradePanels();
     }
 
     private void ResetCurrentUpgradePanel(UpgradePanel upgradePanel)
@@ -55,19 +59,64 @@ public class UpgradePanelManager : MonoBehaviour
         }
     }
 
-
-    public void AddUpgradePanel(UpgradePanel upgradePanel)
+    public void ClearUpgradePanels()
     {
-        upgradePanels.Add(upgradePanel);
+        _upgradePanels.Clear();
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+    }
+    public void SetUpTableUpgradePanels(Table table)
+    {
+        if (table == null || _upgradePanelPrefab == null)
+        {
+            Debug.LogError("Table is null or no upgrade panel prefab found!");
+            return;
+        }
+
+        ClearUpgradePanels(); // pour éviter les doublons
+
+        for (int i = 0; i < table.PurchasedTableUpgrades.Count; i++)
+        {
+            if (table.PurchasedTableUpgrades.Keys.ToList()[i] == null) continue;
+            if (table.PurchasedTableUpgrades[table.PurchasedTableUpgrades.Keys.ToList()[i]] == true) continue;
+            GameObject instance = Instantiate(_upgradePanelPrefab, transform);
+            if (!instance)
+            {
+                Debug.LogWarning($"UpgradePanel prefab instantiation failed at index {i}");
+                continue;
+            }
+            
+            UpgradePanel upgradePanel = instance.transform.GetChild(0).GetComponent<UpgradePanel>();
+            if (!upgradePanel)
+            {
+                Debug.LogWarning($"No UpgradePanel component found on instance at index {i}");
+                Destroy(instance); // nettoyage
+                continue;
+            }
+
+            upgradePanel.SetUpPanel(table.PurchasedTableUpgrades.Keys.ToList()[i], table);
+            _upgradePanels.Add(upgradePanel);
+        }
     }
 
-    public void RemoveUpgradePanel(UpgradePanel upgradePanel)
-    {
-        upgradePanels.Remove(upgradePanel);
-    }
+
+    // public void StartSetUp()
+    // {
+    //     SetUpTableUpgradePanels(_tablesManager.Tables[0]);
+    // }
     void Start()
     {
-        
+        // _tablesManager = ServiceLocator.Get<TablesManager>();
+        // if (!_tablesManager)
+        // {
+        //     Debug.LogWarning("There is no TablesManager in the scene.");
+        // }
+        // else
+        // {
+        //     _tablesManager.OnTablesIDSetUp += StartSetUp;
+        // }
     }
 
     // Update is called once per frame

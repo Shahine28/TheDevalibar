@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using NaughtyAttributes;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Upgrade", menuName = "Scriptable Objects/Upgrade")]
@@ -10,9 +11,9 @@ public class Upgrade : ScriptableObject
     [TextArea] public string UpgradeDescription;
     public int UpgradeCost;
     public ConstraintBoolDictionary AccessibiltiesToAddWithUpgrade;
-    public Mesh NewUpgradeTableMesh;
-    public Mesh NewUpgradeChairMesh;
-    public bool IsPurchased;
+
+
+    
 
     /// <summary>
     /// Get First Upgrade 
@@ -32,7 +33,6 @@ public class Upgrade : ScriptableObject
             .Where((key, i) => i < AccessibiltiesToAddWithUpgrade.values.Count && AccessibiltiesToAddWithUpgrade.values[i])
             .ToList();
     }
-
-    public void BuyUpgrade() => IsPurchased = true;
+    
 
 }

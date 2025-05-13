@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f229c915b002ed44bb45f812f39e9ba2, type: 3}
-  m_Name: ElevatorType2 1
+  m_Script: {fileID: 11500000, guid: 13f1edc776b448f9bc3401150e361524, type: 3}
+  m_Name: ElevatorType3
   m_EditorClassIdentifier: 
-  UpgradeSprite: {fileID: 21300000, guid: 3c10b3af839666446b885b4f4d08c900, type: 3}
-  UpgradeName: Ascenseur de Type 3
-  UpgradeDescription: "Ce mod\xE8le d'une charge de 450kg, peut accueillir un ou
-    plusieurs passagers en plus d'un fauteuil roulant"
-  UpgradeCost: 45000
+  UpgradeSprite: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
+  UpgradeName: Ascenceur Type 3
+  UpgradeDescription: "Ce mod\xE8le d'une charge de 750kg, peut accueillir un ou
+    plusieurs passagers en plus d'un fauteuil roulant ou deux fauteuils roulants"
+  UpgradeCost: 25000
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "Mobilit\xE9"
@@ -30,4 +30,10 @@ MonoBehaviour:
     - "Troubles cognitifs l\xE9gers"
     - Troubles dermatologiques
     values: 01000000000000000000
-  IsPurchased: 0
+  useless: 
+  NewUpgradeTableMesh: {fileID: 0}
+  NewUpgradeTableMaterial: {fileID: 0}
+  NewUpgradeChair1Mesh: {fileID: 0}
+  NewUpgradeChair1Material: {fileID: 0}
+  NewUpgradeChair2Mesh: {fileID: 0}
+  NewUpgradeChair2Material: {fileID: 0}

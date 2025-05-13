@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f229c915b002ed44bb45f812f39e9ba2, type: 3}
-  m_Name: ElevatorType2
+  m_Script: {fileID: 11500000, guid: 13f1edc776b448f9bc3401150e361524, type: 3}
+  m_Name: TableSympa
   m_EditorClassIdentifier: 
-  UpgradeSprite: {fileID: 21300000, guid: fb728e0b81874844cac836fdde42e401, type: 3}
-  UpgradeName: Ascenseur de Type 2
-  UpgradeDescription: "Ce mod\xE8le d'une charge de 450kg, peut accueillir un ou
-    plusieurs passagers en plus d'un fauteuil roulant"
-  UpgradeCost: 30000
+  UpgradeSprite: {fileID: 21300000, guid: 7d9a3ad4050ec33478dcac63e1fcc7cd, type: 3}
+  UpgradeName: Table Sympa
+  UpgradeDescription: Table Sympa qui rend tout le monde sympa
+  UpgradeCost: 250000
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "Mobilit\xE9"
@@ -29,5 +28,11 @@ MonoBehaviour:
     - "Allergies s\xE9v\xE8res"
     - "Troubles cognitifs l\xE9gers"
     - Troubles dermatologiques
-    values: 01000000000000000000
-  IsPurchased: 0
+    values: 01010101010100000000
+  useless: 
+  NewUpgradeTableMesh: {fileID: 0}
+  NewUpgradeTableMaterial: {fileID: 0}
+  NewUpgradeChair1Mesh: {fileID: 0}
+  NewUpgradeChair1Material: {fileID: 0}
+  NewUpgradeChair2Mesh: {fileID: 0}
+  NewUpgradeChair2Material: {fileID: 0}

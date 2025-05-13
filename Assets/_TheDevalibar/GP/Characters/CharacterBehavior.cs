@@ -14,8 +14,6 @@ using Random = Unity.Mathematics.Random;
 
 public class CharacterBehavior : MonoBehaviour
 {
-
-
     [FormerlySerializedAs("character")]
     [Header("Character Behavior")]
     [SerializeField] private Character _character;
@@ -280,7 +278,7 @@ public class CharacterBehavior : MonoBehaviour
                 {
                     List<Table> tables = new List<Table> { firstTable, secondTable };
                     bestTable = tables
-                        .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNumber].position))
+                        .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNodeNumber].position))
                         .First();
                 }
                 else
@@ -313,7 +311,7 @@ public class CharacterBehavior : MonoBehaviour
                     {
                         List<Table> tables = new List<Table> { firstTable, secondTable };
                         bestTable = tables
-                            .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNumber].position))
+                            .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNodeNumber].position))
                             .First();
                     }
                     else
@@ -326,7 +324,7 @@ public class CharacterBehavior : MonoBehaviour
                 {
                     // Ma liste ne contient forcément que des tables adapté au handicap bloquant et disponible
                     bestTable = bestTables
-                        .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNumber].position))
+                        .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNodeNumber].position))
                         .First();
                 }
             }
@@ -337,7 +335,7 @@ public class CharacterBehavior : MonoBehaviour
         Debug.Log($"Best table chosen: {bestTable.name}");
 
         // Ex : déplacement vers la table
-        _nextNodeIndex = bestTable.TableNumber;
+        _nextNodeIndex = bestTable.TableNodeNumber;
         _dijkstraManager.EnableConstraint(_characterDisability);
         _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex,  _nextNodeIndex);
         _dijkstraPathFollower.FollowPath();

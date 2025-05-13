@@ -1,13 +1,16 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using MyUtilities;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
+
 
 public class TablesManager : MonoBehaviour
 {
-    [SerializeField] private List<Table> Tables;
-
+    [SerializeField] private List<Table> _tables;
+    public List<Table> Tables => _tables;
+    public event Action OnTablesIDSetUp;
     void Awake()
     {
         ServiceLocator.Register(this);
@@ -16,7 +19,7 @@ public class TablesManager : MonoBehaviour
 
     public void HideUpgradeButtonTables()
     {
-        foreach (Table table in Tables)
+        foreach (Table table in _tables)
         {
            table.HideUpgradeButton(); 
         }
@@ -24,25 +27,30 @@ public class TablesManager : MonoBehaviour
 
     public void ShowUpgradeButtonTables()
     {
-        foreach (Table table in Tables)
+        foreach (Table table in _tables)
         {
             table.ShowUpgradeButton();
         }
     }
+
+    public void InvokeOnTablesIDSetUp()
+    {
+        OnTablesIDSetUp?.Invoke();
+    }
     public List<Table> GetAccessibleTables(string CharacterDisability = "")
     {
-        if (Tables[0].TableNumber == -1)
+        if (_tables[0].TableNodeNumber == -1)
         {
-            foreach (Table table in Tables)
+            for (int i = 0; i < _tables.Count; i++)
             {
-                table.SetTableNode();
+                _tables[i].SetTableNode(i);
             }
         }
         NodeManager nodeManager = ServiceLocator.Get<NodeManager>();
         // 0. Aucun handicap ➜ règle classique
         if (CharacterDisability == "")
         {
-            return Tables
+            return _tables
                 .Where(t => !t.IsUsedByCustomer)
                 .OrderBy(t =>
                 {
@@ -79,7 +87,7 @@ public class TablesManager : MonoBehaviour
         bool isBlocking = constraint != null && constraint.IsBlockingConstraint;
 
         // 2. Sélectionne les tables libres + si elles supportent la contrainte
-        var matchingTables = Tables
+        var matchingTables = _tables
             .Where(t => !t.IsUsedByCustomer)
             .Select(table =>
             {

@@ -26,6 +26,13 @@ public class UpgradePanel : MonoBehaviour
     public bool IsPanelTransitioning { get; private set; }
     private UpgradePanelManager _upgradePanelManager;
     
+    [Header("Upgrade")]
+    [SerializeField, ReadOnly] private Upgrade _currentUpgrade;
+    private ObjectType _currentObjectType;
+    [SerializeField, ReadOnly] private Table _currentTable;
+    
+    private GameManager _gameManager;
+    
     
     public IEnumerator MoveUpgradePanelCoroutine()
     {
@@ -59,7 +66,7 @@ public class UpgradePanel : MonoBehaviour
         IsPanelTransitioning = false;
     }
 
-    public void SetUpPanel(Upgrade upgrade)
+    public void SetUpPanel(Upgrade upgrade, Table table = null)
     {
         if (!upgrade)
         {
@@ -70,9 +77,68 @@ public class UpgradePanel : MonoBehaviour
         _upgradeTitleText.text = upgrade.UpgradeName;
         _upgradeDescriptionText.text = upgrade.UpgradeDescription;
         _upgradePriceText.text = upgrade.UpgradeCost.ToString() + "€";
+        _currentUpgrade = upgrade;
+        if (table != null)
+        {
+            _currentObjectType = ObjectType.Table;
+            _currentTable = table;
+        }
+        
     }
-    
-    
+
+
+    private void TryBuyUpgrade()
+    {
+        if (_currentTable == null || _currentUpgrade == null)
+        {
+            Debug.LogError("The upgrade is null or the current table is null");
+            return;
+        }
+
+        if (_gameManager == null)
+        {
+            Debug.LogError("The game manager is null");
+            return;
+        }
+
+        if (_gameManager.gameData == null)
+        {
+            Debug.LogError("The game data is null");
+            return;
+        }
+
+        if (_gameManager.gameData.Gold >= _currentUpgrade.UpgradeCost)
+        {
+            _gameManager.gameData.Gold -= _currentUpgrade.UpgradeCost;
+            _gameManager.UpdateGoldValue();
+            switch (_currentObjectType)
+            {
+                case ObjectType.Table:
+                {
+                    if (_currentTable != null)
+                    {
+                        TableUpgrade tableUpgrade = _currentUpgrade as TableUpgrade;
+                        _currentTable.BuyUpgrade(tableUpgrade);
+                    }
+                    break;
+                }
+                case ObjectType.Stairs :
+                    break;
+                case ObjectType.Elevator:
+                    break;
+                case ObjectType.WC:
+                    break;
+                default:
+                    break;
+            }
+            
+            Destroy(gameObject.transform.parent.gameObject); // On détruit le panel quand il est acheté
+        }
+        else
+        {
+            Debug.LogWarning("The upgrade cost is out of range");
+        }
+    }
     
 
 
@@ -95,22 +161,25 @@ public class UpgradePanel : MonoBehaviour
     {
         _panelStartPosition = _upgradePanelRectTransform.anchoredPosition;
         _upgradePanelManager = ServiceLocator.Get<UpgradePanelManager>();
-        if (_upgradePanelManager)
-        {
-            _upgradePanelManager.AddUpgradePanel(this);
-        }
+        _gameManager = ServiceLocator.Get<GameManager>();
+        _buyUpgradeButton?.onClick.AddListener(TryBuyUpgrade);
     }
 
     void OnDestroy()
     {
-        if (_upgradePanelManager)
-        {
-            _upgradePanelManager.RemoveUpgradePanel(this);
-        }
     }
     // Update is called once per frame
     void Update()
     {
         
     }
+}
+
+public enum ObjectType
+{
+    None,
+    Table,
+    Stairs,
+    Elevator,
+    WC
 }
