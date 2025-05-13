@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 6109307883590305541}
   - component: {fileID: 3726257515661688090}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TableMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,6 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8785699763701547413}
   - component: {fileID: 194364402038393385}
+  - component: {fileID: 8076181417590245509}
   m_Layer: 0
   m_Name: Table&Chairs
   m_TagString: Untagged
@@ -319,7 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TableGameObject: {fileID: 3617300709660714605}
-  _tableNumber: -1
+  _tableNodeNumber: -1
+  _tableID: 0
   _upgradeButton: {fileID: 8578825517007200259}
   constraintDict:
     keys:
@@ -335,6 +337,35 @@ MonoBehaviour:
     - Troubles dermatologiques
     values: 01000000000000000000
   IsUsedByCustomer: 0
+  PurchasedTableUpgrades:
+    _serializedList: []
+  _tableMeshFilter: {fileID: 6109307883590305541}
+  _tableMeshRenderer: {fileID: 3726257515661688090}
+  _chairMesh1Filter: {fileID: 3521613363213056437}
+  _chairMeshRenderer1: {fileID: 8977888523242463528}
+  _chairMesh2Filter: {fileID: 7163325352750971814}
+  _chairMeshRenderer2: {fileID: 1064174150383114442}
+--- !u!65 &8076181417590245509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3617300709660714605}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5302615, y: 0.5383911, z: 1}
+  m_Center: {x: -0.003339539, y: -0.089775726, z: 0}
 --- !u!1 &4425701614627256205
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +410,7 @@ GameObject:
   - component: {fileID: 3521613363213056437}
   - component: {fileID: 8977888523242463528}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Chair1Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -465,7 +496,7 @@ GameObject:
   - component: {fileID: 7163325352750971814}
   - component: {fileID: 1064174150383114442}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Chair2Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
