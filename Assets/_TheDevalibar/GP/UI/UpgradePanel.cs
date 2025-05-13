@@ -59,6 +59,22 @@ public class UpgradePanel : MonoBehaviour
         IsPanelTransitioning = false;
     }
 
+    public void SetUpPanel(Upgrade upgrade)
+    {
+        if (!upgrade)
+        {
+            Debug.LogError("The upgrade is null");
+            return;
+        }
+        _upgradeImage.sprite = upgrade.UpgradeSprite;
+        _upgradeTitleText.text = upgrade.UpgradeName;
+        _upgradeDescriptionText.text = upgrade.UpgradeDescription;
+        _upgradePriceText.text = upgrade.UpgradeCost.ToString() + "€";
+    }
+    
+    
+    
+
 
     public void MoveUpgradePanel()
     {

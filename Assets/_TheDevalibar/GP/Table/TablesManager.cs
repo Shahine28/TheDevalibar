@@ -12,18 +12,7 @@ public class TablesManager : MonoBehaviour
     {
         ServiceLocator.Register(this);
     }
-   
     
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void HideUpgradeButtonTables()
     {

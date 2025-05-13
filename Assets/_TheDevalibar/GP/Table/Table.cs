@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using MyUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,7 +19,7 @@ public class Table : MonoBehaviour
     
     public bool IsUsedByCustomer  = false;
     
-    
+    public List<Upgrade> TableUpgrade = new List<Upgrade>();
 
     void Awake()
     {
