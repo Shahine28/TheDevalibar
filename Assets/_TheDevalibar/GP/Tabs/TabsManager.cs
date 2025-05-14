@@ -9,6 +9,7 @@ public class TabsManager : MonoBehaviour
     [SerializeField] private GameObject TabPrefab;
     private TablesManager _tablesManager;
     private UpgradePanelManager _upgradePanelManager;
+    private CameraZoomToTarget _cameraZoom;
     
     [Header("Sprites")]
     [SerializeField] private Sprite _tableSprite;
@@ -33,7 +34,11 @@ public class TabsManager : MonoBehaviour
         {
             Debug.LogError("There is no UpgradePanelManager in the scene");
         }
-
+        _cameraZoom = ServiceLocator.Get<CameraZoomToTarget>();
+        if (_cameraZoom== null)
+        {
+            Debug.LogError("There is no Camera Zoom To Target in the scene");
+        }
         if (TabPrefab == null)
         {
             Debug.LogWarning("There is no TabPrefab");
@@ -56,6 +61,7 @@ public class TabsManager : MonoBehaviour
                 continue;
             }
             tab.Initialize(_tableSprite, ObjectType.Table,i);
+            _tabs.Add(tab);
         }
     }
 
@@ -66,6 +72,25 @@ public class TabsManager : MonoBehaviour
         {
             Destroy(transform.GetChild(i).gameObject);
         }
+    }
+
+    public void ResetFocus()
+    {
+        _cameraZoom.ResetCamera(); // Appelle la fonction de retour caméra
+        _upgradePanelManager.ClearUpgradePanels(true);
+    }
+
+    public void FocusCameraOnTab(int TableID)
+    {
+        foreach (Tab tab in _tabs)
+        {
+            if (tab.TabID == TableID)
+            {
+                tab.FocusCameraOnTabObject();
+                return;
+            }
+        }
+        Debug.LogError("There is no tab with the ID " + TableID);
     }
     // Update is called once per frame
     void Update()
