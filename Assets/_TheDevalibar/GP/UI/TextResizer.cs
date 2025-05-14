@@ -16,15 +16,18 @@ public class TextResizer : MonoBehaviour
     [SerializeField] int _UITextSize;
     [SerializeField] float _UIspaceInbetweenLetter;
     [SerializeField] float _UISpaceBetweenWord;
+    [SerializeField] float _UILineSpace;
 
     [Header("World Text")]
     [SerializeField] TextMeshPro _worldText;
+    [SerializeField] Color _worldTextColor;
 
     [Header("World Text param")]
     [RangeAttribute(0, 100)]
     [SerializeField] int _worldTextSize;
     [SerializeField] float _worldSpaceInbetweenLetter;
     [SerializeField] float _worldSpaceBetweenWord;
+    [SerializeField] float _worldLineSpace;
 
     [Header("FontStyle")]
     [SerializeField] TMP_FontAsset _openDys;
@@ -58,12 +61,16 @@ public class TextResizer : MonoBehaviour
         }
 
         //----- Text Color ----//
-        //_UITextColor
+        _UIText.color = _UITextColor;
+        _worldText.color = _worldTextColor;
+
         //---- Text Spacing settings ----//
         _UIText.characterSpacing = _UIspaceInbetweenLetter;
         _UIText.wordSpacing = _UISpaceBetweenWord;
+        _UIText.lineSpacing = _UILineSpace;
         _worldText.characterSpacing = _worldSpaceInbetweenLetter;
         _worldText.wordSpacing = _worldSpaceBetweenWord;
+        _worldText.lineSpacing = _worldLineSpace;
     }
 
     [Button]
