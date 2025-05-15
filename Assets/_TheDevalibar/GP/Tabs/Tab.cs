@@ -10,6 +10,7 @@ public class Tab : MonoBehaviour
     [SerializeField] private Button _tabButton;
     [SerializeField] private TextMeshProUGUI _tabIDText;
     private int _tabID = -1;
+    public int TabID => _tabID;
     [SerializeField] private ObjectType _objectType;
     
     private CameraZoomToTarget _cameraZoomToTarget;
@@ -48,7 +49,7 @@ public class Tab : MonoBehaviour
         }
     }
 
-    void FocusCameraOnTabObject()
+    public void FocusCameraOnTabObject()
     {
         if (_cameraZoomToTarget == null)
         {

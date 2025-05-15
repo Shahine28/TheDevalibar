@@ -45,6 +45,7 @@ public class CharacterBehavior : MonoBehaviour
     [SerializeField, ReadOnly] private  int _nextNodeIndex;
     private TablesManager _tablesManager;
     private Table _usedTable;
+    private ShowHideUI _showHideUI;
     
     
     [Header("CharacterState")]
@@ -147,6 +148,12 @@ public class CharacterBehavior : MonoBehaviour
 
         
         _dialogueButton?.onClick.AddListener(StartCharacterDialogue);
+        
+        _showHideUI = ServiceLocator.Get<ShowHideUI>();
+        if (_showHideUI == null)
+        {
+            Debug.LogError("No show hide UI found");
+        }
     }
     
     private int GetClosestNode()
@@ -450,6 +457,7 @@ public class CharacterBehavior : MonoBehaviour
             if (spawnManager && spawnManager.HaveAllCharactersAndNCPBeenSpawned && spawnManager.CharacterSpawnPoint.childCount.Equals(1))
             {
                 _tablesManager.ShowUpgradeButtonTables();
+                if (_showHideUI) _showHideUI.ShowUI();
             }
             GameManager gameManager = ServiceLocator.Get<GameManager>();
             if (gameManager)
