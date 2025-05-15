@@ -45,7 +45,7 @@ public class Table : MonoBehaviour
         {
             Debug.LogError("There is no tabs manager in the scene.");
         }
-        _upgradeButton.onClick.AddListener(GetFocusOnTable);
+        _upgradeButton?.onClick.AddListener(GetFocusOnTable);
     }
     
 
