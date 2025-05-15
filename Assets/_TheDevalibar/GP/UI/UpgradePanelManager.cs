@@ -11,6 +11,7 @@ public class UpgradePanelManager : MonoBehaviour
     private Coroutine _currentUpgradePanelCoroutine;
     [SerializeField] private GameObject _upgradePanelPrefab;
     private TablesManager _tablesManager;
+    [SerializeField] private MoveUI _moveUI;
     
     void Awake()
     {
@@ -59,8 +60,12 @@ public class UpgradePanelManager : MonoBehaviour
         }
     }
 
-    public void ClearUpgradePanels()
+    public void ClearUpgradePanels(bool HidePanels = false)
     {
+        if (HidePanels)
+        {
+            _moveUI.LaunchMoveUI(true);
+        }
         _upgradePanels.Clear();
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -69,12 +74,20 @@ public class UpgradePanelManager : MonoBehaviour
     }
     public void SetUpTableUpgradePanels(Table table)
     {
+        if (!_moveUI.IsUIAtTargetPoint())
+        {
+            _moveUI.LaunchMoveUI();
+        }
+        else if (!_moveUI.IsUIAtTargetPoint())
+        {
+            _moveUI.LaunchMoveUI();
+        }
         if (table == null || _upgradePanelPrefab == null)
         {
             Debug.LogError("Table is null or no upgrade panel prefab found!");
             return;
         }
-
+        
         ClearUpgradePanels(); // pour éviter les doublons
 
         for (int i = 0; i < table.PurchasedTableUpgrades.Count; i++)
@@ -117,6 +130,10 @@ public class UpgradePanelManager : MonoBehaviour
         // {
         //     _tablesManager.OnTablesIDSetUp += StartSetUp;
         // }
+        if (_moveUI == null)
+        {
+            Debug.LogError("_moveUI is null");
+        }
     }
 
     // Update is called once per frame

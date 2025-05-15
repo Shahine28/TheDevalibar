@@ -1,3 +1,5 @@
+using MyUtilities;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,7 +8,17 @@ public class TableClickHandler : MonoBehaviour
     [SerializeField] private LayerMask _clickableLayer; // Filtre les objets cliquables (ex: décor, table, etc.)
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private CameraZoomToTarget _cameraZoom; // référence au script qui gère le reset
+    [SerializeField] private UpgradePanelManager _upgradePanelManager;
+    private TabsManager _tabsManager;
 
+    private void Start()
+    {
+        _tabsManager = ServiceLocator.Get<TabsManager>();
+        if (_tabsManager == null)
+        {
+            Debug.LogError("There is no TabsManager in the scene");
+        }
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -20,12 +32,17 @@ public class TableClickHandler : MonoBehaviour
             {
                 // Vérifie si l'objet cliqué a un composant Table
                 Table clickedTable = hit.collider.GetComponentInParent<Table>();
-                if (clickedTable == null)
+                if (clickedTable == null && _tabsManager != null)
                 {
-                    _cameraZoom.ResetCamera(); // Appelle la fonction de retour caméra
+                    _tabsManager.ResetFocus();
                 }
             }
         }
+    }
+
+    private void OnMouseDown()
+    {
+        
     }
 }
 

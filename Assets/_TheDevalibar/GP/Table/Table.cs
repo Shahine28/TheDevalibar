@@ -13,7 +13,7 @@ public class Table : MonoBehaviour
 
     [SerializeField, ReadOnly] private int _tableNodeNumber = -1;
     [SerializeField, ReadOnly] private int _tableID = 0;
-    
+    private TabsManager _tabsManager;
     public int TableNodeNumber => _tableNodeNumber;
 
     [SerializeField] private Button _upgradeButton;
@@ -40,7 +40,14 @@ public class Table : MonoBehaviour
     void Start()
     {
         HideUpgradeButton();
+        _tabsManager = ServiceLocator.Get<TabsManager>();
+        if (_tabsManager == null)
+        {
+            Debug.LogError("There is no tabs manager in the scene.");
+        }
+        _upgradeButton.onClick.AddListener(GetFocusOnTable);
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -56,6 +63,16 @@ public class Table : MonoBehaviour
     public void HideUpgradeButton()
     {
         _upgradeButton?.gameObject.SetActive(false);
+    }
+
+    private void GetFocusOnTable()
+    {
+        if (_tabsManager== null)
+        {
+            Debug.LogError("There is no tab object in the scene.");
+            return;
+        }
+        _tabsManager.FocusCameraOnTab(_tableID);
     }
 
     public void SetTableNode(int TableId)
