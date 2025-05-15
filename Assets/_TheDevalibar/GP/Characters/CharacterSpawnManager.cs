@@ -14,6 +14,8 @@ public class CharacterSpawnManager : MonoBehaviour
     private int _NPCCount = 0;
     [Header("Character & NPC GameObjects")]
     [SerializeField] private GameObject _characterGameObject;
+
+    public bool CanSpawnCharacter;
     [SerializeField] private GameObject _NPCGameObject;
     private bool _haveAllCharactersAndNCPBeenSpawned;
     public bool HaveAllCharactersAndNCPBeenSpawned => _haveAllCharactersAndNCPBeenSpawned;
@@ -32,6 +34,7 @@ public class CharacterSpawnManager : MonoBehaviour
     void Awake()
     {
         ServiceLocator.Register(this);
+        CanSpawnCharacter = true;
     }
     void Start()
     {
@@ -71,7 +74,7 @@ public class CharacterSpawnManager : MonoBehaviour
             while (_isPaused)
                 yield return null;
 
-            bool canSpawnCharacter = _nextCharacterIndex < customerCount;
+            bool canSpawnCharacter = _nextCharacterIndex < customerCount && CanSpawnCharacter;
             bool canSpawnNPC = _NPCCount < npcTargetCount;
 
             // Choisir aléatoirement entre character et NPC
@@ -92,7 +95,7 @@ public class CharacterSpawnManager : MonoBehaviour
 
             if (spawnCharacter)
                 SpawnCharacter();
-            else
+            else if (canSpawnNPC)
                 SpawnNPC();
 
             yield return new WaitForSeconds(_characterSpawnDelayInSeconds);

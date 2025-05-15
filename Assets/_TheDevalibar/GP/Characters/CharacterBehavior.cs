@@ -14,13 +14,12 @@ using Random = Unity.Mathematics.Random;
 
 public class CharacterBehavior : MonoBehaviour
 {
-
-
     [FormerlySerializedAs("character")]
     [Header("Character Behavior")]
     [SerializeField] private Character _character;
     public Character Character => _character;
     [SerializeField, ReadOnly] private string _characterDisability;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
     private bool _isCharacterAssigned => _character != null;
 
     [SerializeField, Range(0, 100), HideIf("_isCharacterAssigned")]
@@ -46,6 +45,7 @@ public class CharacterBehavior : MonoBehaviour
     [SerializeField, ReadOnly] private  int _nextNodeIndex;
     private TablesManager _tablesManager;
     private Table _usedTable;
+    private ShowHideUI _showHideUI;
     
     
     [Header("CharacterState")]
@@ -53,6 +53,7 @@ public class CharacterBehavior : MonoBehaviour
     
     [Header("Dialogue")]
     [SerializeField] private DialogueManager _dialogueManager;
+    [SerializeField] private Button _dialogueButton;
     
     [Header("Character Feedback")]
     [SerializeField, ReadOnly] private CustomersFeedback _customerFeedback = CustomersFeedback.Good;
@@ -80,6 +81,8 @@ public class CharacterBehavior : MonoBehaviour
     public void Initialize(Character character)
     {
         _character = character;
+        _spriteRenderer.sprite = _character.CharacterSprite; // temporary
+        GetComponent<MeshRenderer>().enabled = false;
     }
 
     public void SetCharacterDisabilities()
@@ -139,9 +142,18 @@ public class CharacterBehavior : MonoBehaviour
         }
         else
         {
+            _spriteRenderer?.gameObject.SetActive(false);
             MoveToBestTable();
         }
+
         
+        _dialogueButton?.onClick.AddListener(StartCharacterDialogue);
+        
+        _showHideUI = ServiceLocator.Get<ShowHideUI>();
+        if (_showHideUI == null)
+        {
+            Debug.LogError("No show hide UI found");
+        }
     }
     
     private int GetClosestNode()
@@ -251,16 +263,86 @@ public class CharacterBehavior : MonoBehaviour
             MoveToBarExit();
             return;
         }
-
+        
         // 3. Détermine la meilleure table selon la distance
-        Table bestTable = bestTables
-            .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNumber].position))
-            .First();
+        Table bestTable = null;
+
+        if (bestTables.Count == 1)
+        {
+            bestTable = bestTables[0];
+        }
+        else
+        {
+            if (_characterDisability == "")
+            {
+                Table firstTable = bestTables[0];
+                bool hasFirstTableContraintAdaptabilty = firstTable.constraintDict.values.FirstOrDefault(x => x);
+
+                Table secondTable = bestTables[1];
+                bool hasSecondTableContraintAdaptabilty = secondTable.constraintDict.values.FirstOrDefault(x => x);
+
+                if (hasFirstTableContraintAdaptabilty && hasSecondTableContraintAdaptabilty)
+                {
+                    List<Table> tables = new List<Table> { firstTable, secondTable };
+                    bestTable = tables
+                        .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNodeNumber].position))
+                        .First();
+                }
+                else
+                {
+                    bestTable = firstTable;
+                }
+            }
+            else
+            {
+                Constraint constraint = _nodeManager.constraints.FirstOrDefault(c => c.name == _characterDisability);
+                if (constraint == null)
+                {
+                    Debug.LogError("No valid constraint in character");
+                }
+                else if (!constraint.IsBlockingConstraint)
+                {
+                    
+                    Table firstTable = bestTables[0];
+                    bool isFirstTableConstraintCompatible = Enumerable.Range(0, firstTable.constraintDict.keys.Count)
+                        .Where(i => firstTable.constraintDict.values[i]) // garde les indices où la contrainte est accessible
+                        .Select(i => firstTable.constraintDict.keys[i])  // récupère les clés correspondantes
+                        .FirstOrDefault() == _characterDisability;
+
+                    Table secondTable = bestTables[1];
+                    bool isSecondTableConstraintCompatible = Enumerable.Range(0, secondTable.constraintDict.keys.Count)
+                        .Where(i => secondTable.constraintDict.values[i]) // garde les indices où la contrainte est accessible
+                        .Select(i => secondTable.constraintDict.keys[i])  // récupère les clés correspondantes
+                        .FirstOrDefault() == _characterDisability;
+                    if (isFirstTableConstraintCompatible && isSecondTableConstraintCompatible)
+                    {
+                        List<Table> tables = new List<Table> { firstTable, secondTable };
+                        bestTable = tables
+                            .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNodeNumber].position))
+                            .First();
+                    }
+                    else
+                    {
+                        bestTable = firstTable; 
+                    }
+
+                }
+                else
+                {
+                    // Ma liste ne contient forcément que des tables adapté au handicap bloquant et disponible
+                    bestTable = bestTables
+                        .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNodeNumber].position))
+                        .First();
+                }
+            }
+        }
+        
+        
         SetCustomerFeedback(bestTable);
         Debug.Log($"Best table chosen: {bestTable.name}");
 
         // Ex : déplacement vers la table
-        _nextNodeIndex = bestTable.TableNumber;
+        _nextNodeIndex = bestTable.TableNodeNumber;
         _dijkstraManager.EnableConstraint(_characterDisability);
         _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex,  _nextNodeIndex);
         _dijkstraPathFollower.FollowPath();
@@ -347,17 +429,26 @@ public class CharacterBehavior : MonoBehaviour
 
         return 0;
     }
+    
 
-
+    private void StartCharacterDialogue()
+    {
+        if (!_dialogueManager) return;
+        _dialogueManager.InitCharacterDialogue(this, false, CodeLanguage.English);
+        _dialogueButton?.gameObject.SetActive(false);
+    }
     private void HandlePathEnd()
     {
         Debug.Log("Le chemin est terminé !");
         if (_lastNodeIndex == _BarNodeId)
         {
             _characterState = CharacterState.AtTheBar;
-            if (!_dialogueManager) return;
-            _dialogueManager.InitCharacterDialogue(this, false, CodeLanguage.English);
-            
+            CharacterSpawnManager characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
+            if (characterSpawnManager)
+            {
+                characterSpawnManager.CanSpawnCharacter = false;
+            }
+            _dialogueButton?.gameObject.SetActive(true);
         }
         else if (_lastNodeIndex == _BarExitNodeId)
         {
@@ -366,6 +457,7 @@ public class CharacterBehavior : MonoBehaviour
             if (spawnManager && spawnManager.HaveAllCharactersAndNCPBeenSpawned && spawnManager.CharacterSpawnPoint.childCount.Equals(1))
             {
                 _tablesManager.ShowUpgradeButtonTables();
+                if (_showHideUI) _showHideUI.ShowUI();
             }
             GameManager gameManager = ServiceLocator.Get<GameManager>();
             if (gameManager)
@@ -388,6 +480,11 @@ public class CharacterBehavior : MonoBehaviour
         {
             case CharacterState.AtTheBar:
             {
+                CharacterSpawnManager characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
+                if (characterSpawnManager)
+                {
+                    characterSpawnManager.CanSpawnCharacter = true;
+                }
                 MoveToBestTable();
                 break;
             }

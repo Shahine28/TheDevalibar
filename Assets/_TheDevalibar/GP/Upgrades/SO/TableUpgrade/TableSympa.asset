@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f1edc776b448f9bc3401150e361524, type: 3}
+  m_Name: TableSympa
+  m_EditorClassIdentifier: 
+  UpgradeSprite: {fileID: 21300000, guid: 7d9a3ad4050ec33478dcac63e1fcc7cd, type: 3}
+  UpgradeName: Table Sympa
+  UpgradeDescription: Table Sympa qui rend tout le monde sympa
+  UpgradeCost: 250000
+  AccessibiltiesToAddWithUpgrade:
+    keys:
+    - "Mobilit\xE9"
+    - "D\xE9ficience visuelle"
+    - "D\xE9ficience auditive s\xE9v\xE8re"
+    - "Fatigabilit\xE9 chronique"
+    - "Troubles de l\u2019\xE9quilibre / vertiges"
+    - "Hypersensibilit\xE9 sensorielle"
+    - Douleurs chroniques
+    - "Allergies s\xE9v\xE8res"
+    - "Troubles cognitifs l\xE9gers"
+    - Troubles dermatologiques
+    values: 01010101010100000000
+  useless: 
+  NewUpgradeTableMesh: {fileID: 0}
+  NewUpgradeTableMaterial: {fileID: 0}
+  NewUpgradeChair1Mesh: {fileID: 0}
+  NewUpgradeChair1Material: {fileID: 0}
+  NewUpgradeChair2Mesh: {fileID: 0}
+  NewUpgradeChair2Material: {fileID: 0}
