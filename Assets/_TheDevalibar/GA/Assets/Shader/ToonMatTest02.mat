@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-685505478458544823
+--- !u!114 &-7134853458805437674
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NPR_Bar_Walls
-  m_Shader: {fileID: -6465566751694194690, guid: 74bdf3ca8d7c39346959862ae47bc2b8, type: 3}
+  m_Name: ToonMatTest02
+  m_Shader: {fileID: -6465566751694194690, guid: 68c9e09c106f850478cdc57c416ad662, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -77,16 +77,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_9b3e9239aaaa45e5a0f9ac1b48f8589d_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 2ffa9bb9ac4e4b24686e7adb2ce178f6, type: 3}
+    - _SampleTexture2D_a5c07f33a39d4587a4e8e779295815c0_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: e0ad1befa34dfab44bb3028d01b52c88, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_e5abb64b69bc482b9f66baa305a11ab6_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 980ca3f35fde3294d825f1ee3d984060, type: 3}
+    - _SampleTexture2D_aed24c7dbf37476ba2c1bf57266a6545_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 81ea2db5d70161c4b978f98819cce7cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_f2eb0acbb252433bbb74680d4e281a10_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 45850c9e361086a4ea5ae5c82999d242, type: 3}
+    - _SampleTexture2D_f7de5274e97540bf961946fccd6b0f69_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: c89c92d3fc9e66e43b4661f018ec03aa, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -94,7 +94,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: cfa1de18d8ce21543acb3c2904149567, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -130,8 +130,9 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _HighlightBrightness: 1
-    - _HighlightRange: 32
+    - _HighlightRange: 16
     - _IfHighLight: 1
+    - _IfLineShadow: 1
     - _LayerCounts: 4
     - _Metallic: 0
     - _OcclusionStrength: 1
@@ -151,8 +152,8 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
-    - _ShadowDensity: {r: 4, g: 4, b: 0, a: 0}
+    - _ShadowColor: {r: 1, g: 1, b: 1, a: 0}
+    - _ShadowDensity: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
