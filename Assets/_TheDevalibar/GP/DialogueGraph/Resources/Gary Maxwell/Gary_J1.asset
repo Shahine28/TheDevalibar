@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18e3a317d118bc94dbb48fe0d762e73f, type: 3}
-  m_Name: G.M.-dialogue_intro_proto
+  m_Name: Gary_J1
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: e048e7cd-82ec-4f58-b734-5080276320b9
+  - BaseNodeGuid: cf471752-d969-45b5-939f-438005317a37
     PortName: StartPointNode
     TargetNodeGuid: e9575ac2-efac-4702-aa91-49600134a2dd
     IsNullNode: 0
@@ -61,6 +61,14 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: 2ccb66c5-27b5-499e-ba98-a4cec1f5f7aa
     IsNullNode: 1
+  - BaseNodeGuid: 2ccb66c5-27b5-499e-ba98-a4cec1f5f7aa
+    PortName: Null Port
+    TargetNodeGuid: 20868fc1-4c0e-4673-9038-283ab9e18aba
+    IsNullNode: 1
+  - BaseNodeGuid: 20868fc1-4c0e-4673-9038-283ab9e18aba
+    PortName: Null Port
+    TargetNodeGuid: 72765767-d5d9-41c6-a6c8-dc567ff67150
+    IsNullNode: 1
   - BaseNodeGuid: dbd68ce1-e2f4-4fa5-8166-a7ec254317ee
     PortName: "Ton p\xE8re venait souvent ici ?"
     TargetNodeGuid: 4ec8c817-00bd-4687-916a-6eaffb575b8a
@@ -70,6 +78,10 @@ MonoBehaviour:
       de vitres \xE0 r\xE9parer"
     TargetNodeGuid: 48df3361-4fc2-4878-9715-0ca7228d100e
     IsNullNode: 0
+  - BaseNodeGuid: 72765767-d5d9-41c6-a6c8-dc567ff67150
+    PortName: Null Port
+    TargetNodeGuid: dbd68ce1-e2f4-4fa5-8166-a7ec254317ee
+    IsNullNode: 1
   - BaseNodeGuid: 4ec8c817-00bd-4687-916a-6eaffb575b8a
     PortName: Null Port
     TargetNodeGuid: 5b31dc55-a9ff-4fd5-b6eb-a105fe32cd43
@@ -81,18 +93,6 @@ MonoBehaviour:
   - BaseNodeGuid: 48df3361-4fc2-4878-9715-0ca7228d100e
     PortName: Null Port
     TargetNodeGuid: b0fb13ce-398a-45d3-9f5b-57accccfe80f
-    IsNullNode: 1
-  - BaseNodeGuid: 2ccb66c5-27b5-499e-ba98-a4cec1f5f7aa
-    PortName: Null Port
-    TargetNodeGuid: 20868fc1-4c0e-4673-9038-283ab9e18aba
-    IsNullNode: 1
-  - BaseNodeGuid: 20868fc1-4c0e-4673-9038-283ab9e18aba
-    PortName: Null Port
-    TargetNodeGuid: 72765767-d5d9-41c6-a6c8-dc567ff67150
-    IsNullNode: 1
-  - BaseNodeGuid: 72765767-d5d9-41c6-a6c8-dc567ff67150
-    PortName: Null Port
-    TargetNodeGuid: dbd68ce1-e2f4-4fa5-8166-a7ec254317ee
     IsNullNode: 1
   - BaseNodeGuid: b0fb13ce-398a-45d3-9f5b-57accccfe80f
     PortName: Null Port
@@ -339,7 +339,4 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
   ExposedProperties: []
-  CommentBlockData:
-  - ChildNodes: []
-    Position: {x: 358.73193, y: 44.28237}
-    Title: Ici c'est PAris
+  CommentBlockData: []
