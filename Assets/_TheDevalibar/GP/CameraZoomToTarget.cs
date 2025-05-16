@@ -12,6 +12,7 @@ public class CameraZoomToTarget : MonoBehaviour
     [SerializeField] private float zoomFOV = 30f;
     [SerializeField] private float zoomSize = 1f;
     [SerializeField] private AnimationCurve zoomCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+    [SerializeField] private float verticalOffset = 0.5f;
 
     private Camera _cam;
     private Coroutine _zoomRoutine;
@@ -50,7 +51,12 @@ public class CameraZoomToTarget : MonoBehaviour
         Vector3 viewDirection = transform.forward.normalized;
 
         // Nouvelle position = cible - direction * distance
-        Vector3 endPos = target.position - viewDirection * zoomDistance;
+        Renderer renderer = target.GetComponentInChildren<Renderer>();
+        Vector3 targetCenter = renderer != null ? renderer.bounds.center : target.position;
+        targetCenter += Vector3.up * verticalOffset; // << décalage vers le haut
+        Vector3 endPos = targetCenter - viewDirection * zoomDistance;
+
+
 
         float elapsed = 0f;
         while (elapsed < transitionDuration)
