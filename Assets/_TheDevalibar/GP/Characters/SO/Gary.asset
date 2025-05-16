@@ -15,7 +15,7 @@ MonoBehaviour:
   AffinityManager: {fileID: 11400000, guid: 23b23b1f68a494d4d8c5ef607d2d0298, type: 2}
   CharacterName: Gary Maxwell
   CharacterPseudo: Gaga la pinta
-  CharacterProfilePicture: {fileID: 0}
+  CharacterProfilePicture: {fileID: 21300000, guid: 1d2c103791467ca4ea491a8eca6332de, type: 3}
   CharacterSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
   Affinity: 55
   NextAffinityValue: 100
@@ -25,24 +25,37 @@ MonoBehaviour:
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
-        - Key: 1
           Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
-        - Key: 1
           Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
-        - Key: 1
           Value: {fileID: 0}
-  DialogueIndex: 0
+        - Key: 1
+          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
+  DialogueIndex: 1
+  _characterReviews:
+    GoodReviews:
+    - {fileID: 11400000, guid: 9a556950957add1438cd3855ca79501e, type: 2}
+    - {fileID: 11400000, guid: f03c6696ba2a430419980d1d91e303d9, type: 2}
+    - {fileID: 11400000, guid: e78765a49ea8d7a418e37aba466afd89, type: 2}
+    AverageReviews:
+    - {fileID: 11400000, guid: 39877af65d222124f9dc71002e5748f1, type: 2}
+    - {fileID: 11400000, guid: 3698fb8a1f3a03d45b21053c3cb40df4, type: 2}
+    - {fileID: 11400000, guid: e3e586d7d879ff340b1b315b71d43e4f, type: 2}
+    BadReviews:
+    - {fileID: 11400000, guid: 3d96e208939116946923cb4f1f2865f6, type: 2}
+    - {fileID: 11400000, guid: 1b94e383e43ae944381d77d3e5ce47b9, type: 2}
+    - {fileID: 11400000, guid: 99692959f43801844936614602728c8c, type: 2}
   constraintDict:
     keys:
     - "Mobilit\xE9"
