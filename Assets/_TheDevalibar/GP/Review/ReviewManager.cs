@@ -42,9 +42,10 @@ public class ReviewManager : MonoBehaviour
     
     public void CloseOpenPanel(bool ClosePanel)
     {
-        _moveUI?.LaunchMoveUI(ClosePanel && _isOpen);
+        _moveUI?.LaunchMoveUI(ClosePanel);
         _isOpen = ClosePanel;
         _reviewCloseButtonText.text = ClosePanel ? "<" : "X";
+        if (!ClosePanel && !_reviewCloseButton.gameObject.activeInHierarchy) _reviewCloseButton.gameObject.SetActive(true);
     }
     
     public string GetRandomUsername()
