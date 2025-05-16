@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ReviewSo", menuName = "Scriptable Objects/ReviewSo")]
