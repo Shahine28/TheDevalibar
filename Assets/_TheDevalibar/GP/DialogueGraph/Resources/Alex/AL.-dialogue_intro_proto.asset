@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18e3a317d118bc94dbb48fe0d762e73f, type: 3}
-  m_Name: Ax.-dialogue_intro_proto
+  m_Name: AL.-dialogue_intro_proto
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: d9877597-0284-43cf-a596-4e46c9ec6ac1
+  - BaseNodeGuid: 449a9dea-dda7-46ca-85ac-142ee1c7264b
     PortName: StartPointNode
     TargetNodeGuid: d03dfe1c-0843-484c-be44-cf45304ad321
     IsNullNode: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
     TargetNodeGuid: 207e77ce-91df-4ea5-82cb-9008e366650f
     IsNullNode: 0
   - BaseNodeGuid: adb0b62c-1f6c-4a22-b774-533d2d09a3c3
-    PortName: "Axel? Wow, \xE7a fait un bail !"
+    PortName: "Alex? Wow, \xE7a fait un bail !"
     TargetNodeGuid: 9ddc020b-24d5-4be6-9ba9-c58cce6103cf
     IsNullNode: 0
   - BaseNodeGuid: 207e77ce-91df-4ea5-82cb-9008e366650f
@@ -75,7 +75,7 @@ MonoBehaviour:
       Direction: 1
       Capacity: 0
       IsPortNull: 0
-    - PortName: "Axel? Wow, \xE7a fait un bail !"
+    - PortName: "Alex? Wow, \xE7a fait un bail !"
       Direction: 1
       Capacity: 0
       IsPortNull: 0

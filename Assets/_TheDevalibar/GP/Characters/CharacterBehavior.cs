@@ -59,6 +59,9 @@ public class CharacterBehavior : MonoBehaviour
     [SerializeField, ReadOnly] private CustomersFeedback _customerFeedback = CustomersFeedback.Good;
     [SerializeField] private CharacterFeedback _characterFeedback;
     [SerializeField] private RawImage FeedBackImage;
+    
+    
+    private GameManager _gameManager;
 
 #region OnEnable/OnDisable
     public void OnEnable()
@@ -105,14 +108,15 @@ public class CharacterBehavior : MonoBehaviour
         }
     }
     void Start()
-    {
+    {   
+        _gameManager = ServiceLocator.Get<GameManager>();
+        if (_gameManager == null)
+        {
+            Debug.LogError("Game manager is null.");
+        }
         if (!_dijkstraManager)
         {
             _dijkstraManager = ServiceLocator.Get<DijkstraManager>();
-            if (_dijkstraPathFollower)
-            {
-                _dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
-            }
         }
         if (!_nodeManager)
         {
@@ -434,7 +438,7 @@ public class CharacterBehavior : MonoBehaviour
     private void StartCharacterDialogue()
     {
         if (!_dialogueManager) return;
-        _dialogueManager.InitCharacterDialogue(this, false, CodeLanguage.English);
+        _dialogueManager.InitCharacterDialogue(this, false, _gameManager != null ? _gameManager.gameData.LanguageCode : CodeLanguage.French);
         _dialogueButton?.gameObject.SetActive(false);
     }
     private void HandlePathEnd()
@@ -453,18 +457,25 @@ public class CharacterBehavior : MonoBehaviour
         else if (_lastNodeIndex == _BarExitNodeId)
         {
             _characterState = CharacterState.Idle;
-            CharacterSpawnManager spawnManager = ServiceLocator.Get<CharacterSpawnManager>();
-            if (spawnManager && spawnManager.HaveAllCharactersAndNCPBeenSpawned && spawnManager.CharacterSpawnPoint.childCount.Equals(1))
-            {
-                _tablesManager.ShowUpgradeButtonTables();
-                if (_showHideUI) _showHideUI.ShowUI();
-            }
+            ReviewManager reviewManager = ServiceLocator.Get<ReviewManager>();
+            reviewManager?.AddReview(_customerFeedback, _character);
+            
+            
             GameManager gameManager = ServiceLocator.Get<GameManager>();
             if (gameManager)
             {
                 gameManager.gameData.Gold += GetTipValue();
                 gameManager.UpdateGoldValue();
             }
+
+            CharacterSpawnManager spawnManager = ServiceLocator.Get<CharacterSpawnManager>();
+            if (spawnManager && spawnManager.HaveAllCharactersAndNCPBeenSpawned && spawnManager.CharacterSpawnPoint.childCount.Equals(1))
+            {
+                _tablesManager?.ShowUpgradeButtonTables();
+                _showHideUI?.ShowUI();
+                reviewManager?.SetReviews();
+            }
+            
             Destroy(gameObject);
         }
         else
@@ -507,4 +518,5 @@ public enum CustomersFeedback
     Average,
     Bad,
 }
+
 

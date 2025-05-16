@@ -12,6 +12,7 @@ public class ReviewPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _reviewTitle;
     [SerializeField] private TextMeshProUGUI _reviewDescription;
     private ReviewManager _reviewManager;
+    public void Initialize(ReviewManager reviewManager)=>_reviewManager = reviewManager;
     void Start()
     {
         _reviewManager = ServiceLocator.Get<ReviewManager>();
@@ -21,10 +22,10 @@ public class ReviewPanel : MonoBehaviour
     {
         _userPictureProfile.sprite = reviewCharacter != null
             ? reviewCharacter.CharacterProfilePicture
-            : _reviewManager.GetRandomProfilePicture();
+            : _reviewManager != null ?_reviewManager.GetRandomProfilePicture() : null;
         _userName.text = reviewCharacter != null 
             ? reviewCharacter.CharacterPseudo 
-            : _reviewManager.GetRandomUsername();
+            : _reviewManager != null ? _reviewManager.GetRandomUsername() : "No Name";
         _reviewGrade?.SetGrade(review.ReviewRate);
         _reviewTitle.text = review.ReviewTitle;
         _reviewDescription.text = review.ReviewDescription;
