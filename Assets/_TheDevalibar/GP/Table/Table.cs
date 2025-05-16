@@ -9,7 +9,8 @@ using UnityEngine.UI;
 
 public class Table : MonoBehaviour
 {
-    [SerializeField] private GameObject TableGameObject;
+    [SerializeField] private GameObject _tableGameObject;
+    public GameObject TableGameObject => _tableGameObject;
 
     [SerializeField, ReadOnly] private int _tableNodeNumber = -1;
     [SerializeField, ReadOnly] private int _tableID = 0;
@@ -82,14 +83,14 @@ public class Table : MonoBehaviour
         TablesManager manager = ServiceLocator.Get<TablesManager>();
         manager?.InvokeOnTablesIDSetUp();
         NodeManager nodeManager = ServiceLocator.Get<NodeManager>();
-        if (!nodeManager || !TableGameObject) return;
+        if (!nodeManager || !_tableGameObject) return;
         float distance = 100;
         int NearestNode = -1;
         foreach (NodeDijkstra node in nodeManager.nodes)
         {
-            if (Vector3.Distance(TableGameObject.transform.position, node.position) < distance)
+            if (Vector3.Distance(_tableGameObject.transform.position, node.position) < distance)
             {
-                distance = Vector3.Distance(TableGameObject.transform.position, node.position);
+                distance = Vector3.Distance(_tableGameObject.transform.position, node.position);
                 NearestNode = nodeManager.nodes.IndexOf(node);
             }
         }

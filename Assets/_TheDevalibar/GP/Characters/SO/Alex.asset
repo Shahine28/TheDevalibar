@@ -10,39 +10,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b9837a5bbc047d586ea988cb871f4fc, type: 3}
-  m_Name: Axel
+  m_Name: Alex
   m_EditorClassIdentifier: 
   AffinityManager: {fileID: 11400000, guid: 23b23b1f68a494d4d8c5ef607d2d0298, type: 2}
-  CharacterName: Axel
-  CharacterPseudo: Axeligidilit
-  CharacterProfilePicture: {fileID: 0}
+  CharacterName: Alex
+  CharacterPseudo: Alexigidilit
+  CharacterProfilePicture: {fileID: 21300000, guid: 9c35a0055d611db40827be89abb434e7, type: 3}
   CharacterSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
-  Affinity: 40
-  NextAffinityValue: 50
+  Affinity: 30
+  NextAffinityValue: 40
   Dialogues:
   - Dialogues:
     - AffinityName: Angry
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
-        - Key: 1
           Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
-        - Key: 1
           Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
-        - Key: 1
           Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
   DialogueIndex: 0
+  _characterReviews:
+    GoodReviews:
+    - {fileID: 11400000, guid: 4386f19f4700a314aa53615092daa64a, type: 2}
+    - {fileID: 11400000, guid: 4c30a34b7477b254898e15508806109b, type: 2}
+    - {fileID: 11400000, guid: ee68a42e6e229774699f295950930cb2, type: 2}
+    AverageReviews:
+    - {fileID: 11400000, guid: 1962643c155e76a43a9f8b2123f81a1b, type: 2}
+    - {fileID: 11400000, guid: 3435525a2b281074eabe1011b5d37571, type: 2}
+    - {fileID: 11400000, guid: a75b8411c82148841958a3ce97934c92, type: 2}
+    BadReviews:
+    - {fileID: 11400000, guid: f9cb8900c91f87d4e9d24119ba654cc4, type: 2}
+    - {fileID: 11400000, guid: 2cdca5feae17aa843aeac7eff3cdf0eb, type: 2}
+    - {fileID: 11400000, guid: 50a27f76b52639c49aa1fe40008f3c1c, type: 2}
   constraintDict:
     keys:
     - "Mobilit\xE9"
