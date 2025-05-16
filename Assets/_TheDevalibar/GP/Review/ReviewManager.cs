@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using MyUtilities;
-using Unity.Android.Gradle.Manifest;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class ReviewManager : MonoBehaviour
@@ -21,6 +22,13 @@ public class ReviewManager : MonoBehaviour
     [SerializeField] private Transform _reviewPanelContainer;
     private List<CharacterReview> _characterReviews = new List<CharacterReview>();
 
+    
+    [Header("Close/Open Panel")]
+    [SerializeField] private Button _reviewCloseButton;
+    [SerializeField] private TextMeshProUGUI _reviewCloseButtonText;
+    [SerializeField] private MoveUI _moveUI;
+    private bool _isOpen;
+    
     
     void Awake()
     {
