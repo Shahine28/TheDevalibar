@@ -34,6 +34,18 @@ public class ReviewManager : MonoBehaviour
     {
         ServiceLocator.Register(this);
     }
+
+    void Start()
+    {
+        _reviewCloseButton?.onClick.AddListener(() => CloseOpenPanel(!_isOpen));
+    }
+    
+    public void CloseOpenPanel(bool ClosePanel)
+    {
+        _moveUI?.LaunchMoveUI(ClosePanel && _isOpen);
+        _isOpen = ClosePanel;
+        _reviewCloseButtonText.text = ClosePanel ? "<" : "X";
+    }
     
     public string GetRandomUsername()
     {
