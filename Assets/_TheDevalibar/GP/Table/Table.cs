@@ -1,10 +1,7 @@
 using System;
-using System.Collections.Generic;
 using AYellowpaper.SerializedCollections;
 using MyUtilities;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Table : MonoBehaviour
@@ -16,6 +13,11 @@ public class Table : MonoBehaviour
     [SerializeField, ReadOnly] private int _tableID = 0;
     private TabsManager _tabsManager;
     public int TableNodeNumber => _tableNodeNumber;
+    
+    
+    [Header("Table Floor Level")]
+    [SerializeField] private FloorLevel _tableFloorLevel = FloorLevel.GroundFloor;
+    public FloorLevel TableFloorLevel => _tableFloorLevel;
 
     [SerializeField] private Button _upgradeButton;
     // Dictionnaire pour gérer les contraintes activées/désactivées
@@ -138,3 +140,9 @@ public class Table : MonoBehaviour
 
 }
 
+[Serializable]
+public enum FloorLevel
+{
+    GroundFloor,
+    UpperFloor
+}

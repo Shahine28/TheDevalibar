@@ -6,7 +6,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
-using NaughtyAttributes;
 using UnityEngine.Serialization;
 using MyUtilities;
 
