@@ -458,7 +458,7 @@ public class CharacterBehavior : MonoBehaviour
         {
             _characterState = CharacterState.Idle;
             ReviewManager reviewManager = ServiceLocator.Get<ReviewManager>();
-            reviewManager?.AddReview(_customerFeedback, _character);
+            reviewManager?.AddReview(_customerFeedback, _characterDisability, _character);
             
             
             GameManager gameManager = ServiceLocator.Get<GameManager>();
