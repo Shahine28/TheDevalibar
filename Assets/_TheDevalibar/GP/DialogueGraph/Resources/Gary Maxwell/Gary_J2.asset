@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gary_J2
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 41c536f0-4594-4f67-a3ca-175919a62661
+  - BaseNodeGuid: 5c3078b6-7540-4d77-8d8b-a843f970dfa8
     PortName: StartPointNode
     TargetNodeGuid: e9575ac2-efac-4702-aa91-49600134a2dd
     IsNullNode: 0
@@ -25,10 +25,6 @@ MonoBehaviour:
     PortName: Houla, c'est un peu beaucoup Gary, non ?
     TargetNodeGuid: e897589e-0e00-49ce-ae97-f2f2a02916e3
     IsNullNode: 0
-  - BaseNodeGuid: e897589e-0e00-49ce-ae97-f2f2a02916e3
-    PortName: Null Port
-    TargetNodeGuid: a6b218e9-6407-4383-94ed-9618e470e5a6
-    IsNullNode: 1
   - BaseNodeGuid: 4fcac0a1-631f-4709-97a3-2df506a7c54a
     PortName: "Aie, \xE7a va pas fort toi on dirait..."
     TargetNodeGuid: fdc4976f-b5da-4ac5-9aa9-e93f9b06a2ed
@@ -37,10 +33,14 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: cc1866cd-72a9-4425-93e8-95653bab0aa6
     IsNullNode: 1
-  - BaseNodeGuid: cc1866cd-72a9-4425-93e8-95653bab0aa6
-    PortName: Null Port
-    TargetNodeGuid: 2fcf67a1-3dc8-404c-b4ac-f891688b6c19
-    IsNullNode: 1
+  - BaseNodeGuid: 2fcf67a1-3dc8-404c-b4ac-f891688b6c19
+    PortName: Wow, un agent de probation ? t'as fais de la prison et tout ?
+    TargetNodeGuid: 88a2fd73-5ab1-4a95-a65b-f4f26f49acfa
+    IsNullNode: 0
+  - BaseNodeGuid: 2fcf67a1-3dc8-404c-b4ac-f891688b6c19
+    PortName: Quelle histoire ?
+    TargetNodeGuid: 229e3e83-30b9-4a71-84fc-932c3ab18e4a
+    IsNullNode: 0
   - BaseNodeGuid: a6b218e9-6407-4383-94ed-9618e470e5a6
     PortName: J'ai dis quelque chose qu'il fallait pas ?
     TargetNodeGuid: a17175f2-6b90-4484-8a3c-8e7d900abad8
@@ -49,6 +49,10 @@ MonoBehaviour:
     PortName: "Wow, mon vieux d\xE9tends toi, je voulais pas te vexer, d\xE9sol\xE9."
     TargetNodeGuid: 1fc151f7-4ac4-45d8-b51f-3be8bc24fe1e
     IsNullNode: 0
+  - BaseNodeGuid: e897589e-0e00-49ce-ae97-f2f2a02916e3
+    PortName: Null Port
+    TargetNodeGuid: a6b218e9-6407-4383-94ed-9618e470e5a6
+    IsNullNode: 1
   - BaseNodeGuid: 1fc151f7-4ac4-45d8-b51f-3be8bc24fe1e
     PortName: Null Port
     TargetNodeGuid: 1e99d4f5-8df8-4cbc-87e6-6774accea8b2
@@ -57,21 +61,14 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: f50c2e97-3c9d-47e2-a5cc-fc10d421f7b6
     IsNullNode: 1
-  - BaseNodeGuid: 2fcf67a1-3dc8-404c-b4ac-f891688b6c19
-    PortName: Wow, un agent de probation ? t'as fais de la prison et tout ?
+  - BaseNodeGuid: f50c2e97-3c9d-47e2-a5cc-fc10d421f7b6
+    PortName: "T'as des probl\xE8mes en ce moment ?"
     TargetNodeGuid: 88a2fd73-5ab1-4a95-a65b-f4f26f49acfa
     IsNullNode: 0
-  - BaseNodeGuid: 88a2fd73-5ab1-4a95-a65b-f4f26f49acfa
-    PortName: Null Port
-    TargetNodeGuid: 15705154-2c62-418c-895e-73c2add608dc
-    IsNullNode: 1
-  - BaseNodeGuid: 15705154-2c62-418c-895e-73c2add608dc
-    PortName: Null Port
-    TargetNodeGuid: 8a6fa482-475d-4f7d-a408-d28477335565
-    IsNullNode: 1
-  - BaseNodeGuid: 2fcf67a1-3dc8-404c-b4ac-f891688b6c19
-    PortName: Quelle histoire ?
-    TargetNodeGuid: 229e3e83-30b9-4a71-84fc-932c3ab18e4a
+  - BaseNodeGuid: f50c2e97-3c9d-47e2-a5cc-fc10d421f7b6
+    PortName: "Je voulais pas te donner cette impression, je m'inqui\xE9tais juste
+      pour toi."
+    TargetNodeGuid: 48bed094-cd4b-439c-97d0-470700ab38ca
     IsNullNode: 0
   - BaseNodeGuid: 229e3e83-30b9-4a71-84fc-932c3ab18e4a
     PortName: Null Port
@@ -81,23 +78,31 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: 3144a087-7707-46f7-848d-19d103a63d9a
     IsNullNode: 1
+  - BaseNodeGuid: cc1866cd-72a9-4425-93e8-95653bab0aa6
+    PortName: Null Port
+    TargetNodeGuid: 2fcf67a1-3dc8-404c-b4ac-f891688b6c19
+    IsNullNode: 1
   - BaseNodeGuid: 3144a087-7707-46f7-848d-19d103a63d9a
     PortName: "Zut ! ils t'ont frapp\xE9 aussi ? \xE7a \xE0 due \xEAtre flippant
       !"
     TargetNodeGuid: 2a814aa4-e94c-4f24-8539-011313847ccb
     IsNullNode: 0
+  - BaseNodeGuid: 3144a087-7707-46f7-848d-19d103a63d9a
+    PortName: "Et ensuite ? ils t'ont juste embarqu\xE9 comme \xE7a ?"
+    TargetNodeGuid: 0c156583-e5f6-446f-8328-82716a3d877f
+    IsNullNode: 0
   - BaseNodeGuid: 2a814aa4-e94c-4f24-8539-011313847ccb
     PortName: Null Port
     TargetNodeGuid: 75d4631a-c7f8-40e0-acc3-c712b779a7fa
+    IsNullNode: 1
+  - BaseNodeGuid: c6424f35-ac25-414a-9385-d54d0ce78c08
+    PortName: Null Port
+    TargetNodeGuid: 87da2e37-1f86-4980-8e06-40b1730b4817
     IsNullNode: 1
   - BaseNodeGuid: 75d4631a-c7f8-40e0-acc3-c712b779a7fa
     PortName: Null Port
     TargetNodeGuid: c6424f35-ac25-414a-9385-d54d0ce78c08
     IsNullNode: 1
-  - BaseNodeGuid: 3144a087-7707-46f7-848d-19d103a63d9a
-    PortName: "Et ensuite ? ils t'ont juste embarqu\xE9 comme \xE7a ?"
-    TargetNodeGuid: 0c156583-e5f6-446f-8328-82716a3d877f
-    IsNullNode: 0
   - BaseNodeGuid: 0c156583-e5f6-446f-8328-82716a3d877f
     PortName: Null Port
     TargetNodeGuid: 6811b738-fc27-4230-bbe4-ac3928ba6e90
@@ -105,10 +110,6 @@ MonoBehaviour:
   - BaseNodeGuid: 6811b738-fc27-4230-bbe4-ac3928ba6e90
     PortName: Null Port
     TargetNodeGuid: b3954ba5-84a3-47fa-9073-45290ba27d5d
-    IsNullNode: 1
-  - BaseNodeGuid: c6424f35-ac25-414a-9385-d54d0ce78c08
-    PortName: Null Port
-    TargetNodeGuid: 87da2e37-1f86-4980-8e06-40b1730b4817
     IsNullNode: 1
   - BaseNodeGuid: b3954ba5-84a3-47fa-9073-45290ba27d5d
     PortName: Null Port
@@ -123,26 +124,25 @@ MonoBehaviour:
       gentil."
     TargetNodeGuid: d5cf50eb-f1d9-4f0f-98a7-da590338dd5d
     IsNullNode: 0
-  - BaseNodeGuid: d5cf50eb-f1d9-4f0f-98a7-da590338dd5d
-    PortName: Null Port
-    TargetNodeGuid: ea7a36c9-611b-4ed3-ac3c-1a550a2268b2
-    IsNullNode: 1
   - BaseNodeGuid: 723cd4d0-d723-4854-8a98-c7b91ab7a186
     PortName: Dur l'ami... tiens bois pour te requinquer.
     TargetNodeGuid: 69ec3efb-c364-435a-9572-d5a74a524fdc
     IsNullNode: 0
-  - BaseNodeGuid: f50c2e97-3c9d-47e2-a5cc-fc10d421f7b6
-    PortName: "T'as des probl\xE8mes en ce moment ?"
-    TargetNodeGuid: 88a2fd73-5ab1-4a95-a65b-f4f26f49acfa
-    IsNullNode: 0
-  - BaseNodeGuid: f50c2e97-3c9d-47e2-a5cc-fc10d421f7b6
-    PortName: "Je voulais pas te donner cette impression, je m'inqui\xE9tais juste
-      pour toi."
-    TargetNodeGuid: 48bed094-cd4b-439c-97d0-470700ab38ca
-    IsNullNode: 0
+  - BaseNodeGuid: d5cf50eb-f1d9-4f0f-98a7-da590338dd5d
+    PortName: Null Port
+    TargetNodeGuid: ea7a36c9-611b-4ed3-ac3c-1a550a2268b2
+    IsNullNode: 1
   - BaseNodeGuid: 48bed094-cd4b-439c-97d0-470700ab38ca
     PortName: Null Port
     TargetNodeGuid: 8979af3c-93e2-45c1-a0ae-991b2530580f
+    IsNullNode: 1
+  - BaseNodeGuid: 88a2fd73-5ab1-4a95-a65b-f4f26f49acfa
+    PortName: Null Port
+    TargetNodeGuid: 15705154-2c62-418c-895e-73c2add608dc
+    IsNullNode: 1
+  - BaseNodeGuid: 15705154-2c62-418c-895e-73c2add608dc
+    PortName: Null Port
+    TargetNodeGuid: 8a6fa482-475d-4f7d-a408-d28477335565
     IsNullNode: 1
   - BaseNodeGuid: 8a6fa482-475d-4f7d-a408-d28477335565
     PortName: "T'as fais quoi pour finir l\xE0 bas ?"
@@ -164,29 +164,25 @@ MonoBehaviour:
     PortName: "j'comprend que tu te sois \xE9nerv\xE9, mais de l\xE0 \xE0 frapper..."
     TargetNodeGuid: c3c7a7f2-ccfb-42ca-84b0-2195619c7bb4
     IsNullNode: 0
-  - BaseNodeGuid: c3c7a7f2-ccfb-42ca-84b0-2195619c7bb4
-    PortName: Null Port
-    TargetNodeGuid: d2a72bee-2975-487f-a070-9181f829c513
-    IsNullNode: 1
   - BaseNodeGuid: 4e6b3da1-f4d5-4853-84bf-44f0c5056db8
     PortName: "Hahaha, t'es un sacr\xE9 personnage Gary !"
     TargetNodeGuid: 0fb50568-d8c9-429b-a4fb-36181a2ca749
+    IsNullNode: 0
+  - BaseNodeGuid: 4e6b3da1-f4d5-4853-84bf-44f0c5056db8
+    PortName: "Hum, mais \xE7a c'\xE9tait il y a longtemps ? Ca te pose encore probl\xE8me?"
+    TargetNodeGuid: 1e6de9bd-39fb-4cba-8731-1b8d683b1ceb
     IsNullNode: 0
   - BaseNodeGuid: d2a72bee-2975-487f-a070-9181f829c513
     PortName: Null Port
     TargetNodeGuid: ea7a36c9-611b-4ed3-ac3c-1a550a2268b2
     IsNullNode: 1
-  - BaseNodeGuid: 4e6b3da1-f4d5-4853-84bf-44f0c5056db8
-    PortName: "Hum, mais \xE7a c'\xE9tait il y a longtemps ? Ca te pose encore probl\xE8me?"
-    TargetNodeGuid: 1e6de9bd-39fb-4cba-8731-1b8d683b1ceb
-    IsNullNode: 0
   - BaseNodeGuid: 1e6de9bd-39fb-4cba-8731-1b8d683b1ceb
     PortName: Null Port
     TargetNodeGuid: 6ae7c71a-a070-41a7-af94-4637fee3931b
     IsNullNode: 1
-  - BaseNodeGuid: 6ae7c71a-a070-41a7-af94-4637fee3931b
+  - BaseNodeGuid: c3c7a7f2-ccfb-42ca-84b0-2195619c7bb4
     PortName: Null Port
-    TargetNodeGuid: d835d87b-c0f1-4111-b4fb-602af462fc09
+    TargetNodeGuid: d2a72bee-2975-487f-a070-9181f829c513
     IsNullNode: 1
   - BaseNodeGuid: d835d87b-c0f1-4111-b4fb-602af462fc09
     PortName: Null Port
@@ -200,14 +196,18 @@ MonoBehaviour:
     PortName: "J'esp\xE8re que \xE7a va se calmer alors."
     TargetNodeGuid: 0a5f3d30-d626-4cff-aabf-0aa410742507
     IsNullNode: 0
-  - BaseNodeGuid: 0a5f3d30-d626-4cff-aabf-0aa410742507
-    PortName: Null Port
-    TargetNodeGuid: ea7a36c9-611b-4ed3-ac3c-1a550a2268b2
-    IsNullNode: 1
   - BaseNodeGuid: 569bd412-41ac-49cf-bdb8-1f75ca122285
     PortName: Tiens le premier verre est pour moi alors, bon courage
     TargetNodeGuid: e1361052-69be-46bf-afc7-f9b04ba89dbf
     IsNullNode: 0
+  - BaseNodeGuid: 0a5f3d30-d626-4cff-aabf-0aa410742507
+    PortName: Null Port
+    TargetNodeGuid: ea7a36c9-611b-4ed3-ac3c-1a550a2268b2
+    IsNullNode: 1
+  - BaseNodeGuid: 6ae7c71a-a070-41a7-af94-4637fee3931b
+    PortName: Null Port
+    TargetNodeGuid: d835d87b-c0f1-4111-b4fb-602af462fc09
+    IsNullNode: 1
   DialogueNodeData:
   - NodeGUID: e9575ac2-efac-4702-aa91-49600134a2dd
     DialogueText: "Salut, une bi\xE8re s'il te plait..."
@@ -287,14 +287,6 @@ MonoBehaviour:
       Direction: 1
       Capacity: 0
       IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
-  - NodeGUID: a17175f2-6b90-4484-8a3c-8e7d900abad8
-    DialogueText: "Laisse tomber, j'suis juste \xE0 cran en ce moment, file moi juste
-      mes verres qu'on en parle plus..."
-    Position: {x: 2731, y: -89.5}
-    StatModifier: -5
-    Ports: []
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
   - NodeGUID: 1fc151f7-4ac4-45d8-b51f-3be8bc24fe1e
@@ -509,7 +501,11 @@ MonoBehaviour:
       l'heure peut \xEAtre."
     Position: {x: 11122, y: 157.5}
     StatModifier: 0
-    Ports: []
+    Ports:
+    - PortName: Tiens, rafraichis-toi.
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
   - NodeGUID: 69ec3efb-c364-435a-9572-d5a74a524fdc
@@ -517,14 +513,18 @@ MonoBehaviour:
       grand soif !"
     Position: {x: 10415, y: 362}
     StatModifier: 0
-    Ports: []
+    Ports:
+    - PortName: "tiens, une bonne bi\xE8re fra\xEEche Gary !"
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
   - NodeGUID: 48bed094-cd4b-439c-97d0-470700ab38ca
     DialogueText: "Ouais ouais, j'suis un grand gar\xE7on, inqui\xE8te toi plut\xF4t
       pour ton bar, c'est d\xE9j\xE0 assez de travaille."
     Position: {x: 5260.5, y: -275}
-    StatModifier: 0
+    StatModifier: -5
     Ports:
     - PortName: Null Port
       Direction: 1
@@ -536,7 +536,11 @@ MonoBehaviour:
     DialogueText: Bon aller, j'ai soif, donne moi mes boissons, j'vais aller m'asseoir.
     Position: {x: 6083, y: -274.5}
     StatModifier: 0
-    Ports: []
+    Ports:
+    - PortName: tiens...
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
   - NodeGUID: 88a2fd73-5ab1-4a95-a65b-f4f26f49acfa
@@ -628,7 +632,11 @@ MonoBehaviour:
       la gorge s\xE8che."
     Position: {x: 7991.5, y: 708}
     StatModifier: 5
-    Ports: []
+    Ports:
+    - PortName: tiens Gary
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
   - NodeGUID: d2a72bee-2975-487f-a070-9181f829c513
@@ -723,7 +731,11 @@ MonoBehaviour:
     DialogueText: "Au merci ! \xE0 ta sant\xE9 alors !"
     Position: {x: 12374, y: 1048.5}
     StatModifier: 0
-    Ports: []
+    Ports:
+    - PortName: "Sant\xE9 \xE0 toi mon vieux !"
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
   - NodeGUID: 6ae7c71a-a070-41a7-af94-4637fee3931b
@@ -736,6 +748,18 @@ MonoBehaviour:
       Direction: 1
       Capacity: 0
       IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
+  - NodeGUID: a17175f2-6b90-4484-8a3c-8e7d900abad8
+    DialogueText: "Laisse tomber, j'suis juste \xE0 cran en ce moment, file moi juste
+      mes verres qu'on en parle plus..."
+    Position: {x: 2731, y: -86.5}
+    StatModifier: -5
+    Ports:
+    - PortName: Tiens...
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
   ExposedProperties: []
