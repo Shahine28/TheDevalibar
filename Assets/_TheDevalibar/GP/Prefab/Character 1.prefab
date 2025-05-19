@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 271331358332592071}
   - component: {fileID: 7218737290905152009}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Character 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dijkstraManager: {fileID: 0}
-  MoveSpeed: 2
+  MoveSpeed: 3
   FollowPathAtStart: 1
 --- !u!114 &7218737290905152009
 MonoBehaviour:
@@ -308,7 +308,7 @@ MonoBehaviour:
   _dijkstraManager: {fileID: 0}
   _dijkstraPathFollower: {fileID: 271331358332592071}
   _waitingTimeRange: {x: 10, y: 20}
-  _barNodeId: 12
+  _barNodeId: 40
   _exitNodeId: 18
   _startNodeIndex: 0
   _lastNodeIndex: 0
