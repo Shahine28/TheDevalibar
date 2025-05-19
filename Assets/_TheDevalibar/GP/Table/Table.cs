@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
 using AYellowpaper.SerializedCollections;
 using MyUtilities;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Table : MonoBehaviour

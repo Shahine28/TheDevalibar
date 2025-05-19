@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using MyUtilities;
-using TMPro.EditorUtilities;
 
 [RequireComponent(typeof(Camera))]
 public class CameraZoomToTarget : MonoBehaviour

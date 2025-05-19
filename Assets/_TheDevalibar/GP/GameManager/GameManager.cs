@@ -1,13 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using AYellowpaper.SerializedCollections;
-using NaughtyAttributes;
-using UnityEditor;
 using UnityEngine;
 using MyUtilities;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {

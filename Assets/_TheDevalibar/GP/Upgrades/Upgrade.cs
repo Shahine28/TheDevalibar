@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using NaughtyAttributes;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Upgrade", menuName = "Scriptable Objects/Upgrade")]
