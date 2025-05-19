@@ -4,11 +4,25 @@ using UnityEngine.UI;
 using NaughtyAttributes;
 using UnityEngine.TextCore.Text;
 using FontStyles = TMPro.FontStyles;
+using UnityEditor.ShaderGraph.Internal;
+using Unity.VisualScripting;
 
 public class TextResizer : MonoBehaviour
 {
+    [Header("UI Slider")]
+    [SerializeField] Slider _UISizeSldr;
+    [SerializeField] Slider _UISpaceLetterSldr;
+    [SerializeField] Slider _UISpaceWordSldr;
+    [SerializeField] Slider _UILineSpacingSldr;
+
     [Header("UI Text")]
     [SerializeField] TextMeshProUGUI _UIText;
+    [SerializeField] TextMeshProUGUI _UISizeVal;
+    [SerializeField] TextMeshProUGUI _UISpaceLetterVal;
+    [SerializeField] TextMeshProUGUI _UISpaceWordVal;
+    [SerializeField] TextMeshProUGUI _UISpaceLineVal;
+
+    [Header("UI Color")]
     [SerializeField] Color _UITextColor;
 
     [Header("UI Text param")]
@@ -18,8 +32,20 @@ public class TextResizer : MonoBehaviour
     [SerializeField] float _UISpaceBetweenWord;
     [SerializeField] float _UILineSpace;
 
+    [Header("World Slider")]
+    [SerializeField] Slider _WorldSizeSldr;
+    [SerializeField] Slider _WorldSpaceLetterSldr;
+    [SerializeField] Slider _WorldSpaceWordSldr;
+    [SerializeField] Slider _WorldSpaceLineSldr;
+
     [Header("World Text")]
     [SerializeField] TextMeshPro _worldText;
+    [SerializeField] TextMeshProUGUI _worldSizeVal;
+    [SerializeField] TextMeshProUGUI _worldSpaceLetterVal;
+    [SerializeField] TextMeshProUGUI _worldSpaceWordVal;
+    [SerializeField] TextMeshProUGUI _worldSpaceLineVal;
+
+    [Header("Color Param")]
     [SerializeField] Color _worldTextColor;
 
     [Header("World Text param")]
@@ -35,9 +61,83 @@ public class TextResizer : MonoBehaviour
 
     void Start()
     {
-        _worldText.fontSize = _worldTextSize;
-        _UIText.fontSize = _UITextSize;
+        //---- UI ----//
+        //_UILineSpacingSldr.onValueChanged.AddListener((v) => { _UISpaceLineVal.text = v.ToString("0"); coucou=v; });
+        _UISizeSldr.onValueChanged.AddListener(UpdateFontSize);
+        _UISpaceLetterSldr.onValueChanged.AddListener(UpdateSpaceBetweenletter);
+        _UISpaceWordSldr.onValueChanged.AddListener(UpdateSpaceBetweenWrod);
+        _UILineSpacingSldr.onValueChanged.AddListener(UpdateLineSpacing);
+
+        //---- World ----//
+        _WorldSizeSldr.onValueChanged.AddListener(UpdateWorldSizeFont);
+        _WorldSpaceLetterSldr.onValueChanged.AddListener(UpdateWorldSpaceBetweenLetter);
+        _WorldSpaceWordSldr.onValueChanged.AddListener(UpdateWorldSpaceBetweenWord);
+        _WorldSpaceLineSldr.onValueChanged.AddListener(UpdateWorldSpaceBetweenLine);
     }
+    private void OnDestroy()
+    {
+        //---- UI ----//
+        _UISizeSldr.onValueChanged.RemoveListener(UpdateFontSize);
+        _UISpaceLetterSldr.onValueChanged.RemoveListener(UpdateSpaceBetweenletter);
+        _UISpaceWordSldr.onValueChanged.RemoveListener(UpdateSpaceBetweenWrod);
+
+        //---- World ----//
+        _WorldSizeSldr.onValueChanged.RemoveListener(UpdateWorldSizeFont);
+        
+    }
+
+    #region UI Listener
+    void UpdateFontSize(float v)
+    {
+        _UISizeVal.text = v.ToString();
+        _UITextSize = (int)v;
+        //Debug.Log(_UITextSize);
+    }
+
+    void UpdateSpaceBetweenletter(float v)
+    {
+        _UISpaceLetterVal.text = v.ToString();
+        _UIspaceInbetweenLetter = (int)v;
+    }
+
+    void UpdateSpaceBetweenWrod(float v)
+    {
+        _UISpaceWordVal.text = v.ToString();
+        _UISpaceBetweenWord = (int)v;
+    }
+
+    void UpdateLineSpacing(float v)
+    {
+        _UISpaceLineVal.text = v.ToString();
+        _UILineSpace = (int)v;
+    }
+    #endregion
+
+    #region world Listener
+    void UpdateWorldSizeFont(float v)
+    {
+        _worldSizeVal.text = v.ToString();
+        _worldTextSize = (int)v;
+    }
+
+    void UpdateWorldSpaceBetweenLetter(float v)
+    {
+        _worldSpaceLetterVal.text = v.ToString();
+        _worldSpaceInbetweenLetter = (int)v;
+    }
+
+    void UpdateWorldSpaceBetweenWord(float v)
+    {
+        _worldSpaceWordVal.text = v.ToString();
+        _worldSpaceBetweenWord = (int)v;
+    }
+
+    void UpdateWorldSpaceBetweenLine(float v)
+    {
+        _worldSpaceLineVal.text = v.ToString();
+        _worldLineSpace = (int)v;
+    }
+    #endregion
 
     void Update()
     {
@@ -73,6 +173,7 @@ public class TextResizer : MonoBehaviour
         _worldText.lineSpacing = _worldLineSpace;
     }
 
+    #region Button
     [Button]
     public void OnBoldText()
     {
@@ -120,4 +221,5 @@ public class TextResizer : MonoBehaviour
             text.font = _robotCondensed;
         }
     }
+    #endregion
 }
