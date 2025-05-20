@@ -374,8 +374,10 @@ public class NodeManager : MonoBehaviour
     public void SetNewStartAndEndNodes(int startNodeID, int endNodeID)
     {
         ResetStartAndEndNodes();
-        nodes[startNodeID].isStartNode = true;
-        nodes[endNodeID].isEndNode = true;
+        int startNodeIndex = nodes.IndexOf(nodes.First(x => x.NodeID == startNodeID));
+        int endNodeIndex = nodes.IndexOf(nodes.Last(x => x.NodeID == endNodeID));
+        nodes[startNodeIndex].isStartNode = true;
+        nodes[endNodeIndex].isEndNode = true;
     }
 
     private void Awake()
