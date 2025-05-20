@@ -6,6 +6,7 @@ using _TheDevalibar.GP.Characters;
 using AYellowpaper.SerializedCollections;
 using MyUtilities;
 using NaughtyAttributes;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -66,6 +67,12 @@ public class CharacterBehavior : MonoBehaviour
     
     private GameManager _gameManager;
     private ElevatorManager _elevatorManager;
+    
+    
+    [Header("Bubble Speech")]
+    [SerializeField] private GameObject _bubbleSpeechPanel;
+    [SerializeField] private TextMeshProUGUI _bubbleSpeechText;
+    private BubbleSpeechManager _bubbleSpeechManager;
 
 #region OnEnable/OnDisable
     public void OnEnable()
@@ -84,14 +91,32 @@ public class CharacterBehavior : MonoBehaviour
         }
     }
 #endregion
-
+#region UnityDefault
     public void Initialize(Character character)
     {
         _character = character;
         _spriteRenderer.sprite = _character.CharacterSprite; // temporary
         GetComponent<MeshRenderer>().enabled = false;
     }
+
+    private void OnApplicationQuit()
+    {
+        if (_character != null)
+        {
+            _character.DialogueIndex = 0;
+            _character.Affinity = 50;
+        }
+    }
     
+    private void OnDestroy()
+    {
+        if (_character != null)
+        {
+            _character.DialogueIndex = 0;
+            _character.Affinity = 50;
+        }
+    }
+
     void Start()
     {   
         _gameManager = ServiceLocator.Get<GameManager>();
@@ -136,6 +161,11 @@ public class CharacterBehavior : MonoBehaviour
         UpdateFeedBackImage();
         SetCharacterDisabilities();
         _characterConstraint = GetCharacterConstraint();
+        _bubbleSpeechManager = ServiceLocator.Get<BubbleSpeechManager>();
+        if (_bubbleSpeechManager == null)
+        {
+            Debug.LogError("No Bubble speech manager in scene");
+        }
         if (_character)
         {
             MoveToNode(_barNodeId);
@@ -155,7 +185,7 @@ public class CharacterBehavior : MonoBehaviour
             Debug.LogError("No show hide UI found");
         }
     }
-    
+#endregion
 #region Constraint&Disability
     public void SetCharacterDisabilities()
     {
@@ -239,13 +269,23 @@ public class CharacterBehavior : MonoBehaviour
     {
         float waitTime = UnityEngine.Random.Range(_waitingTimeRange.x, _waitingTimeRange.y);
         float elapsed = 0f;
+        float deltaBubbleSpeech = waitTime / 4;
 
         while (elapsed < waitTime)
         {
             while (_isPaused) yield return null;
+            if (elapsed >= deltaBubbleSpeech && elapsed < waitTime - deltaBubbleSpeech && !_bubbleSpeechPanel.gameObject.activeInHierarchy) // On le fait apparaite
+            {
+                SetBubbleSpeech(false);
+            }
+            else if (elapsed >= waitTime - deltaBubbleSpeech && _bubbleSpeechPanel.gameObject.activeInHierarchy) // On le fait disparaitre
+            {
+                _bubbleSpeechPanel.gameObject.SetActive(false);
+            }
             if (_interrupted)
             {
                 Debug.Log("Waiting at the bar was interrupted.");
+                if (_bubbleSpeechPanel.gameObject.activeInHierarchy) _bubbleSpeechPanel.gameObject.SetActive(false);
                 MoveToBarExit();
                 if (_usedTable)
                 {
@@ -278,6 +318,7 @@ public class CharacterBehavior : MonoBehaviour
 
     private void MoveToBarExit()
     {
+        SetBubbleSpeech(true);
         if (_floorLevel == FloorLevel.GroundFloor)
         {
             MoveToNode(_exitNodeId);
@@ -591,7 +632,7 @@ public class CharacterBehavior : MonoBehaviour
             FeedBackImage.texture = texture;
         }
     }
-#endregion
+
     private int GetTipValue()
     {
         switch (_customerFeedback)
@@ -609,7 +650,23 @@ public class CharacterBehavior : MonoBehaviour
         return 0;
     }
     
-    
+#endregion
+#region BubbleSpeech
+
+private void SetBubbleSpeech(bool isCustomerLeaving)
+{
+    string speech = _character != null
+        ? _bubbleSpeechManager.GetSpeech(_customerFeedback, isCustomerLeaving, _character.BubbleSpeech)
+        : _bubbleSpeechManager.GetSpeech(_customerFeedback, isCustomerLeaving);
+    if (speech == string.Empty)
+    {
+        Debug.LogWarning("No bubble speech found.");
+        return;
+    }
+    _bubbleSpeechText.text = speech;
+    _bubbleSpeechPanel.gameObject.SetActive(true);
+}
+#endregion
 #region Dialogue
     private void StartCharacterDialogue()
     {
@@ -638,6 +695,7 @@ public class CharacterBehavior : MonoBehaviour
         }
     }
     #endregion
+
 }
 
 

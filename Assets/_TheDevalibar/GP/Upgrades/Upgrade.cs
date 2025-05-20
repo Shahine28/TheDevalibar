@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "Upgrade", menuName = "Scriptable Objects/Upgrade")]
 public class Upgrade : ScriptableObject
@@ -10,10 +11,14 @@ public class Upgrade : ScriptableObject
     [TextArea] public string UpgradeDescription;
     public int UpgradeCost;
     public ConstraintBoolDictionary AccessibiltiesToAddWithUpgrade;
+    public UnityEvent OnUpgrade;
 
 
-    
 
+    public void InvokeUpgrade()
+    {
+        OnUpgrade?.Invoke();
+    }
     /// <summary>
     /// Get First Upgrade 
     /// </summary>

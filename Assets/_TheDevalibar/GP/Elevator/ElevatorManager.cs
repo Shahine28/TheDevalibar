@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 public class ElevatorManager : MonoBehaviour
 {
     [SerializeField] private GameObject _elevatorGameObject;
+    public GameObject ElevatorGameObject => _elevatorGameObject;
     [SerializeField, ReadOnly] private FloorLevel _floorLevel = FloorLevel.GroundFloor;
     
     public FloorLevel FloorLevel=>_floorLevel;
@@ -30,8 +31,12 @@ public class ElevatorManager : MonoBehaviour
 
     private Coroutine _movementCoroutine;
 
-    [SerializeField, ReadOnly] private bool _isElevatorBuyed ;
+    [SerializeField, ReadOnly] private bool _isElevatorBuyed;
     public bool IsElevatorBuyed => _isElevatorBuyed;
+    
+    [SerializeField] private Upgrade _elevatorUpgrade;
+    public Upgrade ElevatorUpgrade => _elevatorUpgrade;
+    
     
     public event Action OnElevatorMovementEnd;
 
@@ -45,6 +50,7 @@ public class ElevatorManager : MonoBehaviour
         _elevatorGameObject.transform.position = _groundFloorPosition;
         _floorLevel = FloorLevel.GroundFloor;
         _movementCoroutine = null;
+        _elevatorUpgrade.OnUpgrade.AddListener(BuyElevator);
     }
 
     [Button]
@@ -52,6 +58,13 @@ public class ElevatorManager : MonoBehaviour
     {
         _isElevatorBuyed = true;
         _elevatorGameObject.gameObject.SetActive(true);
+    }
+    
+    [Button]
+    public void SellElevator()
+    {
+        _isElevatorBuyed = false;
+        _elevatorGameObject.gameObject.SetActive(false);
     }
 
     [Button]

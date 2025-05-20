@@ -148,7 +148,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100.000046, z: 100.000046}
+  m_LocalScale: {x: 32.89591, y: 32.89592, z: 32.89592}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1717586062734720318}
@@ -170,23 +170,26 @@ MonoBehaviour:
   _tableGameObject: {fileID: 2062023832369538948}
   _tableNodeNumber: -1
   _tableID: 0
+  _tableFloorLevel: 0
   _upgradeButton: {fileID: 8405305214540582626}
   constraintDict:
     keys:
-    - "Mobilit\xE9"
-    - "D\xE9ficience visuelle"
     - "D\xE9ficience auditive s\xE9v\xE8re"
-    - "Fatigabilit\xE9 chronique"
-    - "Troubles de l\u2019\xE9quilibre / vertiges"
-    - "Hypersensibilit\xE9 sensorielle"
-    - Douleurs chroniques
-    - "Allergies s\xE9v\xE8res"
-    - "Troubles cognitifs l\xE9gers"
-    - Troubles dermatologiques
-    values: 00000000000000000000
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000000000000
   IsUsedByCustomer: 0
   PurchasedTableUpgrades:
-    _serializedList: []
+    _serializedList:
+    - Key: {fileID: 11400000, guid: 92c88bac9b6e07a46bf767b79d9b5ab4, type: 2}
+      Value: 0
+    - Key: {fileID: 11400000, guid: 7b07139ac997b304cba8da3daa84560d, type: 2}
+      Value: 0
+    - Key: {fileID: 11400000, guid: 5326bfb8cefba8d43bb12b2f166d8869, type: 2}
+      Value: 0
   _tableMeshFilter: {fileID: 2340126854477378203}
   _tableMeshRenderer: {fileID: 548660357387322961}
   _chairMesh1Filter: {fileID: 8300974000015378488}
