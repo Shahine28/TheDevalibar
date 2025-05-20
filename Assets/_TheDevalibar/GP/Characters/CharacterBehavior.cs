@@ -169,6 +169,7 @@ public class CharacterBehavior : MonoBehaviour
         if (_character)
         {
             MoveToNode(_barNodeId);
+            // MoveToBestTable(); // Pour les test
         }
         else
         {
@@ -369,13 +370,17 @@ public class CharacterBehavior : MonoBehaviour
         {
             _lastNodeIndex = nextElevatorNodeIndex;
             _floorLevel = _elevatorManager.FloorLevel; 
+            CharacterSpawnManager spawnManager = ServiceLocator.Get<CharacterSpawnManager>();
             if (_usedTable != null)
             {
+                transform.SetParent(spawnManager.CharacterSpawnPoint);
+                _elevatorManager.currentPassenger = null;
                 MoveToNode(_usedTable.TableNodeNumber);
             }
             else
             {
-                transform.SetParent(null);
+                transform.SetParent(spawnManager.CharacterSpawnPoint);
+                _elevatorManager.currentPassenger = null;
                 MoveToBarExit();
             }
         }
@@ -555,16 +560,18 @@ public class CharacterBehavior : MonoBehaviour
             {
                 if (hasTable) // On veut monter
                 {
-                    transform.SetParent(_elevatorManager.transform);
-                    _elevatorManager.MoveToUpperFloor();
+                    transform.SetParent(_elevatorManager.elevatorPlateform.transform);
+                    _elevatorManager.currentPassenger = this;
+                    _elevatorManager.CloseDoor(_floorLevel);
                 }
                 return;
             }
 
-            if (isOnElevatorUpperFloor)
+            if (isOnElevatorUpperFloor) // On veut descendre
             {
-                transform.SetParent(_elevatorManager.transform);
-                _elevatorManager.MoveToGroundFloor();
+                transform.SetParent(_elevatorManager.elevatorPlateform.transform);
+                _elevatorManager.currentPassenger = this;
+                _elevatorManager.CloseDoor(_floorLevel);
             }
 
         }

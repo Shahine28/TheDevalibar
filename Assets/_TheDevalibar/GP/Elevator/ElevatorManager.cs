@@ -2,13 +2,18 @@ using System;
 using System.Collections;
 using MyUtilities;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class ElevatorManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _elevatorGameObject;
-    public GameObject ElevatorGameObject => _elevatorGameObject;
+    [SerializeField] private GameObject _elevatorPrefab;   
+    [SerializeField] private GameObject _elevatorPlateformGameObject;
+    public GameObject elevatorPlateform => _elevatorPlateformGameObject;
+    [SerializeField] private Animator _elevatorAnimator;
+    
+    public GameObject ElevatorGameObject => _elevatorPlateformGameObject;
     [SerializeField, ReadOnly] private FloorLevel _floorLevel = FloorLevel.GroundFloor;
     
     public FloorLevel FloorLevel=>_floorLevel;
@@ -36,6 +41,8 @@ public class ElevatorManager : MonoBehaviour
     
     [SerializeField] private Upgrade _elevatorUpgrade;
     public Upgrade ElevatorUpgrade => _elevatorUpgrade;
+
+    public CharacterBehavior currentPassenger;
     
     
     public event Action OnElevatorMovementEnd;
@@ -47,24 +54,75 @@ public class ElevatorManager : MonoBehaviour
 
     private void Start()
     {
-        _elevatorGameObject.transform.position = _groundFloorPosition;
+        _elevatorPlateformGameObject.transform.position = _groundFloorPosition;
         _floorLevel = FloorLevel.GroundFloor;
         _movementCoroutine = null;
         _elevatorUpgrade.OnUpgrade.AddListener(BuyElevator);
+    }
+
+    public void OpenDoor(FloorLevel floorLevel)
+    {
+        if (floorLevel == FloorLevel.GroundFloor)
+        {
+            _elevatorAnimator?.SetTrigger("OpenFrontDoor");
+        }
+        else
+        {
+            _elevatorAnimator?.SetTrigger("OpenBackDoor");
+        }
+    }
+    
+    public void CloseDoor(FloorLevel floorLevel)
+    {
+        if (floorLevel == FloorLevel.GroundFloor)
+        {
+            _elevatorAnimator?.SetTrigger("CloseFrontDoor");
+        }
+        else
+        {
+            _elevatorAnimator?.SetTrigger("CloseBackDoor");
+        }
+    }
+
+    public void OnDoorClosed()
+    {
+        if (currentPassenger != null)
+        {
+            if (_floorLevel == FloorLevel.GroundFloor)
+            {
+                MoveToUpperFloor();
+            }
+            else
+            {
+                MoveToGroundFloor();
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        CloseDoor(_floorLevel);
+    }
+
+
+
+    public void OnDoorOpened()
+    {
+        OnElevatorMovementEnd?.Invoke();
     }
 
     [Button]
     public void BuyElevator()
     {
         _isElevatorBuyed = true;
-        _elevatorGameObject.gameObject.SetActive(true);
+        _elevatorPrefab.gameObject.SetActive(true);
     }
     
     [Button]
     public void SellElevator()
     {
         _isElevatorBuyed = false;
-        _elevatorGameObject.gameObject.SetActive(false);
+        _elevatorPrefab.gameObject.SetActive(false);
     }
 
     [Button]
@@ -72,7 +130,10 @@ public class ElevatorManager : MonoBehaviour
     {
         if (_floorLevel == FloorLevel.UpperFloor)
         {
-            if (_movementCoroutine == null) OnElevatorMovementEnd?.Invoke();
+            if (_movementCoroutine == null)
+            {
+                OpenDoor(_floorLevel);
+            }
             return;
         }
 
@@ -89,7 +150,10 @@ public class ElevatorManager : MonoBehaviour
     {
         if (_floorLevel == FloorLevel.GroundFloor)
         {
-            if (_movementCoroutine == null) OnElevatorMovementEnd?.Invoke();
+            if (_movementCoroutine == null)
+            {
+                OpenDoor(_floorLevel);
+            }
             return;
         }
 
@@ -103,7 +167,7 @@ public class ElevatorManager : MonoBehaviour
 
     private IEnumerator MoveElevator(Vector3 targetPosition, FloorLevel destinationLevel)
     {
-        Transform elevator = _elevatorGameObject.transform;
+        Transform elevator = _elevatorPlateformGameObject.transform;
         Vector3 start = elevator.position;
         Vector3 end = targetPosition;
 
@@ -124,7 +188,7 @@ public class ElevatorManager : MonoBehaviour
         elevator.position = end;
         _floorLevel = destinationLevel;
         _movementCoroutine = null;
-        OnElevatorMovementEnd?.Invoke();
+        OpenDoor(destinationLevel);
     }
 }
 
