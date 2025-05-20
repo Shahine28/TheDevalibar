@@ -554,7 +554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMin.x
@@ -562,7 +562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_SizeDelta.x
@@ -602,11 +602,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 91.5
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -780
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -766,6 +766,14 @@ PrefabInstance:
     - target: {fileID: 2119125150931628903, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910202032347847620, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_fontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910202032347847620, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3570899399634836936, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2410,6 +2418,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277828580}
   m_CullTransparentMesh: 1
+--- !u!1 &288439840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 288439842}
+  - component: {fileID: 288439841}
+  m_Layer: 0
+  m_Name: ElevatorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &288439841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288439840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa34e80cd0d39554aac920a0a19a40ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _elevatorGameObject: {fileID: 744720132}
+  _floorLevel: 0
+  _GroundFloorNodeId: 31
+  _UpperFloorNodeId: 30
+  _elevatorWaitingPositionGroundFloorNodeId: 35
+  _elevatorWaitingPositionUpperFloorNodeId: 29
+  _groundFloorPosition: {x: 34.312, y: -17.04, z: 21.728}
+  _upperFloorPosition: {x: 34.312, y: -16.134, z: 21.728}
+  _movementSpeed: 1
+  _movementCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _isElevatorBuyed: 0
+  _elevatorUpgrade: {fileID: 11400000, guid: 7c75a30c1c99a9946a95d7b3627a5e47, type: 2}
+--- !u!4 &288439842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288439840}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.29678, y: -19.711714, z: 26.145582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 744720134}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &304655995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3514,8 +3602,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1771207920904847811, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: 'constraintDict.values.Array.data[2]'
+      propertyPath: 'constraintDict.values.Array.data[1]'
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771207920904847811, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[2]'
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1771207920904847811, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: PurchasedTableUpgrades._serializedList.Array.size
@@ -3662,6 +3754,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6597385002374057496, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597385002374057496, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597385002374057496, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: 'constraintDict.values.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597385002374057496, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: PurchasedTableUpgrades._serializedList.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -3673,6 +3777,18 @@ PrefabInstance:
       propertyPath: PurchasedTableUpgrades._serializedList.Array.data[1].Key
       value: 
       objectReference: {fileID: 11400000, guid: f4ae7afe725437c4cb5594fede6b5f4f, type: 2}
+    - target: {fileID: 7072600178088209346, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072600178088209346, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072600178088209346, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7072600178088209346, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.08
@@ -4431,7 +4547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMin.x
@@ -4439,7 +4555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4479,11 +4595,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 91.5
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -465
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5709,8 +5825,12 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 288439842}
     m_Modifications:
+    - target: {fileID: -8702806891474150068, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.19
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.35
@@ -5725,15 +5845,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.313
+      value: -0.98477936
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.943
+      value: 2.6717129
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.753
+      value: -4.4175816
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5741,7 +5861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5749,7 +5869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5769,13 +5889,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
       propertyPath: m_Name
-      value: ENV_Elevator_T3
+      value: Elevator
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1329017145}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
+--- !u!1 &744720132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
+  m_PrefabInstance: {fileID: 744720131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &744720134 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b75d374275baf744ca0d9e2ac0666a19, type: 3}
+  m_PrefabInstance: {fileID: 744720131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &753353020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5882,7 +6019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMin.x
@@ -5890,7 +6027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_SizeDelta.x
@@ -5930,11 +6067,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 91.5
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1410
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6034,6 +6171,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756730868}
   m_CullTransparentMesh: 1
+--- !u!1 &779857894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779857896}
+  - component: {fileID: 779857895}
+  m_Layer: 0
+  m_Name: BubbleSpeechManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &779857895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779857894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8531e054beae49c45bd366b7b52c7ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBubbleSpeechUnique: 1
+  _bubbleSpeech:
+    _goodTableSpeech:
+    - Wow trop bien ce bar
+    - J'adore la vibe
+    - La serveuse est super sympa
+    - Je vais ramener des amis ici
+    - "Oh je suis s\xFBr que Jul kifferai"
+    _averageTableSpeech:
+    - Dommage c'etait mieux avant
+    - La table est bancale...
+    - Y'a aucun ambiance
+    - "Je me sens pas \xE0 l'aise"
+    - "Y'a que moi qui suis mitig\xE9 ?"
+    _goodLeavingSpeech:
+    - A la prochaine !
+    - "Vous me reverrez bient\xF4t !"
+    - "A tr\xE8s vite"
+    - "J'ai d\xE9j\xE0 h\xE2te de revenir"
+    - A plus !
+    _averageLeavingSpeech:
+    - "Pas s\xFBr que je reviendrais"
+    - "Y'a pas mal de trucs \xE0 changer"
+    - Y'a du potentiel
+    - Moue bof
+    - "Je repasserai peut \xEAtre... ou pas"
+    _badLeavingSpeech:
+    - "Premi\xE8re et derni\xE8re fois ici"
+    - "Pff d\xE9\xE7u"
+    - "5\u20AC pour la pinte de pisse..."
+    - A FUIIIIIIIIR
+    - C'est ciao pour moi
+--- !u!4 &779857896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779857894}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1431.8723, y: 713.0523, z: -8.437653}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &805629046
 GameObject:
   m_ObjectHideFlags: 0
@@ -9494,6 +9707,115 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312883785}
   m_CullTransparentMesh: 1
+--- !u!1 &1329017144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1329017145}
+  - component: {fileID: 1329017148}
+  - component: {fileID: 1329017147}
+  - component: {fileID: 1329017146}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1329017145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329017144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.03, z: 0}
+  m_LocalScale: {x: 0.13733, y: 0.13733, z: 0.13733}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 744720134}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1329017146
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329017144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1329017147
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329017144}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1329017148
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329017144}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1354419864
 GameObject:
   m_ObjectHideFlags: 0
@@ -9761,6 +10083,7 @@ MonoBehaviour:
   - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
     type: 1
     IsBlockingConstraint: 1
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9768,6 +10091,7 @@ MonoBehaviour:
   - name: "D\xE9ficience visuelle s\xE9v\xE8re"
     type: 1
     IsBlockingConstraint: 1
+    CanTakeStairs: 1
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9775,6 +10099,7 @@ MonoBehaviour:
   - name: "D\xE9ficience auditive s\xE9v\xE8re"
     type: 1
     IsBlockingConstraint: 1
+    CanTakeStairs: 1
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9782,6 +10107,7 @@ MonoBehaviour:
   - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     type: 1
     IsBlockingConstraint: 0
+    CanTakeStairs: 1
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9789,6 +10115,7 @@ MonoBehaviour:
   - name: "Douleurs chroniques l\xE9g\xE8re"
     type: 1
     IsBlockingConstraint: 0
+    CanTakeStairs: 1
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9796,6 +10123,7 @@ MonoBehaviour:
   - name: "Troubles cognitifs l\xE9g\xE8re"
     type: 1
     IsBlockingConstraint: 0
+    CanTakeStairs: 1
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9941,6 +10269,41 @@ MonoBehaviour:
     waitTime: 0
     isStartNode: 0
     isEndNode: 0
+  - NodeID: 29
+    position: {x: 35.069336, y: -16.11517, z: 21.728268}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 30
+    position: {x: 34.3, y: -16.11517, z: 21.70688}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 31
+    position: {x: 34.3, y: -16.9895, z: 21.706879}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 32
+    position: {x: 33.269028, y: -17.045, z: 21.72835}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 33
+    position: {x: 37.157314, y: -16.113268, z: 21.722853}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 34
+    position: {x: 32.347343, y: -17.045, z: 21.70845}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
+  - NodeID: 35
+    position: {x: 33.79672, y: -17.045, z: 21.72327}
+    waitTime: 0
+    isStartNode: 0
+    isEndNode: 0
   connections:
   - label: 
     StartNodeNumber: 0
@@ -9950,6 +10313,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -9957,6 +10321,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -9964,6 +10329,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -9971,6 +10337,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -9978,6 +10345,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -9985,6 +10353,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -9997,6 +10366,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10004,6 +10374,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10011,6 +10382,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10018,6 +10390,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10025,6 +10398,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10032,6 +10406,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10044,6 +10419,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10051,6 +10427,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10058,6 +10435,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10065,6 +10443,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10072,6 +10451,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10079,6 +10459,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10091,6 +10472,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 0
       intValue: 0
       floatValue: 0
@@ -10098,6 +10480,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10105,6 +10488,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10112,6 +10496,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10119,6 +10504,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10126,6 +10512,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10138,6 +10525,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10145,6 +10533,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10152,6 +10541,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10159,6 +10549,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10166,6 +10557,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10173,53 +10565,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-  - label: 
-    StartNodeNumber: 5
-    EndNodeNumber: 6
-    cost: 1
-    constraints:
-    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-    - name: "D\xE9ficience auditive s\xE9v\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-    - name: "Douleurs chroniques l\xE9g\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-    - name: "Troubles cognitifs l\xE9g\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10232,6 +10578,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10239,6 +10586,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10246,6 +10594,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10253,6 +10602,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10260,6 +10610,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10267,6 +10618,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10279,6 +10631,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10286,6 +10639,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10293,6 +10647,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10300,6 +10655,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10307,6 +10663,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10314,6 +10671,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10326,6 +10684,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10333,6 +10692,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10340,6 +10700,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10347,6 +10708,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10354,6 +10716,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10361,6 +10724,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10373,6 +10737,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10380,6 +10745,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10387,6 +10753,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10394,6 +10761,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10401,6 +10769,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10408,6 +10777,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10420,6 +10790,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10427,6 +10798,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10434,6 +10806,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10441,6 +10814,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10448,6 +10822,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10455,6 +10830,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10467,6 +10843,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10474,6 +10851,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10481,6 +10859,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10488,6 +10867,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10495,6 +10875,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10502,6 +10883,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10514,6 +10896,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10521,6 +10904,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10528,6 +10912,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10535,6 +10920,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10542,6 +10928,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10549,6 +10936,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10561,6 +10949,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10568,6 +10957,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10575,6 +10965,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10582,6 +10973,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10589,6 +10981,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10596,6 +10989,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10608,6 +11002,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10615,6 +11010,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10622,6 +11018,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10629,6 +11026,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10636,6 +11034,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10643,53 +11042,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-  - label: 
-    StartNodeNumber: 1
-    EndNodeNumber: 2
-    cost: 1
-    constraints:
-    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-    - name: "D\xE9ficience auditive s\xE9v\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-    - name: "Douleurs chroniques l\xE9g\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
-      boolValue: 1
-      intValue: 0
-      floatValue: 0
-      vector3Value: {x: 0, y: 0, z: 0}
-    - name: "Troubles cognitifs l\xE9g\xE8re"
-      type: 1
-      IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10702,6 +11055,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10709,6 +11063,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10716,6 +11071,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10723,6 +11079,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10730,6 +11087,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10737,6 +11095,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10749,6 +11108,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10756,6 +11116,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10763,6 +11124,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10770,6 +11132,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10777,6 +11140,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10784,6 +11148,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10796,6 +11161,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10803,6 +11169,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10810,6 +11177,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10817,6 +11185,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10824,6 +11193,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10831,6 +11201,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10843,6 +11214,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10850,6 +11222,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10857,6 +11230,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10864,6 +11238,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10871,6 +11246,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10878,6 +11254,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10890,6 +11267,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10897,6 +11275,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10904,6 +11283,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10911,6 +11291,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10918,6 +11299,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10925,6 +11307,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10937,6 +11320,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10944,6 +11328,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10951,6 +11336,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10958,6 +11344,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10965,6 +11352,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10972,6 +11360,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10984,6 +11373,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10991,6 +11381,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10998,6 +11389,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11005,6 +11397,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11012,6 +11405,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11019,6 +11413,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11031,6 +11426,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11038,6 +11434,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11045,6 +11442,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11052,6 +11450,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11059,6 +11458,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11066,6 +11466,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11078,6 +11479,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11085,6 +11487,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11092,6 +11495,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11099,6 +11503,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11106,6 +11511,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11113,6 +11519,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11125,6 +11532,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11132,6 +11540,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11139,6 +11548,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11146,6 +11556,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11153,6 +11564,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11160,6 +11572,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11172,6 +11585,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11179,6 +11593,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11186,6 +11601,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11193,6 +11609,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11200,6 +11617,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11207,6 +11625,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11219,6 +11638,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11226,6 +11646,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11233,6 +11654,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11240,6 +11662,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11247,6 +11670,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11254,6 +11678,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11266,6 +11691,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11273,6 +11699,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11280,6 +11707,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11287,6 +11715,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11294,6 +11723,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11301,6 +11731,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11313,6 +11744,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11320,6 +11752,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11327,6 +11760,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11334,6 +11768,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11341,6 +11776,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11348,6 +11784,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11360,6 +11797,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11367,6 +11805,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11374,6 +11813,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11381,6 +11821,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11388,6 +11829,7 @@ MonoBehaviour:
     - name: "Douleurs chroniques l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11395,6 +11837,590 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9g\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 33
+    EndNodeNumber: 29
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 30
+    EndNodeNumber: 31
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 29
+    EndNodeNumber: 30
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 32
+    EndNodeNumber: 15
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 1
+    EndNodeNumber: 34
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 2
+    EndNodeNumber: 34
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 34
+    EndNodeNumber: 32
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 31
+    EndNodeNumber: 35
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 32
+    EndNodeNumber: 35
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 6
+    EndNodeNumber: 33
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+  - label: 
+    StartNodeNumber: 33
+    EndNodeNumber: 5
+    cost: 1
+    constraints:
+    - name: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience visuelle s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "D\xE9ficience auditive s\xE9v\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Douleurs chroniques l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
+      boolValue: 1
+      intValue: 0
+      floatValue: 0
+      vector3Value: {x: 0, y: 0, z: 0}
+    - name: "Troubles cognitifs l\xE9g\xE8re"
+      type: 1
+      IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11409,7 +12435,7 @@ Transform:
   m_GameObject: {fileID: 1552646587}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.51, y: 1, z: -0.21}
+  m_LocalPosition: {x: -2.51, y: 0.134, z: -0.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13738,7 +14764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMin.x
@@ -13746,7 +14772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_SizeDelta.x
@@ -13786,11 +14812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 91.5
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1095
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14751,7 +15777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMin.x
@@ -14759,7 +15785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_SizeDelta.x
@@ -14799,11 +15825,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 91.5
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 8963770665381607902, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15034,4 +16060,5 @@ SceneRoots:
   - {fileID: 1111276698}
   - {fileID: 200595791}
   - {fileID: 1751621723}
-  - {fileID: 744720131}
+  - {fileID: 288439842}
+  - {fileID: 779857896}

@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AYellowpaper.SerializedCollections;
-
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
@@ -29,6 +28,10 @@ public class Character : ScriptableObject
     [Header("Character Reviews")] 
     [SerializeField] private CharacterReviews _characterReviews;
     public CharacterReviews CharacterReviews => _characterReviews;
+    
+    [Header("Character Bubble Speech")]
+    [SerializeField] private CustomersBubbleSpeech _bubbleSpeech;
+    public CustomersBubbleSpeech BubbleSpeech => _bubbleSpeech;
     
     public ConstraintBoolDictionary constraintDict = new ConstraintBoolDictionary();
     
@@ -70,6 +73,9 @@ public class Character : ScriptableObject
     {
         return affinity >= moodRange.x && affinity <= moodRange.y;
     }
+    
+    
+
 }
 
 [Serializable]

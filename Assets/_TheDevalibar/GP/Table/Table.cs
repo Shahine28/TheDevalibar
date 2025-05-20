@@ -50,13 +50,6 @@ public class Table : MonoBehaviour
         }
         _upgradeButton?.onClick.AddListener(GetFocusOnTable);
     }
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ShowUpgradeButton()
     {
