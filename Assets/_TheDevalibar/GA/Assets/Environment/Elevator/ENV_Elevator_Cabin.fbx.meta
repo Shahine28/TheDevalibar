@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b75d374275baf744ca0d9e2ac0666a19
+guid: 1e2d68859c53642428c8228378bc05ac
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,11 +31,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: ANIM_ElevatorT3_Back_Open
-      takeName: ANIM_Elevator_T3_Back_Open
-      internalID: -5245413734391457288
+      name: ANIM_ElevatorT1_BackDoor_Open
+      takeName: ANIM_ElevatorT1_BackDoor_Open
+      internalID: -5609908193114625102
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 14
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -60,11 +60,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: ANIM_ElevatorT3_Back_Close
-      takeName: ANIM_ElevatorT3_Back_Close
-      internalID: 2422324662241664157
+      name: ANIM_ElevatorT1_BackDoor_Close
+      takeName: ANIM_ElevatorT1_BackDoor_Close
+      internalID: -8310977174141841636
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 14
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -89,11 +89,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: ANIM_ElevatorT3_Front_Open
-      takeName: ANIM_ElevatorT3_Front_Open
-      internalID: 3572222216073602758
+      name: ANIM_ElevatorT1_FrontDoor_Open
+      takeName: ANIM_ElevatorT1_FrontDoor_Open
+      internalID: 5774906739925471851
       firstFrame: 0
-      lastFrame: 20
+      lastFrame: 14
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -118,11 +118,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: ANIM_ElevatorT3_Front_Close
-      takeName: ANIM_ElevatorT3_Front_Close
-      internalID: 4736471672657785473
+      name: ANIM_ElevatorT1_FrontDoor_Close
+      takeName: ANIM_ElevatorT1_FrontDoor_Close
+      internalID: -5417766102313024481
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 14
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
