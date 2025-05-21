@@ -45,6 +45,7 @@ public class UIManager : MonoBehaviour
             _settingsMenus?.SetActive(true);
             _audioMenu?.SetActive(true);
             _rebindMenus?.SetActive(false);
+            _textSettingsMenu?.SetActive(false);
         }
         else
         {

@@ -10,6 +10,10 @@ public class PlayerInput : MonoBehaviour, IPointerDownHandler
     [SerializeField] InputActionReference _Interact;
     [SerializeField] InputActionReference _joystickMove;
     [SerializeField] InputActionReference _mousePosition;
+    [SerializeField] InputActionReference _pauseMenu;
+
+    [Header("UI Manager")]
+    [SerializeField] UIManager _menu;
 
     //[Header("Player Param")]
     //[SerializeField] float speed;
@@ -23,6 +27,8 @@ public class PlayerInput : MonoBehaviour, IPointerDownHandler
     {
         //_click.action.performed += OnClick;
         //_click.action.canceled += OnClick;
+        _pauseMenu.action.performed += OnPause;
+        _pauseMenu.action.canceled += OnPause;
 
     }
 
@@ -59,4 +65,9 @@ public class PlayerInput : MonoBehaviour, IPointerDownHandler
     //    _cursor.transform.position = result;
     //}
 
+
+    void OnPause(InputAction.CallbackContext ctx)
+    {
+        _menu.OnPause();
+    }
 }

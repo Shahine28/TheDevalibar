@@ -62,7 +62,6 @@ public class TextResizer : MonoBehaviour
     void Start()
     {
         //---- UI ----//
-        //_UILineSpacingSldr.onValueChanged.AddListener((v) => { _UISpaceLineVal.text = v.ToString("0"); coucou=v; });
         _UISizeSldr.onValueChanged.AddListener(UpdateFontSize);
         _UISpaceLetterSldr.onValueChanged.AddListener(UpdateSpaceBetweenletter);
         _UISpaceWordSldr.onValueChanged.AddListener(UpdateSpaceBetweenWrod);
@@ -74,6 +73,7 @@ public class TextResizer : MonoBehaviour
         _WorldSpaceWordSldr.onValueChanged.AddListener(UpdateWorldSpaceBetweenWord);
         _WorldSpaceLineSldr.onValueChanged.AddListener(UpdateWorldSpaceBetweenLine);
     }
+
     private void OnDestroy()
     {
         //---- UI ----//
@@ -83,7 +83,9 @@ public class TextResizer : MonoBehaviour
 
         //---- World ----//
         _WorldSizeSldr.onValueChanged.RemoveListener(UpdateWorldSizeFont);
-        
+        _WorldSpaceLetterSldr.onValueChanged.RemoveListener(UpdateWorldSpaceBetweenLetter);
+        _WorldSpaceWordSldr.onValueChanged.RemoveListener(UpdateWorldSpaceBetweenWord);
+        _WorldSpaceLineSldr.onValueChanged.RemoveListener(UpdateWorldSpaceBetweenLine);
     }
 
     #region UI Listener
