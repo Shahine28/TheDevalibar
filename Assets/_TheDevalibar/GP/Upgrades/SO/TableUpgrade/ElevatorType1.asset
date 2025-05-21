@@ -19,19 +19,18 @@ MonoBehaviour:
   UpgradeCost: 8000
   AccessibiltiesToAddWithUpgrade:
     keys:
-    - "Mobilit\xE9"
-    - "D\xE9ficience visuelle"
     - "D\xE9ficience auditive s\xE9v\xE8re"
-    - "Fatigabilit\xE9 chronique"
-    - "Troubles de l\u2019\xE9quilibre / vertiges"
-    - "Hypersensibilit\xE9 sensorielle"
-    - Douleurs chroniques
-    - "Allergies s\xE9v\xE8res"
-    - "Troubles cognitifs l\xE9gers"
-    - Troubles dermatologiques
-    values: 01000000000000000000
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000000000000
+  OnUpgrade:
+    m_PersistentCalls:
+      m_Calls: []
   useless: 
-  NewUpgradeTableMesh: {fileID: 0}
+  NewUpgradeTableMesh: {fileID: 6623375816794612673, guid: dcf713db8fac09641ad8d82f1a3f1d8e, type: 3}
   NewUpgradeTableMaterial: {fileID: 0}
   NewUpgradeChair1Mesh: {fileID: 0}
   NewUpgradeChair1Material: {fileID: 0}

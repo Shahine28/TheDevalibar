@@ -54,7 +54,7 @@ public class ElevatorManager : MonoBehaviour
 
     private void Start()
     {
-        _elevatorPlateformGameObject.transform.position = _groundFloorPosition;
+        _elevatorPlateformGameObject.transform.localPosition = _groundFloorPosition;
         _floorLevel = FloorLevel.GroundFloor;
         _movementCoroutine = null;
         _elevatorUpgrade.OnUpgrade.AddListener(BuyElevator);
@@ -115,14 +115,16 @@ public class ElevatorManager : MonoBehaviour
     public void BuyElevator()
     {
         _isElevatorBuyed = true;
-        _elevatorPrefab.gameObject.SetActive(true);
+        _elevatorPrefab?.gameObject.SetActive(true);
+        _elevatorPlateformGameObject?.SetActive(true);
     }
     
     [Button]
     public void SellElevator()
     {
         _isElevatorBuyed = false;
-        _elevatorPrefab.gameObject.SetActive(false);
+        _elevatorPrefab?.gameObject.SetActive(false);
+        _elevatorPlateformGameObject?.SetActive(false);
     }
 
     [Button]
@@ -168,7 +170,7 @@ public class ElevatorManager : MonoBehaviour
     private IEnumerator MoveElevator(Vector3 targetPosition, FloorLevel destinationLevel)
     {
         Transform elevator = _elevatorPlateformGameObject.transform;
-        Vector3 start = elevator.position;
+        Vector3 start = elevator.localPosition;
         Vector3 end = targetPosition;
 
         float distance = Vector3.Distance(start, end);
@@ -181,11 +183,11 @@ public class ElevatorManager : MonoBehaviour
             float t = Mathf.Clamp01(elapsed / duration);
             float curvedT = _movementCurve.Evaluate(t);
 
-            elevator.position = Vector3.Lerp(start, end, curvedT);
+            elevator.localPosition = Vector3.Lerp(start, end, curvedT);
             yield return null;
         }
 
-        elevator.position = end;
+        elevator.localPosition = end;
         _floorLevel = destinationLevel;
         _movementCoroutine = null;
         OpenDoor(destinationLevel);

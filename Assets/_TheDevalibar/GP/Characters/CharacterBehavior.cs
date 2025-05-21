@@ -430,7 +430,7 @@ public class CharacterBehavior : MonoBehaviour
             return bestTables[0];
         }
        
-        if (_characterDisability == "")
+        if (_characterDisability == String.Empty)
         {
             Table firstTable = bestTables[0];
             bool hasFirstTableContraintAdaptabilty = firstTable.constraintDict.values.FirstOrDefault(x => x);
@@ -453,8 +453,9 @@ public class CharacterBehavior : MonoBehaviour
         if (constraint == null)
         {
             Debug.LogError("No valid constraint in character");
+            return null;
         }
-        else if (!constraint.IsBlockingConstraint)
+        if (!constraint.IsBlockingConstraint)
         {
             
             Table firstTable = bestTables[0];
@@ -478,14 +479,11 @@ public class CharacterBehavior : MonoBehaviour
             return firstTable; 
             
         }
-        else
-        {
-            // Ma liste ne contient forcément que des tables adapté au handicap bloquant et disponible
-            return bestTables
-                .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNodeNumber].position))
-                .First();
-        }
-        return null;
+        // Ma liste ne contient forcément que des tables adapté au handicap bloquant et disponible
+        return bestTables
+            .OrderBy(t => Vector3.Distance(transform.position, _nodeManager.nodes[t.TableNodeNumber].position))
+            .First();
+        
     }
     
     private void HandlePathEnd()
@@ -516,7 +514,7 @@ public class CharacterBehavior : MonoBehaviour
             GameManager gameManager = ServiceLocator.Get<GameManager>();
             if (gameManager)
             {
-                gameManager.gameData.Gold += GetTipValue();
+                gameManager.GameData.Gold += GetTipValue();
                 gameManager.UpdateGoldValue();
             }
 
@@ -678,7 +676,7 @@ private void SetBubbleSpeech(bool isCustomerLeaving)
     private void StartCharacterDialogue()
     {
         if (!_dialogueManager) return;
-        _dialogueManager.InitCharacterDialogue(this, false, _gameManager != null ? _gameManager.gameData.LanguageCode : CodeLanguage.French);
+        _dialogueManager.InitCharacterDialogue(this, false, _gameManager != null ? _gameManager.GameData.LanguageCode : CodeLanguage.French);
         _dialogueButton?.gameObject.SetActive(false);
     }
     

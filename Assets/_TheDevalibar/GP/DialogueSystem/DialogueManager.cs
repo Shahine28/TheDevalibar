@@ -188,7 +188,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         
-        CodeLanguage languageCode = _gameManager.gameData.LanguageCode;
+        CodeLanguage languageCode = _gameManager.GameData.LanguageCode;
         
         
         _containerCache = _character.GetCharacterDialogue(languageCode);
