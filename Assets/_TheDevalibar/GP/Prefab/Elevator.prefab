@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5781957845970265744}
-  - component: {fileID: 1458703658351252002}
+  - component: {fileID: 2235549901868103452}
   - component: {fileID: 1240264657256024370}
   - component: {fileID: 1564653184581567646}
   m_Layer: 0
@@ -27,15 +27,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6656998121199666065}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.69222224, z: -0, w: -0.72168446}
+  m_LocalRotation: {x: 0, y: 0.6922252, z: -0, w: -0.72168154}
   m_LocalPosition: {x: 19.482, y: -30.726, z: 56.775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7209961282960395292}
   - {fileID: 8297289626569821024}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 272.387, z: 0}
---- !u!114 &1458703658351252002
+--- !u!114 &2235549901868103452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,7 +83,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _isElevatorBuyed: 0
+  _isElevatorBuyed: 1
   _elevatorUpgrade: {fileID: 11400000, guid: 7c75a30c1c99a9946a95d7b3627a5e47, type: 2}
   currentPassenger: {fileID: 0}
 --- !u!95 &1240264657256024370
@@ -126,15 +127,15 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7431124, y: 2.2957497, z: 1.8555695}
-  m_Center: {x: -0.041724324, y: 1.0290852, z: 0.1274019}
+  m_Size: {x: 0.7431124, y: 2.2957497, z: 1.6380688}
+  m_Center: {x: -0.041724324, y: 1.0290852, z: 0.018651456}
 --- !u!1001 &7170949876141911031
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8297289626569821024}
+    m_TransformParent: {fileID: 5781957845970265744}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2605ed7ea2e51ab4885d04565871868b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -297,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1e2d68859c53642428c8228378bc05ac, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6976162943580853979, guid: 1e2d68859c53642428c8228378bc05ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -317,10 +318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1e2d68859c53642428c8228378bc05ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7209961282960395292}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e2d68859c53642428c8228378bc05ac, type: 3}
 --- !u!4 &8297289626569821024 stripped

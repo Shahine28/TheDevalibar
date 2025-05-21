@@ -201,7 +201,7 @@ public class ReviewManager : MonoBehaviour
         }
     }
 
-    private void ClearReviews()
+    public void ClearReviews()
     {
         _characterReviews.Clear();
         for (int i = _reviewPanelContainer.childCount - 1; i >= 0; i--)

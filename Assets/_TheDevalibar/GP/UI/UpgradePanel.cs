@@ -104,15 +104,15 @@ public class UpgradePanel : MonoBehaviour
             return;
         }
 
-        if (_gameManager.gameData == null)
+        if (_gameManager.GameData == null)
         {
             Debug.LogError("The game data is null");
             return;
         }
 
-        if (_gameManager.gameData.Gold >= _currentUpgrade.UpgradeCost)
+        if (_gameManager.GameData.Gold >= _currentUpgrade.UpgradeCost)
         {
-            _gameManager.gameData.Gold -= _currentUpgrade.UpgradeCost;
+            _gameManager.GameData.Gold -= _currentUpgrade.UpgradeCost;
             _gameManager.UpdateGoldValue();
             switch (_currentObjectType)
             {
