@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AYellowpaper.SerializedCollections;
-
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 [CreateAssetMenu(fileName = "Character", menuName = "Scriptable Objects/Character"), System.Serializable]
 public class Character : ScriptableObject
@@ -24,6 +24,14 @@ public class Character : ScriptableObject
     [Header("Dialogues")]
     public List<Day> Dialogues;
     public int DialogueIndex = 0;
+
+    [Header("Character Reviews")] 
+    [SerializeField] private CharacterReviews _characterReviews;
+    public CharacterReviews CharacterReviews => _characterReviews;
+    
+    [Header("Character Bubble Speech")]
+    [SerializeField] private CustomersBubbleSpeech _bubbleSpeech;
+    public CustomersBubbleSpeech BubbleSpeech => _bubbleSpeech;
     
     public ConstraintBoolDictionary constraintDict = new ConstraintBoolDictionary();
     
@@ -65,6 +73,9 @@ public class Character : ScriptableObject
     {
         return affinity >= moodRange.x && affinity <= moodRange.y;
     }
+    
+    
+
 }
 
 [Serializable]
@@ -73,3 +84,10 @@ public struct DescriptionTextArea
     [TextArea(1, 10)] public string Description;
 }
 
+[Serializable]
+public struct CharacterReviews
+{
+    public List<ReviewSO> GoodReviews;
+    public List<ReviewSO> AverageReviews;
+    public List<ReviewSO> BadReviews;
+}

@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9837a5bbc047d586ea988cb871f4fc, type: 3}
+  m_Name: Alex
+  m_EditorClassIdentifier: 
+  AffinityManager: {fileID: 11400000, guid: 23b23b1f68a494d4d8c5ef607d2d0298, type: 2}
+  CharacterName: Alex
+  CharacterPseudo: Alexigidilit
+  CharacterProfilePicture: {fileID: 21300000, guid: 9c35a0055d611db40827be89abb434e7, type: 3}
+  CharacterSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+  Affinity: 50
+  NextAffinityValue: 50
+  Dialogues:
+  - Dialogues:
+    - AffinityName: Angry
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
+    - AffinityName: Neutral
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
+    - AffinityName: Happy
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
+  DialogueIndex: 0
+  _characterReviews:
+    GoodReviews:
+    - {fileID: 11400000, guid: 4386f19f4700a314aa53615092daa64a, type: 2}
+    - {fileID: 11400000, guid: 4c30a34b7477b254898e15508806109b, type: 2}
+    - {fileID: 11400000, guid: ee68a42e6e229774699f295950930cb2, type: 2}
+    AverageReviews:
+    - {fileID: 11400000, guid: 1962643c155e76a43a9f8b2123f81a1b, type: 2}
+    - {fileID: 11400000, guid: 3435525a2b281074eabe1011b5d37571, type: 2}
+    - {fileID: 11400000, guid: a75b8411c82148841958a3ce97934c92, type: 2}
+    BadReviews:
+    - {fileID: 11400000, guid: f9cb8900c91f87d4e9d24119ba654cc4, type: 2}
+    - {fileID: 11400000, guid: 2cdca5feae17aa843aeac7eff3cdf0eb, type: 2}
+    - {fileID: 11400000, guid: 50a27f76b52639c49aa1fe40008f3c1c, type: 2}
+  _bubbleSpeech:
+    _goodTableSpeech:
+    - Grave cool cette place
+    - "Gribouille a valid\xE9 direct"
+    - "J\u2019sens que j\u2019vais rester"
+    - La vibe est douce ici
+    - "J\u2019entends m\xEAme pas mes pens\xE9es"
+    - "J\u2019ai faim et j\u2019suis bien"
+    _averageTableSpeech:
+    - La chaise est chelou
+    - "Un peu trop de lumi\xE8re"
+    - "J\u2019me sens pas centr\xE9 l\xE0"
+    - "Y\u2019avait pas d\u2019autre coin ?"
+    - "J\u2019crois qu\u2019il manque un coussin"
+    - "C\u2019est ok\u2026 mais j\u2019suis pas s\xFBr"
+    _goodLeavingSpeech:
+    - "J\u2019reviens avec le groupe  "
+    - "Gribouille dort, c\u2019est bon signe"
+    - "Merci ! J\u2019me sens l\xE9ger"
+    - Trop cool ce moment
+    - "J\u2019ai pas vu l\u2019heure passer"
+    - 'Mon ventre dit merci  '
+    _averageLeavingSpeech:
+    - "Trop d\u2019odeurs d\u2019un coup"
+    - "J\u2019me sens un peu flou"
+    - "C\u2019\xE9tait bien, mais j\u2019me barre  "
+    - "J\u2019ai pas fini mon verre"
+    - "Faut que j\u2019bouge"
+    - "J\u2019ai satur\xE9 sans pr\xE9venir"
+    _badLeavingSpeech:
+    - Bruit + piment = chaos
+    - "J\u2019ai paniqu\xE9 sur le coussin"
+    - Trop. Juste trop.
+    - "J\u2019suis pas fait pour ce coin"
+    - "Mon oreille a explos\xE9"
+    - Gribouille tirait la laisse
+  constraintDict:
+    keys:
+    - "D\xE9ficience auditive s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000000000000

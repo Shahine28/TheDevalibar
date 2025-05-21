@@ -14,9 +14,13 @@ public class CharacterSpawnManager : MonoBehaviour
     private int _NPCCount = 0;
     [Header("Character & NPC GameObjects")]
     [SerializeField] private GameObject _characterGameObject;
+
+    public bool CanSpawnCharacter;
     [SerializeField] private GameObject _NPCGameObject;
-    
+    private bool _haveAllCharactersAndNCPBeenSpawned;
+    public bool HaveAllCharactersAndNCPBeenSpawned => _haveAllCharactersAndNCPBeenSpawned;
     [SerializeField] private Transform _characterSpawnPoint;
+    public Transform CharacterSpawnPoint => _characterSpawnPoint;
 
     [Header("Delay between spawning")]
     [SerializeField] private float _characterSpawnDelayInSeconds;
@@ -24,10 +28,14 @@ public class CharacterSpawnManager : MonoBehaviour
     private bool _isPaused;
     
     public event Action OnSpawnFinished;
+    [SerializeField] private GameManager _gameManager;
+    
+    
 
     void Awake()
     {
         ServiceLocator.Register(this);
+        CanSpawnCharacter = true;
     }
     void Start()
     {
@@ -37,7 +45,11 @@ public class CharacterSpawnManager : MonoBehaviour
             dialogueManager._onDialogueStart += PauseSpawning;
             dialogueManager._onDialogueEnd += PlaySpawning;
         }
-        StartSpawning();
+
+        if (!_gameManager)
+        {
+            _gameManager = ServiceLocator.Get<GameManager>();
+        }
     }
 
     // Update is called once per frame
@@ -46,11 +58,13 @@ public class CharacterSpawnManager : MonoBehaviour
         
     }
 
-    private void StartSpawning()
+    public void StartSpawning()
     {
         if (_delayCoroutine == null)
         {
             _isPaused = false;
+            _dayIndex = _gameManager.GameData.DayIndex;
+            _haveAllCharactersAndNCPBeenSpawned = false;
             _delayCoroutine = StartCoroutine(SpawningCharacterAndNPC());
         }
     }
@@ -66,7 +80,7 @@ public class CharacterSpawnManager : MonoBehaviour
             while (_isPaused)
                 yield return null;
 
-            bool canSpawnCharacter = _nextCharacterIndex < customerCount;
+            bool canSpawnCharacter = _nextCharacterIndex < customerCount && CanSpawnCharacter;
             bool canSpawnNPC = _NPCCount < npcTargetCount;
 
             // Choisir aléatoirement entre character et NPC
@@ -87,13 +101,14 @@ public class CharacterSpawnManager : MonoBehaviour
 
             if (spawnCharacter)
                 SpawnCharacter();
-            else
+            else if (canSpawnNPC)
                 SpawnNPC();
 
             yield return new WaitForSeconds(_characterSpawnDelayInSeconds);
         }
 
         _delayCoroutine = null; // Permet de redémarrer plus tard si besoin
+        _haveAllCharactersAndNCPBeenSpawned = true;
         Debug.Log("All characters and NPCs spawned for this day.");
     }
 
@@ -131,7 +146,7 @@ public class CharacterSpawnManager : MonoBehaviour
             return;
         }
 
-        GameObject characterInstance = Instantiate(_characterGameObject, _characterSpawnPoint.position, _characterSpawnPoint.rotation);
+        GameObject characterInstance = Instantiate(_characterGameObject, _characterSpawnPoint.position, _characterSpawnPoint.rotation,  _characterSpawnPoint);
         CharacterBehavior characterBehavior = characterInstance.GetComponent<CharacterBehavior>();
         if (characterBehavior != null)
         {
@@ -149,7 +164,7 @@ public class CharacterSpawnManager : MonoBehaviour
             return;
         }
 
-        Instantiate(_NPCGameObject, _characterSpawnPoint.position, _characterSpawnPoint.rotation);
+        Instantiate(_NPCGameObject, _characterSpawnPoint.position, _characterSpawnPoint.rotation,  _characterSpawnPoint);
         _NPCCount++;
         Debug.Log("NPC spawned.");
     }

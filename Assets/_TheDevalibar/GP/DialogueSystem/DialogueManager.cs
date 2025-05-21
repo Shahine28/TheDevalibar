@@ -6,7 +6,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
-using NaughtyAttributes;
 using UnityEngine.Serialization;
 using MyUtilities;
 
@@ -31,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private List<Button> _buttons = new List<Button>();
     [SerializeField] private Button _continueButton;
     [SerializeField] private GameObject _buttonsContainer;
+    [SerializeField] private Slider _affinitySlider;
     
     private Dictionary<Button, string> _NodeGUIDFromButton= new Dictionary<Button, string>();
     [SerializeField] private bool _randomizeButtonsOrder = true;
@@ -157,6 +157,13 @@ public class DialogueManager : MonoBehaviour
         _onDialogueStart?.Invoke();
         if (!_characterNameText) Debug.LogWarning("_characterNameText is null!");
         else _characterNameText.text = _character.CharacterName;
+        if (_affinitySlider)
+        {
+            Vector2 moodRange = _character.AffinityManager.GetRange();
+            _affinitySlider.minValue = moodRange.x;
+            _affinitySlider.maxValue = moodRange.y;
+            _affinitySlider.value = _character.Affinity;
+        }
         SetDialogueCanvas(firstDialogueNode);
     }
 
@@ -181,7 +188,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         
-        CodeLanguage languageCode = _gameManager.gameData.LanguageCode;
+        CodeLanguage languageCode = _gameManager.GameData.LanguageCode;
         
         
         _containerCache = _character.GetCharacterDialogue(languageCode);
@@ -231,8 +238,10 @@ public class DialogueManager : MonoBehaviour
         _nodesPathHistory.Add(dialogueNodeData);
         SetupDialogueButtons(Ports);
         
-
+        
         _character.NextAffinityValue += dialogueNodeData.StatModifier;
+        _character.Affinity += dialogueNodeData.StatModifier;
+        _affinitySlider.value += dialogueNodeData.StatModifier;
         Sprite NewSprite = dialogueNodeData.CharacterMoodSprite;
         if (NewSprite != null && _character1Sprite.sprite != NewSprite)
         {
