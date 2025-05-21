@@ -3334,6 +3334,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.0004
       objectReference: {fileID: 0}
+    - target: {fileID: 1700838836409453816, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6d45351cccb18a8419086681f76e0b8b, type: 2}
     - target: {fileID: 1715027404841688376, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: PurchasedTableUpgrades._serializedList.Array.size
       value: 2
@@ -3478,6 +3482,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.598
       objectReference: {fileID: 0}
+    - target: {fileID: 3440938918388100906, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6d45351cccb18a8419086681f76e0b8b, type: 2}
+    - target: {fileID: 6002697612690581009, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6d45351cccb18a8419086681f76e0b8b, type: 2}
     - target: {fileID: 6116775020841404090, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 5.78
@@ -3507,9 +3519,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f4ae7afe725437c4cb5594fede6b5f4f, type: 2}
     - target: {fileID: 7072600178088209346, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072600178088209346, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072600178088209346, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072600178088209346, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.08
       objectReference: {fileID: 0}
+    - target: {fileID: 7072600178088209346, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081166590954614363, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6d45351cccb18a8419086681f76e0b8b, type: 2}
     - target: {fileID: 7875481481794888544, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: PurchasedTableUpgrades._serializedList.Array.size
       value: 3
@@ -4830,6 +4862,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1784415500049769299, guid: 1baf4c5dac085ba47b51f43884b372ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d76a33cdf6c043d44b5bbfbcd6f41494, type: 2}
     - target: {fileID: 2044918121975176477, guid: 1baf4c5dac085ba47b51f43884b372ce, type: 3}
       propertyPath: m_Name
       value: Table_Set (4)
@@ -4966,6 +5002,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8603762163234766907, guid: 1baf4c5dac085ba47b51f43884b372ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a54f3a972184bae4e8c3c8fa30ebf3d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5318519767087568543, guid: 1baf4c5dac085ba47b51f43884b372ce, type: 3}
@@ -9760,6 +9800,7 @@ MonoBehaviour:
   - name: "Mobilit\xE9"
     type: 1
     IsBlockingConstraint: 1
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9767,6 +9808,7 @@ MonoBehaviour:
   - name: "D\xE9ficience visuelle"
     type: 1
     IsBlockingConstraint: 1
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9774,6 +9816,7 @@ MonoBehaviour:
   - name: "D\xE9ficience auditive s\xE9v\xE8re"
     type: 1
     IsBlockingConstraint: 1
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9781,6 +9824,7 @@ MonoBehaviour:
   - name: "Fatigabilit\xE9 chronique"
     type: 1
     IsBlockingConstraint: 1
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9788,6 +9832,7 @@ MonoBehaviour:
   - name: "Troubles de l\u2019\xE9quilibre / vertiges"
     type: 1
     IsBlockingConstraint: 1
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9795,6 +9840,7 @@ MonoBehaviour:
   - name: "Hypersensibilit\xE9 sensorielle"
     type: 1
     IsBlockingConstraint: 0
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9802,6 +9848,7 @@ MonoBehaviour:
   - name: Douleurs chroniques
     type: 1
     IsBlockingConstraint: 0
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9809,6 +9856,7 @@ MonoBehaviour:
   - name: "Allergies s\xE9v\xE8res"
     type: 1
     IsBlockingConstraint: 0
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9816,6 +9864,7 @@ MonoBehaviour:
   - name: "Troubles cognitifs l\xE9gers"
     type: 1
     IsBlockingConstraint: 0
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9823,6 +9872,7 @@ MonoBehaviour:
   - name: Troubles dermatologiques
     type: 1
     IsBlockingConstraint: 0
+    CanTakeStairs: 0
     boolValue: 0
     intValue: 0
     floatValue: 0
@@ -9977,6 +10027,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -9984,6 +10035,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -9991,6 +10043,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -9998,6 +10051,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10005,6 +10059,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10012,6 +10067,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10019,6 +10075,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10026,6 +10083,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10033,6 +10091,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10040,6 +10099,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10052,6 +10112,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10059,6 +10120,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10066,6 +10128,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10073,6 +10136,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10080,6 +10144,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10087,6 +10152,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10094,6 +10160,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10101,6 +10168,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10108,6 +10176,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10115,6 +10184,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10127,6 +10197,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10134,6 +10205,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10141,6 +10213,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10148,6 +10221,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10155,6 +10229,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10162,6 +10237,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10169,6 +10245,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10176,6 +10253,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10183,6 +10261,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10190,6 +10269,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10202,6 +10282,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10209,6 +10290,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10216,6 +10298,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10223,6 +10306,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10230,6 +10314,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10237,6 +10322,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10244,6 +10330,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10251,6 +10338,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10258,6 +10346,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10265,6 +10354,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10277,6 +10367,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10284,6 +10375,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10291,6 +10383,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10298,6 +10391,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10305,6 +10399,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10312,6 +10407,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10319,6 +10415,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10326,6 +10423,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10333,6 +10431,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10340,6 +10439,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10352,6 +10452,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10359,6 +10460,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10366,6 +10468,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10373,6 +10476,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10380,6 +10484,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10387,6 +10492,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10394,6 +10500,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10401,6 +10508,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10408,6 +10516,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10415,6 +10524,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10427,6 +10537,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10434,6 +10545,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10441,6 +10553,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10448,6 +10561,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10455,6 +10569,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10462,6 +10577,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10469,6 +10585,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10476,6 +10593,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10483,6 +10601,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10490,6 +10609,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10502,6 +10622,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10509,6 +10630,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10516,6 +10638,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10523,6 +10646,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10530,6 +10654,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10537,6 +10662,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10544,6 +10670,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10551,6 +10678,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10558,6 +10686,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10565,6 +10694,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10577,6 +10707,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10584,6 +10715,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10591,6 +10723,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10598,6 +10731,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10605,6 +10739,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10612,6 +10747,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10619,6 +10755,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10626,6 +10763,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10633,6 +10771,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10640,6 +10779,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10652,6 +10792,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10659,6 +10800,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10666,6 +10808,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10673,6 +10816,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10680,6 +10824,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10687,6 +10832,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10694,6 +10840,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10701,6 +10848,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10708,6 +10856,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10715,6 +10864,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10727,6 +10877,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10734,6 +10885,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10741,6 +10893,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10748,6 +10901,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10755,6 +10909,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10762,6 +10917,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10769,6 +10925,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10776,6 +10933,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10783,6 +10941,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10790,6 +10949,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10802,6 +10962,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10809,6 +10970,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10816,6 +10978,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10823,6 +10986,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10830,6 +10994,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10837,6 +11002,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10844,6 +11010,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10851,6 +11018,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10858,6 +11026,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10865,6 +11034,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10877,6 +11047,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10884,6 +11055,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10891,6 +11063,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10898,6 +11071,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10905,6 +11079,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10912,6 +11087,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10919,6 +11095,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10926,6 +11103,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10933,6 +11111,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10940,6 +11119,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10952,6 +11132,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10959,6 +11140,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10966,6 +11148,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10973,6 +11156,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10980,6 +11164,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10987,6 +11172,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -10994,6 +11180,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11001,6 +11188,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11008,6 +11196,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11015,6 +11204,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11027,6 +11217,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11034,6 +11225,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11041,6 +11233,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11048,6 +11241,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11055,6 +11249,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11062,6 +11257,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11069,6 +11265,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11076,6 +11273,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11083,6 +11281,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11090,6 +11289,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11102,6 +11302,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11109,6 +11310,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11116,6 +11318,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11123,6 +11326,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11130,6 +11334,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11137,6 +11342,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11144,6 +11350,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11151,6 +11358,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11158,6 +11366,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11165,6 +11374,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11177,6 +11387,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11184,6 +11395,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11191,6 +11403,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11198,6 +11411,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11205,6 +11419,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11212,6 +11427,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11219,6 +11435,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11226,6 +11443,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11233,6 +11451,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11240,6 +11459,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11252,6 +11472,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11259,6 +11480,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11266,6 +11488,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11273,6 +11496,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11280,6 +11504,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11287,6 +11512,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11294,6 +11520,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11301,6 +11528,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11308,6 +11536,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11315,6 +11544,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11327,6 +11557,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11334,6 +11565,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11341,6 +11573,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11348,6 +11581,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11355,6 +11589,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11362,6 +11597,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11369,6 +11605,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11376,6 +11613,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11383,6 +11621,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11390,6 +11629,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11402,6 +11642,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11409,6 +11650,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11416,6 +11658,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11423,6 +11666,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11430,6 +11674,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11437,6 +11682,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11444,6 +11690,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11451,6 +11698,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11458,6 +11706,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11465,6 +11714,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11477,6 +11727,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11484,6 +11735,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11491,6 +11743,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11498,6 +11751,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11505,6 +11759,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11512,6 +11767,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11519,6 +11775,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11526,6 +11783,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11533,6 +11791,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11540,6 +11799,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11552,6 +11812,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11559,6 +11820,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11566,6 +11828,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11573,6 +11836,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11580,6 +11844,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11587,6 +11852,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11594,6 +11860,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11601,6 +11868,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11608,6 +11876,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11615,6 +11884,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11627,6 +11897,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11634,6 +11905,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11641,6 +11913,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11648,6 +11921,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11655,6 +11929,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11662,6 +11937,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11669,6 +11945,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11676,6 +11953,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11683,6 +11961,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11690,6 +11969,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11702,6 +11982,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11709,6 +11990,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11716,6 +11998,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11723,6 +12006,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11730,6 +12014,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11737,6 +12022,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11744,6 +12030,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11751,6 +12038,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11758,6 +12046,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11765,6 +12054,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11777,6 +12067,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11784,6 +12075,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11791,6 +12083,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11798,6 +12091,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11805,6 +12099,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11812,6 +12107,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11819,6 +12115,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11826,6 +12123,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11833,6 +12131,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11840,6 +12139,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11852,6 +12152,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11859,6 +12160,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11866,6 +12168,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11873,6 +12176,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11880,6 +12184,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11887,6 +12192,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11894,6 +12200,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11901,6 +12208,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11908,6 +12216,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11915,6 +12224,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11927,6 +12237,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11934,6 +12245,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11941,6 +12253,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11948,6 +12261,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11955,6 +12269,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11962,6 +12277,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11969,6 +12285,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11976,6 +12293,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11983,6 +12301,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -11990,6 +12309,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12002,6 +12322,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12009,6 +12330,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12016,6 +12338,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12023,6 +12346,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12030,6 +12354,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12037,6 +12362,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12044,6 +12370,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12051,6 +12378,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12058,6 +12386,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12065,6 +12394,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12077,6 +12407,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12084,6 +12415,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12091,6 +12423,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12098,6 +12431,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12105,6 +12439,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12112,6 +12447,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12119,6 +12455,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12126,6 +12463,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12133,6 +12471,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12140,6 +12479,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12152,6 +12492,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12159,6 +12500,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12166,6 +12508,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12173,6 +12516,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12180,6 +12524,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12187,6 +12532,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12194,6 +12540,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12201,6 +12548,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12208,6 +12556,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12215,6 +12564,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12227,6 +12577,7 @@ MonoBehaviour:
     - name: "Mobilit\xE9"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12234,6 +12585,7 @@ MonoBehaviour:
     - name: "D\xE9ficience visuelle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12241,6 +12593,7 @@ MonoBehaviour:
     - name: "D\xE9ficience auditive s\xE9v\xE8re"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12248,6 +12601,7 @@ MonoBehaviour:
     - name: "Fatigabilit\xE9 chronique"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12255,6 +12609,7 @@ MonoBehaviour:
     - name: "Troubles de l\u2019\xE9quilibre / vertiges"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12262,6 +12617,7 @@ MonoBehaviour:
     - name: "Hypersensibilit\xE9 sensorielle"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12269,6 +12625,7 @@ MonoBehaviour:
     - name: Douleurs chroniques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12276,6 +12633,7 @@ MonoBehaviour:
     - name: "Allergies s\xE9v\xE8res"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12283,6 +12641,7 @@ MonoBehaviour:
     - name: "Troubles cognitifs l\xE9gers"
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
@@ -12290,6 +12649,7 @@ MonoBehaviour:
     - name: Troubles dermatologiques
       type: 1
       IsBlockingConstraint: 0
+      CanTakeStairs: 0
       boolValue: 1
       intValue: 0
       floatValue: 0
