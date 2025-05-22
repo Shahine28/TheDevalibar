@@ -89,25 +89,27 @@ public class UpgradePanelManager : MonoBehaviour
         }
         
         ClearUpgradePanels(); // pour éviter les doublons
-        
-        GameObject instance = Instantiate(_upgradePanelPrefab, transform);
-        if (!instance)
-        {
-            Debug.LogWarning($"UpgradePanel prefab instantiation failed at index 0");
-            return;
-        }
-        
-        UpgradePanel upgradePanel = instance.transform.GetChild(0).GetComponent<UpgradePanel>();
-        if (!upgradePanel)
-        {
-            Debug.LogWarning($"No UpgradePanel component found on instance at index {0}");
-            Destroy(instance); // nettoyage
-            return;
-        }
 
-        upgradePanel.SetUpPanel(elevatorManager.ElevatorUpgrade, null, elevatorManager);
-        _upgradePanels.Add(upgradePanel);
+        if (!elevatorManager.IsElevatorBuyed)
+        {
+            GameObject instance = Instantiate(_upgradePanelPrefab, transform);
+            if (!instance)
+            {
+                Debug.LogWarning($"UpgradePanel prefab instantiation failed at index 0");
+                return;
+            }
         
+            UpgradePanel upgradePanel = instance.transform.GetChild(0).GetComponent<UpgradePanel>();
+            if (!upgradePanel)
+            {
+                Debug.LogWarning($"No UpgradePanel component found on instance at index {0}");
+                Destroy(instance); // nettoyage
+                return;
+            }
+
+            upgradePanel.SetUpPanel(elevatorManager.ElevatorUpgrade, null, elevatorManager);
+            _upgradePanels.Add(upgradePanel);
+        }
     }
     
     public void SetUpTableUpgradePanels(Table table)

@@ -10,29 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13f1edc776b448f9bc3401150e361524, type: 3}
-  m_Name: TableSympa
+  m_Name: InductionLoopSystem
   m_EditorClassIdentifier: 
-  UpgradeSprite: {fileID: 21300000, guid: 7d9a3ad4050ec33478dcac63e1fcc7cd, type: 3}
-  UpgradeName: Table Sympa
-  UpgradeDescription: Table Sympa qui rend tout le monde sympa
-  UpgradeCost: 250000
+  UpgradeSprite: {fileID: 21300000, guid: fdaee0504d0f3de44b076cc3a2ae310c, type: 3}
+  UpgradeName: 'Induction Loop '
+  UpgradeDescription: C'est pour mieux entendre
+  UpgradeCost: 6000
   AccessibiltiesToAddWithUpgrade:
     keys:
-    - "Mobilit\xE9"
-    - "D\xE9ficience visuelle"
     - "D\xE9ficience auditive s\xE9v\xE8re"
-    - "Fatigabilit\xE9 chronique"
-    - "Troubles de l\u2019\xE9quilibre / vertiges"
-    - "Hypersensibilit\xE9 sensorielle"
-    - Douleurs chroniques
-    - "Allergies s\xE9v\xE8res"
-    - "Troubles cognitifs l\xE9gers"
-    - Troubles dermatologiques
-    values: 01010101010100000000
-  useless: 
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 010000000000
+  OnUpgrade:
+    m_PersistentCalls:
+      m_Calls: []
   NewUpgradeTableMesh: {fileID: 0}
   NewUpgradeTableMaterial: {fileID: 0}
   NewUpgradeChair1Mesh: {fileID: 0}
   NewUpgradeChair1Material: {fileID: 0}
   NewUpgradeChair2Mesh: {fileID: 0}
   NewUpgradeChair2Material: {fileID: 0}
+  AccessibilityUpgrade: 5
