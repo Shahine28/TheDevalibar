@@ -2122,9 +2122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ceb7bf003c25742b30e82bc650052f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameData: {fileID: 11400000, guid: a5bb5399697a6364ca69ef94d52b84bb, type: 2}
+  GameData: {fileID: 0}
   _goldText: {fileID: 974997365}
   _loadSceneDirectly: 0
+  OnNewDay:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &265395975
 Transform:
   m_ObjectHideFlags: 0
@@ -4998,6 +5001,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8435947549060673432, guid: 1baf4c5dac085ba47b51f43884b372ce, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b3bf38af4f748948b23a348fdb1b196, type: 2}
     - target: {fileID: 8486266216471248427, guid: 1baf4c5dac085ba47b51f43884b372ce, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
@@ -7275,6 +7282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39013ce46d7b4f24fa55c928d572e4b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transitionManager: {fileID: 0}
 --- !u!1 &995370825
 GameObject:
   m_ObjectHideFlags: 0
@@ -14643,6 +14651,7 @@ MonoBehaviour:
   _NPCGameObject: {fileID: 6742652457405017559, guid: 5ad368c1dfa2dd54c92d09caead4a3ef, type: 3}
   _characterSpawnPoint: {fileID: 1737055025}
   _characterSpawnDelayInSeconds: 6
+  _gameManager: {fileID: 0}
 --- !u!4 &2014900796
 Transform:
   m_ObjectHideFlags: 0
