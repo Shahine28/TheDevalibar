@@ -9,13 +9,14 @@ public class Constraint
     public string name; // Nom de la contrainte
     public ConstraintType type; // Type sélectionnable
     public bool IsBlockingConstraint;
+    public bool CanTakeStairs;
     
     public bool boolValue = true;
     public int intValue;
     public float floatValue;
     public Vector3 vector3Value;
 
-    // ✅ Retourne la valeur selon le type sélectionné
+    // Retourne la valeur selon le type sélectionné
     public object GetValue()
     {
         return type switch
@@ -98,7 +99,8 @@ public class ConstraintDrawer : PropertyDrawer
             SerializedProperty nameProperty = property.FindPropertyRelative("name");
             SerializedProperty typeProperty = property.FindPropertyRelative("type");
             SerializedProperty boolProperty = property.FindPropertyRelative("IsBlockingConstraint");
-
+            SerializedProperty bool2Property = property.FindPropertyRelative("CanTakeStairs");
+            
             EditorGUI.PropertyField(
                 new Rect(position.x, yOffset, position.width, lineHeight),
                 nameProperty,
@@ -118,6 +120,14 @@ public class ConstraintDrawer : PropertyDrawer
                 boolProperty,
                 new GUIContent("Is Blocking Constraint")
             );
+            
+            yOffset += lineHeight + spacing;
+            
+            EditorGUI.PropertyField(
+                new Rect(position.x, yOffset, position.width, lineHeight),
+                bool2Property,
+                new GUIContent("Can Take Stairs")
+            );
             EditorGUI.indentLevel--;
         }
 
@@ -126,7 +136,7 @@ public class ConstraintDrawer : PropertyDrawer
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        float lineHeight = EditorGUIUtility.singleLineHeight + 3f;
+        float lineHeight = EditorGUIUtility.singleLineHeight + 4f;
         float totalHeight = lineHeight;
 
         string propertyPath = property.propertyPath;
@@ -134,7 +144,7 @@ public class ConstraintDrawer : PropertyDrawer
         // ✅ Si la contrainte est dépliée, ajoute de la hauteur
         if (constraintFoldouts.ContainsKey(propertyPath) && constraintFoldouts[propertyPath])
         {
-            totalHeight += 3 * lineHeight; // Nom + Type
+            totalHeight += 4 * lineHeight; // Nom + Type
         }
 
         return totalHeight;

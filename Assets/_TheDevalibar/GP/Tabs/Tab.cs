@@ -26,12 +26,6 @@ public class Tab : MonoBehaviour
         }
         _tabButton?.onClick.AddListener(FocusCameraOnTabObject);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     public void Initialize(Sprite image, ObjectType objectType, int tabID = -1)
     {
@@ -73,6 +67,18 @@ public class Tab : MonoBehaviour
                     return;
                 }
                 _upgradePanelManager.SetUpTableUpgradePanels(tablesManager.Tables[_tabID]);
+                break;
+            }
+            case ObjectType.Elevator:
+            {
+                ElevatorManager elevatorManager = ServiceLocator.Get<ElevatorManager>();
+                if (elevatorManager == null)
+                {
+                    Debug.LogError("There is no elevator manager in the scene.");
+                    return;
+                }
+                _cameraZoomToTarget.ZoomTo(elevatorManager.ElevatorGameObject.gameObject.transform);
+                _upgradePanelManager.SetUpElevatorUpgradePanel(elevatorManager);
                 break;
             }
         }

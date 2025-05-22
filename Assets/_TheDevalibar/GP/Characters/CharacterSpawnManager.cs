@@ -28,6 +28,7 @@ public class CharacterSpawnManager : MonoBehaviour
     private bool _isPaused;
     
     public event Action OnSpawnFinished;
+    [SerializeField] private GameManager _gameManager;
     
     
 
@@ -44,7 +45,11 @@ public class CharacterSpawnManager : MonoBehaviour
             dialogueManager._onDialogueStart += PauseSpawning;
             dialogueManager._onDialogueEnd += PlaySpawning;
         }
-        StartSpawning();
+
+        if (!_gameManager)
+        {
+            _gameManager = ServiceLocator.Get<GameManager>();
+        }
     }
 
     // Update is called once per frame
@@ -53,11 +58,14 @@ public class CharacterSpawnManager : MonoBehaviour
         
     }
 
-    private void StartSpawning()
+    public void StartSpawning()
     {
         if (_delayCoroutine == null)
         {
             _isPaused = false;
+            _nextCharacterIndex = 0;
+            _NPCCount = 0;
+            _dayIndex = _gameManager.GameData.DayIndex;
             _haveAllCharactersAndNCPBeenSpawned = false;
             _delayCoroutine = StartCoroutine(SpawningCharacterAndNPC());
         }

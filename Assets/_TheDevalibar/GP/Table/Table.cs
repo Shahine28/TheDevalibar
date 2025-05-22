@@ -36,6 +36,9 @@ public class Table : MonoBehaviour
     [SerializeField] private MeshFilter _chairMesh2Filter;
     [SerializeField] private MeshRenderer _chairMeshRenderer2;
 
+    [SerializedDictionary("Unlockable Item", "Accessibility Upgrade Type")]
+    public SerializedDictionary<AccessibilityUpgrade, GameObject> UnloclableItems = new SerializedDictionary<AccessibilityUpgrade, GameObject>();
+
     void Awake()
     {
         _tableNodeNumber = -1;
@@ -49,13 +52,6 @@ public class Table : MonoBehaviour
             Debug.LogError("There is no tabs manager in the scene.");
         }
         _upgradeButton?.onClick.AddListener(GetFocusOnTable);
-    }
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ShowUpgradeButton()
@@ -124,6 +120,11 @@ public class Table : MonoBehaviour
 
         TryApplyMesh(_chairMesh2Filter, upgrade.NewUpgradeChair2Mesh);
         TryApplyMaterial(_chairMeshRenderer2, upgrade.NewUpgradeChair2Material);
+
+        if (UnloclableItems.ContainsKey(upgrade.AccessibilityUpgrade))
+        {
+            UnloclableItems[upgrade.AccessibilityUpgrade].gameObject.SetActive(true);
+        }
     }
     
     private void TryApplyMesh(MeshFilter filter, Mesh mesh)
@@ -146,3 +147,5 @@ public enum FloorLevel
     GroundFloor,
     UpperFloor
 }
+
+

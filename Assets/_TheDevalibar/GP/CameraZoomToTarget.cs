@@ -50,7 +50,7 @@ public class CameraZoomToTarget : MonoBehaviour
         Vector3 viewDirection = transform.forward.normalized;
 
         // Nouvelle position = cible - direction * distance
-        Renderer renderer = target.GetComponentInChildren<Renderer>();
+        Renderer renderer = target.GetComponentInChildren<Renderer>(false);
         Vector3 targetCenter = renderer != null ? renderer.bounds.center : target.position;
         targetCenter += Vector3.up * verticalOffset; // << décalage vers le haut
         Vector3 endPos = targetCenter - viewDirection * zoomDistance;
