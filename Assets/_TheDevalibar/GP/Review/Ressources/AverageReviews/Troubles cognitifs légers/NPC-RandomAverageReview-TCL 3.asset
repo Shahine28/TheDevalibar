@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a489a9d0d445ecf4290861f2659f614f, type: 3}
-  m_Name: NPC-RandomAverageReview
+  m_Name: NPC-RandomAverageReview-TCL 3
   m_EditorClassIdentifier: 
-  _reviewRate: 3.5
-  _reviewTitle: "joli et honn\xEAte"
-  _reviewDescription: "Bon bar, rien \xE0 dire sur la plupart des choses, m\xEAme
-    si je suis pas trop musique punk \xE0 la base. Maintenant je pense que c'est
-    encore possible d'aller un peu plus loin dans l'accessibilit\xE9 des tables."
+  _reviewRate: 2
+  _reviewTitle: "pas l'id\xE9al pour date"
+  _reviewDescription: "j'\xE9tais avec mon petit copain <3 sauf qu'on a du mal \xE0
+    discuter, d'habitude je ram\xE8ne mon collier favori pour jouer avec et l\xE0
+    je l'avais oubli\xE9; jsais que c'est pas de la faute du bar mais pensez \xE0
+    en mettre et l\xE0 5 \xE9toiles direct"
   _reviewTopic:
     keys:
     - "D\xE9ficience auditive s\xE9v\xE8re"
@@ -25,4 +26,4 @@ MonoBehaviour:
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 000000010000
+    values: 000000000001

@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a489a9d0d445ecf4290861f2659f614f, type: 3}
-  m_Name: NPC-RandomAverageReview
+  m_Name: NPC-RandomGoodReview 17
   m_EditorClassIdentifier: 
-  _reviewRate: 3.5
-  _reviewTitle: "joli et honn\xEAte"
-  _reviewDescription: "Bon bar, rien \xE0 dire sur la plupart des choses, m\xEAme
-    si je suis pas trop musique punk \xE0 la base. Maintenant je pense que c'est
-    encore possible d'aller un peu plus loin dans l'accessibilit\xE9 des tables."
+  _reviewRate: 4.5
+  _reviewTitle: LE PASTIS C'EST 51 PAS 45
+  _reviewDescription: "Le pastis c'est 51 degr\xE9 et pas un degr\xE9 de moins !
+    C'est comme la naza, 6 degr\xE9s, tu vises Paris, tu touches nevers !!!"
   _reviewTopic:
     keys:
-    - "D\xE9ficience auditive s\xE9v\xE8re"
     - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
     - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "D\xE9ficience auditive s\xE9v\xE8re"
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 000000010000
+    values: 000000000000
