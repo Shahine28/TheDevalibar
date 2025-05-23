@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a489a9d0d445ecf4290861f2659f614f, type: 3}
-  m_Name: NPC-RandomAverageReview-DCL
+  m_Name: NPC-RandomAverageReview-TCL 1
   m_EditorClassIdentifier: 
-  _reviewRate: 3.5
-  _reviewTitle: Super, mais...
-  _reviewDescription: "J'ai pass\xE9 une super soir\xE9e, mais je ne mets que 3.5
-    pour une raison purement personnelle. J'ai des douleurs chroniques aux \xE9paules
-    et je trouve que les chaises ne sont pas tr\xE8s adapt\xE9es \xE0 cela."
+  _reviewRate: 3
+  _reviewTitle: Aaaaaarh...
+  _reviewDescription: "Ouai 'avoue que je sais pas quoi en penser de ce petit bar.
+    Parce que j'ai pas pu rester trop longtemps. J'arrivais pas \xE0 me mettre \xE0
+    l'aise. Contre \xE7a, j'aurai bien aimer un petit jouet calmant ou un truc du
+    genre :("
   _reviewTopic:
     keys:
     - "D\xE9ficience auditive s\xE9v\xE8re"
@@ -25,4 +26,4 @@ MonoBehaviour:
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 000000000100
+    values: 000000000001
