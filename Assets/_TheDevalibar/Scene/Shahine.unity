@@ -2721,11 +2721,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319254287}
   m_CullTransparentMesh: 1
---- !u!1 &330823761 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6534128278245382943, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-  m_PrefabInstance: {fileID: 435908229}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &371240805
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,31 +3518,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 402114420165754332, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_Size.x
-      value: 0.02501361
+      value: 0.019416688
       objectReference: {fileID: 0}
     - target: {fileID: 402114420165754332, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_Size.y
-      value: 0.014064981
+      value: 0.009029784
       objectReference: {fileID: 0}
     - target: {fileID: 402114420165754332, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_Size.z
-      value: 0.018559638
+      value: 0.030384555
       objectReference: {fileID: 0}
     - target: {fileID: 402114420165754332, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_Center.x
-      value: 0.00064027624
+      value: 0.00015189481
       objectReference: {fileID: 0}
     - target: {fileID: 402114420165754332, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_Center.y
-      value: 0.00017404181
+      value: 0.0038736188
       objectReference: {fileID: 0}
     - target: {fileID: 402114420165754332, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_Center.z
-      value: 0.006524355
-      objectReference: {fileID: 0}
-    - target: {fileID: 1415344515452603809, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.0002
+      value: 0.00061189575
       objectReference: {fileID: 0}
     - target: {fileID: 1415344515452603809, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3575,28 +3566,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727448172942756193, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771207920904847811, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: 'constraintDict.values.Array.data[0]'
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771207920904847811, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: 'constraintDict.values.Array.data[1]'
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771207920904847811, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: 'constraintDict.values.Array.data[2]'
-      value: 0
+      value: 2.02
       objectReference: {fileID: 0}
     - target: {fileID: 1771207920904847811, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: PurchasedTableUpgrades._serializedList.Array.size
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1771207920904847811, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: PurchasedTableUpgrades._serializedList.Array.data[0].Key
-      value: 
-      objectReference: {fileID: 11400000, guid: 92c88bac9b6e07a46bf767b79d9b5ab4, type: 2}
     - target: {fileID: 1771207920904847811, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: PurchasedTableUpgrades._serializedList.Array.data[1].Key
       value: 
@@ -3611,7 +3586,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7b07139ac997b304cba8da3daa84560d, type: 2}
     - target: {fileID: 1774621229939217818, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.78
+      value: 5.91
       objectReference: {fileID: 0}
     - target: {fileID: 1926128613022396210, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalScale.x
@@ -3673,22 +3648,10 @@ PrefabInstance:
       propertyPath: PurchasedTableUpgrades._serializedList.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2504271948903671422, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: PurchasedTableUpgrades._serializedList.Array.data[0].Key
-      value: 
-      objectReference: {fileID: 11400000, guid: 92c88bac9b6e07a46bf767b79d9b5ab4, type: 2}
-    - target: {fileID: 2806206725497143595, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.08
-      objectReference: {fileID: 0}
     - target: {fileID: 2998305449395292553, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: PurchasedTableUpgrades._serializedList.Array.size
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 2998305449395292553, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: PurchasedTableUpgrades._serializedList.Array.data[0].Key
-      value: 
-      objectReference: {fileID: 11400000, guid: 92c88bac9b6e07a46bf767b79d9b5ab4, type: 2}
     - target: {fileID: 2998305449395292553, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: PurchasedTableUpgrades._serializedList.Array.data[1].Key
       value: 
@@ -3702,12 +3665,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 7b07139ac997b304cba8da3daa84560d, type: 2}
     - target: {fileID: 3021984067259017756, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.0073
-      objectReference: {fileID: 0}
-    - target: {fileID: 3021984067259017756, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3030518107808167213, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_IsActive
@@ -3715,19 +3674,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3291373609605541596, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.598
+      value: 5.91
       objectReference: {fileID: 0}
     - target: {fileID: 5017480811472378513, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 3778802712381926709, guid: e9896ed95010b8146ab8386c238b9255, type: 3}
+    - target: {fileID: 5213507600853627529, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213507600853627529, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213507600853627529, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213507600853627529, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213507600853627529, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213507600853627529, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213507600853627529, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213507600853627529, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 5966824162306645191, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6116775020841404090, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.78
+      value: 5.91
       objectReference: {fileID: 0}
     - target: {fileID: 6129795949197000882, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: PurchasedTableUpgrades._serializedList.Array.size
@@ -3737,25 +3728,9 @@ PrefabInstance:
       propertyPath: PurchasedTableUpgrades._serializedList.Array.data[0].Key
       value: 
       objectReference: {fileID: 11400000, guid: 7b07139ac997b304cba8da3daa84560d, type: 2}
-    - target: {fileID: 6520315324850948112, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.08
-      objectReference: {fileID: 0}
     - target: {fileID: 6597385002374057496, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: _tableFloorLevel
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6597385002374057496, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: 'constraintDict.values.Array.data[0]'
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6597385002374057496, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: 'constraintDict.values.Array.data[1]'
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6597385002374057496, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: 'constraintDict.values.Array.data[2]'
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6597385002374057496, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: PurchasedTableUpgrades._serializedList.Array.size
@@ -3781,52 +3756,24 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 7072600178088209346, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.08
-      objectReference: {fileID: 0}
     - target: {fileID: 7081166590954614363, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7081166590954614363, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 6d45351cccb18a8419086681f76e0b8b, type: 2}
-    - target: {fileID: 7875481481794888544, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: UnloclableItems._serializedList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7875481481794888544, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: PurchasedTableUpgrades._serializedList.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7875481481794888544, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: UnloclableItems._serializedList.Array.data[1].Key
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7875481481794888544, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: UnloclableItems._serializedList.Array.data[1].Value
-      value: 
-      objectReference: {fileID: 330823761}
-    - target: {fileID: 7875481481794888544, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: PurchasedTableUpgrades._serializedList.Array.data[0].Key
-      value: 
-      objectReference: {fileID: 11400000, guid: 92c88bac9b6e07a46bf767b79d9b5ab4, type: 2}
-    - target: {fileID: 7875481481794888544, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: PurchasedTableUpgrades._serializedList.Array.data[1].Key
-      value: 
-      objectReference: {fileID: 11400000, guid: 7b07139ac997b304cba8da3daa84560d, type: 2}
-    - target: {fileID: 7875481481794888544, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
-      propertyPath: PurchasedTableUpgrades._serializedList.Array.data[2].Key
-      value: 
-      objectReference: {fileID: 11400000, guid: 5326bfb8cefba8d43bb12b2f166d8869, type: 2}
     - target: {fileID: 8043588401913575186, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_Name
       value: Tables
       objectReference: {fileID: 0}
     - target: {fileID: 8218637914597840180, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218637914597840180, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218637914597840180, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8218637914597840180, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
