@@ -59,6 +59,29 @@ public class TextResizer : MonoBehaviour
     [SerializeField] TMP_FontAsset _openDys;
     [SerializeField] TMP_FontAsset _robotCondensed;
 
+    private void Awake()
+    {
+        //---- UI ----//
+        _UISizeSldr.value = _UITextSize;
+        _UISizeVal.text = _UITextSize.ToString();
+        _UISpaceLetterSldr.value = _UIspaceInbetweenLetter;
+        _UISpaceLetterVal.text = _UIspaceInbetweenLetter.ToString();
+        _UISpaceWordSldr.value = _UISpaceBetweenWord;
+        _UISpaceWordVal.text = _UISpaceBetweenWord.ToString();
+        _UILineSpacingSldr.value = _UILineSpace;
+        _UISpaceLineVal.text = _UILineSpace.ToString();
+
+        //---- World ----//
+        _WorldSizeSldr.value = _worldTextSize;
+        _worldSizeVal.text = _worldTextSize.ToString();
+        _WorldSpaceLetterSldr.value = _worldSpaceInbetweenLetter;
+        _worldSpaceLineVal.text= _worldSpaceInbetweenLetter.ToString();
+        _WorldSpaceWordSldr.value = _worldSpaceBetweenWord;
+        _worldSpaceWordVal.text= _worldSpaceBetweenWord.ToString();
+        _WorldSpaceLineSldr.value = _worldLineSpace;
+        _worldSpaceLineVal.text= _worldLineSpace.ToString();
+    }
+
     void Start()
     {
         //---- UI ----//
