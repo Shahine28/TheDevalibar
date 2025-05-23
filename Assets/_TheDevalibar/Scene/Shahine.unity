@@ -3547,11 +3547,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1415344515452603809, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0065
+      value: 0.0002
       objectReference: {fileID: 0}
     - target: {fileID: 1415344515452603809, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1715027404841688376, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: _tableFloorLevel
@@ -3571,7 +3571,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: f4ae7afe725437c4cb5594fede6b5f4f, type: 2}
     - target: {fileID: 1727448172942756193, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.758
+      value: 3.08
       objectReference: {fileID: 0}
     - target: {fileID: 1727448172942756193, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3824,6 +3824,10 @@ PrefabInstance:
     - target: {fileID: 8043588401913575186, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_Name
       value: Tables
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218637914597840180, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8218637914597840180, guid: 9947c40ec474cd940994bec7a480893c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7980,6 +7984,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b0e691b2664664ac5945046a4f93b4ec, type: 2}
   - {fileID: 11400000, guid: 33c3cf91e816a4f13bfc98aad6a2465d, type: 2}
   - {fileID: 11400000, guid: 536414bab02d14703863c15ef4519c3a, type: 2}
+  - {fileID: 11400000, guid: b2f9d84165906ab43b9bd1e5d717ac55, type: 2}
+  - {fileID: 11400000, guid: 35a8c3d5771ac394aaf858ac9b1a9b47, type: 2}
+  - {fileID: 11400000, guid: 277565071eee2b84f969ae118349cde5, type: 2}
+  - {fileID: 11400000, guid: 8d78a676c469f6b43bc4beb4fec6e831, type: 2}
+  - {fileID: 11400000, guid: b6c113b3068bac9429dd8f78efba7dc0, type: 2}
   _randomBadReviewSO:
   - {fileID: 11400000, guid: 8ef890bac66914302ae69b50be2f0948, type: 2}
   - {fileID: 11400000, guid: 666d82039be204c69bd51bd88b41ff9d, type: 2}
