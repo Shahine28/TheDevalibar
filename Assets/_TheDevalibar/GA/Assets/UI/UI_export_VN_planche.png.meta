@@ -93,6 +93,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -100,10 +139,10 @@ TextureImporter:
       name: UI_export_VN_planche_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1792
-        width: 512
-        height: 256
+        x: 21
+        y: 1862
+        width: 457
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,10 +161,10 @@ TextureImporter:
       name: UI_export_VN_planche_3
       rect:
         serializedVersion: 2
-        x: 509
-        y: 1792
-        width: 515
-        height: 256
+        x: 527
+        y: 1853
+        width: 458
+        height: 135
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +183,10 @@ TextureImporter:
       name: UI_export_VN_planche_5
       rect:
         serializedVersion: 2
-        x: 1025
-        y: 1792
-        width: 511
-        height: 256
+        x: 1026
+        y: 1845
+        width: 484
+        height: 143
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,9 +250,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2047
-        y: 1792
+        y: 1801
         width: 515
-        height: 256
+        height: 247
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +271,10 @@ TextureImporter:
       name: UI_export_VN_planche_14
       rect:
         serializedVersion: 2
-        x: 93
-        y: 1281
-        width: 1187
-        height: 509
+        x: 111
+        y: 1277
+        width: 1158
+        height: 430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,7 +318,7 @@ TextureImporter:
         x: 1559
         y: 1279
         width: 1171
-        height: 513
+        height: 437
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

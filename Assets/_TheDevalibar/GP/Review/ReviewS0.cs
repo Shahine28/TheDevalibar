@@ -1,6 +1,5 @@
 using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 [CreateAssetMenu(fileName = "ReviewSo", menuName = "Scriptable Objects/ReviewSo")]
 public class ReviewSO : ScriptableObject

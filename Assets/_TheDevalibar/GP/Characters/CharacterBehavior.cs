@@ -3,16 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using _TheDevalibar.GP.Characters;
-using AYellowpaper.SerializedCollections;
 using MyUtilities;
 using NaughtyAttributes;
-using NaughtyAttributes.Editor;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
-using Random = Unity.Mathematics.Random;
 
 public class CharacterBehavior : MonoBehaviour
 {
