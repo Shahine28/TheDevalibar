@@ -92,8 +92,19 @@ public class CharacterBehavior : MonoBehaviour
     public void Initialize(Character character)
     {
         _character = character;
-        _spriteRenderer.sprite = _character.CharacterSprite; // temporary
-        GetComponent<MeshRenderer>().enabled = false;
+        if (_character.CharacterMesh == null)
+        {
+            _spriteRenderer.sprite = _character.CharacterSprite; // temporary
+            GetComponent<MeshRenderer>().enabled = false;
+        }
+        else
+        {
+            _spriteRenderer.gameObject.SetActive(false);
+            MeshFilter filter = GetComponent<MeshFilter>();
+            filter.mesh = character.CharacterMesh;
+            MeshRenderer renderer = GetComponent<MeshRenderer>();
+            renderer.material = character.CharacterMaterial;
+        }
     }
 
     void Start()
