@@ -17,9 +17,31 @@ MonoBehaviour:
   CharacterPseudo: Alexigidilit
   CharacterProfilePicture: {fileID: 21300000, guid: 9c35a0055d611db40827be89abb434e7, type: 3}
   CharacterSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
-  Affinity: 30
-  NextAffinityValue: 40
+  Affinity: 50
+  NextAffinityValue: 100
   Dialogues:
+  - Dialogues:
+    - AffinityName: Angry
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
+    - AffinityName: Neutral
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
+    - AffinityName: Happy
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 2f1d5d883989c430bbe9779397bc7e57, type: 2}
   - Dialogues:
     - AffinityName: Angry
       DialogueContainerFromLanguageCode:
@@ -56,16 +78,48 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f9cb8900c91f87d4e9d24119ba654cc4, type: 2}
     - {fileID: 11400000, guid: 2cdca5feae17aa843aeac7eff3cdf0eb, type: 2}
     - {fileID: 11400000, guid: 50a27f76b52639c49aa1fe40008f3c1c, type: 2}
+  _bubbleSpeech:
+    _goodTableSpeech:
+    - Grave cool cette place
+    - "Gribouille a valid\xE9 direct"
+    - "J\u2019sens que j\u2019vais rester"
+    - La vibe est douce ici
+    - "J\u2019entends m\xEAme pas mes pens\xE9es"
+    - "J\u2019ai faim et j\u2019suis bien"
+    _averageTableSpeech:
+    - La chaise est chelou
+    - "Un peu trop de lumi\xE8re"
+    - "J\u2019me sens pas centr\xE9 l\xE0"
+    - "Y\u2019avait pas d\u2019autre coin ?"
+    - "J\u2019crois qu\u2019il manque un coussin"
+    - "C\u2019est ok\u2026 mais j\u2019suis pas s\xFBr"
+    _goodLeavingSpeech:
+    - "J\u2019reviens avec le groupe  "
+    - "Gribouille dort, c\u2019est bon signe"
+    - "Merci ! J\u2019me sens l\xE9ger"
+    - Trop cool ce moment
+    - "J\u2019ai pas vu l\u2019heure passer"
+    - 'Mon ventre dit merci  '
+    _averageLeavingSpeech:
+    - "Trop d\u2019odeurs d\u2019un coup"
+    - "J\u2019me sens un peu flou"
+    - "C\u2019\xE9tait bien, mais j\u2019me barre  "
+    - "J\u2019ai pas fini mon verre"
+    - "Faut que j\u2019bouge"
+    - "J\u2019ai satur\xE9 sans pr\xE9venir"
+    _badLeavingSpeech:
+    - Bruit + piment = chaos
+    - "J\u2019ai paniqu\xE9 sur le coussin"
+    - Trop. Juste trop.
+    - "J\u2019suis pas fait pour ce coin"
+    - "Mon oreille a explos\xE9"
+    - Gribouille tirait la laisse
   constraintDict:
     keys:
-    - "Mobilit\xE9"
-    - "D\xE9ficience visuelle"
-    - "Fatigabilit\xE9 chronique"
     - "D\xE9ficience auditive s\xE9v\xE8re"
-    - "Troubles de l\u2019\xE9quilibre / vertiges"
-    - "Hypersensibilit\xE9 sensorielle"
-    - Douleurs chroniques
-    - "Allergies s\xE9v\xE8res"
-    - "Troubles cognitifs l\xE9gers"
-    - Troubles dermatologiques
-    values: 00000000000000000000
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000000000000

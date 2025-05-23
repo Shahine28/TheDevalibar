@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using MyUtilities;
 using UnityEngine;
@@ -52,9 +51,10 @@ public class TabsManager : MonoBehaviour
         // Tables
         ClearTabs();
         if (_tablesManager == null) return;
+        Tab tab;
         for (int i = 0; i < _tablesManager.Tables.Count; i++)
         {
-            Tab tab = Instantiate(TabPrefab, transform).GetComponent<Tab>();
+            tab = Instantiate(TabPrefab, transform).GetComponent<Tab>();
             if (tab == null)
             {
                 Debug.LogWarning("There is no TabPrefab in the prefab");
@@ -63,6 +63,19 @@ public class TabsManager : MonoBehaviour
             tab.Initialize(_tableSprite, ObjectType.Table,i);
             _tabs.Add(tab);
         }
+        
+        // Elevator
+        tab = Instantiate(TabPrefab, transform).GetComponent<Tab>();
+        if (tab == null)
+        {
+            Debug.LogWarning("There is no TabPrefab in the prefab");
+            return;
+        }
+        ElevatorManager elevator = ServiceLocator.Get<ElevatorManager>();
+        if (elevator == null) return;
+        tab.Initialize(_elevatorSprite, ObjectType.Elevator);
+        _tabs.Add(tab);
+        
     }
 
     void ClearTabs()
@@ -80,17 +93,17 @@ public class TabsManager : MonoBehaviour
         _upgradePanelManager.ClearUpgradePanels(true);
     }
 
-    public void FocusCameraOnTab(int TableID)
+    public void FocusCameraOnTab(int TabID)
     {
         foreach (Tab tab in _tabs)
         {
-            if (tab.TabID == TableID)
+            if (tab.TabID == TabID)
             {
                 tab.FocusCameraOnTabObject();
                 return;
             }
         }
-        Debug.LogError("There is no tab with the ID " + TableID);
+        Debug.LogError("There is no tab with the ID " + TabID);
     }
     // Update is called once per frame
     void Update()

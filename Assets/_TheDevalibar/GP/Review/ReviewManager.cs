@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using MyUtilities;
 using TMPro;
 using UnityEngine;
@@ -83,10 +84,29 @@ public class ReviewManager : MonoBehaviour
         int index = Random.Range(0, ReviewSOList.Count);
         return ReviewSOList[index];
     }
-
-    public void AddReview(CustomersFeedback feedback, Character character = null)
+    
+    public ReviewSO GetRandomReview(List<ReviewSO> ReviewSOList, string reviewerDisabilty)
     {
-        CharacterReview characterReview = new CharacterReview(character, feedback);
+        if (ReviewSOList == null || ReviewSOList.Count == 0)
+        {
+            Debug.LogWarning("Review SO bank is empty!");
+            return null;
+        }
+        
+        List<ReviewSO> UsableReviewSo = ReviewSOList.Where(x => x.GetReviewTopic() == reviewerDisabilty).ToList();
+        if (UsableReviewSo == null || UsableReviewSo.Count == 0)
+        {
+            Debug.LogWarning("No accurate review available!");
+            return null;
+        }
+
+        int index = Random.Range(0, UsableReviewSo.Count);
+        return UsableReviewSo[index];
+    }
+
+    public void AddReview(CustomersFeedback feedback, string reviewerDisability, Character character = null)
+    {
+        CharacterReview characterReview = new CharacterReview(character,reviewerDisability,feedback);
         _characterReviews.Add(characterReview);
     }
 
@@ -115,11 +135,11 @@ public class ReviewManager : MonoBehaviour
                     {
                         if (characterReview.Character == null)
                         {
-                            reviewSO = GetRandomReview(_randomGoodReviewSO);
+                            reviewSO = GetRandomReview(_randomGoodReviewSO, characterReview.ReviewerDisability);
                             int count = 0; 
                             while (AlreadyUsedReviewSOList.Contains(reviewSO) && count < 10)
                             {
-                                reviewSO = GetRandomReview(_randomGoodReviewSO);
+                                reviewSO = GetRandomReview(_randomGoodReviewSO, characterReview.ReviewerDisability);
                                 count++;
                             }
                             AlreadyUsedReviewSOList.Add(reviewSO);
@@ -134,11 +154,11 @@ public class ReviewManager : MonoBehaviour
                     {
                         if (characterReview.Character == null)
                         {
-                            reviewSO = GetRandomReview(_randomAverageReviewSO);
+                            reviewSO = GetRandomReview(_randomAverageReviewSO, characterReview.ReviewerDisability);
                             int count = 0; 
                             while (AlreadyUsedReviewSOList.Contains(reviewSO) && count < 10)
                             {
-                                reviewSO = GetRandomReview(_randomAverageReviewSO);
+                                reviewSO = GetRandomReview(_randomAverageReviewSO, characterReview.ReviewerDisability);
                                 count++;
                             }
                             AlreadyUsedReviewSOList.Add(reviewSO);
@@ -153,11 +173,11 @@ public class ReviewManager : MonoBehaviour
                     {
                         if (characterReview.Character == null)
                         {
-                            reviewSO = GetRandomReview(_randomBadReviewSO);
+                            reviewSO = GetRandomReview(_randomBadReviewSO, characterReview.ReviewerDisability);
                             int count = 0; 
                             while (AlreadyUsedReviewSOList.Contains(reviewSO) && count < 10)
                             {
-                                reviewSO = GetRandomReview(_randomBadReviewSO);
+                                reviewSO = GetRandomReview(_randomBadReviewSO, characterReview.ReviewerDisability);
                                 count++;
                             }
                             AlreadyUsedReviewSOList.Add(reviewSO);
@@ -181,7 +201,7 @@ public class ReviewManager : MonoBehaviour
         }
     }
 
-    private void ClearReviews()
+    public void ClearReviews()
     {
         _characterReviews.Clear();
         for (int i = _reviewPanelContainer.childCount - 1; i >= 0; i--)
@@ -195,11 +215,13 @@ public class ReviewManager : MonoBehaviour
 public struct CharacterReview
 {
     public Character Character;
+    public string ReviewerDisability;
     public CustomersFeedback Feedback;
 
-    public CharacterReview(Character character, CustomersFeedback feedback)
+    public CharacterReview(Character character, string reviewerDisability, CustomersFeedback feedback)
     {
         Character = character;
+        ReviewerDisability = reviewerDisability;
         Feedback = feedback;
     }
 }

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a489a9d0d445ecf4290861f2659f614f, type: 3}
+  m_Name: NPC-RandomGoodReview-TCL 2
+  m_EditorClassIdentifier: 
+  _reviewRate: 5
+  _reviewTitle: 'Punk Zen  '
+  _reviewDescription: "J'adore la musique punk, mais j'ai du mal avec le bruit...
+    Je sais \xE7a peut paraitre bizarre, mais j'ai pris l'habitude de l'\xE9couter
+    peu fort, et la zone calme de l'\xE9tage avec ses enceintes directionnelles est
+    parfaite pour \xE7a ! Bravo !"
+  _reviewTopic:
+    keys:
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "D\xE9ficience auditive s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000000000001

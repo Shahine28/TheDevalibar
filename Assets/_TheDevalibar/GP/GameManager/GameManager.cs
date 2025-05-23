@@ -1,20 +1,17 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using AYellowpaper.SerializedCollections;
-using NaughtyAttributes;
-using UnityEditor;
 using UnityEngine;
 using MyUtilities;
 using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
 
-    [Header("Data")] public GameData gameData;
+    [Header("Data")] 
+    public GameData GameData;
 
     [Header("SceneLoader")] private AsyncOperation _sceneLoadingOperation;
     private string _nextSceneName;
@@ -29,9 +26,14 @@ public class GameManager : MonoBehaviour
     public event Action<string> OnLoadingScene;
 
 
-    [Header("Localization")] private bool active;
+    [Header("Localization")] 
+    private bool active;
     
     public event Action OnLanguageChanged;
+
+    [Header("On New Day")]
+    public UnityEvent OnNewDay;
+    
 
     
     private void Awake()
@@ -51,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateGoldValue()
     {
-        UpdateGoldValue(gameData.Gold);
+        UpdateGoldValue(GameData.Gold);
     }
     public void UpdateGoldValue(int gold)
     {
@@ -59,10 +61,16 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        if (gameData && _goldText)
+        if (GameData && _goldText)
         {
-            UpdateGoldValue(gameData.Gold);
+            UpdateGoldValue(GameData.Gold);
         }
+    }
+
+    public void StartNewDay()
+    {
+        GameData.DayIndex++;
+        OnNewDay?.Invoke();
     }
    
 }

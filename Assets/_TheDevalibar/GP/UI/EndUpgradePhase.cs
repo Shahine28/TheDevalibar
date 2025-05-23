@@ -6,6 +6,7 @@ public class EndUpgradePhase : MonoBehaviour
     private TablesManager _tablesManager;
     private ShowHideUI _showHideUI;
     private TabsManager _tabsManager;
+    [SerializeField] private TransitionManager _transitionManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,6 +38,7 @@ public class EndUpgradePhase : MonoBehaviour
         _tabsManager.ResetFocus();
         _showHideUI.HideUI();
         _tablesManager.HideUpgradeButtonTables();
+        _transitionManager?.StartTransition();
     }
     // Update is called once per frame
     void Update()

@@ -6,7 +6,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
-using NaughtyAttributes;
 using UnityEngine.Serialization;
 using MyUtilities;
 
@@ -19,6 +18,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private int _dialogueIndex;
     [SerializeField] private Image _character1Sprite;
+    [SerializeField] private Image _barmaidSprite;
     
     // [Header("File")]
     // [SerializeField] private string filePath = "Assets/_NarrativeProject/Prog/Scripts/DialogueGraph/Resources";
@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private List<TextMeshProUGUI> _dialogueButtonTexts = new List<TextMeshProUGUI>();
     [SerializeField] private List<Button> _buttons = new List<Button>();
     [SerializeField] private Button _continueButton;
+    [SerializeField] private GameObject _continueButtonContainer;
     [SerializeField] private GameObject _buttonsContainer;
     [SerializeField] private Slider _affinitySlider;
     
@@ -81,6 +82,13 @@ public class DialogueManager : MonoBehaviour
 
         
     }
+
+    public void SwitchCharacterFocus(Image CharaterToFocus, Image CharacterToUnfocus)
+    {
+        CharaterToFocus.color = Color.white;
+        CharacterToUnfocus.color = Color.grey;
+    }
+    
 
     private void OnEnable()
     {
@@ -189,7 +197,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         
-        CodeLanguage languageCode = _gameManager.gameData.LanguageCode;
+        CodeLanguage languageCode = _gameManager.GameData.LanguageCode;
         
         
         _containerCache = _character.GetCharacterDialogue(languageCode);
@@ -219,6 +227,8 @@ public class DialogueManager : MonoBehaviour
     private void SetDialogueCanvas(DialogueNodeData dialogueNodeData, bool typingEffect = true)
     {
         _buttonsContainer?.gameObject.SetActive(false);
+        _continueButtonContainer?.gameObject.SetActive(false);
+        SwitchCharacterFocus(_character1Sprite, _barmaidSprite);
         if (_typingCoroutine != null && _isTyping)
         {
             StopCoroutine(_typingCoroutine);
@@ -226,13 +236,14 @@ public class DialogueManager : MonoBehaviour
         }
         if (typingEffect)
         {
-            
             _typingCoroutine = StartCoroutine(TypeText(dialogueNodeData.DialogueText));
         }
         else
         {
             _dialogueText.text = dialogueNodeData.DialogueText;
             _buttonsContainer?.gameObject.SetActive(true);
+            _continueButtonContainer?.gameObject.SetActive(true);
+            SwitchCharacterFocus(_barmaidSprite, _character1Sprite);
         }
         
         List<NodeLinkData> Ports = _containerCache.NodeLinks.Where(links => links.BaseNodeGuid == dialogueNodeData.NodeGUID).ToList();
@@ -265,6 +276,8 @@ public class DialogueManager : MonoBehaviour
 
         _isTyping = false;
         _buttonsContainer?.gameObject.SetActive(true);
+        _continueButtonContainer?.gameObject.SetActive(true);
+        if (_buttons.Any(x=>x.gameObject.activeInHierarchy)) SwitchCharacterFocus(_barmaidSprite, _character1Sprite);
     }
 
     public void SkipTypingEffect()
@@ -275,6 +288,8 @@ public class DialogueManager : MonoBehaviour
             _dialogueText.text = _fullText;
             _isTyping = false;
             _buttonsContainer?.gameObject.SetActive(true);
+            _continueButtonContainer?.gameObject.SetActive(true);
+            if (_buttons.Any(x=>x.gameObject.activeInHierarchy)) SwitchCharacterFocus(_barmaidSprite, _character1Sprite);
         }
     }
 
@@ -351,6 +366,7 @@ public class DialogueManager : MonoBehaviour
         if ((!_buttons.Contains(clickedButton) && clickedButton != _continueButton) || !_NodeGUIDFromButton.ContainsKey(clickedButton))
         {
             Debug.LogError("Button not found or NodeGUID not found");
+            EndDialogue();
             return;
         }
         DialogueNodeData nextDialogueNode = GetDialogueNodeData(_NodeGUIDFromButton[clickedButton]);

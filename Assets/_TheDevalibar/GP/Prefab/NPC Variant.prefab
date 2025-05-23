@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3325692719259931364, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325692719259931364, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3360062174184561702, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -60,8 +68,18 @@ PrefabInstance:
       propertyPath: _character
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7218737290905152009, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: _spriteRenderer
+      value: 
+      objectReference: {fileID: 7981099886674644546}
+    m_RemovedComponents:
+    - {fileID: 3078036017781758731, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+--- !u!212 &7981099886674644546 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3325692719259931364, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+  m_PrefabInstance: {fileID: 4676332800036592806}
+  m_PrefabAsset: {fileID: 0}

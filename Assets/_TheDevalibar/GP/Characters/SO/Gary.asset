@@ -17,7 +17,7 @@ MonoBehaviour:
   CharacterPseudo: Gaga la pinta
   CharacterProfilePicture: {fileID: 21300000, guid: 1d2c103791467ca4ea491a8eca6332de, type: 3}
   CharacterSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
-  Affinity: 55
+  Affinity: 50
   NextAffinityValue: 100
   Dialogues:
   - Dialogues:
@@ -27,22 +27,44 @@ MonoBehaviour:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
+          Value: {fileID: 11400000, guid: 99f6ee009531e49ddb74f1bb7f3d7a9c, type: 2}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
+          Value: {fileID: 11400000, guid: 99f6ee009531e49ddb74f1bb7f3d7a9c, type: 2}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 11400000, guid: b0c3bc396708c7b49881d65b48a38db4, type: 2}
-  DialogueIndex: 1
+          Value: {fileID: 11400000, guid: 99f6ee009531e49ddb74f1bb7f3d7a9c, type: 2}
+  - Dialogues:
+    - AffinityName: Angry
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 4e1b3f6979ba0432e8587f7e80865fa3, type: 2}
+    - AffinityName: Neutral
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 4e1b3f6979ba0432e8587f7e80865fa3, type: 2}
+    - AffinityName: Happy
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 4e1b3f6979ba0432e8587f7e80865fa3, type: 2}
+  DialogueIndex: 0
   _characterReviews:
     GoodReviews:
     - {fileID: 11400000, guid: 9a556950957add1438cd3855ca79501e, type: 2}
@@ -56,16 +78,48 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3d96e208939116946923cb4f1f2865f6, type: 2}
     - {fileID: 11400000, guid: 1b94e383e43ae944381d77d3e5ce47b9, type: 2}
     - {fileID: 11400000, guid: 99692959f43801844936614602728c8c, type: 2}
+  _bubbleSpeech:
+    _goodTableSpeech:
+    - Pas trop pourri ici !
+    - "J\u2019vais peut-\xEAtre pas gueuler."
+    - "Boisson fra\xEEche, si\xE8ge correct."
+    - Comme au bon vieux temps
+    - "Une vraie pause pour le c\u0153ur"
+    - "J\u2019prends mon temps, c\u2019est tout"
+    _averageTableSpeech:
+    - "C\u2019est pas comme hier"
+    - "J\u2019ai connu mieux, j\u2019te mens pas"
+    - La table est trop basse
+    - "O\xF9 est pass\xE9 mon silence ?"
+    - "Bon... \xE7a fera l\u2019affaire"
+    - "Y\u2019a trop de jeunesse ici"
+    _goodLeavingSpeech:
+    - "Merci, j\u2019reviens demain"
+    - Bien servi, bien assis
+    - "\xC0 l\u2019ancienne, sans le poids  "
+    - Salut les jeunes !
+    - "Belle ambiance, rien \xE0 dire"
+    - "\xC0 la prochaine, si Dieu veut"
+    _averageLeavingSpeech:
+    - "J\u2019pars avant qu\u2019on crie"
+    - Un peu trop de bruit
+    - "J\u2019trouvais mieux en 72"
+    - "Bon\u2026 \xE7a ira pour aujourd\u2019hui"
+    - "J\u2019suis pas venu pour \xE7a"
+    - "Dommage pour le caf\xE9"
+    _badLeavingSpeech:
+    - "Pas ma tasse de th\xE9"
+    - "C\u2019\xE9tait pas un bon jour"
+    - Je suis venu pour rien
+    - "J\u2019aurais d\xFB rester couch\xE9"
+    - "M\xEAme le silence m\u2019ignore"
+    - "Mauvais go\xFBt, mauvaise humeur  "
   constraintDict:
     keys:
-    - "Mobilit\xE9"
-    - "D\xE9ficience visuelle"
     - "D\xE9ficience auditive s\xE9v\xE8re"
-    - "Fatigabilit\xE9 chronique"
-    - "Troubles de l\u2019\xE9quilibre / vertiges"
-    - "Hypersensibilit\xE9 sensorielle"
-    - Douleurs chroniques
-    - "Allergies s\xE9v\xE8res"
-    - "Troubles cognitifs l\xE9gers"
-    - Troubles dermatologiques
-    values: 01000000000000000000
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000001000000

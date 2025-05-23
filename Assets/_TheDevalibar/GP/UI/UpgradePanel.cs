@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using MyUtilities;
 using TMPro;
@@ -66,7 +65,7 @@ public class UpgradePanel : MonoBehaviour
         IsPanelTransitioning = false;
     }
 
-    public void SetUpPanel(Upgrade upgrade, Table table = null)
+    public void SetUpPanel(Upgrade upgrade, Table table = null, ElevatorManager elevatorManager = null)
     {
         if (!upgrade)
         {
@@ -83,13 +82,17 @@ public class UpgradePanel : MonoBehaviour
             _currentObjectType = ObjectType.Table;
             _currentTable = table;
         }
+        else if (elevatorManager != null)
+        {
+            _currentObjectType = ObjectType.Elevator;
+        }
         
     }
 
 
     private void TryBuyUpgrade()
     {
-        if (_currentTable == null || _currentUpgrade == null)
+        if ((_currentTable == null && _currentObjectType == ObjectType.Table) || _currentUpgrade == null)
         {
             Debug.LogError("The upgrade is null or the current table is null");
             return;
@@ -101,15 +104,15 @@ public class UpgradePanel : MonoBehaviour
             return;
         }
 
-        if (_gameManager.gameData == null)
+        if (_gameManager.GameData == null)
         {
             Debug.LogError("The game data is null");
             return;
         }
 
-        if (_gameManager.gameData.Gold >= _currentUpgrade.UpgradeCost)
+        if (_gameManager.GameData.Gold >= _currentUpgrade.UpgradeCost)
         {
-            _gameManager.gameData.Gold -= _currentUpgrade.UpgradeCost;
+            _gameManager.GameData.Gold -= _currentUpgrade.UpgradeCost;
             _gameManager.UpdateGoldValue();
             switch (_currentObjectType)
             {
@@ -125,7 +128,15 @@ public class UpgradePanel : MonoBehaviour
                 case ObjectType.Stairs :
                     break;
                 case ObjectType.Elevator:
+                {
+                    ElevatorManager elevatorManager = ServiceLocator.Get<ElevatorManager>();
+                    if (elevatorManager != null)
+                    {
+                        _currentUpgrade.InvokeUpgrade();
+                    }
                     break;
+                }
+                    
                 case ObjectType.WC:
                     break;
                 default:
