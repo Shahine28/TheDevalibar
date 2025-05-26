@@ -63,6 +63,8 @@ public class CharacterSpawnManager : MonoBehaviour
         if (_delayCoroutine == null)
         {
             _isPaused = false;
+            _nextCharacterIndex = 0;
+            _NPCCount = 0;
             _dayIndex = _gameManager.GameData.DayIndex;
             _haveAllCharactersAndNCPBeenSpawned = false;
             _delayCoroutine = StartCoroutine(SpawningCharacterAndNPC());
