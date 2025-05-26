@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13f1edc776b448f9bc3401150e361524, type: 3}
-  m_Name: TablePMR
+  m_Name: Boucle
   m_EditorClassIdentifier: 
   UpgradeSprite: {fileID: 21300000, guid: 1a1ddf1e3bd7bfa4ea1cc089888f0ed1, type: 3}
-  UpgradeName: Table PMR
-  UpgradeDescription: "Passez d'une table classique \xE0 la table PMR"
-  UpgradeCost: 5000
+  UpgradeName: "Boucle \xE0 Induction Magn\xE9tique"
+  UpgradeDescription: "L'appareil envoie des ondes sonores directement dans l'appareil
+    auditif. Le son est clair, sans interf\xE9rances et bruits parasites. La discussion
+    entre individus devient plus fluide."
+  UpgradeCost: 0
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
