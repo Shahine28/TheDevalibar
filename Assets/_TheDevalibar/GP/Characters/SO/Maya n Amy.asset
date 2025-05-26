@@ -27,22 +27,32 @@ MonoBehaviour:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
   DialogueIndex: 0
+  _characterReviews:
+    GoodReviews: []
+    AverageReviews: []
+    BadReviews: []
+  _bubbleSpeech:
+    _goodTableSpeech: []
+    _averageTableSpeech: []
+    _goodLeavingSpeech: []
+    _averageLeavingSpeech: []
+    _badLeavingSpeech: []
   constraintDict:
     keys:
     - "Mobilit\xE9"
