@@ -21,6 +21,7 @@ public class ReviewSO : ScriptableObject
 
     public string GetReviewTopic()
     {
-        return _reviewTopic.keys.FirstOrDefault(key => _reviewTopic[key])?.ToString();
+        return _reviewTopic.keys.FirstOrDefault(key => _reviewTopic[key])?.ToString() ?? string.Empty;
     }
+
 }

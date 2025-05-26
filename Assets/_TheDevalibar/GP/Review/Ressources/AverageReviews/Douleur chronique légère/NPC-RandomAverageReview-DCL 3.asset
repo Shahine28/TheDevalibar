@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a489a9d0d445ecf4290861f2659f614f, type: 3}
+  m_Name: NPC-RandomAverageReview-DCL 3
+  m_EditorClassIdentifier: 
+  _reviewRate: 3
+  _reviewTitle: bar de fou, tables pas folles
+  _reviewDescription: "Y'a des vrais efforts d'accessibilit\xE9s, et je suis peut
+    \xEAtre tomb\xE9 sur la mauvaise table, mais bon, y'avait pleins de petites choses
+    qui g\xE2chaient un peu l'exp\xE9rience."
+  _reviewTopic:
+    keys:
+    - "D\xE9ficience auditive s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000000000100

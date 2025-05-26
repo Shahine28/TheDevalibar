@@ -82,7 +82,7 @@ public class TransitionManager : MonoBehaviour
         else
         {
             yield return new WaitForSeconds(_timeBeforeUpdatingDayIndex/2);
-            _dayText.text = "Day " + ((_dayIndex == -1 ? _dayIndex+1 : _dayIndex) + 1);
+            _dayText.text = "Day " + (_dayIndex + 2);
             yield return new WaitForSeconds(_timeBeforeUpdatingDayIndex/2);
             StartFadeOut();
         }
@@ -105,7 +105,7 @@ public class TransitionManager : MonoBehaviour
         }
         
         yield return new WaitForSeconds(_timeBeforeUpdatingDayIndex/2);
-        _dayText.text = "Day " + ((_dayIndex == -1 ? _dayIndex+1 : _dayIndex) + 1);
+        _dayText.text = "Day " + (_dayIndex + 2);
         yield return new WaitForSeconds(_timeBeforeUpdatingDayIndex/2);
         StartFadeOut();
     }

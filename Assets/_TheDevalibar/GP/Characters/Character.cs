@@ -2,9 +2,11 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AYellowpaper.SerializedCollections;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 
 [CreateAssetMenu(fileName = "Character", menuName = "Scriptable Objects/Character"), System.Serializable]
 public class Character : ScriptableObject
@@ -34,6 +36,29 @@ public class Character : ScriptableObject
     public CustomersBubbleSpeech BubbleSpeech => _bubbleSpeech;
     
     public ConstraintBoolDictionary constraintDict = new ConstraintBoolDictionary();
+    
+#if UNITY_EDITOR  
+    private void OnEnable()
+    {
+        // SaveInitialValues();
+        EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
+    }
+
+    private void OnDisable()
+    {
+        EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;
+    }
+
+    private void OnPlayModeStateChanged(PlayModeStateChange state)
+    {
+        if (state == PlayModeStateChange.ExitingPlayMode) // Quand on quitte le mode Play
+        {
+            DialogueIndex = 0;
+            Affinity = 50;
+        }
+    }
+
+#endif
     
     public Sprite GetCharacterSprite()
     {
