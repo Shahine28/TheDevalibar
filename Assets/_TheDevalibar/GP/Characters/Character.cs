@@ -18,6 +18,8 @@ public class Character : ScriptableObject
     public string CharacterPseudo;
     public Sprite CharacterProfilePicture;
     public Sprite CharacterSprite;
+    public Mesh CharacterMesh;
+    public Material CharacterMaterial;
     
     public int Affinity;
 
