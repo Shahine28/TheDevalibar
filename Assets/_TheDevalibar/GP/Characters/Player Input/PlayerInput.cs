@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
-public class PlayerInput : MonoBehaviour, IPointerDownHandler
+public class PlayerInput : MonoBehaviour, IPointerDownHandler, ISelectHandler
 {
     [SerializeField] PlayerInput _playerController;
     [SerializeField] InputActionReference _Interact;
@@ -14,6 +14,7 @@ public class PlayerInput : MonoBehaviour, IPointerDownHandler
 
     [Header("UI Manager")]
     [SerializeField] UIManager _menu;
+    [SerializeField] bool _isPaused = false;
 
     //[Header("Player Param")]
     //[SerializeField] float speed;
@@ -44,6 +45,11 @@ public class PlayerInput : MonoBehaviour, IPointerDownHandler
         //OnClick();
     }
 
+    public void OnSelect(BaseEventData eventData)
+    {
+        Debug.Log("test");
+    }
+
     private void OnInteract()
     {
         //var dir = ctx.ReadValue<Vector2>();
@@ -68,6 +74,16 @@ public class PlayerInput : MonoBehaviour, IPointerDownHandler
 
     void OnPause(InputAction.CallbackContext ctx)
     {
-        _menu.OnPause();
+        if (_isPaused == false)
+        {
+            _menu.OnPause();
+            _isPaused = true;
+        }
+        else
+        {
+            _menu.resume();
+            _isPaused = false;
+        }
     }
+
 }

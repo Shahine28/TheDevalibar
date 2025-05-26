@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
@@ -17,9 +18,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] bool _isRebindDisplay = false;
     [SerializeField] bool _isTextSettingsDisplay = false;
 
+    [Header("Controller Selection")]
+    [SerializeField] EventSystem _selected;
+    [SerializeField] GameObject _newSelected;
+    [SerializeField] GameObject _previousSelected;
+
     void Start()
     {
         _settingsMenus.SetActive(false);
+        _previousSelected = _selected.firstSelectedGameObject;
     }
 
     void Update()
@@ -47,6 +54,10 @@ public class UIManager : MonoBehaviour
             _pauseMenus.SetActive(false);
             _rebindMenus?.SetActive(false);
             _textSettingsMenu?.SetActive(false);
+
+            //set the first selected obj when using controller
+            _selected.SetSelectedGameObject(_newSelected);
+            _selected.firstSelectedGameObject = _newSelected;
         }
         else
         {
@@ -59,6 +70,8 @@ public class UIManager : MonoBehaviour
         /*_audioMenu?.SetActive(false);
         _rebindMenus?.SetActive(false);*/
         _pauseMenus.SetActive(true);
+        _selected.SetSelectedGameObject(_previousSelected);
+        _selected.firstSelectedGameObject = _previousSelected;
     }
 
     public void ShowAudioParam()

@@ -16,7 +16,6 @@ public class TextResizer : MonoBehaviour
     [SerializeField] Slider _UILineSpacingSldr;
 
     [Header("UI Text")]
-    [SerializeField] TextMeshProUGUI _UIText;
     [SerializeField] TextMeshProUGUI _UISizeVal;
     [SerializeField] TextMeshProUGUI _UISpaceLetterVal;
     [SerializeField] TextMeshProUGUI _UISpaceWordVal;
@@ -39,7 +38,6 @@ public class TextResizer : MonoBehaviour
     [SerializeField] Slider _WorldSpaceLineSldr;
 
     [Header("World Text")]
-    [SerializeField] TextMeshPro _worldText;
     [SerializeField] TextMeshProUGUI _worldSizeVal;
     [SerializeField] TextMeshProUGUI _worldSpaceLetterVal;
     [SerializeField] TextMeshProUGUI _worldSpaceWordVal;
@@ -170,12 +168,24 @@ public class TextResizer : MonoBehaviour
         foreach (var text in allUIText)
         {
             text.fontSize = _UITextSize; //change UI text size
+            text.color = _UITextColor; //change UI text color
+
+            //---- Text Spacing settings ----//
+            text.characterSpacing = _UIspaceInbetweenLetter;
+            text.wordSpacing = _UISpaceBetweenWord;
+            text.lineSpacing = _UILineSpace;
         }
 
         var allWorldText = FindObjectsByType<TextMeshPro>(FindObjectsInactive.Include, FindObjectsSortMode.None); // get all TextMeshPro
         foreach (var text in allWorldText)
         {
             text.fontSize = _worldTextSize; // change non UI Text size
+            text.color = _worldTextColor; //change non UI Color
+
+            //---- Text Spacing settings ----//
+            text.characterSpacing = _worldSpaceInbetweenLetter;
+            text.wordSpacing = _worldSpaceBetweenWord;
+            text.lineSpacing = _worldLineSpace;
         }
 
         //----- clamp the max and min size of a text -----//
@@ -184,18 +194,6 @@ public class TextResizer : MonoBehaviour
             _worldTextSize = Mathf.Clamp(_worldTextSize, 0, 100);
             _UITextSize = Mathf.Clamp(_UITextSize, 0, 100);
         }
-
-        //----- Text Color ----//
-        _UIText.color = _UITextColor;
-        _worldText.color = _worldTextColor;
-
-        //---- Text Spacing settings ----//
-        _UIText.characterSpacing = _UIspaceInbetweenLetter;
-        _UIText.wordSpacing = _UISpaceBetweenWord;
-        _UIText.lineSpacing = _UILineSpace;
-        _worldText.characterSpacing = _worldSpaceInbetweenLetter;
-        _worldText.wordSpacing = _worldSpaceBetweenWord;
-        _worldText.lineSpacing = _worldLineSpace;
     }
 
     #region Button
