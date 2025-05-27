@@ -74,7 +74,9 @@ public class PlayerInput : MonoBehaviour, IPointerDownHandler, ISelectHandler
 
     void OnPause(InputAction.CallbackContext ctx)
     {
-        if (_isPaused == false)
+        if (!ctx.performed) return; //only reacte when key pressed;
+
+        if (!_isPaused)
         {
             _menu.OnPause();
             _isPaused = true;

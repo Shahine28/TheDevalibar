@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class UIManager : MonoBehaviour
 {
     [Header("UI Elements")]
+    [SerializeField] GameObject _mainMenu;
     [SerializeField] GameObject _pauseMenus;
     [SerializeField] GameObject _settingsMenus;
     [SerializeField] GameObject _rebindMenus;
@@ -51,6 +52,7 @@ public class UIManager : MonoBehaviour
         {
             _settingsMenus?.SetActive(true);
             _audioMenu?.SetActive(true);
+            _mainMenu?.SetActive(false);
             _pauseMenus.SetActive(false);
             _rebindMenus?.SetActive(false);
             _textSettingsMenu?.SetActive(false);
@@ -64,7 +66,7 @@ public class UIManager : MonoBehaviour
             _settingsMenus?.SetActive(false);
         }
     }
-    public void GoBack()
+    public void GoBackToPause()
     {
         _settingsMenus?.SetActive(false);
         /*_audioMenu?.SetActive(false);
@@ -74,6 +76,14 @@ public class UIManager : MonoBehaviour
         _selected.firstSelectedGameObject = _previousSelected;
     }
 
+    public void GoBackToMain()
+    {
+        _settingsMenus?.SetActive(false);
+        _mainMenu?.SetActive(true);
+        _selected.SetSelectedGameObject(_previousSelected);
+        _selected.firstSelectedGameObject= _previousSelected;
+    }
+
     public void ShowAudioParam()
     {
         if (!_isAudioDisplay)
@@ -81,6 +91,7 @@ public class UIManager : MonoBehaviour
             _audioMenu?.SetActive(true);
             _rebindMenus?.SetActive(false);
             _textSettingsMenu?.SetActive(false);
+            _mainMenu.SetActive(false);
         }
         else
         {
