@@ -13,26 +13,18 @@ MonoBehaviour:
   m_Name: "Genevi\xE8ve_J2_avec_HA"
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: aff95476-39a9-4c2d-9281-dd5e5e215ae4
+  - BaseNodeGuid: 9b6da821-2695-4de5-83a0-bae856f91db6
     PortName: StartPointNode
     TargetNodeGuid: 4df7c77e-a29d-4262-b0f2-014194229e66
     IsNullNode: 0
   - BaseNodeGuid: 4df7c77e-a29d-4262-b0f2-014194229e66
-    PortName: T'en avais jamais vu avant ?
+    PortName: C'est un peu l'objectif haha !
     TargetNodeGuid: ac1b7ecc-8be9-4cc0-8188-d9493a3bfbfd
     IsNullNode: 0
   - BaseNodeGuid: 4df7c77e-a29d-4262-b0f2-014194229e66
-    PortName: Yes, bien couteux le bestiau mais bien pratique.
+    PortName: Yes, bien couteux les bestiaux mais bien pratique.
     TargetNodeGuid: 05799dbb-444c-4481-a3b7-eeba17930580
     IsNullNode: 0
-  - BaseNodeGuid: ac1b7ecc-8be9-4cc0-8188-d9493a3bfbfd
-    PortName: Null Port
-    TargetNodeGuid: fa721146-397d-4457-a66a-aa6d0dedc63a
-    IsNullNode: 1
-  - BaseNodeGuid: 05799dbb-444c-4481-a3b7-eeba17930580
-    PortName: Null Port
-    TargetNodeGuid: 927319f8-2c00-40c6-ae2c-aa744a60d007
-    IsNullNode: 1
   - BaseNodeGuid: fa721146-397d-4457-a66a-aa6d0dedc63a
     PortName: Null Port
     TargetNodeGuid: 94db1a54-60f7-46fe-ad1f-e8863d2fa3ea
@@ -52,10 +44,6 @@ MonoBehaviour:
   - BaseNodeGuid: e47d85cc-9957-4d64-86f6-8ab409f1d28d
     PortName: Null Port
     TargetNodeGuid: 09189fa7-44eb-4cf9-9ccb-4f49a05674db
-    IsNullNode: 1
-  - BaseNodeGuid: 927319f8-2c00-40c6-ae2c-aa744a60d007
-    PortName: Null Port
-    TargetNodeGuid: fa721146-397d-4457-a66a-aa6d0dedc63a
     IsNullNode: 1
   - BaseNodeGuid: 94db1a54-60f7-46fe-ad1f-e8863d2fa3ea
     PortName: L'obscurantisme ?
@@ -107,6 +95,11 @@ MonoBehaviour:
     PortName: "Nan nan, tranquille, c'est toujours passionant de t'\xE9couter parler"
     TargetNodeGuid: 7625a5f3-d6c0-4fc1-9147-0f70c4b4d1b1
     IsNullNode: 0
+  - BaseNodeGuid: ffb83c09-2509-4fc9-b946-fe40905c276c
+    PortName: "Allez pas de probl\xE8me, trinquons plut\xF4t au pass\xE9 avec un
+      bon verre"
+    TargetNodeGuid: 78831dcf-d7c4-4744-a96c-7b05c13e6a44
+    IsNullNode: 0
   - BaseNodeGuid: 1b3b5edc-9f95-4ec7-a4fe-c2537278a0ce
     PortName: Null Port
     TargetNodeGuid: 65618694-16df-40d5-8f63-cd40f0d7fdce
@@ -123,25 +116,33 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: fe7a923d-2636-4cc2-b757-46c627d805e1
     IsNullNode: 1
-  - BaseNodeGuid: 7eee24d2-4fc4-40c2-82b4-b4cd078220ca
-    PortName: Null Port
-    TargetNodeGuid: d4689e26-eab4-4c6a-82b8-832aa58a16b7
-    IsNullNode: 1
   - BaseNodeGuid: fe7a923d-2636-4cc2-b757-46c627d805e1
     PortName: Null Port
     TargetNodeGuid: d2537852-83a0-4e4f-aed7-bf4ecf2ccdc9
     IsNullNode: 1
-  - BaseNodeGuid: 384e23c2-ed08-4739-931c-334e08ab1336
-    PortName: "Du bon rhum arrang\xE9 pour te r\xE9chauffer ?"
-    TargetNodeGuid: d2f4856a-a28d-4b00-a3ce-d1977ac15d90
-    IsNullNode: 0
-  - BaseNodeGuid: 384e23c2-ed08-4739-931c-334e08ab1336
-    PortName: "Un ptit vodka canon sci\xE9 ? Un cocktail de mon p\xE8re."
-    TargetNodeGuid: d2f4856a-a28d-4b00-a3ce-d1977ac15d90
-    IsNullNode: 0
-  - BaseNodeGuid: d2f4856a-a28d-4b00-a3ce-d1977ac15d90
+  - BaseNodeGuid: 927319f8-2c00-40c6-ae2c-aa744a60d007
     PortName: Null Port
-    TargetNodeGuid: ee0791c8-94ae-4e94-9bd8-0a15ecfd1a25
+    TargetNodeGuid: fa721146-397d-4457-a66a-aa6d0dedc63a
+    IsNullNode: 1
+  - BaseNodeGuid: 05799dbb-444c-4481-a3b7-eeba17930580
+    PortName: Null Port
+    TargetNodeGuid: 927319f8-2c00-40c6-ae2c-aa744a60d007
+    IsNullNode: 1
+  - BaseNodeGuid: ac1b7ecc-8be9-4cc0-8188-d9493a3bfbfd
+    PortName: Null Port
+    TargetNodeGuid: fa721146-397d-4457-a66a-aa6d0dedc63a
+    IsNullNode: 1
+  - BaseNodeGuid: d2537852-83a0-4e4f-aed7-bf4ecf2ccdc9
+    PortName: Null Port
+    TargetNodeGuid: 78831dcf-d7c4-4744-a96c-7b05c13e6a44
+    IsNullNode: 1
+  - BaseNodeGuid: 7eee24d2-4fc4-40c2-82b4-b4cd078220ca
+    PortName: Null Port
+    TargetNodeGuid: d4689e26-eab4-4c6a-82b8-832aa58a16b7
+    IsNullNode: 1
+  - BaseNodeGuid: d4689e26-eab4-4c6a-82b8-832aa58a16b7
+    PortName: Null Port
+    TargetNodeGuid: bd71f8f5-375d-4c81-9bbc-31603ed001a4
     IsNullNode: 1
   - BaseNodeGuid: 7625a5f3-d6c0-4fc1-9147-0f70c4b4d1b1
     PortName: Null Port
@@ -151,27 +152,26 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: 51b2f01a-5001-4afe-8537-feb33d17776a
     IsNullNode: 1
-  - BaseNodeGuid: ffb83c09-2509-4fc9-b946-fe40905c276c
-    PortName: "Allez pas de probl\xE8me, trinquons plut\xF4t au pass\xE9 avec un
-      bon verre"
-    TargetNodeGuid: 78831dcf-d7c4-4744-a96c-7b05c13e6a44
-    IsNullNode: 0
-  - BaseNodeGuid: d2537852-83a0-4e4f-aed7-bf4ecf2ccdc9
+  - BaseNodeGuid: 51b2f01a-5001-4afe-8537-feb33d17776a
     PortName: Null Port
     TargetNodeGuid: 78831dcf-d7c4-4744-a96c-7b05c13e6a44
+    IsNullNode: 1
+  - BaseNodeGuid: d2f4856a-a28d-4b00-a3ce-d1977ac15d90
+    PortName: Null Port
+    TargetNodeGuid: ee0791c8-94ae-4e94-9bd8-0a15ecfd1a25
     IsNullNode: 1
   - BaseNodeGuid: 78831dcf-d7c4-4744-a96c-7b05c13e6a44
     PortName: Null Port
     TargetNodeGuid: 384e23c2-ed08-4739-931c-334e08ab1336
     IsNullNode: 1
-  - BaseNodeGuid: 51b2f01a-5001-4afe-8537-feb33d17776a
-    PortName: Null Port
-    TargetNodeGuid: 78831dcf-d7c4-4744-a96c-7b05c13e6a44
-    IsNullNode: 1
-  - BaseNodeGuid: d4689e26-eab4-4c6a-82b8-832aa58a16b7
-    PortName: Null Port
-    TargetNodeGuid: bd71f8f5-375d-4c81-9bbc-31603ed001a4
-    IsNullNode: 1
+  - BaseNodeGuid: 384e23c2-ed08-4739-931c-334e08ab1336
+    PortName: "Du bon rhum arrang\xE9 pour te r\xE9chauffer ?"
+    TargetNodeGuid: d2f4856a-a28d-4b00-a3ce-d1977ac15d90
+    IsNullNode: 0
+  - BaseNodeGuid: 384e23c2-ed08-4739-931c-334e08ab1336
+    PortName: "Un ptit vodka canon sci\xE9 ? Un cocktail de mon p\xE8re."
+    TargetNodeGuid: d2f4856a-a28d-4b00-a3ce-d1977ac15d90
+    IsNullNode: 0
   - BaseNodeGuid: bd71f8f5-375d-4c81-9bbc-31603ed001a4
     PortName: Null Port
     TargetNodeGuid: c2e2873f-ef5f-4b13-9933-0b90ad33c3aa
@@ -201,33 +201,6 @@ MonoBehaviour:
     TargetNodeGuid: 78831dcf-d7c4-4744-a96c-7b05c13e6a44
     IsNullNode: 1
   DialogueNodeData:
-  - NodeGUID: 4df7c77e-a29d-4262-b0f2-014194229e66
-    DialogueText: "Oh, bonjour... ! Je vois que tu as install\xE9 un bien bel appareil."
-    Position: {x: 309, y: 158}
-    StatModifier: 0
-    Ports:
-    - PortName: Yes, bien couteux le bestiau mais bien pratique.
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    - PortName: T'en avais jamais vu avant ?
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
-  - NodeGUID: fa721146-397d-4457-a66a-aa6d0dedc63a
-    DialogueText: "J'ai vu le m\xEAme appareil \xE0 la mairie, hier- AH ! Mais faut
-      que je te raconte !"
-    Position: {x: 2995, y: 263.5}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 78062f0b-e9a3-48bb-acd9-5817a1995625
     DialogueText: "Eh... Ces petiots sont un vrai calvaire. Une seconde d'inattention
       et v'l\xE0, plus personne pour t'\xE9couter."
@@ -483,7 +456,7 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: ac1b7ecc-8be9-4cc0-8188-d9493a3bfbfd
-    DialogueText: Jamais je crois... Si, en fait !...
+    DialogueText: "C'est pas toujours simple \xE0 mettre en place, mais c'est important."
     Position: {x: 1426.5, y: 302}
     StatModifier: 0
     Ports:
@@ -680,6 +653,34 @@ MonoBehaviour:
   - NodeGUID: 1802846e-22f6-42cd-be62-2e2641d6a1ce
     DialogueText: "Enfin bref, arr\xEAtons de rabbacher le pass\xE9 !"
     Position: {x: 17082, y: 531}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: 4df7c77e-a29d-4262-b0f2-014194229e66
+    DialogueText: "Oh, bonjour... ! Je vois que tu as install\xE9 des nouveaux moyens
+      d'accessibilit\xE9s."
+    Position: {x: 309, y: 158}
+    StatModifier: 0
+    Ports:
+    - PortName: Yes, bien couteux les bestiaux mais bien pratique.
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: C'est un peu l'objectif haha !
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: fa721146-397d-4457-a66a-aa6d0dedc63a
+    DialogueText: "Ils en installent en ce moment \xE0 la mairie - AH ! Mais faut
+      que je te raconte !"
+    Position: {x: 2995, y: 263.5}
     StatModifier: 0
     Ports:
     - PortName: Null Port

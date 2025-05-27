@@ -17,6 +17,8 @@ MonoBehaviour:
   CharacterPseudo: Queen_Gueye
   CharacterProfilePicture: {fileID: 21300000, guid: 1d2c103791467ca4ea491a8eca6332de, type: 3}
   CharacterSprite: {fileID: 21300000, guid: ad706a90293fb486bade25d279cf303e, type: 3}
+  CharacterMesh: {fileID: 0}
+  CharacterMaterial: {fileID: 0}
   Affinity: 50
   NextAffinityValue: 100
   Dialogues:
@@ -49,14 +51,14 @@ MonoBehaviour:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: b151514de296f423fa5e256b148d6471, type: 2}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: b151514de296f423fa5e256b148d6471, type: 2}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
