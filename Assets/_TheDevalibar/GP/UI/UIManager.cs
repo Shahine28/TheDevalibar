@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -52,20 +54,28 @@ public class UIManager : MonoBehaviour
         {
             _settingsMenus?.SetActive(true);
             _audioMenu?.SetActive(true);
-            _mainMenu?.SetActive(false);
+            //_mainMenu?.SetActive(false);
             _pauseMenus.SetActive(false);
             _rebindMenus?.SetActive(false);
             _textSettingsMenu?.SetActive(false);
-
+            StartCoroutine(coucou());
             //set the first selected obj when using controller
-            _selected.SetSelectedGameObject(_newSelected);
-            _selected.firstSelectedGameObject = _newSelected;
+           // _selected.SetSelectedGameObject(_newSelected);
+            //_selected.firstSelectedGameObject = _newSelected;
         }
         else
         {
             _settingsMenus?.SetActive(false);
         }
     }
+
+    IEnumerator coucou()
+    {
+        yield return new WaitForSecondsRealtime(0.01f);
+        _selected.SetSelectedGameObject(_newSelected);
+
+    }
+
     public void GoBackToPause()
     {
         _settingsMenus?.SetActive(false);
