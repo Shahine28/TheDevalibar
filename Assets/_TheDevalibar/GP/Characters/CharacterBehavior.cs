@@ -6,6 +6,7 @@ using _TheDevalibar.GP.Characters;
 using AYellowpaper.SerializedCollections;
 using MyUtilities;
 using NaughtyAttributes;
+using NaughtyAttributes.Editor;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class CharacterBehavior : MonoBehaviour
     [Header("Character Behavior")]
     [SerializeField] private Character _character;
     public Character Character => _character;
-    [SerializeField, ReadOnly] private string _characterDisability;
+    [SerializeField, ReadOnly] private string _characterDisability = string.Empty;
     private Constraint _characterConstraint;
     
     [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -97,24 +98,6 @@ public class CharacterBehavior : MonoBehaviour
         _character = character;
         _spriteRenderer.sprite = _character.CharacterSprite; // temporary
         GetComponent<MeshRenderer>().enabled = false;
-    }
-
-    private void OnApplicationQuit()
-    {
-        if (_character != null)
-        {
-            _character.DialogueIndex = 0;
-            _character.Affinity = 50;
-        }
-    }
-    
-    private void OnDestroy()
-    {
-        if (_character != null)
-        {
-            _character.DialogueIndex = 0;
-            _character.Affinity = 50;
-        }
     }
 
     void Start()
@@ -204,6 +187,10 @@ public class CharacterBehavior : MonoBehaviour
                 if (!_nodeManager) _nodeManager = ServiceLocator.Get<NodeManager>();
                 int randomDisabiltyIndex = UnityEngine.Random.Range(0, _nodeManager.constraints.Count-1);
                 _characterDisability = _nodeManager.constraints[randomDisabiltyIndex].name;
+            }
+            else
+            {
+                _characterDisability = string.Empty;
             }
         }
     }
