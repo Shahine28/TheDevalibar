@@ -13,6 +13,11 @@ public class Table : MonoBehaviour
     [SerializeField, ReadOnly] private int _tableID = 0;
     private TabsManager _tabsManager;
     public int TableNodeNumber => _tableNodeNumber;
+
+    [Header("Chairs")] 
+    [SerializeField] private Chair _chair1;
+    [SerializeField] private Chair _chair2;
+    
     
     
     [Header("Table Floor Level")]
@@ -23,7 +28,10 @@ public class Table : MonoBehaviour
     // Dictionnaire pour gérer les contraintes activées/désactivées
     public ConstraintBoolDictionary constraintDict = new ConstraintBoolDictionary();
     
-    public bool IsUsedByCustomer  = false;
+    public bool IsUsedByCustomer =>
+        (_chair1 != null && _chair1.IsChairOccupied) ||
+        (_chair2 != null && _chair2.IsChairOccupied);
+
     
     [SerializedDictionary("Table Upgrade", "Is Purchased")]
     public SerializedDictionary<TableUpgrade, bool> PurchasedTableUpgrades = new SerializedDictionary<TableUpgrade, bool>();
@@ -64,6 +72,13 @@ public class Table : MonoBehaviour
         _upgradeButton?.gameObject.SetActive(false);
     }
 
+    public Chair GetFirstAvailableChair()
+    {
+        if (!_chair1.IsChairOccupied) return _chair1;
+        if (!_chair2.IsChairOccupied) return _chair2;
+        return null;
+    }
+
     private void GetFocusOnTable()
     {
         if (_tabsManager== null)
@@ -89,7 +104,7 @@ public class Table : MonoBehaviour
             if (Vector3.Distance(_tableGameObject.transform.position, node.position) < distance)
             {
                 distance = Vector3.Distance(_tableGameObject.transform.position, node.position);
-                NearestNode = nodeManager.nodes.IndexOf(node);
+                NearestNode = node.NodeID;
             }
         }
         _tableNodeNumber = NearestNode;
