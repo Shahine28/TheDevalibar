@@ -46,9 +46,24 @@ MonoBehaviour:
           Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
   DialogueIndex: 0
   _characterReviews:
-    GoodReviews: []
-    AverageReviews: []
-    BadReviews: []
+    GoodReviews:
+    - {fileID: 11400000, guid: 561b3c4b2c9e03542859f1af2069752d, type: 2}
+    - {fileID: 11400000, guid: 28daa2e939864ab45973371ed2bb6659, type: 2}
+    - {fileID: 11400000, guid: b285b295f24599a4a9441215875288c3, type: 2}
+    - {fileID: 11400000, guid: 8c3e63d5b31dd4444a43401fa2728319, type: 2}
+    - {fileID: 11400000, guid: 6d9bb3f91a98c9142b4846feff02c2f9, type: 2}
+    AverageReviews:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    BadReviews:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   _bubbleSpeech:
     _goodTableSpeech:
     - 'Amy : Je sens mon pouvoir grandir !'
