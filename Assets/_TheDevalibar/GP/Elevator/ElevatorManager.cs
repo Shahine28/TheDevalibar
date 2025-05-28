@@ -2,9 +2,7 @@ using System;
 using System.Collections;
 using MyUtilities;
 using NaughtyAttributes;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class ElevatorManager : MonoBehaviour
 {

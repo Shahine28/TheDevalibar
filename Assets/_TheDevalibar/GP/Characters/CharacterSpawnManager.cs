@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using MyUtilities;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class CharacterSpawnManager : MonoBehaviour

@@ -3,16 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using _TheDevalibar.GP.Characters;
-using AYellowpaper.SerializedCollections;
 using MyUtilities;
 using NaughtyAttributes;
-using NaughtyAttributes.Editor;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
-using Random = Unity.Mathematics.Random;
 
 public class CharacterBehavior : MonoBehaviour
 {
@@ -49,6 +45,7 @@ public class CharacterBehavior : MonoBehaviour
     [SerializeField, ReadOnly] private  int _nextNodeIndex;
     private TablesManager _tablesManager;
     private Table _usedTable;
+    private Chair _usedChair;
     private ShowHideUI _showHideUI;
     
     
@@ -74,6 +71,9 @@ public class CharacterBehavior : MonoBehaviour
     [SerializeField] private GameObject _bubbleSpeechPanel;
     [SerializeField] private TextMeshProUGUI _bubbleSpeechText;
     private BubbleSpeechManager _bubbleSpeechManager;
+    
+    [Header("Animations")]
+    [SerializeField] private AnimationManager _animationManager;
 
 #region OnEnable/OnDisable
     public void OnEnable()
@@ -96,8 +96,20 @@ public class CharacterBehavior : MonoBehaviour
     public void Initialize(Character character)
     {
         _character = character;
-        _spriteRenderer.sprite = _character.CharacterSprite; // temporary
-        GetComponent<MeshRenderer>().enabled = false;
+        if (_character.CharacterMesh == null)
+        {
+            _spriteRenderer.sprite = _character.CharacterSprite; 
+            _spriteRenderer.gameObject.SetActive(true);// temporary
+            _animationManager?.gameObject.SetActive(false);
+        }
+        else
+        {
+            _spriteRenderer?.gameObject.SetActive(false);
+            _animationManager?.gameObject.SetActive(true);
+            _animationManager?.SetAnimation(_character.CharacterMesh,
+                _character.CharacterMaterial,
+                _character.HasSpecificRuntimeAnimationController ? _character.CharacterRuntimeAnimatorController : null);
+        }
     }
 
     void Start()
@@ -168,6 +180,14 @@ public class CharacterBehavior : MonoBehaviour
         {
             Debug.LogError("No show hide UI found");
         }
+
+        if (_animationManager == null)
+        {
+            _animationManager = GetComponent<AnimationManager>();
+        }
+
+        _animationManager.OnCharacterStandUp += OnCharacterStandUp;
+        _animationManager.OnCharacterSitDown += OnCharacterSitDown;
     }
 #endregion
 #region Constraint&Disability
@@ -217,13 +237,38 @@ public class CharacterBehavior : MonoBehaviour
             if (Vector3.Distance(transform.position, node.position) < distance)
             {
                 distance = Vector3.Distance(transform.position, node.position);
-                NearestNode = nodeManager.nodes.IndexOf(node);
+                NearestNode = node.NodeID;
             }
         }
         return NearestNode;
     }
 
 #region Waiting
+
+    private void OnCharacterSitDown()
+    {
+        StartWaiting();
+    }
+
+    private void OnCharacterStandUp()
+    {
+        if (_characterConstraint != null && !_characterConstraint.CanTakeStairs)
+        {
+            _usedChair.ShowChair();
+        }
+        else
+        {
+            _usedChair.MoveChairToUnoccupiedPosition();
+        }
+        
+        if (_usedChair)
+        {
+            _usedChair = null;
+        }
+        MoveToBarExit();
+    }
+    
+    
     public void StartWaiting()
     {
         _interrupted = false;
@@ -274,10 +319,11 @@ public class CharacterBehavior : MonoBehaviour
             {
                 Debug.Log("Waiting at the bar was interrupted.");
                 if (_bubbleSpeechPanel.gameObject.activeInHierarchy) _bubbleSpeechPanel.gameObject.SetActive(false);
-                MoveToBarExit();
+                // MoveToBarExit();
+                _animationManager.StandUp();
                 if (_usedTable)
                 {
-                    _usedTable.IsUsedByCustomer = false;
+                    // _usedTable.IsUsedByCustomer = false;
                     _usedTable = null;
                 }
                 yield break;
@@ -287,21 +333,38 @@ public class CharacterBehavior : MonoBehaviour
         }
 
         Debug.Log("Finished waiting at the bar.");
-        MoveToBarExit();
+        // MoveToBarExit();
+        _animationManager.StandUp();
+        
         if (_usedTable)
         {
-            _usedTable.IsUsedByCustomer = false;
+            // _usedTable.IsUsedByCustomer = false;
             _usedTable = null;
         }
+        
     }
+    
 #endregion
 #region Movement
 
+    private void RotateTowardsTarget(Transform self, Transform target, float rotationSpeed = 5f)
+    {
+        if (self == null || target == null) return;
+
+        Vector3 direction = (target.position - self.position).normalized;
+
+        if (direction == Vector3.zero) return;
+
+        self.rotation = Quaternion.LookRotation(direction, Vector3.up);
+    }
+    
+    
     private void MoveToNode(int NodeId)
     {
         _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex, NodeId);
         _nextNodeIndex = NodeId;
         _dijkstraPathFollower.FollowPath();
+        _animationManager?.StartMovement();
     }
 
     private void MoveToBarExit()
@@ -389,14 +452,16 @@ public class CharacterBehavior : MonoBehaviour
         // Détermine la meilleure table selon la distance
         Table bestTable = FindBestTable(bestTables);
         _usedTable = bestTable;
-        _usedTable.IsUsedByCustomer = true;
+        _usedChair = _usedTable.GetFirstAvailableChair();
+        _usedChair.IsChairOccupied = true;
+        // _usedTable.IsUsedByCustomer = true;
         SetCustomerFeedback(bestTable);
         Debug.Log($"Best table chosen: {bestTable.name}");
 
 
         if (_floorLevel == _usedTable.TableFloorLevel || _characterConstraint.CanTakeStairs)
         {
-            MoveToNode(bestTable.TableNodeNumber);
+            MoveToNode(_usedChair.ChairClosestNodeID);
             // _dijkstraManager.EnableConstraint(_characterDisability);
         }
         else if (_elevatorManager.IsElevatorBuyed)
@@ -476,6 +541,10 @@ public class CharacterBehavior : MonoBehaviour
     private void HandlePathEnd()
     {
         Debug.Log("Le chemin est terminé !");
+        
+        _animationManager.StopMovement();
+        
+        
         if (_nextNodeIndex != -1)
         {
             _lastNodeIndex = _nextNodeIndex;
@@ -484,6 +553,7 @@ public class CharacterBehavior : MonoBehaviour
         
         if (_lastNodeIndex == _barNodeId)
         {
+            
             _characterState = CharacterState.AtTheBar;
             CharacterSpawnManager characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
             if (characterSpawnManager != null)
@@ -517,10 +587,21 @@ public class CharacterBehavior : MonoBehaviour
         }
         else
         {
-            if (_usedTable != null && _usedTable.TableNodeNumber == _lastNodeIndex)
+            if (_usedTable != null && _usedChair != null && _usedChair.ChairClosestNodeID == _lastNodeIndex)
             {
                 _characterState = CharacterState.AtTheBestTable;
-                StartWaiting();
+
+                if (_characterConstraint != null && !_characterConstraint.CanTakeStairs)
+                {
+                    _usedChair.HideChair();
+                }
+                else
+                {
+                    _usedChair.MoveChairToOccupiedPosition();
+                }
+                _animationManager?.SitDown();
+                RotateTowardsTarget(_dijkstraPathFollower.ObjectToRotate.transform, _usedTable.transform);
+                // StartWaiting();
                 return;
             }
             

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a489a9d0d445ecf4290861f2659f614f, type: 3}
+  m_Name: NPC-RandomAverageReview-TCL 3
+  m_EditorClassIdentifier: 
+  _reviewRate: 2
+  _reviewTitle: "pas l'id\xE9al pour date"
+  _reviewDescription: "j'\xE9tais avec mon petit copain <3 sauf qu'on a du mal \xE0
+    discuter, d'habitude je ram\xE8ne mon collier favori pour jouer avec et l\xE0
+    je l'avais oubli\xE9; jsais que c'est pas de la faute du bar mais pensez \xE0
+    en mettre et l\xE0 5 \xE9toiles direct"
+  _reviewTopic:
+    keys:
+    - "D\xE9ficience auditive s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000000000001
