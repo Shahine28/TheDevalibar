@@ -31,6 +31,7 @@ public class TextResizer : MonoBehaviour
     [SerializeField] float _UISpaceBetweenWord;
     [SerializeField] float _UILineSpace;
 
+    //------ Section Non-UI Text ------//
     [Header("World Slider")]
     [SerializeField] Slider _WorldSizeSldr;
     [SerializeField] Slider _WorldSpaceLetterSldr;
@@ -57,6 +58,23 @@ public class TextResizer : MonoBehaviour
     [SerializeField] TMP_FontAsset _openDys;
     [SerializeField] TMP_FontAsset _robotCondensed;
 
+    //------ Section Satisfaction buble ------//
+   /* [Header("Bubule")]
+    [SerializeField] RectTransform _bublePrefab;
+    [SerializeField] Image _emote;
+
+    [Header("Buble Slider")]
+    [SerializeField] Slider _bubleSld;
+    [SerializeField] Slider _emoteSld;
+
+    [Header("Buble Text")]
+    [SerializeField] TextMeshProUGUI _bubleVal;
+    [SerializeField] TextMeshProUGUI _emoteVal;
+
+    [Header("Buble Param")]
+    [SerializeField] int _bubleSize;
+    [SerializeField] int _emoteSize;*/
+
     private void Awake()
     {
         //---- UI ----//
@@ -78,6 +96,12 @@ public class TextResizer : MonoBehaviour
         _worldSpaceWordVal.text= _worldSpaceBetweenWord.ToString();
         _WorldSpaceLineSldr.value = _worldLineSpace;
         _worldSpaceLineVal.text= _worldLineSpace.ToString();
+
+        //---- Buble ----//
+       /* _bubleSld.value = _bubleSize;
+        _bubleVal.text = _bubleSize.ToString();
+        _emoteSld.value = _emoteSize;
+        _emoteVal.text = _emoteSize.ToString();*/
     }
 
     void Start()
@@ -93,6 +117,10 @@ public class TextResizer : MonoBehaviour
         _WorldSpaceLetterSldr.onValueChanged.AddListener(UpdateWorldSpaceBetweenLetter);
         _WorldSpaceWordSldr.onValueChanged.AddListener(UpdateWorldSpaceBetweenWord);
         _WorldSpaceLineSldr.onValueChanged.AddListener(UpdateWorldSpaceBetweenLine);
+
+        //---- Buble ----//
+        /*_bubleSld.onValueChanged.AddListener(UpdateBubleSize);
+        _emoteSld.onValueChanged.AddListener(UpdateEmoteSize);*/
     }
 
     private void OnDestroy()
@@ -107,6 +135,10 @@ public class TextResizer : MonoBehaviour
         _WorldSpaceLetterSldr.onValueChanged.RemoveListener(UpdateWorldSpaceBetweenLetter);
         _WorldSpaceWordSldr.onValueChanged.RemoveListener(UpdateWorldSpaceBetweenWord);
         _WorldSpaceLineSldr.onValueChanged.RemoveListener(UpdateWorldSpaceBetweenLine);
+
+        //---- Buble ----//
+        /*_bubleSld.onValueChanged.RemoveListener(UpdateBubleSize);
+        _emoteSld.onValueChanged.RemoveListener(UpdateEmoteSize);*/
     }
 
     #region UI Listener
@@ -162,6 +194,19 @@ public class TextResizer : MonoBehaviour
     }
     #endregion
 
+    #region Buble Listener
+    /*public void UpdateBubleSize(float v)
+    {
+        _bubleVal.text = v.ToString();
+        _bubleSize = (int)v;
+    }
+    public void UpdateEmoteSize(float v)
+    {
+        _emoteVal.text = v.ToString();
+        _emoteSize = (int)v;
+    }*/
+    #endregion
+
     void Update()
     {
         var allUIText = FindObjectsByType<TextMeshProUGUI>(FindObjectsInactive.Include, FindObjectsSortMode.None); //get all TextMeshProUGUI
@@ -194,6 +239,8 @@ public class TextResizer : MonoBehaviour
             _worldTextSize = Mathf.Clamp(_worldTextSize, 0, 100);
             _UITextSize = Mathf.Clamp(_UITextSize, 0, 100);
         }
+
+        //_bublePrefab.localScale = new Vector2(50, 50);
     }
 
     #region Button

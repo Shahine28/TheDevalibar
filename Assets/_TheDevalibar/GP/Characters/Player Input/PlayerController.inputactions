@@ -25,7 +25,7 @@
                 },
                 {
                     "name": "Menu",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "ce89c3b6-9e7b-4374-9a05-f13cb1f7bc4c",
                     "expectedControlType": "",
                     "processors": "",
@@ -102,6 +102,28 @@
                     "name": "",
                     "id": "4cd42efc-7323-49c8-94c1-d4a0b75446f9",
                     "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "59ba70c0-8f05-43ee-b65f-33b39a661c79",
+                    "path": "<DualShockGamepad>/touchpadButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b7aba256-2531-4ca2-a975-72be8ca41655",
+                    "path": "<DualShockGamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
