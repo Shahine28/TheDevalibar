@@ -195,6 +195,8 @@ MonoBehaviour:
   _tableGameObject: {fileID: 2062023832369538948}
   _tableNodeNumber: -1
   _tableID: 0
+  _chair1: {fileID: 3497988552043981611}
+  _chair2: {fileID: 3237583891750551841}
   _tableFloorLevel: 0
   _upgradeButton: {fileID: 8405305214540582626}
   constraintDict:
@@ -206,7 +208,6 @@ MonoBehaviour:
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
     values: 000000000000
-  IsUsedByCustomer: 0
   PurchasedTableUpgrades:
     _serializedList:
     - Key: {fileID: 11400000, guid: 92c88bac9b6e07a46bf767b79d9b5ab4, type: 2}
@@ -556,11 +557,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0125
+      value: 0.01524
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
       propertyPath: m_LocalRotation.w
@@ -597,7 +598,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3237583891750551841}
   m_SourcePrefab: {fileID: 100100000, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
 --- !u!33 &860751580480250322 stripped
 MeshFilter:
@@ -609,6 +613,53 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
   m_PrefabInstance: {fileID: 4312025019448543644}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3969371363094754509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
+  m_PrefabInstance: {fileID: 4312025019448543644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3237583891750551841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3969371363094754509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcdeb908319dcc41afdb58a3e1516e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chair: {fileID: 3969371363094754509}
+  _availablePosition: {x: 0, y: 0.0165, z: 0}
+  _takenPosition: {x: 0, y: 0.01524, z: 0}
+  _movementSpeed: 0.01
+  _movementAnimation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  IsChairOccupied: 1
+  _chairClosestNodeID: -1
 --- !u!4 &4349873151890337399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
@@ -640,11 +691,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0125
+      value: -0.01524
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
       propertyPath: m_LocalRotation.w
@@ -681,13 +732,63 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3497988552043981611}
   m_SourcePrefab: {fileID: 100100000, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
 --- !u!4 &4944143468770658205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
   m_PrefabInstance: {fileID: 4834501187985858678}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5753050447801015591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
+  m_PrefabInstance: {fileID: 4834501187985858678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3497988552043981611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5753050447801015591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcdeb908319dcc41afdb58a3e1516e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chair: {fileID: 5753050447801015591}
+  _availablePosition: {x: 0, y: -0.0165, z: 0}
+  _takenPosition: {x: 0, y: -0.01524, z: 0}
+  _movementSpeed: 0.01
+  _movementAnimation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  IsChairOccupied: 1
+  _chairClosestNodeID: -1
 --- !u!23 &6113087384914197746 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}

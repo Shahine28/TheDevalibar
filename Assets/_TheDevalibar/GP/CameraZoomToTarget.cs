@@ -1,31 +1,29 @@
 using UnityEngine;
 using System.Collections;
 using MyUtilities;
+using Unity.Cinemachine;
 
-[RequireComponent(typeof(Camera))]
+[RequireComponent(typeof(CinemachineCamera))]
 public class CameraZoomToTarget : MonoBehaviour
 {
     [Header("Zoom Settings")]
     [SerializeField] private float zoomDistance = 5f;
     [SerializeField] private float transitionDuration = 1f;
-    [SerializeField] private float zoomFOV = 30f;
     [SerializeField] private float zoomSize = 1f;
     [SerializeField] private AnimationCurve zoomCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] private float verticalOffset = 0.5f;
-
-    private Camera _cam;
+    
+    private CinemachineCamera _cam;
     private Coroutine _zoomRoutine;
 
     private Vector3 _originalPosition;
-    private float _originalFOV;
     private float _originalSize;
 
     private void Awake()
     {
-        _cam = GetComponent<Camera>();
+        _cam = GetComponent<CinemachineCamera>();
         _originalPosition = transform.position;
-        _originalFOV = _cam.fieldOfView;
-        _originalSize = _cam.orthographicSize;
+        _originalSize = _cam.Lens.OrthographicSize;
         ServiceLocator.Register(this);
     }
 
@@ -44,42 +42,34 @@ public class CameraZoomToTarget : MonoBehaviour
     private IEnumerator ZoomToTargetRoutine(Transform target)
     {
         Vector3 startPos = transform.position;
-        float startFOV = _cam.fieldOfView;
-        float startSize = _cam.orthographicSize;
-        // Direction actuelle de la caméra
+        float startSize = _cam.Lens.OrthographicSize;;
         Vector3 viewDirection = transform.forward.normalized;
 
-        // Nouvelle position = cible - direction * distance
         Renderer renderer = target.GetComponentInChildren<Renderer>(false);
         Vector3 targetCenter = renderer != null ? renderer.bounds.center : target.position;
-        targetCenter += Vector3.up * verticalOffset; // << décalage vers le haut
+        targetCenter += Vector3.up * verticalOffset;
         Vector3 endPos = targetCenter - viewDirection * zoomDistance;
-
-
 
         float elapsed = 0f;
         while (elapsed < transitionDuration)
         {
             elapsed += Time.deltaTime;
             float t = zoomCurve.Evaluate(elapsed / transitionDuration);
-            
+
             transform.position = Vector3.Lerp(startPos, endPos, t);
-            _cam.fieldOfView = Mathf.Lerp(startFOV, zoomFOV, t);
-            _cam.orthographicSize = Mathf.Lerp(startSize, zoomSize, t);
+            _cam.Lens.OrthographicSize = Mathf.Lerp(startSize, zoomSize, t);
 
             yield return null;
         }
 
         transform.position = endPos;
-        _cam.fieldOfView = zoomFOV;
         _zoomRoutine = null;
     }
 
     private IEnumerator ZoomToOriginalRoutine()
     {
         Vector3 startPos = transform.position;
-        float startFOV = _cam.fieldOfView;
-        float startSize = _cam.orthographicSize;
+        float startSize = _cam.Lens.OrthographicSize;;
 
         float elapsed = 0f;
         while (elapsed < transitionDuration)
@@ -88,13 +78,11 @@ public class CameraZoomToTarget : MonoBehaviour
             float t = zoomCurve.Evaluate(elapsed / transitionDuration);
 
             transform.position = Vector3.Lerp(startPos, _originalPosition, t);
-            _cam.fieldOfView = Mathf.Lerp(startFOV, _originalFOV, t);
-            _cam.orthographicSize = Mathf.Lerp(startSize, _originalSize, t);
+            _cam.Lens.OrthographicSize = Mathf.Lerp(startSize, _originalSize, t);
             yield return null;
         }
 
         transform.position = _originalPosition;
-        _cam.fieldOfView = _originalFOV;
         _zoomRoutine = null;
     }
 }

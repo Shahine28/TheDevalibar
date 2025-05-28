@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using NaughtyAttributes;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -20,6 +21,8 @@ public class Character : ScriptableObject
     public Sprite CharacterSprite;
     public Mesh CharacterMesh;
     public Material CharacterMaterial;
+    public bool HasSpecificRuntimeAnimationController;
+    [ShowIf("HasSpecificRuntimeAnimationController")] public RuntimeAnimatorController CharacterRuntimeAnimatorController;
     
     public int Affinity;
 
