@@ -88,6 +88,13 @@ MonoBehaviour:
     - "Amy a suivit en cours aujourd'hui, \xE7a m'a fait plaisir."
     - "Ce bar est une vraie pause pour le c\u0153ur"
     - "Il faut absolument que je programme Ast\xE9r\xE9otypie \xE0 la biblioth\xE8que."
+    - "C'est si agr\xE9able ici..."
+    - L'endroit parfait pour lire
+    - "Un p'tit club de lecture et \xE7a serait le paradis"
+    - Et ils osent dire que le Punk est mort
+    - Tout est plus clair avec c'te machine, une merveille
+    - "Moha a bien fait de s'int\xE9resser \xE0 ce bar"
+    - "J'ai une nouvelle id\xE9e pour mon cours d'aujourd'hui !"
     _averageTableSpeech:
     - "J'aurais vraiment aim\xE9 aimer."
     - "J'arrive pas \xE0 me concentrer..."
@@ -95,27 +102,27 @@ MonoBehaviour:
     - "O\xF9 est pass\xE9 mon silence ?"
     - "Hummm... quel cours je leur pr\xE9pare demain..."
     - Trois petits points.
+    - Huh, je m'y sens pas aussi bien que j'aurais voulu
+    - "Faut pas que je tra\xEEne trop, j'ai du taff demain"
+    - Il manque quelque chose j'pense et ce bar serait le meilleur de la ville...
+    - Petite envie de rentrer lire un bon livre
+    - "Merde, j'ai command\xE9 le mauvais truc, je l'entendais pas bien"
+    - "Les bi\xE8res sont bonnes au moins."
+    - "Les gens sont cools mais je gal\xE8re \xE0 leur parler, \xE7a me frustre !"
     _goodLeavingSpeech:
-    - "Merci, j\u2019reviens demain"
-    - Bien servi, bien assis
-    - "\xC0 l\u2019ancienne, sans le poids  "
+    - "Bisous \xE0 tous, les enfants !"
+    - "Bye, j'serai \xE0 la biblioth\xE8que"
+    - "Pur\xE9e, je suis par\xE9e pour la nuit !"
     - Salut les jeunes !
-    - "Belle ambiance, rien \xE0 dire"
-    - "\xC0 la prochaine, si Dieu veut"
+    - "Le bar me manque d\xE9j\xE0 :("
+    - "\xC0 la prochaine, restez forts !"
     _averageLeavingSpeech:
-    - "J\u2019pars avant qu\u2019on crie"
-    - Un peu trop de bruit
-    - "J\u2019trouvais mieux en 72"
+    - Je vais aller me lire un bon bouquin. Bye
+    - Arf, le taff m'attend, ciao
+    - "J'vais aller me concentrer \xE0 la maison, c'est mieux"
     - "Bon\u2026 \xE7a ira pour aujourd\u2019hui"
-    - "J\u2019suis pas venu pour \xE7a"
     - "Dommage pour le caf\xE9"
-    _badLeavingSpeech:
-    - "Pas ma tasse de th\xE9"
-    - "C\u2019\xE9tait pas un bon jour"
-    - Je suis venu pour rien
-    - "J\u2019aurais d\xFB rester couch\xE9"
-    - "M\xEAme le silence m\u2019ignore"
-    - "Mauvais go\xFBt, mauvaise humeur  "
+    _badLeavingSpeech: []
   constraintDict:
     keys:
     - "D\xE9ficience auditive s\xE9v\xE8re"
@@ -124,4 +131,4 @@ MonoBehaviour:
     - "D\xE9ficience visuelle s\xE9v\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 000001000000
+    values: 010000000000
