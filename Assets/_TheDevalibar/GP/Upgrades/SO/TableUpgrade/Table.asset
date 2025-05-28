@@ -10,31 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13f1edc776b448f9bc3401150e361524, type: 3}
-  m_Name: ElevatorType2
+  m_Name: Table
   m_EditorClassIdentifier: 
-  UpgradeSprite: {fileID: 21300000, guid: 4529998d671ed394dbe44e22ffeebacb, type: 3}
-  UpgradeName: Ascenceur Type 2
-  UpgradeDescription: "Un ascenceur moderne, offrant l'acc\xE8s \xE0 l'\xE9tage \xE0
-    une personne en fauteuil roulant et un ou plusieurs passagers. "
+  UpgradeSprite: {fileID: 21300000, guid: 1a1ddf1e3bd7bfa4ea1cc089888f0ed1, type: 3}
+  UpgradeName: "Table Creus\xE9"
+  UpgradeDescription: "Une table customis\xE9e favorisant l'acc\xE8s aux personnes
+    PMR gr\xE2ce \xE0 sa technique de conception."
   UpgradeCost: 0
   AccessibiltiesToAddWithUpgrade:
     keys:
-    - "Mobilit\xE9"
-    - "D\xE9ficience visuelle"
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
     - "D\xE9ficience auditive s\xE9v\xE8re"
-    - "Fatigabilit\xE9 chronique"
-    - "Troubles de l\u2019\xE9quilibre / vertiges"
-    - "Hypersensibilit\xE9 sensorielle"
-    - Douleurs chroniques
-    - "Allergies s\xE9v\xE8res"
-    - "Troubles cognitifs l\xE9gers"
-    - Troubles dermatologiques
-    values: 00010000000000000000
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 010000000000
   OnUpgrade:
     m_PersistentCalls:
       m_Calls: []
-  NewUpgradeTableMesh: {fileID: 0}
-  NewUpgradeTableMaterial: {fileID: 0}
+  NewUpgradeTableMesh: {fileID: 6623375816794612673, guid: dcf713db8fac09641ad8d82f1a3f1d8e, type: 3}
+  NewUpgradeTableMaterial: {fileID: 2100000, guid: ed74ac5ce8fbb904a9295d3e0333c57f, type: 2}
   NewUpgradeChair1Mesh: {fileID: 0}
   NewUpgradeChair1Material: {fileID: 0}
   NewUpgradeChair2Mesh: {fileID: 0}
