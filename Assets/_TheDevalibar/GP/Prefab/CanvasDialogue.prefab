@@ -1824,8 +1824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.769402, y: -12.8250065}
-  m_SizeDelta: {x: 162.9079, y: 18.3508}
+  m_AnchoredPosition: {x: 4.266838, y: -24.612}
+  m_SizeDelta: {x: 178.25768, y: 24.976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8694620999381119282
 CanvasRenderer:
@@ -1941,10 +1941,26 @@ PrefabInstance:
       propertyPath: m_fontSizeMin
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3842081880127474884, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 96
+      objectReference: {fileID: 0}
     - target: {fileID: 4976989457015870040, guid: becaa1940d86f56439259f270646bb81, type: 3}
       propertyPath: m_Name
       value: Button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: _otherButtonsBehaviors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: '_otherButtonsBehaviors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4692986299025457935}
+    - target: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: '_otherButtonsBehaviors.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7729344884888301522}
     - target: {fileID: 7589162240691816695, guid: becaa1940d86f56439259f270646bb81, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2025,11 +2041,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8091384013126702883, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: becaa1940d86f56439259f270646bb81, type: 3}
+--- !u!114 &5542156831760349364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+  m_PrefabInstance: {fileID: 1484011809323359366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a8309dcecc96f0438e1381ec8b0b16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &9064156403212113009 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7589162240691816695, guid: becaa1940d86f56439259f270646bb81, type: 3}
@@ -2067,10 +2098,26 @@ PrefabInstance:
       propertyPath: m_fontSizeMin
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3842081880127474884, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 95.999985
+      objectReference: {fileID: 0}
     - target: {fileID: 4976989457015870040, guid: becaa1940d86f56439259f270646bb81, type: 3}
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: _otherButtonsBehaviors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: '_otherButtonsBehaviors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7729344884888301522}
+    - target: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: '_otherButtonsBehaviors.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5542156831760349364}
     - target: {fileID: 7589162240691816695, guid: becaa1940d86f56439259f270646bb81, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2151,11 +2198,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8091384013126702883, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: becaa1940d86f56439259f270646bb81, type: 3}
+--- !u!114 &4692986299025457935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+  m_PrefabInstance: {fileID: 1824275102054770493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a8309dcecc96f0438e1381ec8b0b16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8071363485489835978 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7589162240691816695, guid: becaa1940d86f56439259f270646bb81, type: 3}
@@ -2193,10 +2255,26 @@ PrefabInstance:
       propertyPath: m_fontSizeMin
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3842081880127474884, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 95.999985
+      objectReference: {fileID: 0}
     - target: {fileID: 4976989457015870040, guid: becaa1940d86f56439259f270646bb81, type: 3}
       propertyPath: m_Name
       value: Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: _otherButtonsBehaviors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: '_otherButtonsBehaviors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4692986299025457935}
+    - target: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: '_otherButtonsBehaviors.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5542156831760349364}
     - target: {fileID: 7589162240691816695, guid: becaa1940d86f56439259f270646bb81, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2277,6 +2355,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8091384013126702883, guid: becaa1940d86f56439259f270646bb81, type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2287,3 +2369,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7589162240691816695, guid: becaa1940d86f56439259f270646bb81, type: 3}
   m_PrefabInstance: {fileID: 3690084846951959520}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7729344884888301522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6373146143209055282, guid: becaa1940d86f56439259f270646bb81, type: 3}
+  m_PrefabInstance: {fileID: 3690084846951959520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a8309dcecc96f0438e1381ec8b0b16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
