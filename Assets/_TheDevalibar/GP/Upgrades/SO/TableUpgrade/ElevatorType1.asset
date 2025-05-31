@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeSprite: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
   UpgradeName: Ascenceur Type 1
-  UpgradeDescription: "Ce mod\xE8le d'une charge de 250kg, peut accueillir un ou
-    plusieurs passagers."
-  UpgradeCost: 8000
+  UpgradeDescription: "Un ascenceur classique, du rez-de-chaussez jusqu'\xE0 l'\xE9tage
+    1, avec une limite d'une personne en fauteuil roulant."
+  UpgradeCost: 0
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "D\xE9ficience auditive s\xE9v\xE8re"
@@ -29,10 +29,10 @@ MonoBehaviour:
   OnUpgrade:
     m_PersistentCalls:
       m_Calls: []
-  useless: 
   NewUpgradeTableMesh: {fileID: 6623375816794612673, guid: dcf713db8fac09641ad8d82f1a3f1d8e, type: 3}
   NewUpgradeTableMaterial: {fileID: 0}
   NewUpgradeChair1Mesh: {fileID: 0}
   NewUpgradeChair1Material: {fileID: 0}
   NewUpgradeChair2Mesh: {fileID: 0}
   NewUpgradeChair2Material: {fileID: 0}
+  AccessibilityUpgrade: 0

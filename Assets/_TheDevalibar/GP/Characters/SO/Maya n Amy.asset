@@ -17,7 +17,9 @@ MonoBehaviour:
   CharacterPseudo: Mayamymya
   CharacterProfilePicture: {fileID: 0}
   CharacterSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
-  Affinity: 40
+  CharacterMesh: {fileID: 0}
+  CharacterMaterial: {fileID: 0}
+  Affinity: 50
   NextAffinityValue: 50
   Dialogues:
   - Dialogues:
@@ -27,32 +29,38 @@ MonoBehaviour:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
   DialogueIndex: 0
+  _characterReviews:
+    GoodReviews: []
+    AverageReviews: []
+    BadReviews: []
+  _bubbleSpeech:
+    _goodTableSpeech: []
+    _averageTableSpeech: []
+    _goodLeavingSpeech: []
+    _averageLeavingSpeech: []
+    _badLeavingSpeech: []
   constraintDict:
     keys:
-    - "Mobilit\xE9"
-    - "D\xE9ficience visuelle"
-    - "Fatigabilit\xE9 chronique"
     - "D\xE9ficience auditive s\xE9v\xE8re"
-    - "Troubles de l\u2019\xE9quilibre / vertiges"
-    - "Hypersensibilit\xE9 sensorielle"
-    - Douleurs chroniques
-    - "Allergies s\xE9v\xE8res"
-    - "Troubles cognitifs l\xE9gers"
-    - Troubles dermatologiques
-    values: 00000000000000000000
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000001000000
