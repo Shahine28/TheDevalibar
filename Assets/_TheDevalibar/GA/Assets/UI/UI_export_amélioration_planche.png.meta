@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: f43f719fed4449e4295331c0163859ad
+guid: 7aa34a10e44f8024c94793382c3bdf48
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,11 +34,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -52,7 +52,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_export_Menu_planche_0
+      name: "UI_export_am\xE9lioration_planche_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1242
-        width: 283
-        height: 256
+        x: 57
+        y: 1344
+        width: 138
+        height: 152
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,42 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39469f11607e6d948b1a4ec787b3f1a6
-      internalID: -2003656519
+      spriteID: a883fb14e73d1f043991891629ba6a51
+      internalID: -1859489215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_1
+      name: "UI_export_am\xE9lioration_planche_1"
       rect:
         serializedVersion: 2
-        x: 397
-        y: 1396
-        width: 93
-        height: 102
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ccc59accf19b3c04eacda5b4af2728ff
-      internalID: 139729871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_export_Menu_planche_2
-      rect:
-        serializedVersion: 2
-        x: 545
-        y: 1272
-        width: 194
-        height: 195
+        x: 331
+        y: 1384
+        width: 107
+        height: 110
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 999200a14ee31ad4a876679cab8ec31c
-      internalID: 941973185
+      spriteID: 5221596e02ba2c142a9479a7cd35cc61
+      internalID: -751223041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_3
+      name: "UI_export_am\xE9lioration_planche_2"
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1242
-        width: 153
-        height: 136
+        x: 523
+        y: 1345
+        width: 489
+        height: 149
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2d6f5af73da13f4f85d31b95b52956b
-      internalID: -1440119200
+      spriteID: 706a13b0e23241249b3265c304ed40f5
+      internalID: -2029417752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_4
+      name: "UI_export_am\xE9lioration_planche_4"
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1242
-        width: 168
-        height: 144
+        x: 1042
+        y: 1336
+        width: 43
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17050ecab8a5ba646a80258e9cd464d9
-      internalID: 1445941105
+      spriteID: bc2ae8cd55ef01547a5c10c5f730e24a
+      internalID: -301865714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_5
+      name: "UI_export_am\xE9lioration_planche_5"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1165
-        width: 811
-        height: 77
+        x: 1234
+        y: 1336
+        width: 41
+        height: 70
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11cf8f2087295d144bc70ff668be9ae8
-      internalID: -1622713129
+      spriteID: be79c46079e2ac949a219db3abc045b7
+      internalID: 1516034631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_6
+      name: "UI_export_am\xE9lioration_planche_6"
       rect:
         serializedVersion: 2
-        x: 455
-        y: 1250
-        width: 55
-        height: 113
+        x: 1
+        y: 1032
+        width: 90
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c2c3f40212c2b04bb6c7d0c1b916914
-      internalID: -812923322
+      spriteID: 21754bb27ca10e146aa15e2fe3fc2c78
+      internalID: 392041501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_7
+      name: "UI_export_am\xE9lioration_planche_7"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1003
-        width: 822
-        height: 88
+        x: 386
+        y: 938
+        width: 134
+        height: 306
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 386e275b05abb28449a1fd56aaab7f68
-      internalID: -597406791
+      spriteID: c19bec2a22b70304b851800db8b8be49
+      internalID: 211746898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_9
+      name: "UI_export_am\xE9lioration_planche_8"
       rect:
         serializedVersion: 2
-        x: 930
-        y: 986
-        width: 436
-        height: 183
+        x: 638
+        y: 969
+        width: 724
+        height: 270
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41d27fa889957de409341fe5b84bc3d7
-      internalID: -119194169
+      spriteID: 32dbbbe643503564cace27d5f79eacfb
+      internalID: 1740887104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_10
+      name: "UI_export_am\xE9lioration_planche_12"
       rect:
         serializedVersion: 2
-        x: 27
-        y: 760
-        width: 497
-        height: 226
+        x: 835
+        y: 818
+        width: 127
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,20 +327,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02ca93e168c46d847b63d99c694fbd6c
-      internalID: 1458590611
+      spriteID: cf0ab2d9e554b0f4aab385b3852f66cb
+      internalID: 1616847256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_13
+      name: "UI_export_am\xE9lioration_planche_15"
       rect:
         serializedVersion: 2
-        x: 576
-        y: 803
-        width: 326
-        height: 119
+        x: 1085
+        y: 818
+        width: 128
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +349,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33af6d8347ff8584f888c883a4219069
-      internalID: -1213856478
+      spriteID: 925013eda2f82df4aa51f49afcd3452d
+      internalID: 848096906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_14
+      name: "UI_export_am\xE9lioration_planche_16"
       rect:
         serializedVersion: 2
-        x: 984
-        y: 821
-        width: 382
-        height: 136
+        x: 3
+        y: 481
+        width: 734
+        height: 270
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,42 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e7a8d7fd51ff8d4098fd8ac2f44ea43
-      internalID: -460178275
+      spriteID: 1077c34e452a85c40aefd5832363368b
+      internalID: 37652307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_15
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 527
-        width: 670
-        height: 203
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f35d92a18c9465f4ba1a63bd24cdfcb1
-      internalID: 371529542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_export_Menu_planche_19
+      name: "UI_export_am\xE9lioration_planche_17"
       rect:
         serializedVersion: 2
         x: 854
-        y: 474
-        width: 428
-        height: 126
+        y: 596
+        width: 510
+        height: 132
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,20 +393,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3134a1a5c34783147b48ccfe7424e4fb
-      internalID: -991698209
+      spriteID: 031ecb113af427b42aa6a44dd143e434
+      internalID: -198366196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_20
+      name: "UI_export_am\xE9lioration_planche_20"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 372
-        width: 501
-        height: 92
+        x: 854
+        y: 335
+        width: 510
+        height: 132
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,20 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a71d6eb2fb0ad7f44adeab8ac7a9d0a5
-      internalID: 2010225493
+      spriteID: c3c6ff286ee692944950730862cddc41
+      internalID: -817890600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_22
+      name: "UI_export_am\xE9lioration_planche_21"
       rect:
         serializedVersion: 2
-        x: 1081
-        y: 218
-        width: 199
-        height: 157
+        x: 1
+        y: 220
+        width: 432
+        height: 131
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f580a31408e83bf4cb39da3fd5b37ed2
-      internalID: -1750417966
+      spriteID: 3534ace5ac6c520448dfc60b77787507
+      internalID: -2108293042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_Menu_planche_8
+      name: "UI_export_am\xE9lioration_planche_22"
       rect:
         serializedVersion: 2
-        x: 324
+        x: 1
         y: 0
-        width: 967
-        height: 53
+        width: 432
+        height: 131
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,30 +459,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f7de4c6b5dc87f419a288fe60b7083b
-      internalID: -802107635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_export_Menu_planche_11
-      rect:
-        serializedVersion: 2
-        x: 1323
-        y: 0
-        width: 43
-        height: 610
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a4750e8da4a23f4b863d6434a516046
-      internalID: -876306812
+      spriteID: 764f380fac141054a8af7eee2d44884a
+      internalID: 1906751001
       vertices: []
       indices: 
       edges: []
@@ -535,7 +469,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2389920cd2e81b1498fab8353456da4f
+    spriteID: e7996b8d1264eea48bccbf8ecac557eb
     internalID: 0
     vertices: []
     indices: 
@@ -545,29 +479,29 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI_export_Menu_planche_0: -2003656519
-      UI_export_Menu_planche_1: 139729871
-      UI_export_Menu_planche_10: 1458590611
-      UI_export_Menu_planche_11: -876306812
-      UI_export_Menu_planche_12: -1959821810
-      UI_export_Menu_planche_13: -1213856478
-      UI_export_Menu_planche_14: -460178275
-      UI_export_Menu_planche_15: 371529542
-      UI_export_Menu_planche_16: -506819509
-      UI_export_Menu_planche_17: -585889123
-      UI_export_Menu_planche_18: -1312750304
-      UI_export_Menu_planche_19: -991698209
-      UI_export_Menu_planche_2: 941973185
-      UI_export_Menu_planche_20: 2010225493
-      UI_export_Menu_planche_21: 1665517629
-      UI_export_Menu_planche_22: -1750417966
-      UI_export_Menu_planche_3: -1440119200
-      UI_export_Menu_planche_4: 1445941105
-      UI_export_Menu_planche_5: -1622713129
-      UI_export_Menu_planche_6: -812923322
-      UI_export_Menu_planche_7: -597406791
-      UI_export_Menu_planche_8: -802107635
-      UI_export_Menu_planche_9: -119194169
+      "UI_export_am\xE9lioration_planche_0": -1859489215
+      "UI_export_am\xE9lioration_planche_1": -751223041
+      "UI_export_am\xE9lioration_planche_10": -1395540220
+      "UI_export_am\xE9lioration_planche_11": 543399431
+      "UI_export_am\xE9lioration_planche_12": 1616847256
+      "UI_export_am\xE9lioration_planche_13": -466056140
+      "UI_export_am\xE9lioration_planche_14": 1556130559
+      "UI_export_am\xE9lioration_planche_15": 848096906
+      "UI_export_am\xE9lioration_planche_16": 37652307
+      "UI_export_am\xE9lioration_planche_17": -198366196
+      "UI_export_am\xE9lioration_planche_18": -811353997
+      "UI_export_am\xE9lioration_planche_19": 924422713
+      "UI_export_am\xE9lioration_planche_2": -2029417752
+      "UI_export_am\xE9lioration_planche_20": -817890600
+      "UI_export_am\xE9lioration_planche_21": -2108293042
+      "UI_export_am\xE9lioration_planche_22": 1906751001
+      "UI_export_am\xE9lioration_planche_3": -191071060
+      "UI_export_am\xE9lioration_planche_4": -301865714
+      "UI_export_am\xE9lioration_planche_5": 1516034631
+      "UI_export_am\xE9lioration_planche_6": 392041501
+      "UI_export_am\xE9lioration_planche_7": 211746898
+      "UI_export_am\xE9lioration_planche_8": 1740887104
+      "UI_export_am\xE9lioration_planche_9": 1523952564
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

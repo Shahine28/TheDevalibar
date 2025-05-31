@@ -822,7 +822,7 @@ PlayerSettings:
   webWasm2023: 0
   scriptingDefineSymbols:
     Standalone: AMPLIFY_SHADER_EDITOR
-    WebGL: CINEMACHINE_PHYSICS
+    WebGL: CINEMACHINE_PHYSICS;AMPLIFY_SHADER_EDITOR
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
