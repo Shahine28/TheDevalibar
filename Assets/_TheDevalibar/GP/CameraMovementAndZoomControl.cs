@@ -27,6 +27,7 @@ public class CameraMovementAndZoomControl : MonoBehaviour
     [SerializeField] private AnimationCurve _zoomCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] private Transform _cameraContainerTransform;
     [SerializeField] private float _maxContainerScale;
+    public bool CanZoom = true;
 
     
     private InputValuesManager _inputValuesManager;
@@ -37,11 +38,14 @@ public class CameraMovementAndZoomControl : MonoBehaviour
         if (!_camera) _camera = GetComponent<CinemachineCamera>();
         CameraOriginalPosition = _camera.transform.position;
         _zoomMaxSize = _camera.Lens.OrthographicSize;
+        CanZoom = true;
+        ServiceLocator.Register(this);
     }
 
     void Start()
     {
         _inputValuesManager = ServiceLocator.Get<InputValuesManager>();
+        UpdateContainerScale();
     }
     public void Update()
     {
@@ -49,14 +53,14 @@ public class CameraMovementAndZoomControl : MonoBehaviour
 
         if (GetZoomPercentage() > 0.2f)
         {
-            if (!_inputValuesManager._isMouseUsed)
+            if (!_inputValuesManager._isMouseUsed && CanZoom)
             {
                 HandleCameraMovement();
             }
             else
             {
-                if (_useEdgeScrolling) HandleCameraMovementEdgeScrolling();
-                if (_useDragPan && _inputValuesManager.IsDragClickPressed) HandleCameraMovementDragPan();
+                if (_useEdgeScrolling && CanZoom) HandleCameraMovementEdgeScrolling();
+                if (_useDragPan && _inputValuesManager.IsDragClickPressed && CanZoom) HandleCameraMovementDragPan();
             }
         }
         else
@@ -67,7 +71,10 @@ public class CameraMovementAndZoomControl : MonoBehaviour
             }
         }
 
-        HandleCameraZoom();
+        if (CanZoom)
+        {
+            HandleCameraZoom();
+        }
     }
     
     private void LateUpdate()
@@ -138,7 +145,15 @@ private void HandleCameraZoom()
     }
     targetSize  = Mathf.Clamp(targetSize , _zoomMinSize, _zoomMaxSize);
     _camera.Lens.OrthographicSize = Mathf.Lerp(_camera.Lens.OrthographicSize, targetSize , Time.deltaTime * _zoomSpeed);
-    _cameraContainerTransform.localScale = Vector3.Lerp(Vector3.zero, new Vector3(_maxContainerScale, _maxContainerScale, _maxContainerScale), GetZoomPercentage());
+    UpdateContainerScale();
+}
+
+public void UpdateContainerScale()
+{
+    _cameraContainerTransform.localScale = 
+        Vector3.Lerp(Vector3.zero,
+              new Vector3(_maxContainerScale, _maxContainerScale, _maxContainerScale)
+            ,GetZoomPercentage());
 }
 
 private float GetZoomPercentage()

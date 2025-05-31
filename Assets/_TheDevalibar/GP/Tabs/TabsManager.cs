@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using System.Linq;
 using MyUtilities;
 using UnityEngine;
 
 public class TabsManager : MonoBehaviour
 {
-    private List<Tab> _tabs = new List<Tab>();
-    [SerializeField] private GameObject TabPrefab;
+    [SerializeField, ReadOnly] private List<Tab> _tabs = new List<Tab>();
+    // [SerializeField] private GameObject TabPrefab;
     private TablesManager _tablesManager;
     private UpgradePanelManager _upgradePanelManager;
     private CameraZoomToTarget _cameraZoom;
@@ -38,12 +39,22 @@ public class TabsManager : MonoBehaviour
         {
             Debug.LogError("There is no Camera Zoom To Target in the scene");
         }
-        if (TabPrefab == null)
+        // if (TabPrefab == null)
+        // {
+        //     Debug.LogWarning("There is no TabPrefab");
+        // }
+        
+        _tabs = new List<Tab>();
+        for (int i = 0; i < transform.childCount; i++)
         {
-            Debug.LogWarning("There is no TabPrefab");
+            _tabs.Add(transform.GetChild(i).GetComponent<Tab>());
         }
         
+        
         InitializeTabs();
+
+
+        
     }
 
     void InitializeTabs()
@@ -51,41 +62,44 @@ public class TabsManager : MonoBehaviour
         // Tables
         ClearTabs();
         if (_tablesManager == null) return;
-        Tab tab;
+
         for (int i = 0; i < _tablesManager.Tables.Count; i++)
         {
-            tab = Instantiate(TabPrefab, transform).GetComponent<Tab>();
-            if (tab == null)
+            // Instantiate(TabPrefab, transform);
+            if (_tabs[i] == null)
             {
                 Debug.LogWarning("There is no TabPrefab in the prefab");
                 continue;
             }
-            tab.Initialize(_tableSprite, ObjectType.Table,i);
-            _tabs.Add(tab);
+            _tabs[i].Initialize(_tableSprite, ObjectType.Table,i);
+            _tabs[i].gameObject.SetActive(true);
         }
         
         // Elevator
-        tab = Instantiate(TabPrefab, transform).GetComponent<Tab>();
+        // tab = Instantiate(TabPrefab, transform).GetComponent<Tab>();
+        Tab tab = _tabs.FirstOrDefault(x => !x.gameObject.activeInHierarchy);
         if (tab == null)
         {
-            Debug.LogWarning("There is no TabPrefab in the prefab");
+            Debug.LogWarning("There is no TabPrefab available");
             return;
         }
         ElevatorManager elevator = ServiceLocator.Get<ElevatorManager>();
         if (elevator == null) return;
         tab.Initialize(_elevatorSprite, ObjectType.Elevator);
-        _tabs.Add(tab);
-        
+        tab.gameObject.SetActive(true);
     }
 
     void ClearTabs()
     {
-        _tabs.Clear();
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Destroy(transform.GetChild(i).gameObject);
-        }
+        // _tabs.Clear();
+        // for (int i = 0; i < transform.childCount; i++)
+        // {
+        //     Destroy(transform.GetChild(i).gameObject);
+        // }
+        if (_tablesManager == null) return;
+        _tabs.ForEach(x => x.gameObject.SetActive(false));
     }
+    
 
     public void ResetFocus()
     {

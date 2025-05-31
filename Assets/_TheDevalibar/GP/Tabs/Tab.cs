@@ -78,6 +78,11 @@ public class Tab : MonoBehaviour
                     return;
                 }
                 _cameraZoomToTarget.ZoomTo(elevatorManager.ElevatorGameObject.gameObject.transform);
+                if (_upgradePanelManager == null)
+                {
+                    Debug.LogError("There is no upgrade panel manager in the scene.");
+                    return;
+                }
                 _upgradePanelManager.SetUpElevatorUpgradePanel(elevatorManager);
                 break;
             }

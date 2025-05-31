@@ -74,6 +74,10 @@ public class CharacterBehavior : MonoBehaviour
     
     [Header("Animations")]
     [SerializeField] private AnimationManager _animationManager;
+    
+
+    ///  Camera
+    private CameraMovementAndZoomControl _cameraMovementAndZoomControl;
 
 #region OnEnable/OnDisable
     public void OnEnable()
@@ -136,9 +140,10 @@ public class CharacterBehavior : MonoBehaviour
         if (!_dialogueManager)
         {
             _dialogueManager = ServiceLocator.Get<DialogueManager>();
-            _dialogueManager._onDialogueStart += PauseWaiting;
-            _dialogueManager._onDialogueEnd += ResumeWaiting;
         }
+        
+        _dialogueManager._onDialogueStart += PauseWaiting;
+        _dialogueManager._onDialogueEnd += ResumeWaiting;
 
         _elevatorManager = ServiceLocator.Get<ElevatorManager>();
         if (_elevatorManager == null)
@@ -188,6 +193,8 @@ public class CharacterBehavior : MonoBehaviour
 
         _animationManager.OnCharacterStandUp += OnCharacterStandUp;
         _animationManager.OnCharacterSitDown += OnCharacterSitDown;
+        
+        _cameraMovementAndZoomControl = ServiceLocator.Get<CameraMovementAndZoomControl>();
     }
 #endregion
 #region Constraint&Disability
@@ -744,28 +751,22 @@ private void SetBubbleSpeech(bool isCustomerLeaving)
     private void StartCharacterDialogue()
     {
         if (!_dialogueManager) return;
-        _dialogueManager.InitCharacterDialogue(this, false, _gameManager != null ? _gameManager.GameData.LanguageCode : CodeLanguage.French);
+        _dialogueManager?.InitCharacterDialogue(this, false, _gameManager != null ? _gameManager.GameData.LanguageCode : CodeLanguage.French);
         _dialogueButton?.gameObject.SetActive(false);
+        
+        _cameraMovementAndZoomControl.CanZoom = false;
     }
     
 
     public void OnDialogueEnd()
     {
-        switch (_characterState)
+        CharacterSpawnManager characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
+        if (characterSpawnManager)
         {
-            case CharacterState.AtTheBar:
-            {
-                CharacterSpawnManager characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
-                if (characterSpawnManager)
-                {
-                    characterSpawnManager.CanSpawnCharacter = true;
-                }
-                MoveToBestTable();
-                break;
-            }
-            default:
-                break;
+            characterSpawnManager.CanSpawnCharacter = true;
         }
+        _cameraMovementAndZoomControl.CanZoom = true;
+        MoveToBestTable();
     }
     #endregion
 
