@@ -19,6 +19,8 @@ MonoBehaviour:
   CharacterSprite: {fileID: 21300000, guid: ad706a90293fb486bade25d279cf303e, type: 3}
   CharacterMesh: {fileID: 0}
   CharacterMaterial: {fileID: 0}
+  HasSpecificRuntimeAnimationController: 0
+  CharacterRuntimeAnimatorController: {fileID: 0}
   Affinity: 50
   NextAffinityValue: 100
   Dialogues:
@@ -84,7 +86,7 @@ MonoBehaviour:
     _goodTableSpeech:
     - "Et si j'organisais peut \xEAtre une sortie scolaire ici ?"
     - "Le cadre parfait pour pr\xE9parer mes cours !"
-    - "Bi\xE8re au bon go\xFBt de revandication sociale."
+    - "Bi\xE8re au bon go\xFBt de revandication sociale"
     - "Amy a suivit en cours aujourd'hui, \xE7a m'a fait plaisir."
     - "Ce bar est une vraie pause pour le c\u0153ur"
     - "Il faut absolument que je programme Ast\xE9r\xE9otypie \xE0 la biblioth\xE8que."
@@ -101,7 +103,7 @@ MonoBehaviour:
     - aie aie aie, mes oreilles...
     - "O\xF9 est pass\xE9 mon silence ?"
     - "Hummm... quel cours je leur pr\xE9pare demain..."
-    - Trois petits points.
+    - Trois petits points
     - Huh, je m'y sens pas aussi bien que j'aurais voulu
     - "Faut pas que je tra\xEEne trop, j'ai du taff demain"
     - Il manque quelque chose j'pense et ce bar serait le meilleur de la ville...
