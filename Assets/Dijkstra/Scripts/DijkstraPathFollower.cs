@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using MyUtilities;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class DijkstraPathFollower : MonoBehaviour
@@ -9,6 +10,8 @@ public class DijkstraPathFollower : MonoBehaviour
     public DijkstraManager dijkstraManager;
     public float MoveSpeed = 7.5f;
     public bool FollowPathAtStart = true;
+    public bool RotateInMovementDirection = true;
+    [ShowIf("RotateInMovementDirection")] public GameObject ObjectToRotate;
 
     public event Action OnFollowPathEnd;
     private void Start()
@@ -60,6 +63,18 @@ public class DijkstraPathFollower : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, startPos, MoveSpeed * Time.deltaTime);
                 yield return new WaitForEndOfFrame();
+                if (RotateInMovementDirection && ObjectToRotate != null) // Pour rotate le perso dans la direction de mouvement
+                {
+                    Vector3 direction = (startPos - transform.position).normalized;
+                    if (direction != Vector3.zero)
+                    {
+                        Quaternion lookRotation = Quaternion.LookRotation(direction, Vector3.up);
+                        ObjectToRotate.transform.rotation = Quaternion.Slerp(ObjectToRotate.transform.rotation, 
+                            lookRotation, 
+                            Time.deltaTime * 10f
+                        );
+                    }
+                }
             }
             yield return new WaitForSeconds(startNode.waitTime);
         }
@@ -74,6 +89,18 @@ public class DijkstraPathFollower : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, nextPos, MoveSpeed * Time.deltaTime);
                 yield return new WaitForEndOfFrame();  
+                if (RotateInMovementDirection && ObjectToRotate != null) // Pour rotate le perso dans la direction de mouvement
+                {
+                    Vector3 direction = (nextPos - transform.position).normalized;
+                    if (direction != Vector3.zero)
+                    {
+                        Quaternion lookRotation = Quaternion.LookRotation(direction, Vector3.up);
+                        ObjectToRotate.transform.rotation = Quaternion.Slerp(ObjectToRotate.transform.rotation, 
+                            lookRotation, 
+                            Time.deltaTime * 10f
+                        );
+                    }
+                }
             }
             
             yield return new WaitForSeconds(targetNode.waitTime);

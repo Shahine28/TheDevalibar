@@ -143,7 +143,10 @@ public class UpgradePanel : MonoBehaviour
                     break;
             }
             
-            Destroy(gameObject.transform.parent.gameObject); // On détruit le panel quand il est acheté
+            // Destroy(gameObject.transform.parent.gameObject); // On détruit le panel quand il est acheté
+            MoveUpgradePanel();
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
         }
         else
         {

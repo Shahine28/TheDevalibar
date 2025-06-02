@@ -17,6 +17,8 @@ MonoBehaviour:
   CharacterPseudo: Mayamymya
   CharacterProfilePicture: {fileID: 0}
   CharacterSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+  CharacterMesh: {fileID: 0}
+  CharacterMaterial: {fileID: 0}
   Affinity: 40
   NextAffinityValue: 50
   Dialogues:
@@ -27,22 +29,75 @@ MonoBehaviour:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
   DialogueIndex: 0
+  _characterReviews:
+    GoodReviews:
+    - {fileID: 11400000, guid: 561b3c4b2c9e03542859f1af2069752d, type: 2}
+    - {fileID: 11400000, guid: 28daa2e939864ab45973371ed2bb6659, type: 2}
+    - {fileID: 11400000, guid: b285b295f24599a4a9441215875288c3, type: 2}
+    - {fileID: 11400000, guid: 8c3e63d5b31dd4444a43401fa2728319, type: 2}
+    - {fileID: 11400000, guid: 6d9bb3f91a98c9142b4846feff02c2f9, type: 2}
+    AverageReviews:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    BadReviews:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  _bubbleSpeech:
+    _goodTableSpeech:
+    - 'Amy : Je sens mon pouvoir grandir !'
+    - "Amy : Je dois m'entra\xEEner avec Sensei Gary ici !"
+    - 'Amy : Watashi no shinpiteki gekkou no shita !'
+    - "Amy : La pression spirituelle de la Barmaid est \xE9norme..."
+    - 'Maya : Un bar avec de la bonne musique, c''est rare'
+    - 'Maya : Amy va jamais s''ennuyer ici, c''est certain'
+    - "Maya : Le vin est d\xE9licieux !"
+    - 'Maya : C''est inspirant cpmme endroit'
+    _averageTableSpeech:
+    - 'Amy : Je sens pas de chakra ici...'
+    - "Amy : Maman ! J'peux avoir ton baton magique piti\xE9 !"
+    - "Amy : Huh, cette potion est trop am\xE8re"
+    - "Amy : J'ai envie d'aller voir Tata Genevi\xE8ve, Maman !"
+    - "Maya : Amy, tu veux partir quand ma ch\xE9rie ?"
+    - 'Maya : Pas trop confort...'
+    - "Maya : J'ai du mal \xE0 m'orienter, arf"
+    - "Maya : Le lieu est \xE0 am\xE9liorer"
+    _goodLeavingSpeech:
+    - 'Amy : La justice n''attend pas !'
+    - 'Amy : Au revoir Super Barmaid !'
+    - 'Maya : On reviendra !'
+    - 'Maya : Amy, rends moi ma canne !'
+    _averageLeavingSpeech:
+    - "Amy : Vite Maman ! L'\xE9pisode est sorti !"
+    - 'Amy : Mamaaaaaan, on peut passer au magasin !?'
+    - "Maya : D\xE9p\xE8ches Amy, le cours commence !"
+    - "Maya : Au revoir, \xE0 demain peut-\xEAtre"
+    _badLeavingSpeech:
+    - 'Amy : Oh non, aucune place pour Maman...!'
+    - "Amy : On part d\xE9j\xE0 ?!"
+    - 'Maya : Allez Amy, on s''en va'
+    - 'Maya : On repassera demain'
   constraintDict:
     keys:
     - "Mobilit\xE9"
