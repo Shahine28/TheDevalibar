@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a489a9d0d445ecf4290861f2659f614f, type: 3}
   m_Name: GeneAverageReview 8
   m_EditorClassIdentifier: 
-  _reviewRate: 5
-  _reviewTitle: 0
-  _reviewDescription: 0
+  _reviewRate: 2
+  _reviewTitle: "Liseuse de l\xE8vres \xE0 en devenir"
+  _reviewDescription: "Pour pouvoir comprendre un mot de ce qu'on me racontait, je
+    devais me mettre \xE0 lire sur les l\xE8vres des gens. C'est dr\xF4le deux secondes,
+    pas plus. Le bar est pas id\xE9al si vous avez des soucis d'audition comme moi."
   _reviewTopic:
     keys:
     - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
@@ -23,4 +25,4 @@ MonoBehaviour:
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 000100000000
+    values: 000001000000

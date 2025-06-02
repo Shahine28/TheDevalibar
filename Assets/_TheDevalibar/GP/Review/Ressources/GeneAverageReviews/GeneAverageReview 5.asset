@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a489a9d0d445ecf4290861f2659f614f, type: 3}
   m_Name: GeneAverageReview 5
   m_EditorClassIdentifier: 
-  _reviewRate: 5
-  _reviewTitle: 0
-  _reviewDescription: 0
+  _reviewRate: 2
+  _reviewTitle: "\"Tu peux r\xE9p\xE9ter ?\""
+  _reviewDescription: "Avec le brouhaha, enfin plut\xF4t, cette cacophonie, je ne
+    pouvais pas discuter sans devoir r\xE9p\xE9ter constamment \"Tu peux r\xE9p\xE9ter
+    ?\". J'\xE9tais m\xEAme anxieuse \xE0 chaque fois que je voulais passer commande.
+    Franchement j'appr\xE9cie l'endroit mais il est pas toujours pratique."
   _reviewTopic:
     keys:
     - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
@@ -23,4 +26,4 @@ MonoBehaviour:
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 000100000000
+    values: 000001000000
