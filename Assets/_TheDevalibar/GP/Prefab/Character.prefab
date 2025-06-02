@@ -462,6 +462,7 @@ Transform:
   m_LocalScale: {x: 0.17940857, y: 0.24464802, z: 0.17940857}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 7821067514074426023}
   - {fileID: 9222570109691481197}
   - {fileID: 266310807201843277}
   - {fileID: 5562322028278993224}
@@ -1938,7 +1939,9 @@ Animator:
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'spine.001'\n\tFrom animation clip 'GarryIdle'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -1957,3 +1960,82 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1965393475740577800}
   skinnedMeshRenderer: {fileID: 6247569309258612616}
+--- !u!1001 &7710367114749381964
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5266263251199399064}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.3296888
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7084389
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.3296888
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.718
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_Name
+      value: GarrySMV2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: -7942588919828313527, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+--- !u!4 &7821067514074426023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
+  m_PrefabInstance: {fileID: 7710367114749381964}
+  m_PrefabAsset: {fileID: 0}
