@@ -60,9 +60,16 @@ public class CharacterSpawnManager : MonoBehaviour
 
     public NPCMeshMaterialController GetRandomNPCAssets()
     {
+        bool useMale = Random.value > 0.5f;
 
-        return null;
+        Mesh selectedMesh = useMale ? _maleNPCMesh : _femaleNPCMesh;
+        List<Material> selectedMaterials = useMale ? _maleNPCMaterials : _femaleNPCMaterials;
+
+        Material selectedMaterial = selectedMaterials[Random.Range(0, selectedMaterials.Count)];
+
+        return new NPCMeshMaterialController(selectedMesh, selectedMaterial, _npcInWheelChairAnimatorController);
     }
+
     public void StartSpawning()
     {
         if (_delayCoroutine == null)
@@ -187,6 +194,13 @@ public struct DayShift
 
 public struct NPCMeshMaterialController
 {
+    public NPCMeshMaterialController(Mesh mesh, Material material, RuntimeAnimatorController animatorController)
+    {
+        Mesh = mesh;
+        Material = material;
+        AnimatorController = animatorController;
+    }
+    
     public Mesh Mesh;
     public Material Material;
     public RuntimeAnimatorController AnimatorController;

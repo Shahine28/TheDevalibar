@@ -19,7 +19,7 @@ public class CharacterBehavior : MonoBehaviour
     public Character Character => _character;
     [SerializeField, ReadOnly] private string _characterDisability = string.Empty;
     private Constraint _characterConstraint;
-    
+    private CharacterSpawnManager _characterSpawnManager;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     private bool _isCharacterAssigned => _character != null;
 
@@ -124,6 +124,11 @@ public class CharacterBehavior : MonoBehaviour
         }
     }
 
+    public void SetNPC()
+    {  
+        NPCMeshMaterialController npcMeshMaterialController = _characterSpawnManager.GetRandomNPCAssets();
+        SetNPC(npcMeshMaterialController.Mesh, npcMeshMaterialController.Material, npcMeshMaterialController.AnimatorController);
+    }
     public void SetNPC(Mesh npcMesh, Material npcMaterial, RuntimeAnimatorController runtimeAnimatorController)
     {
         _animationManager?.SetAnimation(npcMesh,
@@ -169,12 +174,16 @@ public class CharacterBehavior : MonoBehaviour
         {
             _elevatorManager.OnElevatorMovementEnd += OnElevatorMovementEnd;
         }
+
+        _characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
+        
         _tablesManager = ServiceLocator.Get<TablesManager>();
         _startNodeIndex = GetClosestNode();
         _lastNodeIndex = _startNodeIndex;
         FeedBackImage.gameObject.SetActive(false);
         UpdateFeedBackImage();
         SetCharacterDisabilities();
+        if (_character == null) SetNPC();
         _characterConstraint = GetCharacterConstraint();
         _bubbleSpeechManager = ServiceLocator.Get<BubbleSpeechManager>();
         if (_bubbleSpeechManager == null)
@@ -240,7 +249,7 @@ public class CharacterBehavior : MonoBehaviour
         {
             _wheelChair?.gameObject.SetActive(false);
         }
-        else if (_wheelChairDisabiltyName != _blindCaneDisabiltyName)
+        if (_characterDisability != _blindCaneDisabiltyName)
         {
             _blindCane?.gameObject.SetActive(false);
         }
@@ -451,16 +460,15 @@ public class CharacterBehavior : MonoBehaviour
         {
             _lastNodeIndex = nextElevatorNodeIndex;
             _floorLevel = _elevatorManager.FloorLevel; 
-            CharacterSpawnManager spawnManager = ServiceLocator.Get<CharacterSpawnManager>();
             if (_usedTable != null)
             {
-                transform.SetParent(spawnManager.CharacterSpawnPoint);
+                transform.SetParent(_characterSpawnManager.CharacterSpawnPoint);
                 _elevatorManager.currentPassenger = null;
                 MoveToNode(_usedTable.TableNodeNumber);
             }
             else
             {
-                transform.SetParent(spawnManager.CharacterSpawnPoint);
+                transform.SetParent(_characterSpawnManager.CharacterSpawnPoint);
                 _elevatorManager.currentPassenger = null;
                 MoveToBarExit();
             }
@@ -586,10 +594,9 @@ public class CharacterBehavior : MonoBehaviour
         {
             
             _characterState = CharacterState.AtTheBar;
-            CharacterSpawnManager characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
-            if (characterSpawnManager != null)
+            if (_characterSpawnManager != null)
             {
-                characterSpawnManager.CanSpawnCharacter = false;
+                _characterSpawnManager.CanSpawnCharacter = false;
             }
             _dialogueButton?.gameObject.SetActive(true);
             if (_dialogueButton != null) EventSystem.current.SetSelectedGameObject(_dialogueButton.gameObject);
@@ -606,10 +613,9 @@ public class CharacterBehavior : MonoBehaviour
                 gameManager.GameData.Gold += GetTipValue();
                 gameManager.UpdateGoldValue();
             }
-
-            CharacterSpawnManager spawnManager = ServiceLocator.Get<CharacterSpawnManager>();
             
-            if (spawnManager && spawnManager.HaveAllCharactersAndNCPBeenSpawned && spawnManager.CharacterSpawnPoint.childCount.Equals(1))
+            
+            if (_characterSpawnManager && _characterSpawnManager.HaveAllCharactersAndNCPBeenSpawned && _characterSpawnManager.CharacterSpawnPoint.childCount.Equals(1))
             {
                 _tablesManager?.ShowUpgradeButtonTables();
                 _showHideUI?.ShowUI();
@@ -786,10 +792,9 @@ private void SetBubbleSpeech(bool isCustomerLeaving)
 
     public void OnDialogueEnd()
     {
-        CharacterSpawnManager characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
-        if (characterSpawnManager)
+        if (_characterSpawnManager)
         {
-            characterSpawnManager.CanSpawnCharacter = true;
+            _characterSpawnManager.CanSpawnCharacter = true;
         }
         _cameraMovementAndZoomControl.CanZoom = true;
         MoveToBestTable();
