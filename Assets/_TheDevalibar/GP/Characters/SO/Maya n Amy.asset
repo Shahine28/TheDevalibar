@@ -16,10 +16,12 @@ MonoBehaviour:
   CharacterName: Maya / Amy
   CharacterPseudo: Mayamymya
   CharacterProfilePicture: {fileID: 0}
-  CharacterSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
-  CharacterMesh: {fileID: 0}
-  CharacterMaterial: {fileID: 0}
-  Affinity: 40
+  CharacterSprite: {fileID: 21300000, guid: 98c6accd322f57a49aa94dcde132f62c, type: 3}
+  CharacterMesh: {fileID: 11203607450732749, guid: 93a1c84f74164414f9f169660cff1067, type: 3}
+  CharacterMaterial: {fileID: 2100000, guid: 9be87e3664da80e4982e6ed0f3e98a14, type: 2}
+  HasSpecificRuntimeAnimationController: 0
+  CharacterRuntimeAnimatorController: {fileID: 0}
+  Affinity: 50
   NextAffinityValue: 50
   Dialogues:
   - Dialogues:
@@ -100,14 +102,10 @@ MonoBehaviour:
     - 'Maya : On repassera demain'
   constraintDict:
     keys:
-    - "Mobilit\xE9"
-    - "D\xE9ficience visuelle"
-    - "Fatigabilit\xE9 chronique"
     - "D\xE9ficience auditive s\xE9v\xE8re"
-    - "Troubles de l\u2019\xE9quilibre / vertiges"
-    - "Hypersensibilit\xE9 sensorielle"
-    - Douleurs chroniques
-    - "Allergies s\xE9v\xE8res"
-    - "Troubles cognitifs l\xE9gers"
-    - Troubles dermatologiques
-    values: 00000000000000000000
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000000000000

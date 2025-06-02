@@ -462,7 +462,6 @@ Transform:
   m_LocalScale: {x: 0.17940857, y: 0.24464802, z: 0.17940857}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 8463900470908838044}
   - {fileID: 9222570109691481197}
   - {fileID: 266310807201843277}
   - {fileID: 5562322028278993224}
@@ -919,13 +918,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3188591549062118800}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: -0.71799994, z: -0.85}
-  m_LocalScale: {x: 232.96887, y: 232.96889, z: 170.84387}
+  m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.70710677}
+  m_LocalPosition: {x: 0, y: 0.027298821, z: -0.3648556}
+  m_LocalScale: {x: 100, y: 99.99996, z: 99.999954}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8241075613186406277}
-  m_Father: {fileID: 5266263251199399064}
+  m_Father: {fileID: 9222570109691481197}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6565616639548187394
 MeshFilter:
@@ -1392,8 +1391,8 @@ Transform:
   m_GameObject: {fileID: 6141251944988906948}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1641532e-10, y: -9.313226e-10, z: -2.65}
-  m_LocalScale: {x: 0.99999976, y: 0.99999976, z: 0.99999976}
+  m_LocalPosition: {x: 0, y: 0, z: -2.65}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9222570109691481197}
@@ -1421,7 +1420,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9be87e3664da80e4982e6ed0f3e98a14, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1446,7 +1445,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 11203607450732749, guid: 93a1c84f74164414f9f169660cff1067, type: 3}
+  m_Mesh: {fileID: 983534966131892205, guid: 3ee3adc466731df419ef7bd48993767c, type: 3}
   m_Bones:
   - {fileID: 3591023337693398459}
   - {fileID: 4450259249000364012}
@@ -2096,6 +2095,7 @@ Transform:
   m_LocalScale: {x: 2.3296888, y: 1.7084389, z: 2.3296888}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8463900470908838044}
   - {fileID: 3822702477466978205}
   - {fileID: 2637244662548322984}
   m_Father: {fileID: 5266263251199399064}

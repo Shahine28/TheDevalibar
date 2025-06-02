@@ -117,10 +117,18 @@ public class CharacterBehavior : MonoBehaviour
         {
             _spriteRenderer?.gameObject.SetActive(false);
             _animationManager?.gameObject.SetActive(true);
+            
             _animationManager?.SetAnimation(_character.CharacterMesh,
                 _character.CharacterMaterial,
                 _character.HasSpecificRuntimeAnimationController ? _character.CharacterRuntimeAnimatorController : null);
         }
+    }
+
+    public void SetNPC(Mesh npcMesh, Material npcMaterial, RuntimeAnimatorController runtimeAnimatorController)
+    {
+        _animationManager?.SetAnimation(npcMesh,
+            npcMaterial,
+            _characterDisability == _wheelChairDisabiltyName ? runtimeAnimatorController : null);
     }
 
     void Start()
