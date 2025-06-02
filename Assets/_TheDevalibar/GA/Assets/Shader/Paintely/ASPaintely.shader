@@ -8,7 +8,7 @@ Shader "ASPaintely"
 		[HideInInspector] _EmissionColor("Emission Color", Color) = (1,1,1,1)
 		_ShadowLine("ShadowLine", 2D) = "white" {}
 		_LayerCounts("LayerCounts", Float) = 4
-		_ShadowColor("ShadowColor", Color) = (0,0,0,0)
+		_LightColor("LightColor", Color) = (0,0,0,0)
 		_MainTex("MainTex", 2D) = "white" {}
 		_LineDensity("LineDensity", Vector) = (1,1,0,0)
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
@@ -271,7 +271,7 @@ Shader "ASPaintely"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _ShadowColor;
+			float4 _LightColor;
 			float4 _MainTex_ST;
 			float2 _LineDensity;
 			float _LayerCounts;
@@ -530,7 +530,7 @@ Shader "ASPaintely"
 				float dotResult82 = dot( dotResult34 , dotResult79 );
 				float temp_output_42_0 = ( floor( ( (dotResult82*0.5 + 0.5) * _LayerCounts ) ) * ( 1.0 / _LayerCounts ) );
 				float temp_output_50_0 = step( temp_output_42_0 , 0.25 );
-				float4 lerpResult61 = lerp( float4( 0,0,0,0 ) , _ShadowColor , temp_output_50_0);
+				float4 lerpResult61 = lerp( _LightColor , float4( 0,0,0,0 ) , temp_output_50_0);
 				float2 uv_MainTex = input.ase_texcoord7.xy * _MainTex_ST.xy + _MainTex_ST.zw;
 				float2 texCoord28 = input.ase_texcoord7.xy * _LineDensity + float2( 0,0 );
 				float cos25 = cos( radians( 45.0 ) );
@@ -540,7 +540,7 @@ Shader "ASPaintely"
 				float cos46 = cos( radians( 90.0 ) );
 				float sin46 = sin( radians( 90.0 ) );
 				float2 rotator46 = mul( texCoord48 - float2( 0.5,0.5 ) , float2x2( cos46 , -sin46 , sin46 , cos46 )) + float2( 0.5,0.5 );
-				float4 lerpResult64 = lerp( lerpResult61 , float4( 1,1,1,1 ) , ( ( tex2D( _MainTex, uv_MainTex ) * temp_output_42_0 ) - max( ( temp_output_50_0 * tex2D( _ShadowLine, _LineDensity ) ) , max( ( step( temp_output_42_0 , 0.5 ) * tex2D( _ShadowLine, rotator25 ) ) , ( step( temp_output_42_0 , 0.75 ) * tex2D( _ShadowLine, rotator46 ) ) ) ) ));
+				float4 lerpResult64 = lerp( float4( 0,0,0,0 ) , lerpResult61 , ( ( tex2D( _MainTex, uv_MainTex ) * temp_output_42_0 ) - max( ( temp_output_50_0 * tex2D( _ShadowLine, _LineDensity ) ) , max( ( step( temp_output_42_0 , 0.5 ) * tex2D( _ShadowLine, rotator25 ) ) , ( step( temp_output_42_0 , 0.75 ) * tex2D( _ShadowLine, rotator46 ) ) ) ) ));
 				
 				float3 BakedAlbedo = 0;
 				float3 BakedEmission = 0;
@@ -669,7 +669,7 @@ Shader "ASPaintely"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _ShadowColor;
+			float4 _LightColor;
 			float4 _MainTex_ST;
 			float2 _LineDensity;
 			float _LayerCounts;
@@ -947,7 +947,7 @@ Shader "ASPaintely"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _ShadowColor;
+			float4 _LightColor;
 			float4 _MainTex_ST;
 			float2 _LineDensity;
 			float _LayerCounts;
@@ -1189,7 +1189,7 @@ Shader "ASPaintely"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _ShadowColor;
+			float4 _LightColor;
 			float4 _MainTex_ST;
 			float2 _LineDensity;
 			float _LayerCounts;
@@ -1410,7 +1410,7 @@ Shader "ASPaintely"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _ShadowColor;
+			float4 _LightColor;
 			float4 _MainTex_ST;
 			float2 _LineDensity;
 			float _LayerCounts;
@@ -1649,7 +1649,7 @@ Shader "ASPaintely"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _ShadowColor;
+			float4 _LightColor;
 			float4 _MainTex_ST;
 			float2 _LineDensity;
 			float _LayerCounts;
@@ -1908,7 +1908,7 @@ Shader "ASPaintely"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _ShadowColor;
+			float4 _LightColor;
 			float4 _MainTex_ST;
 			float2 _LineDensity;
 			float _LayerCounts;
@@ -2045,11 +2045,9 @@ Node;AmplifyShaderEditor.SamplerNode;68;-848,-192;Inherit;True;Property;_Texture
 Node;AmplifyShaderEditor.LerpOp;64;224,-112;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;1,1,1,1;False;2;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleSubtractOpNode;65;-112,-64;Inherit;False;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.LerpOp;61;32,-240;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.ColorNode;63;-320,-224;Inherit;False;Property;_ShadowColor;ShadowColor;4;0;Create;True;0;0;0;False;0;False;0,0,0,0;0,0,0,0;True;True;0;6;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT3;5
 Node;AmplifyShaderEditor.RangedFloatNode;38;-1712,96;Inherit;False;Property;_LayerCounts;LayerCounts;3;0;Create;True;0;0;0;False;0;False;4;4;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.FloorOpNode;43;-1328,-32;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.ScaleAndOffsetNode;37;-1792,-32;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0.5;False;2;FLOAT;0.5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.WireNode;71;-128,64;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.TexturePropertyNode;30;-1712,176;Inherit;True;Property;_ShadowLine;ShadowLine;2;0;Create;True;0;0;0;False;0;False;None;d47f50665910256478c0bbe7dd39dbed;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.RotatorNode;25;-1648,416;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;0.5,0.5;False;2;FLOAT;1;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.RadiansOpNode;26;-1808,544;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
@@ -2069,6 +2067,8 @@ Node;AmplifyShaderEditor.WorldNormalVector;73;-2304,32;Inherit;False;False;1;0;F
 Node;AmplifyShaderEditor.DotProductOpNode;79;-2112,128;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;72;-2576,128;Inherit;False;False;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.WorldNormalVector;78;-2304,192;Inherit;False;False;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.WireNode;71;-128,48;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.ColorNode;63;-336,-240;Inherit;False;Property;_LightColor;LightColor;4;0;Create;True;0;0;0;False;0;False;0,0,0,0;0,0,0,0;True;True;0;6;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT3;5
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;2;516,-112;Float;False;True;-1;3;UnityEditor.ShaderGraphUnlitGUI;0;13;ASPaintely;2992e84f91cbeb14eab234972e07ea9d;True;Forward;0;1;Forward;9;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;False;False;False;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Unlit;True;5;True;12;all;0;False;True;1;1;False;;0;False;;1;1;False;;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;LightMode=UniversalForwardOnly;False;False;0;;0;0;Standard;27;Surface;0;0;  Blend;0;0;Two Sided;1;0;Alpha Clipping;1;0;  Use Shadow Threshold;0;0;Forward Only;0;0;Cast Shadows;1;0;Receive Shadows;1;0;Motion Vectors;1;0;  Add Precomputed Velocity;0;0;GPU Instancing;1;0;LOD CrossFade;1;0;Built-in Fog;1;0;Meta Pass;0;0;Extra Pre Pass;0;0;Tessellation;0;0;  Phong;0;0;  Strength;0.5,False,;0;  Type;0;0;  Tess;16,False,;0;  Min;10,False,;0;  Max;25,False,;0;  Edge Length;16,False,;0;  Max Displacement;25,False,;0;Write Depth;0;0;  Early Z;0;0;Vertex Position,InvertActionOnDeselection;1;0;0;11;False;True;True;True;False;False;True;True;True;False;True;False;;False;0
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;1;-1840,-96;Float;False;False;-1;3;UnityEditor.ShaderGraphUnlitGUI;0;1;New Amplify Shader;2992e84f91cbeb14eab234972e07ea9d;True;ExtraPrePass;0;0;ExtraPrePass;5;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;False;False;False;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Unlit;True;5;True;12;all;0;False;True;1;1;False;;0;False;;0;1;False;;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;0;False;False;0;;0;0;Standard;0;False;0
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;3;0,0;Float;False;False;-1;3;UnityEditor.ShaderGraphUnlitGUI;0;1;New Amplify Shader;2992e84f91cbeb14eab234972e07ea9d;True;ShadowCaster;0;2;ShadowCaster;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;False;False;False;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Unlit;True;5;True;12;all;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;False;False;True;False;False;False;False;0;False;;False;False;False;False;False;False;False;False;False;True;1;False;;True;3;False;;False;True;1;LightMode=ShadowCaster;False;False;0;;0;0;Standard;0;False;0
@@ -2109,15 +2109,14 @@ WireConnection;59;1;58;0
 WireConnection;66;0;68;0
 WireConnection;66;1;42;0
 WireConnection;68;0;67;0
-WireConnection;64;0;61;0
+WireConnection;64;1;61;0
 WireConnection;64;2;65;0
 WireConnection;65;0;66;0
 WireConnection;65;1;59;0
-WireConnection;61;1;63;0
+WireConnection;61;0;63;0
 WireConnection;61;2;71;0
 WireConnection;43;0;39;0
 WireConnection;37;0;82;0
-WireConnection;71;0;50;0
 WireConnection;25;0;28;0
 WireConnection;25;2;26;0
 WireConnection;26;0;27;0
@@ -2134,6 +2133,7 @@ WireConnection;34;0;36;0
 WireConnection;34;1;73;0
 WireConnection;79;0;72;0
 WireConnection;79;1;78;0
+WireConnection;71;0;50;0
 WireConnection;2;2;64;0
 ASEEND*/
-//CHKSM=36F3CC1F7D5996C2CAB25F4FA185FAE3EB3C4B99
+//CHKSM=C21ED838824C9234D522AB185F1A589F6CD4968B
