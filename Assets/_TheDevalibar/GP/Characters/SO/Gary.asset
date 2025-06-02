@@ -17,10 +17,10 @@ MonoBehaviour:
   CharacterPseudo: Gaga la pinta
   CharacterProfilePicture: {fileID: 21300000, guid: 1d2c103791467ca4ea491a8eca6332de, type: 3}
   CharacterSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
-  CharacterMesh: {fileID: -8201639395956322401, guid: 65cb617f6dc14c948a2b159da2903518, type: 3}
-  CharacterMaterial: {fileID: 2100000, guid: 27a78d9e610f0d64a8444d6efce72f5f, type: 2}
-  HasSpecificRuntimeAnimationController: 1
-  CharacterRuntimeAnimatorController: {fileID: 22100000, guid: 75108a3e9b42959499f7730ee5c41322, type: 2}
+  CharacterMesh: {fileID: 0}
+  CharacterMaterial: {fileID: 0}
+  HasSpecificRuntimeAnimationController: 0
+  CharacterRuntimeAnimatorController: {fileID: 0}
   Affinity: 50
   NextAffinityValue: 100
   Dialogues:
@@ -84,10 +84,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 99692959f43801844936614602728c8c, type: 2}
   _bubbleSpeech:
     _goodTableSpeech:
-    - "Je jouerais bien une petite partie d'\xE9checs."
-    - "J\u2019vais peut-\xEAtre pas gueuler finalement."
-    - "J'suis bien l\xE0, j'me sens bien."
-    - "Faudrait que je passe dire bonjour \xE0 Giselle depuis le temps."
+    - "Je jouerais bien une petite partie d'\xE9checs"
+    - "J\u2019vais peut-\xEAtre pas gueuler finalement"
+    - "J'suis bien l\xE0, j'me sens bien"
+    - "Faudrait que je passe dire bonjour \xE0 Giselle depuis le temps"
     - '"Asso de merde qui vampirise le handicap" en trois lettre...'
     - "Axel ! comment tu fais pour avoir des bras comme \xE7a ?"
     - Hum... je pourrais utiliser ce coup pour contrer l'ouverture de Amy...
@@ -97,10 +97,10 @@ MonoBehaviour:
     - "P\xE9tard ! ma bi\xE8re \xE0 ti\xE8die..."
     - "*soupir* Y'a personne pour une petite partie d'\xE9chec ? "
     - Oh tiens, faudrait que j'appel mon agent de probation.
-    - "Faudrait que je passe dire bonjour \xE0 Giselle depuis le temps."
+    - "Faudrait que je passe dire bonjour \xE0 Giselle depuis le temps"
     - "Axel vient \xE0 la baraque ce week end ? j'ai oubli\xE9."
     - "J'ai roul\xE9 dans un truc crade ou quoi ?"
-    - "J'esp\xE8re que c'est de la bi\xE8re cette t\xE2che sur le sol."
+    - "J'esp\xE8re que c'est de la bi\xE8re cette t\xE2che sur le sol"
     _goodLeavingSpeech:
     - "A plus le d\xE9valibar ! A la revoyure !"
     - "Wow, j'suis fait, j'me casse, \xE0 plus les potes !"
