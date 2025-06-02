@@ -30,7 +30,14 @@ public class CharacterSpawnManager : MonoBehaviour
     [SerializeField] private GameManager _gameManager;
     
     
-
+    [Header("NPC Mesh & Materials")] 
+    [SerializeField] private Mesh _maleNPCMesh;
+    [SerializeField] List<Material> _maleNPCMaterials;
+    
+    [SerializeField] private Mesh _femaleNPCMesh;
+    [SerializeField] List<Material> _femaleNPCMaterials;
+    
+    [SerializeField] private RuntimeAnimatorController _npcInWheelChairAnimatorController;
     void Awake()
     {
         ServiceLocator.Register(this);
@@ -51,12 +58,11 @@ public class CharacterSpawnManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public NPCMeshMaterialController GetRandomNPCAssets()
     {
-        
-    }
 
+        return null;
+    }
     public void StartSpawning()
     {
         if (_delayCoroutine == null)
@@ -176,4 +182,12 @@ public struct DayShift
 {
     public List<Character> DailyCustomers;
     public int NPCToSpawnThisDay;
+}
+
+
+public struct NPCMeshMaterialController
+{
+    public Mesh Mesh;
+    public Material Material;
+    public RuntimeAnimatorController AnimatorController;
 }
