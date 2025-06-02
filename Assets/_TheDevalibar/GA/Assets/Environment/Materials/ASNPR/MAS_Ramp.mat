@@ -24,8 +24,10 @@ Material:
   m_Shader: {fileID: 4800000, guid: 2aa8a029403a56c4dac695cacc2fe8b8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_ValidKeywords:
+  - _RECEIVE_SHADOWS_OFF
+  m_InvalidKeywords:
+  - _RECEIVESHADOWS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -171,7 +173,7 @@ Material:
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
+    - _ReceiveShadows: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -184,8 +186,8 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightColor: {r: 0, g: 0, b: 0, a: 0}
-    - _LineDensity: {r: 1, g: 1, b: 0, a: 0}
+    - _LightColor: {r: 0.9056604, g: 0.75387496, b: 0.5838376, a: 1}
+    - _LineDensity: {r: 4, g: 4, b: 0, a: 0}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _ShadowDensity: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
