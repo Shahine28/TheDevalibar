@@ -13,7 +13,6 @@ using UnityEngine.UI;
 
 public class CharacterBehavior : MonoBehaviour
 {
-    [FormerlySerializedAs("character")]
     [Header("Character Behavior")]
     [SerializeField] private Character _character;
     public Character Character => _character;
@@ -22,9 +21,14 @@ public class CharacterBehavior : MonoBehaviour
     private CharacterSpawnManager _characterSpawnManager;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     private bool _isCharacterAssigned => _character != null;
-
     [SerializeField, Range(0, 100), HideIf("_isCharacterAssigned")]
     private float _disabilityChance = 20;
+        
+    [Header("Character Follower")] 
+    [SerializeField] private bool _hasAFollower;
+    [SerializeField] private CharacterFollowerBehavior _characterFollowerBehavior;
+    [SerializeField] private Transform _characterFollowerPointToFollow;
+    
     
     [Header("Dijkstra")]
     [SerializeField] private NodeManager _nodeManager;
@@ -176,8 +180,10 @@ public class CharacterBehavior : MonoBehaviour
         }
 
         _characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
-        
         _tablesManager = ServiceLocator.Get<TablesManager>();
+        
+        if (_hasAFollower) _characterFollowerBehavior.gameObject.SetActive(true);
+        
         _startNodeIndex = GetClosestNode();
         _lastNodeIndex = _startNodeIndex;
         FeedBackImage.gameObject.SetActive(false);
@@ -292,7 +298,7 @@ public class CharacterBehavior : MonoBehaviour
 
     private void OnCharacterStandUp()
     {
-        if (_characterConstraint != null && !_characterConstraint.CanTakeStairs)
+        if (_characterConstraint is { CanTakeStairs: false } || _characterDisability == _wheelChairDisabiltyName)
         {
             _usedChair.ShowChair();
         }
@@ -630,7 +636,7 @@ public class CharacterBehavior : MonoBehaviour
             {
                 _characterState = CharacterState.AtTheBestTable;
 
-                if (_characterConstraint != null && !_characterConstraint.CanTakeStairs)
+                if (_characterConstraint is { CanTakeStairs: false } || _characterDisability == _wheelChairDisabiltyName)
                 {
                     _usedChair.HideChair();
                 }

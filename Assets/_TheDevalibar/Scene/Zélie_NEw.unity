@@ -2142,6 +2142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Devalibar 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4779478306650490935, guid: 1baf4c5dac085ba47b51f43884b372ce, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5528511820662815426, guid: 1baf4c5dac085ba47b51f43884b372ce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -6978,6 +6982,11 @@ MonoBehaviour:
   _characterSpawnPoint: {fileID: 1737055025}
   _characterSpawnDelayInSeconds: 6
   _gameManager: {fileID: 0}
+  _maleNPCMesh: {fileID: 0}
+  _maleNPCMaterials: []
+  _femaleNPCMesh: {fileID: 0}
+  _femaleNPCMaterials: []
+  _npcInWheelChairAnimatorController: {fileID: 0}
 --- !u!4 &2014900796
 Transform:
   m_ObjectHideFlags: 0

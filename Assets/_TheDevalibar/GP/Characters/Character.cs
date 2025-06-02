@@ -22,7 +22,7 @@ public class Character : ScriptableObject
     public Mesh CharacterMesh;
     public Material CharacterMaterial;
     public bool HasSpecificRuntimeAnimationController;
-    [ShowIf("HasSpecificRuntimeAnimationController")] public RuntimeAnimatorController CharacterRuntimeAnimatorController;
+    [ShowIf("HasSpecificRuntimeAnimationController"), SerializeField] public RuntimeAnimatorController CharacterRuntimeAnimatorController;
     
     public int Affinity;
 
