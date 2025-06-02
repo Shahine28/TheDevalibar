@@ -2,12 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using MyUtilities;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UpgradePanelManager : MonoBehaviour
 {
     [SerializeField, ReadOnly] private List<UpgradePanel> _upgradePanels = new List<UpgradePanel>();
 
     private UpgradePanel currentUpgradePanel;
+    public UpgradePanel CurrentUpgradePanel;
     private Coroutine _currentUpgradePanelCoroutine;
     [SerializeField] private GameObject _upgradePanelPrefab;
     private TablesManager _tablesManager;
@@ -38,44 +40,50 @@ public class UpgradePanelManager : MonoBehaviour
     }
     
 #region UpgradePanelsMovement
-    private void ResetCurrentUpgradePanel(UpgradePanel upgradePanel)
+    public void ResetCurrentUpgradePanel(UpgradePanel upgradePanel)
     {
-        if (upgradePanel == null || upgradePanel != currentUpgradePanel)
-            return;
+        if (upgradePanel == null || upgradePanel != currentUpgradePanel) return;
 
-        // Stoppe toute animation existante
-        if (_currentUpgradePanelCoroutine != null)
-        {
-            StopCoroutine(_currentUpgradePanelCoroutine);
-            _currentUpgradePanelCoroutine = null;
-        }
-
-        // Sécurise l'appel si le panel est encore actif
-        if (upgradePanel.gameObject.activeInHierarchy)
-        {
-            _currentUpgradePanelCoroutine = StartCoroutine(upgradePanel.MoveUpgradePanelCoroutine());
-        }
+        ResetUpgradePanel(upgradePanel);
 
         currentUpgradePanel = null;
+    }
+    
+    public void ResetUpgradePanel(UpgradePanel upgradePanel)
+    {
+        if (upgradePanel == null)
+            return;
+        
+        upgradePanel.StopTransitionCoroutine();
+        
+        if (upgradePanel.gameObject.activeInHierarchy)
+        {
+           upgradePanel.MovePanelToStartPosition();
+        }
+    }
+
+    public void ResetUpgradePanelsPosition(bool ignoreCurrentUpgradePanel = false)
+    {
+        foreach (UpgradePanel upgradePanel in _upgradePanels)
+        {
+            if (upgradePanel == null || (ignoreCurrentUpgradePanel && upgradePanel == currentUpgradePanel)) return;
+            if (upgradePanel.IsPanelTransitioning || upgradePanel.IsUpgradeFullyDisplayed)
+            {
+                if (currentUpgradePanel == upgradePanel) ResetCurrentUpgradePanel(upgradePanel);
+                else ResetUpgradePanel(upgradePanel);
+            }
+        }
     }
 
     public void UpdateCurrentUpgradePanel(UpgradePanel newUpgradePanel)
     {
-        // Ne rien faire si null ou déjà en transition vers celui-là
+
         if (newUpgradePanel == null) return;
-
-        // Si un autre est déjà affiché, le fermer proprement
-        if (currentUpgradePanel != null)
-        {
-            ResetCurrentUpgradePanel(currentUpgradePanel);
-            if (currentUpgradePanel == newUpgradePanel) return;
-        }
-
         currentUpgradePanel = newUpgradePanel;
-
+        ResetUpgradePanelsPosition(true);
         if (currentUpgradePanel.gameObject.activeInHierarchy)
         {
-            _currentUpgradePanelCoroutine = StartCoroutine(currentUpgradePanel.MoveUpgradePanelCoroutine());
+            currentUpgradePanel.MovePanelToEndPosition();
         }
     }
 #endregion
@@ -87,6 +95,25 @@ public class UpgradePanelManager : MonoBehaviour
             _moveUI.LaunchMoveUI(true);
         }
         _upgradePanels?.ForEach(panel => panel?.transform.parent.gameObject.SetActive(false));
+        ResetUpgradePanelsPosition();
+    }
+
+    public void SelectFirstAvailableUpgradePanel()
+    {
+        if (_upgradePanels.Count == 0) return;
+        UpgradePanel firstAvailableUpgradePanel = _upgradePanels.FirstOrDefault(x => x.transform.parent.gameObject.activeInHierarchy);
+        if (firstAvailableUpgradePanel != null)
+        {
+            EventSystem.current.SetSelectedGameObject(firstAvailableUpgradePanel.transform.parent.gameObject);
+        }
+        else
+        {
+            TabsManager tabsManager = ServiceLocator.Get<TabsManager>();
+            if (tabsManager != null)
+            {
+                tabsManager.SelectFirstTabs();
+            }
+        }
     }
     
     public void SetUpTableUpgradePanels(Table table)
