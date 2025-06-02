@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AL.-dialogue_intro_proto
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: dfa5b35a-e85e-439e-8eaa-4ef66265e7ff
+  - BaseNodeGuid: 3650ef57-4167-44a2-b56c-d31153220276
     PortName: StartPointNode
     TargetNodeGuid: d03dfe1c-0843-484c-be44-cf45304ad321
     IsNullNode: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+    CharacterMoodSprite: {fileID: -1581459269, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: adb0b62c-1f6c-4a22-b774-533d2d09a3c3
     DialogueText: Hey mais attends, on se connait non ?
     Position: {x: 1418, y: 191}
@@ -80,7 +80,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+    CharacterMoodSprite: {fileID: 0}
   - NodeGUID: 207e77ce-91df-4ea5-82cb-9008e366650f
     DialogueText: "Ah, j'ai d\xFB confondre alors..."
     Position: {x: 1922, y: 97}
@@ -91,7 +91,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+    CharacterMoodSprite: {fileID: 562066760, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 9ddc020b-24d5-4be6-9ba9-c58cce6103cf
     DialogueText: "Putain ouais, depuis le lyc\xE9e haha"
     Position: {x: 1926, y: 297}
@@ -102,18 +102,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
-  - NodeGUID: c5462026-8fcf-4013-82b9-fbbb0edd343b
-    DialogueText: Je vais te prendre une limonade s'il te plait.
-    Position: {x: 2541, y: 76}
-    StatModifier: 0
-    Ports:
-    - PortName: "Je te pr\xE9pare \xE7a"
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+    CharacterMoodSprite: {fileID: 326382544, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: a0b16146-f4bc-4020-b804-f50f42efc3cf
     DialogueText: "Tu te rappelles des cours de chimie de madame Lou ? t'avais foutu
       le feu \xE0 ta blouse !"
@@ -129,7 +118,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+    CharacterMoodSprite: {fileID: 0}
   - NodeGUID: c28e8ecd-c56e-4104-8c5a-9851917104b4
     DialogueText: "Tu m'\xE9tonnes, en tout cas c'est cool de te revoir dans le coin
       !"
@@ -141,7 +130,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+    CharacterMoodSprite: {fileID: 0}
   - NodeGUID: c71531ad-10db-433c-924e-4afb130c95fe
     DialogueText: "Je vais aller m'asseoir, mais j'esp\xE8re qu'on pourra reparler
       !"
@@ -153,9 +142,9 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+    CharacterMoodSprite: {fileID: -1581459269, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: d03dfe1c-0843-484c-be44-cf45304ad321
-    DialogueText: "Salut ! c'est toi qui \xE0 repris le bar ?"
+    DialogueText: Salut ! c'est toi qui a repris le bar ?
     Position: {x: 282, y: 192}
     StatModifier: 0
     Ports:
@@ -164,6 +153,17 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+    CharacterMoodSprite: {fileID: 326382544, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: c5462026-8fcf-4013-82b9-fbbb0edd343b
+    DialogueText: Je vais te prendre une limonade s'il te plait.
+    Position: {x: 2493, y: 97}
+    StatModifier: 0
+    Ports:
+    - PortName: "Je te pr\xE9pare \xE7a"
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: -1581459269, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   ExposedProperties: []
   CommentBlockData: []
