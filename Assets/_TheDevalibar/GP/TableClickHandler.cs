@@ -1,6 +1,7 @@
 using MyUtilities;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class TableClickHandler : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TableClickHandler : MonoBehaviour
     [SerializeField] private CameraZoomToTarget _cameraZoom; // référence au script qui gère le reset
     [SerializeField] private UpgradePanelManager _upgradePanelManager;
     private TabsManager _tabsManager;
+    private InputValuesManager _inputValuesManager;
 
     private void Start()
     {
@@ -17,16 +19,19 @@ public class TableClickHandler : MonoBehaviour
         {
             Debug.LogError("There is no TabsManager in the scene");
         }
+        _inputValuesManager = ServiceLocator.Get<InputValuesManager>();
     }
-    private void Update()
+
+
+    public void OnLeftClick(InputAction.CallbackContext context)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (context.performed)
         {
             // Ignore les clics sur l'UI
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
                 return;
 
-            Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = _mainCamera.ScreenPointToRay(_inputValuesManager.MousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, 100f, _clickableLayer))
             {
                 // Vérifie si l'objet cliqué a un composant Table
@@ -38,6 +43,12 @@ public class TableClickHandler : MonoBehaviour
             }
         }
     }
+    private void Update()
+    {
+        
+    }
+    
+    
 
     private void OnMouseDown()
     {

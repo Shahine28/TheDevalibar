@@ -7,6 +7,7 @@ using MyUtilities;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -568,6 +569,7 @@ public class CharacterBehavior : MonoBehaviour
                 characterSpawnManager.CanSpawnCharacter = false;
             }
             _dialogueButton?.gameObject.SetActive(true);
+            if (_dialogueButton != null) EventSystem.current.SetSelectedGameObject(_dialogueButton.gameObject);
         }
         else if (_lastNodeIndex == _exitNodeId)
         {
@@ -583,6 +585,7 @@ public class CharacterBehavior : MonoBehaviour
             }
 
             CharacterSpawnManager spawnManager = ServiceLocator.Get<CharacterSpawnManager>();
+            
             if (spawnManager && spawnManager.HaveAllCharactersAndNCPBeenSpawned && spawnManager.CharacterSpawnPoint.childCount.Equals(1))
             {
                 _tablesManager?.ShowUpgradeButtonTables();
