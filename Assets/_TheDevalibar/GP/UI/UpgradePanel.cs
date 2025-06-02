@@ -2,6 +2,7 @@ using System.Collections;
 using MyUtilities;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UpgradePanel : MonoBehaviour
@@ -17,11 +18,16 @@ public class UpgradePanel : MonoBehaviour
     [Header("Panel Movements")]
     [SerializeField] private RectTransform _upgradePanelRectTransform;
     [SerializeField] private bool _isUpgradeFullyDisplayed;
+    public bool IsUpgradeFullyDisplayed => _isUpgradeFullyDisplayed;
     private Vector2 _panelStartPosition;
     [SerializeField] private float _panelEndPositionX;
     private Vector2 _panelEndPosition => new Vector2(_panelEndPositionX, _panelStartPosition.y);
     [SerializeField] private float _transitionSpeed = 2;
     [SerializeField] private AnimationCurve _transitionCurve;
+    private Coroutine _transitionCoroutine;
+    
+    
+    
     public bool IsPanelTransitioning { get; private set; }
     private UpgradePanelManager _upgradePanelManager;
     
@@ -31,15 +37,37 @@ public class UpgradePanel : MonoBehaviour
     [SerializeField, ReadOnly] private Table _currentTable;
     
     private GameManager _gameManager;
+
+    public void StopTransitionCoroutine()
+    {
+        if (_transitionCoroutine != null)
+        {
+            StopCoroutine(_transitionCoroutine);
+            _transitionCoroutine = null;
+        }
+    }
+
+    public void MovePanelToEndPosition()
+    {
+        StopTransitionCoroutine();
+        if (_upgradePanelRectTransform.anchoredPosition == _panelEndPosition) return;
+        _transitionCoroutine = StartCoroutine(MoveUpgradePanelCoroutine(_panelEndPosition));
+    }
     
-    
-    public IEnumerator MoveUpgradePanelCoroutine()
+    public void MovePanelToStartPosition()
+    {
+        StopTransitionCoroutine();
+        if (_upgradePanelRectTransform.anchoredPosition == _panelStartPosition) return;
+        _transitionCoroutine = StartCoroutine(MoveUpgradePanelCoroutine(_panelStartPosition));
+    }
+
+    private IEnumerator MoveUpgradePanelCoroutine(Vector2 targetPosition)
     {
         IsPanelTransitioning = true;
 
         // On part de la position actuelle
         Vector2 from = _upgradePanelRectTransform.anchoredPosition;
-        Vector2 target = _isUpgradeFullyDisplayed ? _panelStartPosition : _panelEndPosition;
+        Vector2 target = targetPosition;
 
         // Mesure la distance pour adapter la durée restante
         float fullDistance = Vector2.Distance(_panelStartPosition, _panelEndPosition);
@@ -47,10 +75,7 @@ public class UpgradePanel : MonoBehaviour
 
         float duration = (1f / _transitionSpeed) * (remainingDistance / fullDistance);
         float elapsed = 0f;
-
-        // Inverse l'état pour la prochaine fois
-        _isUpgradeFullyDisplayed = !_isUpgradeFullyDisplayed;
-
+        
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
@@ -60,8 +85,17 @@ public class UpgradePanel : MonoBehaviour
             _upgradePanelRectTransform.anchoredPosition = Vector2.Lerp(from, target, curvedT);
             yield return null;
         }
-
+        
+        _isUpgradeFullyDisplayed = targetPosition == _panelEndPosition;
         _upgradePanelRectTransform.anchoredPosition = target;
+        IsPanelTransitioning = false;
+    }
+    
+
+    public void ResetUpgradePanelPosition()
+    {
+        _isUpgradeFullyDisplayed = false;
+        _upgradePanelRectTransform.anchoredPosition = _panelStartPosition;
         IsPanelTransitioning = false;
     }
 
@@ -90,7 +124,7 @@ public class UpgradePanel : MonoBehaviour
     }
 
 
-    private void TryBuyUpgrade()
+    public void TryBuyUpgrade()
     {
         if ((_currentTable == null && _currentObjectType == ObjectType.Table) || _currentUpgrade == null)
         {
@@ -143,7 +177,10 @@ public class UpgradePanel : MonoBehaviour
                     break;
             }
             
-            Destroy(gameObject.transform.parent.gameObject); // On détruit le panel quand il est acheté
+            // Destroy(gameObject.transform.parent.gameObject); // On détruit le panel quand il est acheté
+            _upgradePanelManager?.ResetCurrentUpgradePanel(this);
+            ResetUpgradePanelPosition();
+            gameObject.transform.parent.gameObject.SetActive(false);
         }
         else
         {
@@ -160,12 +197,12 @@ public class UpgradePanel : MonoBehaviour
 
     private void OnEnable()
     {
-        _showUpgradeButton?.onClick.AddListener(MoveUpgradePanel);
+        _showUpgradeButton?.onClick.AddListener(() => EventSystem.current.SetSelectedGameObject(transform.parent.gameObject));
     }
 
     private void OnDisable()
     {
-        _showUpgradeButton?.onClick.RemoveListener(MoveUpgradePanel);
+        _showUpgradeButton?.onClick.RemoveListener(() => EventSystem.current.SetSelectedGameObject(transform.parent.gameObject));
     }
 
     void Start()
@@ -175,15 +212,7 @@ public class UpgradePanel : MonoBehaviour
         _gameManager = ServiceLocator.Get<GameManager>();
         _buyUpgradeButton?.onClick.AddListener(TryBuyUpgrade);
     }
-
-    void OnDestroy()
-    {
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
 
 public enum ObjectType

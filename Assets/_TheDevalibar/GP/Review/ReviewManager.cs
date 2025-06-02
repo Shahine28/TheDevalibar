@@ -22,11 +22,13 @@ public class ReviewManager : MonoBehaviour
     [SerializeField] private GameObject _reviewPanel;
     [SerializeField] private Transform _reviewPanelContainer;
     private List<CharacterReview> _characterReviews = new List<CharacterReview>();
+    [SerializeField, ReadOnly] private List<ReviewPanel> _reviewPanels = new List<ReviewPanel>();
 
     
     [Header("Close/Open Panel")]
     [SerializeField] private Button _reviewCloseButton;
-    [SerializeField] private TextMeshProUGUI _reviewCloseButtonText;
+
+    [SerializeField] private bool _showCloseButton;
     [SerializeField] private MoveUI _moveUI;
     private bool _isOpen;
     
@@ -39,14 +41,19 @@ public class ReviewManager : MonoBehaviour
     void Start()
     {
         _reviewCloseButton?.onClick.AddListener(() => CloseOpenPanel(!_isOpen));
+        
+        _reviewPanels.Clear();
+        for (int i = 0; i < _reviewPanelContainer.childCount; i++)
+        {
+            _reviewPanels.Add(_reviewPanelContainer.GetChild(i).GetComponent<ReviewPanel>());
+        }
     }
     
     public void CloseOpenPanel(bool ClosePanel)
     {
         _moveUI?.LaunchMoveUI(ClosePanel);
         _isOpen = ClosePanel;
-        _reviewCloseButtonText.text = ClosePanel ? "<" : "X";
-        if (!ClosePanel && !_reviewCloseButton.gameObject.activeInHierarchy) _reviewCloseButton.gameObject.SetActive(true);
+        // if (!ClosePanel && !_reviewCloseButton.gameObject.activeInHierarchy) _reviewCloseButton?.gameObject.SetActive(_showCloseButton);
     }
     
     public string GetRandomUsername()
@@ -112,20 +119,17 @@ public class ReviewManager : MonoBehaviour
 
     public void SetReviews()
     {
-        for (int i = _reviewPanelContainer.childCount - 1; i >= 0; i--)
-        {
-            Destroy(_reviewPanelContainer.GetChild(i).gameObject);
-        }
-       
+        ClearReviewsPanel();
         if (_characterReviews == null || _characterReviews.Count == 0)
         {
             Debug.LogWarning("Character reviews is null or empty!");
             return;
         }
         List<ReviewSO> AlreadyUsedReviewSOList = new List<ReviewSO>();
-        foreach (CharacterReview characterReview in _characterReviews)
+        for (int i = 0; i < _characterReviews.Count; i++)
         {
-            ReviewPanel reviewPanel = Instantiate(_reviewPanel, _reviewPanelContainer).GetComponent<ReviewPanel>();
+            CharacterReview characterReview = _characterReviews[i];
+            ReviewPanel reviewPanel = _reviewPanels[i];
             if (_reviewPanel != null)
             {
                 ReviewSO reviewSO = null;
@@ -197,6 +201,7 @@ public class ReviewManager : MonoBehaviour
                 }
                 reviewPanel.Initialize(this);
                 reviewPanel.SetReview(reviewSO, characterReview.Character);
+                reviewPanel.gameObject.SetActive(true);
             }
         }
     }
@@ -204,10 +209,18 @@ public class ReviewManager : MonoBehaviour
     public void ClearReviews()
     {
         _characterReviews.Clear();
-        for (int i = _reviewPanelContainer.childCount - 1; i >= 0; i--)
-        {
-            Destroy(_reviewPanelContainer.GetChild(i).gameObject);
-        }
+        ClearReviewsPanel();
+    }
+
+    public void ClearReviewsPanel()
+    {
+        // for (int i = _reviewPanelContainer.childCount - 1; i >= 0; i--)
+        // {
+        //     Destroy(_reviewPanelContainer.GetChild(i).gameObject);
+        // }
+        
+        _reviewPanels.ForEach(reviewPanel => reviewPanel?.gameObject.SetActive(false));
+        
     }
 
 }
