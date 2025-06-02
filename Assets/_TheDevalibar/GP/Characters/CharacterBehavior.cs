@@ -75,6 +75,12 @@ public class CharacterBehavior : MonoBehaviour
     
     [Header("Animations")]
     [SerializeField] private AnimationManager _animationManager;
+
+    [SerializeField] private GameObject _wheelChair;
+    [SerializeField] private string  _wheelChairDisabiltyName = "Mobilité réduite sévère";
+    
+    [SerializeField] private GameObject _blindCane;
+    [SerializeField] private string  _blindCaneDisabiltyName = "Déficience visuelle sévère";
     
 
     ///  Camera
@@ -111,10 +117,18 @@ public class CharacterBehavior : MonoBehaviour
         {
             _spriteRenderer?.gameObject.SetActive(false);
             _animationManager?.gameObject.SetActive(true);
+            
             _animationManager?.SetAnimation(_character.CharacterMesh,
                 _character.CharacterMaterial,
                 _character.HasSpecificRuntimeAnimationController ? _character.CharacterRuntimeAnimatorController : null);
         }
+    }
+
+    public void SetNPC(Mesh npcMesh, Material npcMaterial, RuntimeAnimatorController runtimeAnimatorController)
+    {
+        _animationManager?.SetAnimation(npcMesh,
+            npcMaterial,
+            _characterDisability == _wheelChairDisabiltyName ? runtimeAnimatorController : null);
     }
 
     void Start()
@@ -220,6 +234,15 @@ public class CharacterBehavior : MonoBehaviour
             {
                 _characterDisability = string.Empty;
             }
+        }
+
+        if (_characterDisability != _wheelChairDisabiltyName)
+        {
+            _wheelChair?.gameObject.SetActive(false);
+        }
+        else if (_wheelChairDisabiltyName != _blindCaneDisabiltyName)
+        {
+            _blindCane?.gameObject.SetActive(false);
         }
     }
 
