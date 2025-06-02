@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f1edc776b448f9bc3401150e361524, type: 3}
+  m_Name: Table
+  m_EditorClassIdentifier: 
+  UpgradeSprite: {fileID: 21300000, guid: 1a1ddf1e3bd7bfa4ea1cc089888f0ed1, type: 3}
+  UpgradeName: "Table Creus\xE9"
+  UpgradeDescription: "Une table customis\xE9e favorisant l'acc\xE8s aux personnes
+    PMR gr\xE2ce \xE0 sa technique de conception."
+  UpgradeCost: 0
+  AccessibiltiesToAddWithUpgrade:
+    keys:
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "D\xE9ficience auditive s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 010000000000
+  OnUpgrade:
+    m_PersistentCalls:
+      m_Calls: []
+  NewUpgradeTableMesh: {fileID: 6623375816794612673, guid: dcf713db8fac09641ad8d82f1a3f1d8e, type: 3}
+  NewUpgradeTableMaterial: {fileID: 2100000, guid: ed74ac5ce8fbb904a9295d3e0333c57f, type: 2}
+  NewUpgradeChair1Mesh: {fileID: 0}
+  NewUpgradeChair1Material: {fileID: 0}
+  NewUpgradeChair2Mesh: {fileID: 0}
+  NewUpgradeChair2Material: {fileID: 0}
+  AccessibilityUpgrade: 0

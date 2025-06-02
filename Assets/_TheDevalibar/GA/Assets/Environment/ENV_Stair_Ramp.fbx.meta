@@ -3,7 +3,12 @@ guid: d334f72c4ce006840ac3351f5b2c9243
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ramp
+    second: {fileID: 2100000, guid: c0553d09547c875429a8f60134ce99aa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: 29dbe9f2fafa7154192de9bb8cafb538
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TX_DrinkCan
+    second: {fileID: 2100000, guid: 22811af466c0940458194130a02767b1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
