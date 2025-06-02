@@ -51,7 +51,7 @@ public class InputValuesManager : MonoBehaviour
         ServiceLocator.Register(this);
     }
 
-    public void OnControlSchemeChanged(PlayerInput input)
+    public void OnControlSchemeChanged(UnityEngine.InputSystem.PlayerInput input)
     {
         string scheme = input.currentControlScheme;
         Debug.Log($"Contrôle changé. Nouveau schéma : {scheme}");
