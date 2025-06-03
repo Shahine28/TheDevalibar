@@ -30,14 +30,7 @@ public class CharacterSpawnManager : MonoBehaviour
     [SerializeField] private GameManager _gameManager;
     
     
-    [Header("NPC Mesh & Materials")] 
-    [SerializeField] private Mesh _maleNPCMesh;
-    [SerializeField] List<Material> _maleNPCMaterials;
-    
-    [SerializeField] private Mesh _femaleNPCMesh;
-    [SerializeField] List<Material> _femaleNPCMaterials;
-    
-    [SerializeField] private RuntimeAnimatorController _npcInWheelChairAnimatorController;
+
     void Awake()
     {
         ServiceLocator.Register(this);
@@ -58,16 +51,10 @@ public class CharacterSpawnManager : MonoBehaviour
         }
     }
 
-    public NPCMeshMaterialController GetRandomNPCAssets()
+    // Update is called once per frame
+    void Update()
     {
-        bool useMale = Random.value > 0.5f;
-
-        Mesh selectedMesh = useMale ? _maleNPCMesh : _femaleNPCMesh;
-        List<Material> selectedMaterials = useMale ? _maleNPCMaterials : _femaleNPCMaterials;
-
-        Material selectedMaterial = selectedMaterials[Random.Range(0, selectedMaterials.Count)];
-
-        return new NPCMeshMaterialController(selectedMesh, selectedMaterial, _npcInWheelChairAnimatorController);
+        
     }
 
     public void StartSpawning()
@@ -189,19 +176,4 @@ public struct DayShift
 {
     public List<Character> DailyCustomers;
     public int NPCToSpawnThisDay;
-}
-
-
-public struct NPCMeshMaterialController
-{
-    public NPCMeshMaterialController(Mesh mesh, Material material, RuntimeAnimatorController animatorController)
-    {
-        Mesh = mesh;
-        Material = material;
-        AnimatorController = animatorController;
-    }
-    
-    public Mesh Mesh;
-    public Material Material;
-    public RuntimeAnimatorController AnimatorController;
 }

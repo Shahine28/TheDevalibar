@@ -27,8 +27,7 @@ public class ReviewManager : MonoBehaviour
     
     [Header("Close/Open Panel")]
     [SerializeField] private Button _reviewCloseButton;
-
-    [SerializeField] private bool _showCloseButton;
+    [SerializeField] private TextMeshProUGUI _reviewCloseButtonText;
     [SerializeField] private MoveUI _moveUI;
     private bool _isOpen;
     
@@ -53,7 +52,8 @@ public class ReviewManager : MonoBehaviour
     {
         _moveUI?.LaunchMoveUI(ClosePanel);
         _isOpen = ClosePanel;
-        // if (!ClosePanel && !_reviewCloseButton.gameObject.activeInHierarchy) _reviewCloseButton?.gameObject.SetActive(_showCloseButton);
+        _reviewCloseButtonText.text = ClosePanel ? "<" : "X";
+        if (!ClosePanel && !_reviewCloseButton.gameObject.activeInHierarchy) _reviewCloseButton.gameObject.SetActive(true);
     }
     
     public string GetRandomUsername()

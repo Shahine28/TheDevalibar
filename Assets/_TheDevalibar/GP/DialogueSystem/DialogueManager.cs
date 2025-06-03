@@ -8,7 +8,6 @@ using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using UnityEngine.Serialization;
 using MyUtilities;
-using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -244,8 +243,6 @@ public class DialogueManager : MonoBehaviour
             _dialogueText.text = dialogueNodeData.DialogueText;
             _buttonsContainer?.gameObject.SetActive(true);
             _continueButtonContainer?.gameObject.SetActive(true);
-            if (_continueButton.gameObject.activeInHierarchy) EventSystem.current.SetSelectedGameObject(_continueButton.gameObject);
-            else EventSystem.current.SetSelectedGameObject(_buttons.First(x => x.gameObject.activeInHierarchy).gameObject);
             SwitchCharacterFocus(_barmaidSprite, _character1Sprite);
         }
         
@@ -267,7 +264,6 @@ public class DialogueManager : MonoBehaviour
     
     private IEnumerator TypeText(string text)
     {
-        EventSystem.current.SetSelectedGameObject(_skipTextMachineEffectButton.gameObject);
         _isTyping = true;
         _fullText = text;
         _dialogueText.text = ""; // Vide le texte avant d'écrire
@@ -281,8 +277,6 @@ public class DialogueManager : MonoBehaviour
         _isTyping = false;
         _buttonsContainer?.gameObject.SetActive(true);
         _continueButtonContainer?.gameObject.SetActive(true);
-        if (_continueButton.gameObject.activeInHierarchy) EventSystem.current.SetSelectedGameObject(_continueButton.gameObject);
-        else EventSystem.current.SetSelectedGameObject(_buttons.First(x => x.gameObject.activeInHierarchy).gameObject);
         if (_buttons.Any(x=>x.gameObject.activeInHierarchy)) SwitchCharacterFocus(_barmaidSprite, _character1Sprite);
     }
 
@@ -295,8 +289,6 @@ public class DialogueManager : MonoBehaviour
             _isTyping = false;
             _buttonsContainer?.gameObject.SetActive(true);
             _continueButtonContainer?.gameObject.SetActive(true);
-            if (_continueButton.gameObject.activeInHierarchy) EventSystem.current.SetSelectedGameObject(_continueButton.gameObject);
-            else EventSystem.current.SetSelectedGameObject(_buttons.First(x => x.gameObject.activeInHierarchy).gameObject);
             if (_buttons.Any(x=>x.gameObject.activeInHierarchy)) SwitchCharacterFocus(_barmaidSprite, _character1Sprite);
         }
     }
