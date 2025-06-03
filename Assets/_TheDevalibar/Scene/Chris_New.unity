@@ -305,6 +305,7 @@ MonoBehaviour:
   _scrollRect: {fileID: 24473201}
   _scrollHorizontally: 1
   _scrollSpeed: 3.5
+  _scrollListContainer: {fileID: 0}
 --- !u!114 &24473201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6168,6 +6169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _upgradePanels: []
+  CurrentUpgradePanel: {fileID: 0}
   _upgradePanelPrefab: {fileID: 4496576375328522091, guid: 523bb6e6fd32db24388ec3d5ac21f75b, type: 3}
   _moveUI: {fileID: 1578686289}
 --- !u!1 &702296246
@@ -8357,7 +8359,7 @@ MonoBehaviour:
   _reviewPanelContainer: {fileID: 1307529014}
   _reviewPanels: []
   _reviewCloseButton: {fileID: 1164666838}
-  _reviewCloseButtonText: {fileID: 631040668}
+  _showCloseButton: 0
   _moveUI: {fileID: 1260699316}
 --- !u!1 &1068387852
 GameObject:
@@ -9900,6 +9902,7 @@ MonoBehaviour:
   _scrollRect: {fileID: 1260699312}
   _scrollHorizontally: 0
   _scrollSpeed: 3.5
+  _scrollListContainer: {fileID: 0}
 --- !u!114 &1260699316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13880,6 +13883,7 @@ MonoBehaviour:
   _scrollRect: {fileID: 1578686285}
   _scrollHorizontally: 0
   _scrollSpeed: 5
+  _scrollListContainer: {fileID: 0}
 --- !u!114 &1578686289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15785,6 +15789,11 @@ MonoBehaviour:
   _characterSpawnPoint: {fileID: 1737055025}
   _characterSpawnDelayInSeconds: 6
   _gameManager: {fileID: 0}
+  _maleNPCMesh: {fileID: 0}
+  _maleNPCMaterials: []
+  _femaleNPCMesh: {fileID: 0}
+  _femaleNPCMaterials: []
+  _npcInWheelChairAnimatorController: {fileID: 0}
 --- !u!4 &2014900796
 Transform:
   m_ObjectHideFlags: 0
