@@ -260,7 +260,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 851c529d-2c12-4336-9c05-7d45f04eeb77
     DialogueText: "C'te petite ville a toujours \xE9t\xE9 tr\xE8s engag\xE9e et un
       petit lieu de rassemblement o\xF9 tous peuvent se sentir \xE0 l'aise..."
@@ -272,7 +272,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 49a8caa5-b463-4bff-a2d6-be497c1ab6fb
     DialogueText: "\xE7a serait l'id\xE9al !"
     Position: {x: 7649, y: 454}
@@ -283,22 +283,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
-  - NodeGUID: b0dd9af9-c39c-4cfd-8b18-52a36678f0d3
-    DialogueText: "Mais pas facile, \xE7a je peux te l'assurer."
-    Position: {x: 8027.5, y: 454.5}
-    StatModifier: 0
-    Ports:
-    - PortName: "Tiens... \xE7a me rassure pas \xE7a..."
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    - PortName: Merci pour l'encouragement, je t'offre le verre pour l'occasion.
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 089220fc-da33-49a6-a367-d1b830692cec
     DialogueText: "Excuses moi ma ch\xE9rie, tu peux r\xE9p\xE9ter ?"
     Position: {x: 8823.5, y: 617.5}
@@ -309,7 +294,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: -1892083817, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 80daf32e-94d8-4e0c-8d92-8a6f4b775811
     DialogueText: "D\xE9sol\xE9e, c'\xE9tait pas mon but. Par contre, je vais devoir
       y aller, le maire m'attend. Il me reste pr\xE9cis\xE9ment 5 minutes pour profiter
@@ -322,20 +307,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
-  - NodeGUID: 426e3114-dcf9-455e-800f-0c158741fe45
-    DialogueText: "Tu es bien la fille de ta m\xE8re, \xE7a se voit. En plus \xE7a
-      tombe bien, j'en ai besoin de ce verre car juste apr\xE8s, direction le bureau
-      du maire !"
-    Position: {x: 9524.5, y: 621}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: -1892083817, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 36d53418-e624-4f65-a704-3fa3843dbadb
     DialogueText: De rien, ma petite. Cela me fait tout aussi plaisir de voir ce
       bar reprendre forme.
@@ -347,7 +319,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 05b77607-bba0-4552-bcbd-3b052809ce7a
     DialogueText: "Maintenant, moins de bla bla et plus de glou glou. Sers moi un
       verre, j'ai besoin de me d\xE9contracter avant d'aller rencontrer le maire."
@@ -359,7 +331,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 6a535c4c-353a-4717-9f32-2cd037c29709
     DialogueText: "Je lis d\xE9j\xE0 la surprise sur ton visage. Pour la faire rapide,
       le maire est co-directeur d'une association souhaitant entamer une collaboration
@@ -372,7 +344,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 3f7c7237-a0d4-4ffd-982d-7e1bcaaa8c5e
     DialogueText: "Pour faire des cours \xE0 des enfants..."
     Position: {x: 9755, y: 230}
@@ -383,7 +355,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: ac797d11-35e6-4b2b-bd8b-b144dea336be
     DialogueText: "Tout devrait bien se passer cependant, enfin j'esp\xE8re. Je t'embrasse
       ma belle, bon courage avec ce bar !"
@@ -395,6 +367,34 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: b0dd9af9-c39c-4cfd-8b18-52a36678f0d3
+    DialogueText: "Mais pas facile, \xE7a je peux te l'assurer."
+    Position: {x: 8076, y: 453.5}
+    StatModifier: 0
+    Ports:
+    - PortName: "Tiens... \xE7a me rassure pas \xE7a..."
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: Merci pour l'encouragement, je t'offre le verre pour l'occasion.
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: -1892083817, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
+  - NodeGUID: 426e3114-dcf9-455e-800f-0c158741fe45
+    DialogueText: "Tu es bien la fille de ta m\xE8re, \xE7a se voit. En plus \xE7a
+      tombe bien, j'en ai besoin de ce verre car juste apr\xE8s, direction le bureau
+      du maire !"
+    Position: {x: 9574, y: 621}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   ExposedProperties: []
   CommentBlockData: []
