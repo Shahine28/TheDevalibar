@@ -99,10 +99,29 @@ public class CharacterBehavior : MonoBehaviour
 #region OnEnable/OnDisable
     public void OnEnable()
     {
+        InitVar();
         if (_dijkstraPathFollower)
         {
             _dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
         }
+        
+        if (_elevatorManager)
+        {
+            _elevatorManager.OnElevatorMovementEnd += OnElevatorMovementEnd;
+        }
+        
+        if (_dialogueManager)
+        {
+            _dialogueManager._onDialogueStart += PauseWaiting;
+            _dialogueManager._onDialogueEnd += ResumeWaiting;
+        }
+        
+        if (_animationManager)
+        {
+            _animationManager.OnCharacterStandUp += OnCharacterStandUp;
+            _animationManager.OnCharacterSitDown += OnCharacterSitDown;
+        }
+        _dialogueButton?.onClick.AddListener(StartCharacterDialogue);
     }
 
     public void OnDisable()
@@ -111,6 +130,25 @@ public class CharacterBehavior : MonoBehaviour
         {
             _dijkstraPathFollower.OnFollowPathEnd -= HandlePathEnd;
         }
+
+        if (_elevatorManager)
+        {
+            _elevatorManager.OnElevatorMovementEnd -= OnElevatorMovementEnd;
+        }
+        
+        if (_dialogueManager)
+        {
+            _dialogueManager._onDialogueStart -= PauseWaiting;
+            _dialogueManager._onDialogueEnd -= ResumeWaiting;
+        }
+
+        if (_animationManager)
+        {
+            _animationManager.OnCharacterStandUp -= OnCharacterStandUp;
+            _animationManager.OnCharacterSitDown -= OnCharacterSitDown;
+        }
+        _dialogueButton?.onClick.RemoveListener(StartCharacterDialogue);
+        
     }
 #endregion
 #region UnityDefault
@@ -133,140 +171,43 @@ public class CharacterBehavior : MonoBehaviour
                 _character.HasSpecificRuntimeAnimationController ? _character.CharacterRuntimeAnimatorController : null);
         }
     }
-
-    public void SetNPC()
-    {  
-        NPCMeshMaterialController npcMeshMaterialController = _characterSpawnManager.GetRandomNPCAssets();
-        SetNPC(npcMeshMaterialController.Mesh, npcMeshMaterialController.Material, npcMeshMaterialController.AnimatorController);
-    }
-    public void SetNPC(Mesh npcMesh, Material npcMaterial, RuntimeAnimatorController runtimeAnimatorController)
-    {
-        _animationManager?.SetAnimation(npcMesh,
-            npcMaterial,
-            _characterDisability == _wheelChairDisabiltyName ? runtimeAnimatorController : null);
-    }
-
-#region CharacerFollower
-    public void SetCharacterFollower()
-    {
-        if ((_character != null && _character.CharacterFollower != null) || HasAFollower)
-        {
-            _characterFollowerBehavior = Instantiate(_characterFollowerPrefab, _characterFollowerPointToFollow.position, Quaternion.identity).GetComponent<CharacterFollowerBehavior>();
-            if (_characterFollowerBehavior == null)
-            {
-                Debug.LogError("CharacterFollower is NULL");
-                return;
-            }
-
-            HasAFollower = true;
-            _characterFollowerBehavior.Initialize(this);
-        }
-    }
-
-    private void StartCharacterFollower()
-    {
-        if (_characterFollowerBehavior != null)
-        {
-            _characterFollowerBehavior.StartFollowing();
-        }
-        else if (HasAFollower)
-        {
-            Debug.LogError("CharacterFollower is NULL");
-        }
-    }
     
-    private void StopCharacterFollower()
+    void InitVar()
     {
-        if (_characterFollowerBehavior != null)
-        {
-            _characterFollowerBehavior.StopFollowing();
-        }
-        else if (HasAFollower)
-        {
-            Debug.LogError("CharacterFollower is NULL");
-        }
+        ServiceLocator.RequireService(this, ref _gameManager, "Game Manager not found");
+        ServiceLocator.RequireService(this, ref _dijkstraManager, "Dijkstra Manager not found");
+        ServiceLocator.RequireService(this, ref _nodeManager, "No node manager");
+        ServiceLocator.RequireService(this, ref _dialogueManager, "Dialogue Manager not found");
+        ServiceLocator.RequireService(this, ref _elevatorManager, "No Elevator manager in scene");
+        ServiceLocator.RequireService(this, ref _characterSpawnManager, "No character spawn manager in scene");
+        ServiceLocator.RequireService(this, ref _tablesManager, "No tables manager in scene");
+        ServiceLocator.RequireService(this, ref _bubbleSpeechManager, "No Bubble speech manager in scene");
+        ServiceLocator.RequireService(this, ref _showHideUI, "No show hide UI found");
+        ServiceLocator.RequireService(this, ref _cameraMovementAndZoomControl, "No CameraMovementAndZoomControl found");
+        
+        
+        ServiceLocator.RequireComponent(this, ref _dijkstraPathFollower, "Missing DijkstraPathFollower");
+        ServiceLocator.RequireComponent(this, ref _animationManager, "Missing AnimationManager");
     }
-
-    private void ForceCharacterFollowerToStandUp()
-    {
-        if (_characterFollowerBehavior != null)
-        {
-            _characterFollowerBehavior.ForceCharacterToStandUp();
-        }
-        else if (HasAFollower)
-        {
-            Debug.LogError("CharacterFollower is NULL");
-        }
-    }
-
-    private void ForceCharacterFollowerToGoToTable(Table table)
-    {
-        if (_characterFollowerBehavior != null)
-        {
-            _characterFollowerBehavior.MoveToSameTableAsCharacter(table);
-        }
-        else if (HasAFollower)
-        {
-            Debug.LogError("CharacterFollower is NULL");
-        }
-    }
-#endregion
     void Start()
     {   
-        _gameManager = ServiceLocator.Get<GameManager>();
-        if (_gameManager == null)
-        {
-            Debug.LogError("Game manager is null.");
-        }
-        if (!_dijkstraManager)
-        {
-            _dijkstraManager = ServiceLocator.Get<DijkstraManager>();
-        }
-        if (!_nodeManager)
-        {
-            _nodeManager = ServiceLocator.Get<NodeManager>();
-        }
-
-        if (!_dijkstraPathFollower)
-        {
-            _dijkstraPathFollower = GetComponent<DijkstraPathFollower>();
-        }
-
-        if (!_dialogueManager)
-        {
-            _dialogueManager = ServiceLocator.Get<DialogueManager>();
-        }
-        
-        _dialogueManager._onDialogueStart += PauseWaiting;
-        _dialogueManager._onDialogueEnd += ResumeWaiting;
-
-        _elevatorManager = ServiceLocator.Get<ElevatorManager>();
-        if (_elevatorManager == null)
-        {
-            Debug.LogError("No Elevator manager in scene");
-        }
-        else
-        {
-            _elevatorManager.OnElevatorMovementEnd += OnElevatorMovementEnd;
-        }
-
-        _characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
-        _tablesManager = ServiceLocator.Get<TablesManager>();
+        InitVar();
         
         _startNodeIndex = GetClosestNode();
         _lastNodeIndex = _startNodeIndex;
+        
         FeedBackImage.gameObject.SetActive(false);
+        
         UpdateFeedBackImage();
+        
         SetCharacterDisabilities();
+        
         if (_character == null) SetNPC();
         
         SetCharacterFollower();
+        
         _characterConstraint = GetCharacterConstraint();
-        _bubbleSpeechManager = ServiceLocator.Get<BubbleSpeechManager>();
-        if (_bubbleSpeechManager == null)
-        {
-            Debug.LogError("No Bubble speech manager in scene");
-        }
+        
         if (_character)
         {
             MoveToNode(_barNodeId);
@@ -277,26 +218,87 @@ public class CharacterBehavior : MonoBehaviour
             _spriteRenderer?.gameObject.SetActive(false);
             MoveToBestTable();
         }
-
-        
-        _dialogueButton?.onClick.AddListener(StartCharacterDialogue);
-        
-        _showHideUI = ServiceLocator.Get<ShowHideUI>();
-        if (_showHideUI == null)
-        {
-            Debug.LogError("No show hide UI found");
-        }
-
-        if (_animationManager == null)
-        {
-            _animationManager = GetComponent<AnimationManager>();
-        }
-
-        _animationManager.OnCharacterStandUp += OnCharacterStandUp;
-        _animationManager.OnCharacterSitDown += OnCharacterSitDown;
-        
-        _cameraMovementAndZoomControl = ServiceLocator.Get<CameraMovementAndZoomControl>();
     }
+#endregion
+#region NPC
+
+    private void SetNPC()
+    {  
+        NPCMeshMaterialController npcMeshMaterialController = _characterSpawnManager.GetRandomNPCAssets();
+        SetNPC(npcMeshMaterialController.Mesh, npcMeshMaterialController.Material, npcMeshMaterialController.AnimatorController);
+    }
+
+    private void SetNPC(Mesh npcMesh, Material npcMaterial, RuntimeAnimatorController runtimeAnimatorController)
+    {
+        _animationManager?.SetAnimation(npcMesh,
+            npcMaterial,
+            _characterDisability == _wheelChairDisabiltyName ? runtimeAnimatorController : null);
+    }
+#endregion
+#region CharacerFollower
+public void SetCharacterFollower()
+{
+    if ((_character != null && _character.CharacterFollower != null) || HasAFollower)
+    {
+        _characterFollowerBehavior = Instantiate(_characterFollowerPrefab, _characterFollowerPointToFollow.position, Quaternion.identity).GetComponent<CharacterFollowerBehavior>();
+        if (_characterFollowerBehavior == null)
+        {
+            Debug.LogError("CharacterFollower is NULL");
+            return;
+        }
+
+        HasAFollower = true;
+        _characterFollowerBehavior.Initialize(this);
+    }
+}
+
+private void StartCharacterFollower()
+{
+    if (_characterFollowerBehavior != null)
+    {
+        _characterFollowerBehavior.StartFollowing();
+    }
+    else if (HasAFollower)
+    {
+        Debug.LogError("CharacterFollower is NULL");
+    }
+}
+    
+private void StopCharacterFollower()
+{
+    if (_characterFollowerBehavior != null)
+    {
+        _characterFollowerBehavior.StopFollowing();
+    }
+    else if (HasAFollower)
+    {
+        Debug.LogError("CharacterFollower is NULL");
+    }
+}
+
+private void ForceCharacterFollowerToStandUp()
+{
+    if (_characterFollowerBehavior != null)
+    {
+        _characterFollowerBehavior.ForceCharacterToStandUp();
+    }
+    else if (HasAFollower)
+    {
+        Debug.LogError("CharacterFollower is NULL");
+    }
+}
+
+private void ForceCharacterFollowerToGoToTable(Table table)
+{
+    if (_characterFollowerBehavior != null)
+    {
+        _characterFollowerBehavior.MoveToSameTableAsCharacter(table);
+    }
+    else if (HasAFollower)
+    {
+        Debug.LogError("CharacterFollower is NULL");
+    }
+}
 #endregion
 #region Constraint&Disability
     public void SetCharacterDisabilities()
@@ -592,6 +594,8 @@ public class CharacterBehavior : MonoBehaviour
         {
             SetCustomerFeedback(null);
             MoveToBarExit();
+            StopCharacterFollower();
+            if (_characterFollowerBehavior) _characterFollowerBehavior.MoveToBarExit();
         }
     }
     
