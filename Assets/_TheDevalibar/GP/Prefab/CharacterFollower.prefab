@@ -440,10 +440,10 @@ GameObject:
   - component: {fileID: 5266263251199399064}
   - component: {fileID: 5591092152769769400}
   - component: {fileID: 271331358332592071}
-  - component: {fileID: 7218737290905152009}
+  - component: {fileID: 7150252159539873618}
   - component: {fileID: 7338392372444584664}
   m_Layer: 0
-  m_Name: Character
+  m_Name: CharacterFollower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -465,7 +465,6 @@ Transform:
   - {fileID: 9222570109691481197}
   - {fileID: 266310807201843277}
   - {fileID: 5562322028278993224}
-  - {fileID: 1220798685495494220}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &5591092152769769400
@@ -505,10 +504,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dijkstraManager: {fileID: 0}
   MoveSpeed: 1
-  FollowPathAtStart: 1
+  FollowPathAtStart: 0
   RotateInMovementDirection: 1
   ObjectToRotate: {fileID: 9031337275297321609}
---- !u!114 &7218737290905152009
+--- !u!114 &7150252159539873618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -517,38 +516,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2123197945782874481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36e861cf9f802994ebe7e0ebbed58bc4, type: 3}
+  m_Script: {fileID: 11500000, guid: c6b1e58a39e771e4cb72156ca17775c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _character: {fileID: 11400000, guid: a7be277518237114f947382c94114930, type: 2}
-  _characterDisability: 
-  _spriteRenderer: {fileID: 3325692719259931364}
-  _disabilityChance: 20
-  HasAFollower: 0
-  _characterFollowerPrefab: {fileID: 2123197945782874481, guid: 898de7dc78c360a4bbab375f7289536c, type: 3}
-  _characterFollowerPointToFollow: {fileID: 1220798685495494220}
+  _characterFollower: {fileID: 0}
+  _characterToFollowTransform: {fileID: 0}
   _nodeManager: {fileID: 0}
   _dijkstraManager: {fileID: 0}
-  _dijkstraPathFollower: {fileID: 271331358332592071}
-  _waitingTimeRange: {x: 10, y: 20}
-  _barNodeId: 12
-  _exitNodeId: 18
+  _dijkstraPathFollower: {fileID: 0}
   _startNodeIndex: 0
   _lastNodeIndex: 0
   _nextNodeIndex: 0
-  _characterState: 0
-  _dialogueManager: {fileID: 0}
-  _dialogueButton: {fileID: 6600202386615296570}
-  _customerFeedback: 0
-  _characterFeedback: {fileID: 11400000, guid: d4b5d8f1656717b44b82fdd8296fbce4, type: 2}
-  FeedBackImage: {fileID: 4471864702310040337}
-  _bubbleSpeechPanel: {fileID: 7647040443379961921}
-  _bubbleSpeechText: {fileID: 2128190934790580227}
   _animationManager: {fileID: 7763626402955616426}
   _wheelChair: {fileID: 3188591549062118800}
   _wheelChairDisabiltyName: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
   _blindCane: {fileID: 1013144009515449363}
   _blindCaneDisabiltyName: "D\xE9ficience visuelle s\xE9v\xE8re"
+  _characterSpawnManager: {fileID: 0}
 --- !u!54 &7338392372444584664
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -699,7 +683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &266310807201843277
 Transform:
   m_ObjectHideFlags: 0
@@ -913,7 +897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8463900470908838044
 Transform:
   m_ObjectHideFlags: 0
@@ -1829,37 +1813,6 @@ Transform:
   - {fileID: 7345347202717097384}
   m_Father: {fileID: 2637244662548322984}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7911166843142380153
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1220798685495494220}
-  m_Layer: 0
-  m_Name: CharacterFollowerFollowPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1220798685495494220
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7911166843142380153}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.3, y: 0, z: -1.31}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5266263251199399064}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &8097239701759094881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,6 +2135,10 @@ PrefabInstance:
     - target: {fileID: 101833052139264094, guid: f35535cb3022f3a46b02c93b74d9f743, type: 3}
       propertyPath: m_Name
       value: maya canne
+      objectReference: {fileID: 0}
+    - target: {fileID: 101833052139264094, guid: f35535cb3022f3a46b02c93b74d9f743, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7380049147549913377, guid: f35535cb3022f3a46b02c93b74d9f743, type: 3}
       propertyPath: m_LocalScale.x

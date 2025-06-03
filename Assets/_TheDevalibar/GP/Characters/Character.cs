@@ -24,8 +24,13 @@ public class Character : ScriptableObject
     public bool HasSpecificRuntimeAnimationController;
     [ShowIf("HasSpecificRuntimeAnimationController"), SerializeField] public RuntimeAnimatorController CharacterRuntimeAnimatorController;
     
+    
+    [Header("Character Follower")] 
+    [SerializeField] private bool _hasAFollower;
+    [SerializeField, ShowIf("_hasAFollower")] private CharacterFollower _characterFollower;
+    public CharacterFollower CharacterFollower => _characterFollower;
+    
     public int Affinity;
-
     [HideInInspector] public int NextAffinityValue = 75;
     
     [Header("Dialogues")]

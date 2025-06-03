@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using MyUtilities;
 using NaughtyAttributes;
@@ -8,29 +9,32 @@ public class CharacterFollowerBehavior : MonoBehaviour
 {
     [Header("Character Follower")]
     [SerializeField] private CharacterFollower _characterFollower;
-    private bool _isCharacterAssigned => _characterFollower != null;
-    [SerializeField, Range(0, 100), HideIf("_isCharacterAssigned")]
-    private float _disabilityChance = 20;
+    private CharacterBehavior _characterBehavior;
     [SerializeField] private Transform _characterToFollowTransform;
-    
-    [Header("Character Follower Disabilty")]
-    [SerializeField, ReadOnly] private string _characterDisability = string.Empty;
-    private Constraint _characterConstraint;
+
+    private float _followThreshold => _characterBehavior != null
+        ? Vector3.Distance(
+            _characterToFollowTransform.transform.position, _characterBehavior.transform.position)
+        : 0.01f;
     
     
     [Header("Dijkstra")] [SerializeField] private NodeManager _nodeManager;
     [SerializeField] private DijkstraManager _dijkstraManager;
     [SerializeField] private DijkstraPathFollower _dijkstraPathFollower;
-    
-    
-    [Header("Movement")] 
-    [SerializeField] private int _barNodeId = 40;
-    [SerializeField] private int _exitNodeId = 1;
-    [SerializeField, ReadOnly] private  int _startNodeIndex;
-    [SerializeField, ReadOnly] private  int _lastNodeIndex;
-    [SerializeField, ReadOnly] private  int _nextNodeIndex;
+
+
+    [Header("Movement")]
+    private int _barNodeExit;
+    [SerializeField, ReadOnly] private  int _startNodeIndex = -1;
+    [SerializeField, ReadOnly] private  int _lastNodeIndex = -1;
+    [SerializeField, ReadOnly] private  int _nextNodeIndex = -1;
     private Table _usedTable;
     private Chair _usedChair;
+    private bool _canFollowCharacter = true;
+    private bool _canGoToPoint = true;
+    private Vector3 _lastTargetPosition;
+    private bool _isFollowing = false;
+    private Coroutine _followCoroutine;
     
     [Header("Animations")]
     [SerializeField] private AnimationManager _animationManager;
@@ -40,28 +44,24 @@ public class CharacterFollowerBehavior : MonoBehaviour
     
     [SerializeField] private GameObject _blindCane;
     [SerializeField] private string  _blindCaneDisabiltyName = "Déficience visuelle sévère";
+    
+    
+    [SerializeField] private CharacterSpawnManager _characterSpawnManager;
 
+    private bool _hasBeenInit;
     
-    
-    
-    public void OnEnable()
-    {
-        if (_dijkstraPathFollower)
-        {
-            _dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
-        }
-    }
-    
-    public void OnDisable()
-    {
-        if (_dijkstraPathFollower)
-        {
-            _dijkstraPathFollower.OnFollowPathEnd -= HandlePathEnd;
-        }
-    }
-
     void Start()
     {
+        Init();   
+    }
+    
+    void Init()
+    {
+        if (_hasBeenInit) return;
+        _hasBeenInit = true;
+        _startNodeIndex = -1;
+        _lastNodeIndex = -1;
+        _nextNodeIndex = -1;
         if (!_dijkstraManager)
         {
             _dijkstraManager = ServiceLocator.Get<DijkstraManager>();
@@ -76,81 +76,186 @@ public class CharacterFollowerBehavior : MonoBehaviour
         {
             _dijkstraPathFollower = GetComponent<DijkstraPathFollower>();
         }
+        _dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
         
-        SetCharacterDisabilities();
+        
+        if (_characterSpawnManager == null)
+        {
+            _characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
+        }
+
+        if (!_animationManager)
+        {
+            _animationManager = GetComponent<AnimationManager>();
+        }
+        _animationManager.OnCharacterStandUp += OnCharacterStandUp;
+        _animationManager.OnCharacterSitDown += OnCharacterSitDown;
     }
     
-    
-    public void Initialize(CharacterFollower characterFollower)
+    void Update()
     {
-        _characterFollower = characterFollower;
-        if (_characterFollower.CharacterMesh == null)
+        if (_canFollowCharacter)
         {
-            _animationManager?.gameObject.SetActive(false);
+            FollowCheck();
         }
-        else
+        else if (_isFollowing && !_canGoToPoint)
         {
-            _animationManager?.gameObject.SetActive(true);
-            
+            StopMovement();
+        }
+    }
+    
+    public void Initialize(CharacterBehavior characterBehavior)
+    {
+        Init();
+        _characterBehavior = characterBehavior;
+        if (_characterBehavior == null)
+        {
+            Debug.LogWarning("Character Behavior is null in CharacterFollowerBehavior");
+            return;
+        }
+
+        _barNodeExit = _characterBehavior.ExitNodeId;
+        _characterToFollowTransform = _characterBehavior.CharacterFollowerPointToFollow;
+        _characterFollower = _characterBehavior?.Character?.CharacterFollower;
+        
+        _animationManager?.gameObject.SetActive(true);
+        if (_characterFollower != null)
+        {
+            if (_characterFollower?.CharacterMesh == null)
+            {
+                Debug.LogWarning("Character Follower is null in CharacterFollowerBehavior");
+                return;
+            }
             _animationManager?.SetAnimation(_characterFollower.CharacterMesh,
                 _characterFollower.CharacterMaterial,
                 _characterFollower.HasSpecificRuntimeAnimationController ? _characterFollower.CharacterRuntimeAnimatorController : null);
         }
-    }
-    
-    
-    public void SetCharacterDisabilities()
-    {
-        if (_characterFollower)
-        {
-            _characterDisability = _characterFollower.constraintDict.keys
-                .Select((key, i) => new { key, isActive = _characterFollower.constraintDict.values[i] })
-                .FirstOrDefault(x => x.isActive)?.key ?? "";
-        }
         else
         {
-            float randomNumber = Random.Range(0, 100);
-            if (randomNumber <= _disabilityChance)
-            {
-                if (!_nodeManager) _nodeManager = ServiceLocator.Get<NodeManager>();
-                int randomDisabiltyIndex = Random.Range(0, _nodeManager.constraints.Count-1);
-                _characterDisability = _nodeManager.constraints[randomDisabiltyIndex].name;
-            }
-            else
-            {
-                _characterDisability = string.Empty;
-            }
+            NPCMeshMaterialController npcMeshMaterialController = _characterSpawnManager.GetRandomNPCAssets();
+            _animationManager?.SetAnimation(npcMeshMaterialController.Mesh, npcMeshMaterialController.Material);
         }
-
-        if (_characterDisability != _wheelChairDisabiltyName)
-        {
-            _wheelChair?.gameObject.SetActive(false);
-        }
-        if (_characterDisability != _blindCaneDisabiltyName)
-        {
-            _blindCane?.gameObject.SetActive(false);
-        }
+        
     }
     
-    private void OnCharacterSitDown()
+#region Follow
+    private int GetClosestNode()
     {
-        
+        NodeManager nodeManager = ServiceLocator.Get<NodeManager>();
+        if (!nodeManager) return -1;
+        float distance = 100;
+        int NearestNode = -1;
+        foreach (NodeDijkstra node in nodeManager.nodes)
+        {
+            if (Vector3.Distance(transform.position, node.position) < distance)
+            {
+                distance = Vector3.Distance(transform.position, node.position);
+                NearestNode = node.NodeID;
+            }
+        }
+        return NearestNode;
+    }
+    
+    public void StartFollowing()
+    {
+        _canFollowCharacter = true;
     }
 
-    private void OnCharacterStandUp()
+    public void StopFollowing()
     {
-        _usedChair?.MoveChairToUnoccupiedPosition();
-        
-        if (_usedChair)
+        _canFollowCharacter = false;
+    }
+    
+    private void FollowCheck()
+    {
+        if (_characterToFollowTransform == null) return;
+
+        float distanceMoved = Vector3.Distance(_characterToFollowTransform.position, _lastTargetPosition);
+        // Si la target bouge suffisamment, on relance le suivi avec délai
+        if (distanceMoved > _followThreshold)
         {
-            _usedChair = null;
+            _lastTargetPosition = _characterToFollowTransform.position;
+
+            if (_followCoroutine != null)
+                StopCoroutine(_followCoroutine);
+
+            _followCoroutine = StartCoroutine(FollowWithDelay());
         }
     }
 
-
-    private void HandlePathEnd()
+    private IEnumerator FollowWithDelay()
     {
-        throw new System.NotImplementedException();
+        StartMovement();
+
+        while (Vector3.Distance(transform.position, _characterToFollowTransform.position) > _followThreshold)
+        {
+            Vector3 targetPos = _characterToFollowTransform.position;
+            Vector3 direction = (targetPos - transform.position).normalized;
+            
+            // Déplacement
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * _dijkstraPathFollower.MoveSpeed);
+
+            // Orientation vers la direction de déplacement (sur l'axe Y uniquement)
+            if (direction != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+                _dijkstraPathFollower.ObjectToRotate.transform.rotation = Quaternion.Slerp(
+                    _dijkstraPathFollower.ObjectToRotate.transform.rotation,
+                    targetRotation, Time.deltaTime * 10f);
+            }
+            yield return null;
+        }
+
+        StopMovement();
+    }
+    
+    private IEnumerator FollowToPosition(Vector3 targetPos)
+    {
+        _canGoToPoint = true;
+        StartMovement();
+
+        while (Vector3.Distance(transform.position, targetPos) > 0.001f)
+        {
+            Vector3 direction = (targetPos - transform.position).normalized;
+            
+            // Déplacement
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * _dijkstraPathFollower.MoveSpeed);
+            
+            // Orientation vers la direction de déplacement (sur l'axe Y uniquement)
+            if (direction != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+                _dijkstraPathFollower.ObjectToRotate.transform.rotation = Quaternion.Slerp(
+                    _dijkstraPathFollower.ObjectToRotate.transform.rotation,
+                    targetRotation, Time.deltaTime * 10f);
+            }
+            yield return null;
+        }
+        
+        StopMovement();
+        _canGoToPoint = false;
+        _lastNodeIndex = GetClosestNode();
+        MoveToBarExit();
+    }
+
+#endregion
+#region Movement
+    public void StartMovement()
+    {
+        if (!_isFollowing)
+        {
+            _isFollowing = true;
+            _animationManager.StartMovement();
+        }
+    }
+
+    public void StopMovement()
+    {
+        if (_isFollowing)
+        {
+            _isFollowing = false;
+            _animationManager.StopMovement();
+        }
     }
     
     private void RotateTowardsTarget(Transform self, Transform target, float rotationSpeed = 5f)
@@ -167,11 +272,95 @@ public class CharacterFollowerBehavior : MonoBehaviour
     
     private void MoveToNode(int NodeId)
     {
+        Init();// Sécurité
+        if (_lastNodeIndex == -1)
+        {
+            _lastNodeIndex = _characterBehavior != null ? _characterBehavior.LastNodeIndex : GetClosestNode();
+        }
         _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex, NodeId);
         _nextNodeIndex = NodeId;
         _dijkstraPathFollower.FollowPath();
         _animationManager?.StartMovement();
     }
+
+    public void MoveToBarExit()
+    {
+        MoveToNode(_barNodeExit);
+    }
+
+    public void MoveToSameTableAsCharacter(Table table)
+    {
+        if (table == null) return;
+        _usedTable = table;
+        _usedChair = table.GetFirstAvailableChair();
+        if (_usedChair == null)
+        {
+            Debug.LogWarning("No available chair found in table");
+            return;
+        }
+        _usedChair.IsChairOccupied = true;
+        MoveToNode(_usedChair.ChairClosestNodeID);
+        
+    }
+    
+     private void HandlePathEnd()
+    {
+        _animationManager.StopMovement();
+        
+        if (_nextNodeIndex != -1)
+        {
+            _lastNodeIndex = _nextNodeIndex;
+            _nextNodeIndex = -1;
+        }
+        
+        if (_usedTable != null && _usedChair != null && _usedChair.ChairClosestNodeID == _lastNodeIndex)
+        {
+            _usedChair.MoveChairToOccupiedPosition();
+            _animationManager?.SitDown();
+            RotateTowardsTarget(_dijkstraPathFollower.ObjectToRotate.transform, _usedTable.transform);
+        }
+
+        if (_lastNodeIndex == _barNodeExit)
+        {
+            Destroy(gameObject);
+        }
+    }
+#endregion
+#region OnCharacterStandUp/SitDown
+    
+    public void OnCharacterSitDown()
+    {
+        
+    }
+    
+    public void ForceCharacterToStandUp()
+    {
+        _animationManager.StandUp();
+    }
+
+    public void OnCharacterStandUp()
+    {
+        _usedChair?.MoveChairToUnoccupiedPosition();
+        
+        if (_usedChair)
+        {
+            _usedChair = null;
+        }
+
+        if (_usedTable != null)
+        {
+            if (_followCoroutine != null)
+                StopCoroutine(_followCoroutine);
+
+            _followCoroutine = StartCoroutine(FollowToPosition(new Vector3(_usedTable.ExitTransform.position.x, transform.position.y,
+                _usedTable.ExitTransform.position.z)));
+        }
+        
+    }
+    
+#endregion
+    
+    
 }    
 
 
