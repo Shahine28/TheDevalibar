@@ -6,6 +6,7 @@ using _TheDevalibar.GP.Characters;
 using MyUtilities;
 using NaughtyAttributes;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -23,11 +24,13 @@ public class CharacterBehavior : MonoBehaviour
     private bool _isCharacterAssigned => _character != null;
     [SerializeField, Range(0, 100), HideIf("_isCharacterAssigned")]
     private float _disabilityChance = 20;
-        
+
     [Header("Character Follower")] 
-    [SerializeField] private bool _hasAFollower;
-    [SerializeField] private CharacterFollowerBehavior _characterFollowerBehavior;
+    public bool HasAFollower;
+    [SerializeField] private GameObject _characterFollowerPrefab;
     [SerializeField] private Transform _characterFollowerPointToFollow;
+    private CharacterFollowerBehavior _characterFollowerBehavior;
+    public Transform CharacterFollowerPointToFollow => _characterFollowerPointToFollow;
     
     
     [Header("Dijkstra")]
@@ -44,9 +47,12 @@ public class CharacterBehavior : MonoBehaviour
     [Header("Movement")] 
     private FloorLevel _floorLevel; 
     [SerializeField] private int _barNodeId = 40;
+    public int BarNodeId => _barNodeId;
     [SerializeField] private int _exitNodeId = 1;
+    public int ExitNodeId => _exitNodeId;
     [SerializeField, ReadOnly] private  int _startNodeIndex;
     [SerializeField, ReadOnly] private  int _lastNodeIndex;
+    public int LastNodeIndex => _lastNodeIndex;
     [SerializeField, ReadOnly] private  int _nextNodeIndex;
     private TablesManager _tablesManager;
     private Table _usedTable;
@@ -140,6 +146,71 @@ public class CharacterBehavior : MonoBehaviour
             _characterDisability == _wheelChairDisabiltyName ? runtimeAnimatorController : null);
     }
 
+#region CharacerFollower
+    public void SetCharacterFollower()
+    {
+        if ((_character != null && _character.CharacterFollower != null) || HasAFollower)
+        {
+            _characterFollowerBehavior = Instantiate(_characterFollowerPrefab, _characterFollowerPointToFollow.position, Quaternion.identity).GetComponent<CharacterFollowerBehavior>();
+            if (_characterFollowerBehavior == null)
+            {
+                Debug.LogError("CharacterFollower is NULL");
+                return;
+            }
+
+            HasAFollower = true;
+            _characterFollowerBehavior.Initialize(this);
+        }
+    }
+
+    private void StartCharacterFollower()
+    {
+        if (_characterFollowerBehavior != null)
+        {
+            _characterFollowerBehavior.StartFollowing();
+        }
+        else if (HasAFollower)
+        {
+            Debug.LogError("CharacterFollower is NULL");
+        }
+    }
+    
+    private void StopCharacterFollower()
+    {
+        if (_characterFollowerBehavior != null)
+        {
+            _characterFollowerBehavior.StopFollowing();
+        }
+        else if (HasAFollower)
+        {
+            Debug.LogError("CharacterFollower is NULL");
+        }
+    }
+
+    private void ForceCharacterFollowerToStandUp()
+    {
+        if (_characterFollowerBehavior != null)
+        {
+            _characterFollowerBehavior.ForceCharacterToStandUp();
+        }
+        else if (HasAFollower)
+        {
+            Debug.LogError("CharacterFollower is NULL");
+        }
+    }
+
+    private void ForceCharacterFollowerToGoToTable(Table table)
+    {
+        if (_characterFollowerBehavior != null)
+        {
+            _characterFollowerBehavior.MoveToSameTableAsCharacter(table);
+        }
+        else if (HasAFollower)
+        {
+            Debug.LogError("CharacterFollower is NULL");
+        }
+    }
+#endregion
     void Start()
     {   
         _gameManager = ServiceLocator.Get<GameManager>();
@@ -182,14 +253,14 @@ public class CharacterBehavior : MonoBehaviour
         _characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
         _tablesManager = ServiceLocator.Get<TablesManager>();
         
-        if (_hasAFollower) _characterFollowerBehavior.gameObject.SetActive(true);
-        
         _startNodeIndex = GetClosestNode();
         _lastNodeIndex = _startNodeIndex;
         FeedBackImage.gameObject.SetActive(false);
         UpdateFeedBackImage();
         SetCharacterDisabilities();
         if (_character == null) SetNPC();
+        
+        SetCharacterFollower();
         _characterConstraint = GetCharacterConstraint();
         _bubbleSpeechManager = ServiceLocator.Get<BubbleSpeechManager>();
         if (_bubbleSpeechManager == null)
@@ -298,6 +369,11 @@ public class CharacterBehavior : MonoBehaviour
 
     private void OnCharacterStandUp()
     {
+        if (_usedTable)
+        {
+            _usedTable = null;
+        }
+        
         if (_characterConstraint is { CanTakeStairs: false } || _characterDisability == _wheelChairDisabiltyName)
         {
             _usedChair.ShowChair();
@@ -311,6 +387,7 @@ public class CharacterBehavior : MonoBehaviour
         {
             _usedChair = null;
         }
+        
         MoveToBarExit();
     }
     
@@ -318,7 +395,7 @@ public class CharacterBehavior : MonoBehaviour
     public void StartWaiting()
     {
         _interrupted = false;
-        _waitRoutine = StartCoroutine(WaitAtTheBar());
+        _waitRoutine = StartCoroutine(WaitAtTable());
     }
 
     public void PauseWaiting()
@@ -344,7 +421,7 @@ public class CharacterBehavior : MonoBehaviour
             StopCoroutine(_waitRoutine);
     }
 
-    private IEnumerator WaitAtTheBar()
+    private IEnumerator WaitAtTable()
     {
         float waitTime = UnityEngine.Random.Range(_waitingTimeRange.x, _waitingTimeRange.y);
         float elapsed = 0f;
@@ -366,6 +443,8 @@ public class CharacterBehavior : MonoBehaviour
                 Debug.Log("Waiting at the bar was interrupted.");
                 if (_bubbleSpeechPanel.gameObject.activeInHierarchy) _bubbleSpeechPanel.gameObject.SetActive(false);
                 // MoveToBarExit();
+                
+                ForceCharacterFollowerToStandUp();
                 _animationManager.StandUp();
                 if (_usedTable)
                 {
@@ -380,14 +459,8 @@ public class CharacterBehavior : MonoBehaviour
 
         Debug.Log("Finished waiting at the bar.");
         // MoveToBarExit();
+        ForceCharacterFollowerToStandUp();
         _animationManager.StandUp();
-        
-        if (_usedTable)
-        {
-            // _usedTable.IsUsedByCustomer = false;
-            _usedTable = null;
-        }
-        
     }
     
 #endregion
@@ -403,7 +476,6 @@ public class CharacterBehavior : MonoBehaviour
 
         self.rotation = Quaternion.LookRotation(direction, Vector3.up);
     }
-    
     
     private void MoveToNode(int NodeId)
     {
@@ -499,14 +571,17 @@ public class CharacterBehavior : MonoBehaviour
         _usedTable = bestTable;
         _usedChair = _usedTable.GetFirstAvailableChair();
         _usedChair.IsChairOccupied = true;
-        // _usedTable.IsUsedByCustomer = true;
+        
+        
         SetCustomerFeedback(bestTable);
-        Debug.Log($"Best table chosen: {bestTable.name}");
-
-
+        // Debug.Log($"Best table chosen: {bestTable.name}");
+        
         if (_floorLevel == _usedTable.TableFloorLevel || _characterConstraint.CanTakeStairs)
         {
             MoveToNode(_usedChair.ChairClosestNodeID);
+            
+            StopCharacterFollower();
+            ForceCharacterFollowerToGoToTable(_usedTable);
             // _dijkstraManager.EnableConstraint(_characterDisability);
         }
         else if (_elevatorManager.IsElevatorBuyed)
@@ -808,8 +883,6 @@ private void SetBubbleSpeech(bool isCustomerLeaving)
     #endregion
 
 }
-
-
 
 public enum CharacterState
 {
