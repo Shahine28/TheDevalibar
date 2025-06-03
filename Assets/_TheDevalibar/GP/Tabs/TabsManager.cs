@@ -1,7 +1,9 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using MyUtilities;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TabsManager : MonoBehaviour
 {
@@ -21,7 +23,7 @@ public class TabsManager : MonoBehaviour
     {
         ServiceLocator.Register(this);
     }
-
+    
     void Start()
     {
         _tablesManager = ServiceLocator.Get<TablesManager>();
@@ -52,9 +54,27 @@ public class TabsManager : MonoBehaviour
         
         
         InitializeTabs();
-
-
         
+    }
+
+    public void CheckIfSelectedGameObjectIsNull()
+    {
+        StartCoroutine(CheckIfSelectedGameObjectIsNullCoroutine());
+    }
+
+    IEnumerator CheckIfSelectedGameObjectIsNullCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            SelectFirstTabs();
+        }
+    }
+    public void SelectFirstTabs()
+    {
+        if (_tabs.Count == 0) return;
+        EventSystem.current.SetSelectedGameObject(_tabs[0].gameObject);
+        ResetFocus();
     }
 
     void InitializeTabs()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using MyUtilities;
 using UnityEngine;
@@ -8,6 +9,9 @@ public class ShowHideUI : MonoBehaviour
     [SerializeField] private List<MoveUI> _UIElementsToMove = new List<MoveUI>();
     private CameraZoomToTarget _cameraZoomToTarget;
     private CameraMovementAndZoomControl _cameraMovementAndZoomControl;
+
+    public event Action OnUIShowed;
+    public event Action OnUIHided;
 
     private void Awake()
     {
@@ -27,6 +31,7 @@ public class ShowHideUI : MonoBehaviour
         {
             transform.gameObject.SetActive(false);
         }
+        OnUIHided?.Invoke();
     }
 
     public void HideSlidingUI()
@@ -49,11 +54,17 @@ public class ShowHideUI : MonoBehaviour
     {
         _cameraMovementAndZoomControl.CanZoom = false;
         _cameraZoomToTarget.ResetCamera();
+        TabsManager tabsManager = ServiceLocator.Get<TabsManager>();
+        if (tabsManager != null)
+        {
+            tabsManager.SelectFirstTabs();
+        }
         ShowSlidingUI();
         foreach (RectTransform transform in _UIElementsToHide)
         {
             transform.gameObject.SetActive(true);
         }
+        OnUIShowed?.Invoke();
     }
 }   
 

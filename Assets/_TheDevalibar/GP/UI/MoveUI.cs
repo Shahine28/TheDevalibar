@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+
 using UnityEngine;
 
 public class MoveUI : MonoBehaviour
@@ -10,12 +12,14 @@ public class MoveUI : MonoBehaviour
     [SerializeField] private AnimationCurve _curve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     
     private Coroutine _coroutine;
-    
+    public event Action<bool> OnUIMoveToTarget;
     private IEnumerator MoveUICoroutine(bool reverse = false)
     {
         Vector2 currentPosition = _rectTransform.anchoredPosition;
         Vector2 startPosition = reverse ? _targetPosition : _startPosition;
         Vector2 targetPosition = reverse ? _startPosition : _targetPosition;
+        
+        OnUIMoveToTarget?.Invoke(targetPosition == _targetPosition);
          
         // Redéfinit "start" = position actuelle
         float totalDistance = Vector2.Distance(startPosition, targetPosition);
