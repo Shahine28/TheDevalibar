@@ -13,18 +13,22 @@ using UnityEngine.UI;
 
 public class CharacterBehavior : MonoBehaviour
 {
-    [FormerlySerializedAs("character")]
     [Header("Character Behavior")]
     [SerializeField] private Character _character;
     public Character Character => _character;
     [SerializeField, ReadOnly] private string _characterDisability = string.Empty;
     private Constraint _characterConstraint;
-    
+    private CharacterSpawnManager _characterSpawnManager;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     private bool _isCharacterAssigned => _character != null;
-
     [SerializeField, Range(0, 100), HideIf("_isCharacterAssigned")]
     private float _disabilityChance = 20;
+        
+    [Header("Character Follower")] 
+    [SerializeField] private bool _hasAFollower;
+    [SerializeField] private CharacterFollowerBehavior _characterFollowerBehavior;
+    [SerializeField] private Transform _characterFollowerPointToFollow;
+    
     
     [Header("Dijkstra")]
     [SerializeField] private NodeManager _nodeManager;
@@ -75,6 +79,12 @@ public class CharacterBehavior : MonoBehaviour
     
     [Header("Animations")]
     [SerializeField] private AnimationManager _animationManager;
+
+    [SerializeField] private GameObject _wheelChair;
+    [SerializeField] private string  _wheelChairDisabiltyName = "Mobilité réduite sévère";
+    
+    [SerializeField] private GameObject _blindCane;
+    [SerializeField] private string  _blindCaneDisabiltyName = "Déficience visuelle sévère";
     
 
     ///  Camera
@@ -111,10 +121,23 @@ public class CharacterBehavior : MonoBehaviour
         {
             _spriteRenderer?.gameObject.SetActive(false);
             _animationManager?.gameObject.SetActive(true);
+            
             _animationManager?.SetAnimation(_character.CharacterMesh,
                 _character.CharacterMaterial,
                 _character.HasSpecificRuntimeAnimationController ? _character.CharacterRuntimeAnimatorController : null);
         }
+    }
+
+    public void SetNPC()
+    {  
+        NPCMeshMaterialController npcMeshMaterialController = _characterSpawnManager.GetRandomNPCAssets();
+        SetNPC(npcMeshMaterialController.Mesh, npcMeshMaterialController.Material, npcMeshMaterialController.AnimatorController);
+    }
+    public void SetNPC(Mesh npcMesh, Material npcMaterial, RuntimeAnimatorController runtimeAnimatorController)
+    {
+        _animationManager?.SetAnimation(npcMesh,
+            npcMaterial,
+            _characterDisability == _wheelChairDisabiltyName ? runtimeAnimatorController : null);
     }
 
     void Start()
@@ -155,12 +178,18 @@ public class CharacterBehavior : MonoBehaviour
         {
             _elevatorManager.OnElevatorMovementEnd += OnElevatorMovementEnd;
         }
+
+        _characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
         _tablesManager = ServiceLocator.Get<TablesManager>();
+        
+        if (_hasAFollower) _characterFollowerBehavior.gameObject.SetActive(true);
+        
         _startNodeIndex = GetClosestNode();
         _lastNodeIndex = _startNodeIndex;
         FeedBackImage.gameObject.SetActive(false);
         UpdateFeedBackImage();
         SetCharacterDisabilities();
+        if (_character == null) SetNPC();
         _characterConstraint = GetCharacterConstraint();
         _bubbleSpeechManager = ServiceLocator.Get<BubbleSpeechManager>();
         if (_bubbleSpeechManager == null)
@@ -221,6 +250,15 @@ public class CharacterBehavior : MonoBehaviour
                 _characterDisability = string.Empty;
             }
         }
+
+        if (_characterDisability != _wheelChairDisabiltyName)
+        {
+            _wheelChair?.gameObject.SetActive(false);
+        }
+        if (_characterDisability != _blindCaneDisabiltyName)
+        {
+            _blindCane?.gameObject.SetActive(false);
+        }
     }
 
     public Constraint GetCharacterConstraint()
@@ -260,7 +298,7 @@ public class CharacterBehavior : MonoBehaviour
 
     private void OnCharacterStandUp()
     {
-        if (_characterConstraint != null && !_characterConstraint.CanTakeStairs)
+        if (_characterConstraint is { CanTakeStairs: false } || _characterDisability == _wheelChairDisabiltyName)
         {
             _usedChair.ShowChair();
         }
@@ -428,16 +466,15 @@ public class CharacterBehavior : MonoBehaviour
         {
             _lastNodeIndex = nextElevatorNodeIndex;
             _floorLevel = _elevatorManager.FloorLevel; 
-            CharacterSpawnManager spawnManager = ServiceLocator.Get<CharacterSpawnManager>();
             if (_usedTable != null)
             {
-                transform.SetParent(spawnManager.CharacterSpawnPoint);
+                transform.SetParent(_characterSpawnManager.CharacterSpawnPoint);
                 _elevatorManager.currentPassenger = null;
                 MoveToNode(_usedTable.TableNodeNumber);
             }
             else
             {
-                transform.SetParent(spawnManager.CharacterSpawnPoint);
+                transform.SetParent(_characterSpawnManager.CharacterSpawnPoint);
                 _elevatorManager.currentPassenger = null;
                 MoveToBarExit();
             }
@@ -563,10 +600,9 @@ public class CharacterBehavior : MonoBehaviour
         {
             
             _characterState = CharacterState.AtTheBar;
-            CharacterSpawnManager characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
-            if (characterSpawnManager != null)
+            if (_characterSpawnManager != null)
             {
-                characterSpawnManager.CanSpawnCharacter = false;
+                _characterSpawnManager.CanSpawnCharacter = false;
             }
             _dialogueButton?.gameObject.SetActive(true);
             if (_dialogueButton != null) EventSystem.current.SetSelectedGameObject(_dialogueButton.gameObject);
@@ -583,10 +619,9 @@ public class CharacterBehavior : MonoBehaviour
                 gameManager.GameData.Gold += GetTipValue();
                 gameManager.UpdateGoldValue();
             }
-
-            CharacterSpawnManager spawnManager = ServiceLocator.Get<CharacterSpawnManager>();
             
-            if (spawnManager && spawnManager.HaveAllCharactersAndNCPBeenSpawned && spawnManager.CharacterSpawnPoint.childCount.Equals(1))
+            
+            if (_characterSpawnManager && _characterSpawnManager.HaveAllCharactersAndNCPBeenSpawned && _characterSpawnManager.CharacterSpawnPoint.childCount.Equals(1))
             {
                 _tablesManager?.ShowUpgradeButtonTables();
                 _showHideUI?.ShowUI();
@@ -601,7 +636,7 @@ public class CharacterBehavior : MonoBehaviour
             {
                 _characterState = CharacterState.AtTheBestTable;
 
-                if (_characterConstraint != null && !_characterConstraint.CanTakeStairs)
+                if (_characterConstraint is { CanTakeStairs: false } || _characterDisability == _wheelChairDisabiltyName)
                 {
                     _usedChair.HideChair();
                 }
@@ -763,10 +798,9 @@ private void SetBubbleSpeech(bool isCustomerLeaving)
 
     public void OnDialogueEnd()
     {
-        CharacterSpawnManager characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
-        if (characterSpawnManager)
+        if (_characterSpawnManager)
         {
-            characterSpawnManager.CanSpawnCharacter = true;
+            _characterSpawnManager.CanSpawnCharacter = true;
         }
         _cameraMovementAndZoomControl.CanZoom = true;
         MoveToBestTable();

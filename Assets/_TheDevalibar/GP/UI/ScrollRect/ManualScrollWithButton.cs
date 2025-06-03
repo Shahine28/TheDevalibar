@@ -138,8 +138,28 @@ public class ManualScrollWithButton : MonoBehaviour
             TabsManager tabsManager = ServiceLocator.Get<TabsManager>();
             if (tabsManager != null)
             {
+                ServiceLocator.Get<UpgradePanelManager>()?.ClearUpgradePanels();
                 tabsManager.SelectFirstTabs();
             }
+        }
+    }
+    
+    public void SelectFirstChild(Tab tab)
+    {
+        Transform firstActiveChild = _scrollListContainer.transform
+            .Cast<Transform>()
+            .FirstOrDefault(child => child.gameObject.activeInHierarchy &&
+                                     child.GetComponent<Selectable>() != null);
+
+        if (firstActiveChild != null)
+        {
+            EventSystem.current.SetSelectedGameObject(firstActiveChild.gameObject);
+        }
+        else
+        {
+            ServiceLocator.Get<UpgradePanelManager>()?.ClearUpgradePanels();
+            EventSystem.current.SetSelectedGameObject(tab.gameObject);
+            
         }
     }
 
