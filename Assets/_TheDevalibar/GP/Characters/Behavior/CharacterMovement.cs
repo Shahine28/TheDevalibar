@@ -37,9 +37,10 @@ public class CharacterMovement : CharacterComponent
     
     [Header("CharacterState")]
     [SerializeField, ReadOnly] private CharacterState _characterState = CharacterState.Idle;
-    
-    
+
+
     private CharacterSpawnManager _characterSpawnManager;
+    private bool _isInit;
 
 #region OnEnable/OnDisable
     private void OnEnable()
