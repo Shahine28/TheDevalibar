@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a3a34d876b65d42969661b88308151, type: 3}
+  m_Name: Amy
+  m_EditorClassIdentifier: 
+  AffinityManager: {fileID: 11400000, guid: 23b23b1f68a494d4d8c5ef607d2d0298, type: 2}
+  CharacterMesh: {fileID: 6233646956644532891, guid: 108c644c1c5e20740ad9760eeba4f7d5, type: 3}
+  CharacterMaterial: {fileID: 2100000, guid: 229d35fb0364f444daa3a77d61f7ab99, type: 2}
+  HasSpecificRuntimeAnimationController: 0
+  CharacterRuntimeAnimatorController: {fileID: 0}
+  constraintDict:
+    keys:
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "D\xE9ficience auditive s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000000000000
