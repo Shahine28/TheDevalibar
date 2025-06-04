@@ -70,8 +70,11 @@ public class ManualScrollWithButton : MonoBehaviour
     
     private IEnumerator ScrollContinuously()
     {
+        Debug.Log("start");
         while (_isButtonUpOrRightHold || _isButtonDownOrLeftHold)
         {
+            Debug.Log("updte");
+
             float direction = 0f;
 
             if (_isButtonUpOrRightHold)
