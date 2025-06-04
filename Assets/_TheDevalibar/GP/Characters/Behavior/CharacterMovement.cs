@@ -58,12 +58,15 @@ public class CharacterMovement : CharacterComponent
         {
             _elevatorManager.OnElevatorMovementEnd += OnElevatorMovementEnd;
         }
-        
-        if (_characterAnimationManager)
+
+        if (!_characterAnimationManager)
         {
-            _characterAnimationManager.OnCharacterStandUp += OnCharacterStandUp;
-            _characterAnimationManager.OnCharacterSitDown += OnCharacterSitDown;
+            Debug.LogError("CharacterMovement: Character Animation Manager is null.");
+            return;
         }
+        
+        _characterAnimationManager.OnCharacterStandUp += OnCharacterStandUp;
+        _characterAnimationManager.OnCharacterSitDown += OnCharacterSitDown;
     }
 
     private void OnDisable()
@@ -81,18 +84,23 @@ public class CharacterMovement : CharacterComponent
         {
             _elevatorManager.OnElevatorMovementEnd -= OnElevatorMovementEnd;
         }
-        
-        if (_characterAnimationManager)
+
+        if (!_characterAnimationManager)
         {
-            _characterAnimationManager.OnCharacterStandUp -= OnCharacterStandUp;
-            _characterAnimationManager.OnCharacterSitDown -= OnCharacterSitDown;
+            Debug.LogError("CharacterMovement: Character Animation Manager is null.");
+            return;
         }
+        
+        _characterAnimationManager.OnCharacterStandUp -= OnCharacterStandUp;
+        _characterAnimationManager.OnCharacterSitDown -= OnCharacterSitDown;
     }
 #endregion
 #region UnityDefault
 
     void Start()
     {
+        _characterAnimationManager.OnCharacterStandUp += OnCharacterStandUp;
+        _characterAnimationManager.OnCharacterSitDown += OnCharacterSitDown;
         if (_character)
         {
             MoveToNode(_barNodeId);
@@ -102,6 +110,13 @@ public class CharacterMovement : CharacterComponent
         {
             MoveToBestTable();
         }
+        if (!_characterAnimationManager)
+        {
+            Debug.LogError("CharacterMovement: Character Animation Manager is null.");
+            return;
+        }
+        _characterAnimationManager.OnCharacterStandUp += OnCharacterStandUp;
+        _characterAnimationManager.OnCharacterSitDown += OnCharacterSitDown;
     }
     public override void Init(CharacterBehavior characterBehavior)
     {
@@ -114,7 +129,14 @@ public class CharacterMovement : CharacterComponent
     void InitVar()
     {
         ServiceLocator.RequireComponent(this, ref _dijkstraPathFollower, "No Dijkstra Path follower found");
-        ServiceLocator.RequireComponent(this, ref _characterAnimationManager, "No Animation Manager found");
+        if (_characterAnimationManager == null)
+        {
+            _characterAnimationManager = GetComponentInParent<CharacterAnimationManager>();
+            if (_characterAnimationManager == null)
+            {
+                Debug.LogWarning("No CharacterAnimationManager found");
+            }
+        }
         
         ServiceLocator.RequireService(this, ref _nodeManager, "No Node Manager in Scene");
         ServiceLocator.RequireService(this, ref _dijkstraManager, "No Dijkstra Manager in Scene");
@@ -455,6 +477,7 @@ public class CharacterMovement : CharacterComponent
     
     private void OnCharacterSitDown()
     {
+        Debug.LogWarning("Character Sit Down");
         _characterWaiting.StartWaiting();
     }
 
