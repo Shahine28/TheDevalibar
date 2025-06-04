@@ -40,67 +40,52 @@ public class CharacterMovement : CharacterComponent
 
 
     private CharacterSpawnManager _characterSpawnManager;
+
+    [SerializeField] private bool _isEventsSubscribed;
+    
     private bool _isInit;
 
 #region OnEnable/OnDisable
     private void OnEnable()
     {
-        if (!_character) // ça veut dire que c'est pas initialisé
+        if (!_character)
         {
             InitVar();
         }
-        if (_dijkstraPathFollower)
-        {
-            _dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
-        }
-        
-        if (_elevatorManager)
-        {
-            _elevatorManager.OnElevatorMovementEnd += OnElevatorMovementEnd;
-        }
-
-        if (!_characterAnimationManager)
-        {
-            Debug.LogError("CharacterMovement: Character Animation Manager is null.");
-            return;
-        }
-        
-        _characterAnimationManager.OnCharacterStandUp += OnCharacterStandUp;
-        _characterAnimationManager.OnCharacterSitDown += OnCharacterSitDown;
+        if (!_isEventsSubscribed) SubscribeEvents();
     }
 
     private void OnDisable()
     {
-        if (!_character) // ça veut dire que c'est pas initialisé
+        if (!_character)
         {
             InitVar();
         }
-        if (_dijkstraPathFollower)
-        {
-            _dijkstraPathFollower.OnFollowPathEnd -= HandlePathEnd;
-        }
+        UnsubscribeEvents();
         
-        if (_elevatorManager)
-        {
-            _elevatorManager.OnElevatorMovementEnd -= OnElevatorMovementEnd;
-        }
-
-        if (!_characterAnimationManager)
-        {
-            Debug.LogError("CharacterMovement: Character Animation Manager is null.");
-            return;
-        }
-        
-        _characterAnimationManager.OnCharacterStandUp -= OnCharacterStandUp;
-        _characterAnimationManager.OnCharacterSitDown -= OnCharacterSitDown;
     }
 #endregion
 #region UnityDefault
+    void Awake()
+    {
+        ServiceLocator.RequireComponent(this, ref _dijkstraPathFollower, "No Dijkstra Path follower found");
+        if (_characterAnimationManager == null)
+        {
+            _characterAnimationManager = GetComponentInChildren<CharacterAnimationManager>();
+            if (_characterAnimationManager == null)
+            {
+                Debug.LogError("CharacterMovement: Character Animation Manager is null.");
+            }
+            else
+            {
+                Debug.LogWarning("CharacterMovement: Character Animation Manager is set.");
+            }
+        }
+    }
 
     void Start()
     {
-        _characterAnimationManager.OnCharacterStandUp += OnCharacterStandUp;
-        _characterAnimationManager.OnCharacterSitDown += OnCharacterSitDown;
+        if (!_isEventsSubscribed) SubscribeEvents();
         if (_character)
         {
             MoveToNode(_barNodeId);
@@ -110,20 +95,16 @@ public class CharacterMovement : CharacterComponent
         {
             MoveToBestTable();
         }
-        if (!_characterAnimationManager)
-        {
-            Debug.LogError("CharacterMovement: Character Animation Manager is null.");
-            return;
-        }
-        _characterAnimationManager.OnCharacterStandUp += OnCharacterStandUp;
-        _characterAnimationManager.OnCharacterSitDown += OnCharacterSitDown;
     }
+#endregion
+#region Initialization
     public override void Init(CharacterBehavior characterBehavior)
     {
         base.Init(characterBehavior);
         InitVar();
         _startNodeIndex = GetClosestNode();
         _lastNodeIndex = _startNodeIndex;
+        if (!_isEventsSubscribed) SubscribeEvents();
     }
 
     void InitVar()
@@ -131,25 +112,72 @@ public class CharacterMovement : CharacterComponent
         ServiceLocator.RequireComponent(this, ref _dijkstraPathFollower, "No Dijkstra Path follower found");
         if (_characterAnimationManager == null)
         {
-            _characterAnimationManager = GetComponentInParent<CharacterAnimationManager>();
-            if (_characterAnimationManager == null)
-            {
-                Debug.LogWarning("No CharacterAnimationManager found");
-            }
+            _characterAnimationManager = GetComponentInChildren<CharacterAnimationManager>();
+            if (_characterAnimationManager == null) Debug.LogError("CharacterMovement: Character Animation Manager is null.");
         }
-        
+        else
+        {
+            Debug.LogWarning("CharacterMovement: Character Animation Manager is already set.");
+        }
+            
+            
         ServiceLocator.RequireService(this, ref _nodeManager, "No Node Manager in Scene");
         ServiceLocator.RequireService(this, ref _dijkstraManager, "No Dijkstra Manager in Scene");
         ServiceLocator.RequireService(this, ref _elevatorManager, "No Elevator Manager in Scene");
-        
+            
         ServiceLocator.RequireService(this, ref _tablesManager, "No Tables Manager in Scene");
         ServiceLocator.RequireService(this, ref _showHideUI, "No Show Hide UI in Scene");
         ServiceLocator.RequireService(this, ref _characterSpawnManager, "No Character Spawn Manager in scene");
     }
-    
 
+    void SubscribeEvents()
+    {
+        if (_dijkstraPathFollower != null)
+        {
+            _dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
+        }
+        else return;
+        
+        if (_elevatorManager!= null)
+        {
+            _elevatorManager.OnElevatorMovementEnd += OnElevatorMovementEnd;
+        }
+        else return;
+        
+
+        if (_characterAnimationManager != null)
+        {
+            _characterAnimationManager.OnCharacterStandUp += OnCharacterStandUp;
+            _characterAnimationManager.OnCharacterSitDown += OnCharacterSitDown;
+        }
+        else return;
+        _isEventsSubscribed = true;
+    }
+
+    void UnsubscribeEvents()
+    {
+        if (_dijkstraPathFollower != null)
+        {
+            _dijkstraPathFollower.OnFollowPathEnd -= HandlePathEnd;
+        }
+        else return;
+        
+        if (_elevatorManager!= null)
+        {
+            _elevatorManager.OnElevatorMovementEnd -= OnElevatorMovementEnd;
+        }
+        else return;
+        
+
+        if (_characterAnimationManager != null)
+        {
+            _characterAnimationManager.OnCharacterStandUp -= OnCharacterStandUp;
+            _characterAnimationManager.OnCharacterSitDown -= OnCharacterSitDown;
+        }
+        else return;
+        _isEventsSubscribed = false;
+    }
 #endregion
-    
     private void RotateTowardsTarget(Transform self, Transform target, float rotationSpeed = 5f)
     {
         if (self == null || target == null) return;
