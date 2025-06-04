@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1220798685495494220, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220798685495494220, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220798685495494220, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.32
+      objectReference: {fileID: 0}
     - target: {fileID: 2123197945782874481, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
       propertyPath: m_Name
       value: NPC Variant
@@ -72,6 +84,10 @@ PrefabInstance:
       propertyPath: _spriteRenderer
       value: 
       objectReference: {fileID: 7981099886674644546}
+    - target: {fileID: 7218737290905152009, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
+      propertyPath: _disabilityChance
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3078036017781758731, guid: cc7bb9c79f9666f42a8d8007835b9bdc, type: 3}
     m_RemovedGameObjects: []

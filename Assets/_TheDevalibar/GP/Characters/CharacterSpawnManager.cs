@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using MyUtilities;
+using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class CharacterSpawnManager : MonoBehaviour
@@ -20,6 +22,10 @@ public class CharacterSpawnManager : MonoBehaviour
     public bool HaveAllCharactersAndNCPBeenSpawned => _haveAllCharactersAndNCPBeenSpawned;
     [SerializeField] private Transform _characterSpawnPoint;
     public Transform CharacterSpawnPoint => _characterSpawnPoint;
+    [SerializeField] private bool _canNPCHaveFollower;
+
+    [ShowIf("_canNPCHaveFollower"), Range(1, 100), SerializeField]
+    private int _npcChanceToHaveAFollower = 30;
 
     [Header("Delay between spawning")]
     [SerializeField] private float _characterSpawnDelayInSeconds;
@@ -165,7 +171,23 @@ public class CharacterSpawnManager : MonoBehaviour
             return;
         }
 
-        Instantiate(_NPCGameObject, _characterSpawnPoint.position, _characterSpawnPoint.rotation,  _characterSpawnPoint);
+        GameObject NPC = Instantiate(_NPCGameObject,
+            _characterSpawnPoint.position,
+            _characterSpawnPoint.rotation,
+            _characterSpawnPoint);
+        if (_canNPCHaveFollower && Random.Range(1, 101) < _npcChanceToHaveAFollower)
+        {
+            CharacterBehavior characterBehavior = NPC.GetComponent<CharacterBehavior>();
+            if (characterBehavior != null)
+            {
+                characterBehavior.HasAFollower = true;
+            }
+            else
+            {
+                Debug.LogError("No CharacterBehavior component attached to NPC.");
+            }
+        }
+        
         _NPCCount++;
         Debug.Log("NPC spawned.");
     }

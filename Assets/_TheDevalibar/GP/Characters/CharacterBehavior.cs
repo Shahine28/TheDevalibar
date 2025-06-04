@@ -6,6 +6,7 @@ using _TheDevalibar.GP.Characters;
 using MyUtilities;
 using NaughtyAttributes;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -39,9 +40,12 @@ public class CharacterBehavior : MonoBehaviour
     [Header("Movement")] 
     private FloorLevel _floorLevel; 
     [SerializeField] private int _barNodeId = 40;
+    public int BarNodeId => _barNodeId;
     [SerializeField] private int _exitNodeId = 1;
+    public int ExitNodeId => _exitNodeId;
     [SerializeField, ReadOnly] private  int _startNodeIndex;
     [SerializeField, ReadOnly] private  int _lastNodeIndex;
+    public int LastNodeIndex => _lastNodeIndex;
     [SerializeField, ReadOnly] private  int _nextNodeIndex;
     private TablesManager _tablesManager;
     private Table _usedTable;
@@ -272,6 +276,7 @@ public class CharacterBehavior : MonoBehaviour
         {
             _usedChair = null;
         }
+        
         MoveToBarExit();
     }
     
@@ -279,7 +284,7 @@ public class CharacterBehavior : MonoBehaviour
     public void StartWaiting()
     {
         _interrupted = false;
-        _waitRoutine = StartCoroutine(WaitAtTheBar());
+        _waitRoutine = StartCoroutine(WaitAtTable());
     }
 
     public void PauseWaiting()
@@ -305,7 +310,7 @@ public class CharacterBehavior : MonoBehaviour
             StopCoroutine(_waitRoutine);
     }
 
-    private IEnumerator WaitAtTheBar()
+    private IEnumerator WaitAtTable()
     {
         float waitTime = UnityEngine.Random.Range(_waitingTimeRange.x, _waitingTimeRange.y);
         float elapsed = 0f;
@@ -327,6 +332,8 @@ public class CharacterBehavior : MonoBehaviour
                 Debug.Log("Waiting at the bar was interrupted.");
                 if (_bubbleSpeechPanel.gameObject.activeInHierarchy) _bubbleSpeechPanel.gameObject.SetActive(false);
                 // MoveToBarExit();
+                
+                ForceCharacterFollowerToStandUp();
                 _animationManager.StandUp();
                 if (_usedTable)
                 {
@@ -341,14 +348,8 @@ public class CharacterBehavior : MonoBehaviour
 
         Debug.Log("Finished waiting at the bar.");
         // MoveToBarExit();
+        ForceCharacterFollowerToStandUp();
         _animationManager.StandUp();
-        
-        if (_usedTable)
-        {
-            // _usedTable.IsUsedByCustomer = false;
-            _usedTable = null;
-        }
-        
     }
     
 #endregion
@@ -364,7 +365,6 @@ public class CharacterBehavior : MonoBehaviour
 
         self.rotation = Quaternion.LookRotation(direction, Vector3.up);
     }
-    
     
     private void MoveToNode(int NodeId)
     {
@@ -461,14 +461,17 @@ public class CharacterBehavior : MonoBehaviour
         _usedTable = bestTable;
         _usedChair = _usedTable.GetFirstAvailableChair();
         _usedChair.IsChairOccupied = true;
-        // _usedTable.IsUsedByCustomer = true;
+        
+        
         SetCustomerFeedback(bestTable);
-        Debug.Log($"Best table chosen: {bestTable.name}");
-
-
+        // Debug.Log($"Best table chosen: {bestTable.name}");
+        
         if (_floorLevel == _usedTable.TableFloorLevel || _characterConstraint.CanTakeStairs)
         {
             MoveToNode(_usedChair.ChairClosestNodeID);
+            
+            StopCharacterFollower();
+            ForceCharacterFollowerToGoToTable(_usedTable);
             // _dijkstraManager.EnableConstraint(_characterDisability);
         }
         else if (_elevatorManager.IsElevatorBuyed)
@@ -771,8 +774,6 @@ private void SetBubbleSpeech(bool isCustomerLeaving)
     #endregion
 
 }
-
-
 
 public enum CharacterState
 {

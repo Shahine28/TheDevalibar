@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: f33dbcbf10f3351408941941677614d4
+guid: f5be363a0a827a240829d00242d3cb22
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,8 +37,8 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -52,7 +52,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_export_VN_planche_V02_0
+      name: Perso_happy_clair_x0.5_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1026
-        width: 274
-        height: 162
+        y: 0
+        width: 248
+        height: 613
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36051336857d4ba4c81f74fc74b49fd7
-      internalID: 983745044
+      spriteID: 116e95a967355eb4caeb30d906495698
+      internalID: 823559111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_VN_planche_V02_1
+      name: Perso_happy_clair_x0.5_1
       rect:
         serializedVersion: 2
-        x: 322
-        y: 1056
-        width: 123
-        height: 114
+        x: 249
+        y: 0
+        width: 277
+        height: 613
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96d9326706ab1794c93a71593a1a2f2e
-      internalID: -918564246
+      spriteID: eb7186e2c4f353e428bb53c94a4f1a05
+      internalID: 840427332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_VN_planche_V02_2
+      name: Perso_happy_clair_x0.5_2
       rect:
         serializedVersion: 2
-        x: 416
-        y: 1257
-        width: 765
-        height: 158
+        x: 526
+        y: 0
+        width: 241
+        height: 613
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,42 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f281132d4bdb6e4c930613f7fd54376
-      internalID: -641825022
+      spriteID: a4843fedef643ae48b1eacfa79700105
+      internalID: 179165363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_VN_planche_V02_3
+      name: Perso_happy_clair_x0.5_3
       rect:
         serializedVersion: 2
-        x: 517
-        y: 993
-        width: 765
-        height: 158
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22c491ecd988be9449dc0490577a50f1
-      internalID: 249393366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_export_VN_planche_V02_4
-      rect:
-        serializedVersion: 2
-        x: 778
-        y: 748
-        width: 588
-        height: 138
+        x: 850
+        y: 0
+        width: 324
+        height: 613
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7761a0a5822cd714388c0b313c0148de
-      internalID: 88310199
+      spriteID: 4b9618763f0c41341b3dd9623be5994e
+      internalID: 1515829921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_VN_planche_V02_5
+      name: Perso_happy_clair_x0.5_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 737
-        width: 587
-        height: 139
+        x: 1280
+        y: 0
+        width: 258
+        height: 613
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ddc93e980c8cb340aa03e4c2af57ee2
-      internalID: 1498449860
+      spriteID: bba916f66afbc524d9ff0495a860dc9b
+      internalID: 409024050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_VN_planche_V02_6
+      name: Perso_happy_clair_x0.5_6
       rect:
         serializedVersion: 2
-        x: 76
-        y: 404
-        width: 1230
-        height: 312
+        x: 1538
+        y: 0
+        width: 264
+        height: 613
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba2b225686eeb4345bc4b794bf6cd998
-      internalID: -2056365523
+      spriteID: 57c48621d21eb0c4fb7ea6dcc197e9b2
+      internalID: -752886933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_VN_planche_V02_7
+      name: Perso_happy_clair_x0.5_7
       rect:
         serializedVersion: 2
-        x: 78
-        y: 71
-        width: 1230
-        height: 312
+        x: 1802
+        y: 0
+        width: 254
+        height: 613
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fac710a3ccc5254ea5944859baa8a66
-      internalID: -1677933540
+      spriteID: a4128636bec8e734fb0625acda1fe9a3
+      internalID: -587796849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_export_VN_planche_V02_8
+      name: Perso_happy_clair_x0.5_8
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1261
-        width: 212
-        height: 216
+        x: 2057
+        y: 0
+        width: 247
+        height: 613
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bed0a01a8a84de940bd73d7bdd8da721
-      internalID: -703903118
+      spriteID: d216b413fed75f04f97de5bdde2aa94c
+      internalID: 326382544
       vertices: []
       indices: 
       edges: []
@@ -337,7 +315,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 139d069851c5abf4f90e25beafda7604
+    spriteID: e3a3a7eb0239f6843b11f24c0c84ca60
     internalID: 0
     vertices: []
     indices: 
@@ -347,14 +325,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI_export_VN_planche_V02_0: 983745044
-      UI_export_VN_planche_V02_1: -918564246
-      UI_export_VN_planche_V02_2: -641825022
-      UI_export_VN_planche_V02_3: 249393366
-      UI_export_VN_planche_V02_4: 88310199
-      UI_export_VN_planche_V02_5: 1498449860
-      UI_export_VN_planche_V02_6: -2056365523
-      UI_export_VN_planche_V02_7: -1677933540
+      Perso_happy_clair_x0.5_0: 823559111
+      Perso_happy_clair_x0.5_1: 840427332
+      Perso_happy_clair_x0.5_2: 179165363
+      Perso_happy_clair_x0.5_3: 1515829921
+      Perso_happy_clair_x0.5_4: 1472626370
+      Perso_happy_clair_x0.5_5: 409024050
+      Perso_happy_clair_x0.5_6: -752886933
+      Perso_happy_clair_x0.5_7: -587796849
+      Perso_happy_clair_x0.5_8: 326382544
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
