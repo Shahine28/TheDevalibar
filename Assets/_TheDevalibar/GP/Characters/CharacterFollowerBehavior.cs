@@ -3,6 +3,7 @@ using System.Linq;
 using MyUtilities;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 public class CharacterFollowerBehavior : MonoBehaviour
@@ -36,8 +37,9 @@ public class CharacterFollowerBehavior : MonoBehaviour
     private bool _isFollowing = false;
     private Coroutine _followCoroutine;
     
+    [FormerlySerializedAs("_animationManager")]
     [Header("Animations")]
-    [SerializeField] private AnimationManager _animationManager;
+    [SerializeField] private CharacterAnimationManager characterAnimationManager;
 
     [SerializeField] private GameObject _wheelChair;
     [SerializeField] private string  _wheelChairDisabiltyName = "Mobilité réduite sévère";
@@ -84,12 +86,12 @@ public class CharacterFollowerBehavior : MonoBehaviour
             _characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
         }
 
-        if (!_animationManager)
+        if (!characterAnimationManager)
         {
-            _animationManager = GetComponent<AnimationManager>();
+            characterAnimationManager = GetComponent<CharacterAnimationManager>();
         }
-        _animationManager.OnCharacterStandUp += OnCharacterStandUp;
-        _animationManager.OnCharacterSitDown += OnCharacterSitDown;
+        characterAnimationManager.OnCharacterStandUp += OnCharacterStandUp;
+        characterAnimationManager.OnCharacterSitDown += OnCharacterSitDown;
     }
     
     void Update()
@@ -114,11 +116,11 @@ public class CharacterFollowerBehavior : MonoBehaviour
             return;
         }
 
-        _barNodeExit = _characterBehavior.ExitNodeId;
-        _characterToFollowTransform = _characterBehavior.CharacterFollowerPointToFollow;
+        _barNodeExit = _characterBehavior.CharacterMovement.ExitNodeId;
+        _characterToFollowTransform = _characterBehavior.CharacterFollowerHandler.CharacterFollowerPointToFollow;
         _characterFollower = _characterBehavior?.Character?.CharacterFollower;
         
-        _animationManager?.gameObject.SetActive(true);
+        characterAnimationManager?.gameObject.SetActive(true);
         if (_characterFollower != null)
         {
             if (_characterFollower?.CharacterMesh == null)
@@ -126,14 +128,14 @@ public class CharacterFollowerBehavior : MonoBehaviour
                 Debug.LogWarning("Character Follower is null in CharacterFollowerBehavior");
                 return;
             }
-            _animationManager?.SetAnimation(_characterFollower.CharacterMesh,
+            characterAnimationManager?.SetAnimation(_characterFollower.CharacterMesh,
                 _characterFollower.CharacterMaterial,
                 _characterFollower.HasSpecificRuntimeAnimationController ? _characterFollower.CharacterRuntimeAnimatorController : null);
         }
         else
         {
             NPCMeshMaterialController npcMeshMaterialController = _characterSpawnManager.GetRandomNPCAssets();
-            _animationManager?.SetAnimation(npcMeshMaterialController.Mesh, npcMeshMaterialController.Material);
+            characterAnimationManager?.SetAnimation(npcMeshMaterialController.Mesh, npcMeshMaterialController.Material);
         }
         
     }
@@ -245,7 +247,7 @@ public class CharacterFollowerBehavior : MonoBehaviour
         if (!_isFollowing)
         {
             _isFollowing = true;
-            _animationManager.StartMovement();
+            characterAnimationManager.StartMovement();
         }
     }
 
@@ -254,7 +256,7 @@ public class CharacterFollowerBehavior : MonoBehaviour
         if (_isFollowing)
         {
             _isFollowing = false;
-            _animationManager.StopMovement();
+            characterAnimationManager.StopMovement();
         }
     }
     
@@ -275,12 +277,12 @@ public class CharacterFollowerBehavior : MonoBehaviour
         Init();// Sécurité
         if (_lastNodeIndex == -1)
         {
-            _lastNodeIndex = _characterBehavior != null ? _characterBehavior.LastNodeIndex : GetClosestNode();
+            _lastNodeIndex = _characterBehavior != null ? _characterBehavior.CharacterMovement.LastNodeIndex : GetClosestNode();
         }
         _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex, NodeId);
         _nextNodeIndex = NodeId;
         _dijkstraPathFollower.FollowPath();
-        _animationManager?.StartMovement();
+        characterAnimationManager?.StartMovement();
     }
 
     public void MoveToBarExit()
@@ -305,7 +307,7 @@ public class CharacterFollowerBehavior : MonoBehaviour
     
      private void HandlePathEnd()
     {
-        _animationManager.StopMovement();
+        characterAnimationManager.StopMovement();
         
         if (_nextNodeIndex != -1)
         {
@@ -316,7 +318,7 @@ public class CharacterFollowerBehavior : MonoBehaviour
         if (_usedTable != null && _usedChair != null && _usedChair.ChairClosestNodeID == _lastNodeIndex)
         {
             _usedChair.MoveChairToOccupiedPosition();
-            _animationManager?.SitDown();
+            characterAnimationManager?.SitDown();
             RotateTowardsTarget(_dijkstraPathFollower.ObjectToRotate.transform, _usedTable.transform);
         }
 
@@ -335,7 +337,7 @@ public class CharacterFollowerBehavior : MonoBehaviour
     
     public void ForceCharacterToStandUp()
     {
-        _animationManager.StandUp();
+        characterAnimationManager.StandUp();
     }
 
     public void OnCharacterStandUp()
