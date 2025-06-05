@@ -1044,6 +1044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chair: {fileID: 3969371363094754509}
+  _meshRenderer: {fileID: 3176997382301766936}
   _availablePosition: {x: 0, y: 0.0211, z: 0}
   _takenPosition: {x: 0, y: 0.0125, z: 0}
   _movementSpeed: 0.01
@@ -1216,6 +1217,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ae79d2569abdcfe45b21141cacdc6851, type: 3}
       propertyPath: m_Name
       value: M_Chaise
@@ -1251,8 +1256,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chair: {fileID: 5753050447801015591}
+  _meshRenderer: {fileID: 6113087384914197746}
   _availablePosition: {x: 0, y: -0.0211, z: 0}
-  _takenPosition: {x: 0, y: -0.0125, z: 0}
+  _takenPosition: {x: 0, y: -0.01518, z: 0}
   _movementSpeed: 0.01
   _movementAnimation:
     serializedVersion: 2
@@ -1278,7 +1284,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  IsChairOccupied: 1
+  IsChairOccupied: 0
   _chairClosestNodeID: -1
 --- !u!23 &6113087384914197746 stripped
 MeshRenderer:

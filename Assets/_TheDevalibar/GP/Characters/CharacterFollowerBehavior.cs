@@ -51,6 +51,7 @@ public class CharacterFollowerBehavior : MonoBehaviour
     [SerializeField] private CharacterSpawnManager _characterSpawnManager;
 
     private bool _hasBeenInit;
+    private bool _isMovingToBarExit => _nextNodeIndex == _barNodeExit;
     
     void Start()
     {
@@ -287,6 +288,7 @@ public class CharacterFollowerBehavior : MonoBehaviour
 
     public void MoveToBarExit()
     {
+        if (_isMovingToBarExit) return;
         MoveToNode(_barNodeExit);
     }
 

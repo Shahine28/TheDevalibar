@@ -2,22 +2,30 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmitHandler, IPointerClickHandler
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+
+public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmitHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public UnityEvent OnItemSelected;
     public UnityEvent OnItemDeselected;
     public UnityEvent OnItemSubmitted;
     public UnityEvent OnItemClicked;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public UnityEvent OnItemHovered;
+    public UnityEvent OnItemUnhovered;
 
+    public bool IsSelected {get; private set; }
 
     public void OnSelect(BaseEventData eventData)
     {
+        IsSelected = true;
         OnItemSelected?.Invoke();
     }
 
     public void OnDeselect(BaseEventData eventData)
     {
+        IsSelected = false;
         OnItemDeselected?.Invoke();
     }
 
@@ -30,4 +38,16 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
     {
         OnItemClicked?.Invoke();
     }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        OnItemHovered?.Invoke();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (IsSelected) return;
+        OnItemUnhovered?.Invoke();
+    }
 }
+

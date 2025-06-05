@@ -43,26 +43,15 @@ public class CharacterMovement : CharacterComponent
 
     [SerializeField] private bool _isEventsSubscribed;
     
-    private bool _isInit;
-
 #region OnEnable/OnDisable
     private void OnEnable()
     {
-        if (!_character)
-        {
-            InitVar();
-        }
-        if (!_isEventsSubscribed) SubscribeEvents();
+        SubscribeEvents();
     }
 
     private void OnDisable()
     {
-        if (!_character)
-        {
-            InitVar();
-        }
         UnsubscribeEvents();
-        
     }
 #endregion
 #region UnityDefault
@@ -75,10 +64,6 @@ public class CharacterMovement : CharacterComponent
             if (_characterAnimationManager == null)
             {
                 Debug.LogError("CharacterMovement: Character Animation Manager is null.");
-            }
-            else
-            {
-                Debug.LogWarning("CharacterMovement: Character Animation Manager is set.");
             }
         }
     }
@@ -96,6 +81,7 @@ public class CharacterMovement : CharacterComponent
             MoveToBestTable();
         }
     }
+    
 #endregion
 #region Initialization
     public override void Init(CharacterBehavior characterBehavior)
@@ -104,7 +90,6 @@ public class CharacterMovement : CharacterComponent
         InitVar();
         _startNodeIndex = GetClosestNode();
         _lastNodeIndex = _startNodeIndex;
-        if (!_isEventsSubscribed) SubscribeEvents();
     }
 
     void InitVar()
@@ -115,11 +100,7 @@ public class CharacterMovement : CharacterComponent
             _characterAnimationManager = GetComponentInChildren<CharacterAnimationManager>();
             if (_characterAnimationManager == null) Debug.LogError("CharacterMovement: Character Animation Manager is null.");
         }
-        else
-        {
-            Debug.LogWarning("CharacterMovement: Character Animation Manager is already set.");
-        }
-            
+        
             
         ServiceLocator.RequireService(this, ref _nodeManager, "No Node Manager in Scene");
         ServiceLocator.RequireService(this, ref _dijkstraManager, "No Dijkstra Manager in Scene");
@@ -132,6 +113,7 @@ public class CharacterMovement : CharacterComponent
 
     void SubscribeEvents()
     {
+        UnsubscribeEvents();
         if (_dijkstraPathFollower != null)
         {
             _dijkstraPathFollower.OnFollowPathEnd += HandlePathEnd;
@@ -178,16 +160,25 @@ public class CharacterMovement : CharacterComponent
         _isEventsSubscribed = false;
     }
 #endregion
-    private void RotateTowardsTarget(Transform self, Transform target, float rotationSpeed = 5f)
+    private void RotateTowardsTarget(Transform self, Transform target)
     {
         if (self == null || target == null) return;
 
-        Vector3 direction = (target.position - self.position).normalized;
+        Vector3 direction = target.position - self.position;
+        direction.y = 0f; // Ignore la différence de hauteur
 
         if (direction == Vector3.zero) return;
 
-        self.rotation = Quaternion.LookRotation(direction, Vector3.up);
+        // Calculer la rotation cible uniquement sur Y
+        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+
+        // Appliquer uniquement l'angle Y à la rotation actuelle
+        Vector3 currentEuler = self.rotation.eulerAngles;
+        Vector3 targetEuler = targetRotation.eulerAngles;
+
+        self.rotation = Quaternion.Euler(currentEuler.x, targetEuler.y, currentEuler.z);
     }
+
     
     private void MoveToNode(int NodeId)
     {
@@ -254,7 +245,9 @@ public class CharacterMovement : CharacterComponent
             {
                 transform.SetParent(_characterSpawnManager.CharacterSpawnPoint);
                 _elevatorManager.currentPassenger = null;
-                MoveToNode(UsedTable.TableNodeNumber);
+                _usedChair = UsedTable.GetFirstAvailableChair();
+                _usedChair.IsChairOccupied = true;
+                MoveToNode(_usedChair.ChairClosestNodeID);
             }
             else
             {
@@ -425,6 +418,7 @@ public class CharacterMovement : CharacterComponent
                 reviewManager?.SetReviews();
             }
             
+            _characterFollowerHandler.ForeCharacterFollowerToMoveToBarExit();
             Destroy(gameObject);
         }
         else
@@ -432,15 +426,7 @@ public class CharacterMovement : CharacterComponent
             if (UsedTable != null && _usedChair != null && _usedChair.ChairClosestNodeID == _lastNodeIndex)
             {
                 _characterState = CharacterState.AtTheBestTable;
-
-                if (_characterDisabilityHandler.CharacterConstraint is { CanTakeStairs: false } || _characterDisabilityHandler.CharacterDisability == _characterAssets.WheelChairDisabiltyName)
-                {
-                    _usedChair.HideChair();
-                }
-                else
-                {
-                    _usedChair.MoveChairToOccupiedPosition();
-                }
+                TakeChair();
                 _characterAnimationManager?.SitDown();
                 RotateTowardsTarget(_dijkstraPathFollower.ObjectToRotate.transform, UsedTable.transform);
                 // StartWaiting();
@@ -485,6 +471,79 @@ public class CharacterMovement : CharacterComponent
         }
     }
 
+    private void TakeChair()
+    {
+        if (!_characterDisabilityHandler)
+        {
+            Debug.LogError("The character disability handler is not set.");
+            return;
+        }
+        if (_characterDisabilityHandler.CharacterConstraint != null)
+        {
+            Debug.Log($"CharacterConstraint.CanTakeStairs: {_characterDisabilityHandler.CharacterConstraint.CanTakeStairs}");
+        }
+        else
+        {
+            Debug.LogWarning("CharacterConstraint is null");
+        }
+        
+        
+        if (_usedChair == null)
+        {
+            Debug.LogError("_usedChair is null! Cannot hide chair.");
+            return;
+        }
+        
+        
+        if (_characterDisabilityHandler.CharacterConstraint != null &&
+            (!_characterDisabilityHandler.CharacterConstraint.CanTakeStairs || 
+                                                                        _characterDisabilityHandler.CharacterDisability == _characterAssets.WheelChairDisabiltyName))
+        {
+            Debug.Log("Condition met: hiding chair.");
+            _usedChair.HideChair();
+        }
+        else
+        {
+            _usedChair.MoveChairToOccupiedPosition();
+        }
+    }
+
+    public void FreeChair()
+    {
+        if (!_characterDisabilityHandler)
+        {
+            Debug.LogError("The character disability handler is not set.");
+            return;
+        }
+        if (_characterDisabilityHandler.CharacterConstraint != null)
+        {
+            Debug.Log($"CharacterConstraint.CanTakeStairs: {_characterDisabilityHandler.CharacterConstraint.CanTakeStairs}");
+        }
+        else
+        {
+            Debug.LogWarning("CharacterConstraint is null");
+        }
+        
+        
+        if (_usedChair == null)
+        {
+            Debug.LogError("_usedChair is null! Cannot hide chair.");
+            return;
+        }
+        
+        
+        if (_characterDisabilityHandler.CharacterConstraint != null && (!_characterDisabilityHandler.CharacterConstraint.CanTakeStairs || 
+                                                                        _characterDisabilityHandler.CharacterDisability == _characterAssets.WheelChairDisabiltyName))
+        {
+            Debug.Log("Condition met: hiding chair.");
+            _usedChair.ShowChair();
+        }
+        else
+        {
+            _usedChair.MoveChairToUnoccupiedPosition();
+        }
+    }
+
     private int GetClosestNode()
     {
         NodeManager nodeManager = ServiceLocator.Get<NodeManager>();
@@ -516,20 +575,10 @@ public class CharacterMovement : CharacterComponent
             UsedTable = null;
         }
         
-        if (_characterDisabilityHandler.CharacterConstraint is { CanTakeStairs: false } || _characterDisabilityHandler.CharacterDisability == _characterAssets.WheelChairDisabiltyName)
-        {
-            _usedChair.ShowChair();
-        }
-        else
-        {
-            _usedChair.MoveChairToUnoccupiedPosition();
-        }
-        
         if (_usedChair)
         {
             _usedChair = null;
         }
-        
         MoveToBarExit();
     }
 }

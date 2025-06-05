@@ -78,4 +78,17 @@ public class CharacterFollowerHandler : CharacterComponent
             Debug.LogError("CharacterFollower is NULL");
         }
     }
+
+    public void ForeCharacterFollowerToMoveToBarExit()
+    {
+        if (_characterFollowerBehavior != null)
+        {
+            _characterFollowerBehavior.StopFollowing();
+            _characterFollowerBehavior.MoveToBarExit();
+        }
+        else if (HasAFollower)
+        {
+            Debug.LogError("CharacterFollower is NULL");
+        }
+    }
 }

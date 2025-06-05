@@ -98,6 +98,7 @@ public class CharacterWaiting : CharacterComponent
                 
                 _characterFollowerHandler.ForceCharacterFollowerToStandUp();
                 _characterAnimationManager.StandUp();
+                _characterMovement.FreeChair();
                 if (_characterMovement.UsedTable)
                 {
                     // _usedTable.IsUsedByCustomer = false;
@@ -113,5 +114,13 @@ public class CharacterWaiting : CharacterComponent
         // MoveToBarExit();
         _characterFollowerHandler.ForceCharacterFollowerToStandUp();
         _characterAnimationManager.StandUp();
+        if (_characterDisabilityHandler.CharacterConstraint is { CanTakeStairs: false } || _characterDisabilityHandler.CharacterDisability == _characterAssets.WheelChairDisabiltyName)
+        {
+            _characterMovement.UsedChair.ShowChair();
+        }
+        else
+        {
+            _characterMovement.UsedChair.MoveChairToUnoccupiedPosition();
+        }
     }
 }

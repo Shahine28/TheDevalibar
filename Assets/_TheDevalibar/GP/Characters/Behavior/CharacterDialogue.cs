@@ -14,6 +14,7 @@ public class CharacterDialogue : CharacterComponent
     private CameraMovementAndZoomControl _cameraMovementAndZoomControl;
     private GameManager _gameManager;
     private CharacterSpawnManager _characterSpawnManager;
+    private CameraZoomToTarget _cameraZoomToTarget;
 
     public override void Init(CharacterBehavior characterBehavior)
     {
@@ -22,6 +23,7 @@ public class CharacterDialogue : CharacterComponent
         ServiceLocator.RequireService(this, ref _cameraMovementAndZoomControl, "No CameraMovementAndZoomControl in scene");
         ServiceLocator.RequireService(this, ref _gameManager, "No GameManager in scene");
         ServiceLocator.RequireService(this, ref _characterSpawnManager, "No CharacterSpawnManager in scene");
+        ServiceLocator.RequireService(this, ref _cameraZoomToTarget, "No camera zoom to camera");
     }
     private void OnEnable()
     {
@@ -54,6 +56,7 @@ public class CharacterDialogue : CharacterComponent
         {
             _characterSpawnManager.CanSpawnCharacter = true;
         }
+        _cameraZoomToTarget.ResetCamera();
         _cameraMovementAndZoomControl.CanZoom = true;
         _characterBehavior.CharacterMovement.MoveToBestTable();
     }

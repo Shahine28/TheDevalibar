@@ -442,7 +442,6 @@ GameObject:
   - component: {fileID: 7338392372444584664}
   - component: {fileID: 271331358332592071}
   - component: {fileID: 7218737290905152009}
-  - component: {fileID: 595218881006604907}
   - component: {fileID: 4690040432188982441}
   - component: {fileID: 1590782614327003179}
   - component: {fileID: 1576068288898737157}
@@ -558,7 +557,7 @@ MonoBehaviour:
   _character: {fileID: 11400000, guid: a7be277518237114f947382c94114930, type: 2}
   _bubbleSpeechPanel: {fileID: 7647040443379961921}
   _bubbleSpeechText: {fileID: 2128190934790580227}
-  _characterAnimationManager: {fileID: 595218881006604907}
+  _characterAnimationManager: {fileID: 7763626402955616426}
   _characterAssets: {fileID: 4690040432188982441}
   _characterDialogue: {fileID: 1590782614327003179}
   _characterDisabilityHandler: {fileID: 1576068288898737157}
@@ -566,21 +565,6 @@ MonoBehaviour:
   _characterFollowerHandler: {fileID: 2446939194651334307}
   _characterMovement: {fileID: 4521981966925076645}
   _characterWaiting: {fileID: 2459091155208035465}
---- !u!114 &595218881006604907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123197945782874481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 717d1fd119ad5424dbd7f8254706ab65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1965393475740577800}
-  skinnedMeshRenderer: {fileID: 6247569309258612616}
-  _spriteRenderer: {fileID: 3325692719259931364}
 --- !u!114 &4690040432188982441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,7 +661,7 @@ MonoBehaviour:
   _nextNodeIndex: 0
   UsedTable: {fileID: 0}
   _characterState: 0
-  _characterAnimationManager: {fileID: 7763626402955616426}
+  _isEventsSubscribed: 0
 --- !u!114 &2459091155208035465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1969,7 +1953,7 @@ Transform:
   m_GameObject: {fileID: 7911166843142380153}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.3, y: 0, z: -1.31}
+  m_LocalPosition: {x: 0.97, y: 0, z: -2.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
