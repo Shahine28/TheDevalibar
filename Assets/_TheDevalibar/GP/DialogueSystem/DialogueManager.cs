@@ -392,7 +392,7 @@ public class DialogueManager : MonoBehaviour
     {
         _character.DialogueIndex++;
         _dialogueCanvas.gameObject.SetActive(false);
-        _characterBehavior.OnDialogueEnd();
+        _characterBehavior.CharacterDialogue.OnDialogueEnd();
         _onDialogueEnd?.Invoke();
     }
 }

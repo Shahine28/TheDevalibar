@@ -7,7 +7,7 @@ using UnityEditor;
 public class GameData : ScriptableObject
 {
     
-    public int DayIndex = 0;
+    public int DayIndex = -1;
     public CodeLanguage LanguageCode = CodeLanguage.English;
     public int Gold = 750;
     

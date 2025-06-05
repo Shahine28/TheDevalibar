@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8083097164444983604}
   - component: {fileID: 4471864702310040337}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: Feedback Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,9 +439,16 @@ GameObject:
   m_Component:
   - component: {fileID: 5266263251199399064}
   - component: {fileID: 5591092152769769400}
+  - component: {fileID: 7338392372444584664}
   - component: {fileID: 271331358332592071}
   - component: {fileID: 7218737290905152009}
-  - component: {fileID: 7338392372444584664}
+  - component: {fileID: 4690040432188982441}
+  - component: {fileID: 1590782614327003179}
+  - component: {fileID: 1576068288898737157}
+  - component: {fileID: 1513352695181504620}
+  - component: {fileID: 2446939194651334307}
+  - component: {fileID: 4521981966925076645}
+  - component: {fileID: 2459091155208035465}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -491,6 +498,33 @@ CapsuleCollider:
   m_Height: 3.0701811
   m_Direction: 1
   m_Center: {x: 0, y: 0.6558041, z: 0}
+--- !u!54 &7338392372444584664
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123197945782874481}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &271331358332592071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,61 +555,126 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _character: {fileID: 11400000, guid: a7be277518237114f947382c94114930, type: 2}
-  _characterDisability: 
-  _spriteRenderer: {fileID: 3325692719259931364}
-  _disabilityChance: 20
-  HasAFollower: 0
-  _characterFollowerPrefab: {fileID: 2123197945782874481, guid: 898de7dc78c360a4bbab375f7289536c, type: 3}
-  _characterFollowerPointToFollow: {fileID: 1220798685495494220}
-  _nodeManager: {fileID: 0}
-  _dijkstraManager: {fileID: 0}
-  _dijkstraPathFollower: {fileID: 271331358332592071}
-  _waitingTimeRange: {x: 10, y: 20}
-  _barNodeId: 12
-  _exitNodeId: 18
-  _startNodeIndex: 0
-  _lastNodeIndex: 0
-  _nextNodeIndex: 0
-  _characterState: 0
-  _dialogueManager: {fileID: 0}
-  _dialogueButton: {fileID: 6600202386615296570}
-  _customerFeedback: 0
-  _characterFeedback: {fileID: 11400000, guid: d4b5d8f1656717b44b82fdd8296fbce4, type: 2}
-  FeedBackImage: {fileID: 4471864702310040337}
   _bubbleSpeechPanel: {fileID: 7647040443379961921}
   _bubbleSpeechText: {fileID: 2128190934790580227}
-  _animationManager: {fileID: 7763626402955616426}
-  _wheelChair: {fileID: 3188591549062118800}
-  _wheelChairDisabiltyName: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
-  _blindCane: {fileID: 1013144009515449363}
-  _blindCaneDisabiltyName: "D\xE9ficience visuelle s\xE9v\xE8re"
---- !u!54 &7338392372444584664
-Rigidbody:
+  _characterAnimationManager: {fileID: 7763626402955616426}
+  _characterAssets: {fileID: 4690040432188982441}
+  _characterDialogue: {fileID: 1590782614327003179}
+  _characterDisabilityHandler: {fileID: 1576068288898737157}
+  _characterFeedback: {fileID: 1513352695181504620}
+  _characterFollowerHandler: {fileID: 2446939194651334307}
+  _characterMovement: {fileID: 4521981966925076645}
+  _characterWaiting: {fileID: 2459091155208035465}
+--- !u!114 &4690040432188982441
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123197945782874481}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d96405594d147148812788af18a37dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wheelChair: {fileID: 3188591549062118800}
+  _wheelChairDisabiltyName: "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+  _blindCane: {fileID: 1013144009515449363}
+  _blindCaneDisabilityName: "D\xE9ficience visuelle s\xE9v\xE8re"
+--- !u!114 &1590782614327003179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123197945782874481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c21ffbbc4ca2dd49aaac4df0bcf531a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueManager: {fileID: 0}
+  _dialogueButton: {fileID: 6600202386615296570}
+--- !u!114 &1576068288898737157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123197945782874481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cebb4758bf42b2c4e8a5d506601f6a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterDisability: 
+  _disabilityChance: 20
+--- !u!114 &1513352695181504620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123197945782874481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e77e63865ae4914d9cd470dafbc62a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _customerFeedback: 0
+  characterFeedbackSo: {fileID: 11400000, guid: d4b5d8f1656717b44b82fdd8296fbce4, type: 2}
+  _feedBackImage: {fileID: 4471864702310040337}
+--- !u!114 &2446939194651334307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123197945782874481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09532af47bdf47043ba58565f21697df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasAFollower: 0
+  _characterFollowerPrefab: {fileID: 2123197945782874481, guid: 898de7dc78c360a4bbab375f7289536c, type: 3}
+  _characterFollowerPointToFollow: {fileID: 1220798685495494220}
+--- !u!114 &4521981966925076645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123197945782874481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c2e01898ea1084084ba252c63377a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeManager: {fileID: 0}
+  _dijkstraManager: {fileID: 0}
+  _dijkstraPathFollower: {fileID: 0}
+  _barNodeId: 12
+  _exitNodeId: 18
+  _startNodeIndex: 0
+  _lastNodeIndex: 0
+  _nextNodeIndex: 0
+  UsedTable: {fileID: 0}
+  _characterState: 0
+  _isEventsSubscribed: 0
+--- !u!114 &2459091155208035465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123197945782874481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81257600e12f204da825e638c203da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waitingTimeRange: {x: 10, y: 20}
 --- !u!1 &2381430135421223250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,7 +1953,7 @@ Transform:
   m_GameObject: {fileID: 7911166843142380153}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.3, y: 0, z: -1.31}
+  m_LocalPosition: {x: 0.97, y: 0, z: -2.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2171,6 +2270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1965393475740577800}
   skinnedMeshRenderer: {fileID: 6247569309258612616}
+  _spriteRenderer: {fileID: 3325692719259931364}
 --- !u!1001 &1109751949896197197
 PrefabInstance:
   m_ObjectHideFlags: 0
