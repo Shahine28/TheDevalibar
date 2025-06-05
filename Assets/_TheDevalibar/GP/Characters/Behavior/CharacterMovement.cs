@@ -485,7 +485,6 @@ public class CharacterMovement : CharacterComponent
         else
         {
             Debug.LogWarning("CharacterConstraint is null");
-            return;
         }
         
         
@@ -496,8 +495,9 @@ public class CharacterMovement : CharacterComponent
         }
         
         
-        if (!_characterDisabilityHandler.CharacterConstraint.CanTakeStairs || 
-            _characterDisabilityHandler.CharacterDisability == _characterAssets.WheelChairDisabiltyName)
+        if (_characterDisabilityHandler.CharacterConstraint != null &&
+            (!_characterDisabilityHandler.CharacterConstraint.CanTakeStairs || 
+                                                                        _characterDisabilityHandler.CharacterDisability == _characterAssets.WheelChairDisabiltyName))
         {
             Debug.Log("Condition met: hiding chair.");
             _usedChair.HideChair();
@@ -522,7 +522,6 @@ public class CharacterMovement : CharacterComponent
         else
         {
             Debug.LogWarning("CharacterConstraint is null");
-            return;
         }
         
         
@@ -533,8 +532,8 @@ public class CharacterMovement : CharacterComponent
         }
         
         
-        if (!_characterDisabilityHandler.CharacterConstraint.CanTakeStairs || 
-            _characterDisabilityHandler.CharacterDisability == _characterAssets.WheelChairDisabiltyName)
+        if (_characterDisabilityHandler.CharacterConstraint != null && (!_characterDisabilityHandler.CharacterConstraint.CanTakeStairs || 
+                                                                        _characterDisabilityHandler.CharacterDisability == _characterAssets.WheelChairDisabiltyName))
         {
             Debug.Log("Condition met: hiding chair.");
             _usedChair.ShowChair();
