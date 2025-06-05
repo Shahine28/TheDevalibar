@@ -16,6 +16,11 @@ public class DijkstraPathFollower : MonoBehaviour
     public event Action OnFollowPathEnd;
     private void Start()
     {
+        Init();
+    }
+
+    void Init()
+    {
         if (!dijkstraManager)
         {
             dijkstraManager = ServiceLocator.Get<DijkstraManager>();
@@ -24,6 +29,7 @@ public class DijkstraPathFollower : MonoBehaviour
 
     public void FollowPath()
     {
+        Init();
         if (!dijkstraManager)
         {
             Debug.LogError("DijkstraManager is null");

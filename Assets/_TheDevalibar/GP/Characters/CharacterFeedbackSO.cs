@@ -3,7 +3,7 @@ using UnityEngine;
 namespace _TheDevalibar.GP.Characters
 {
     [CreateAssetMenu(fileName = "CharacterFeedback", menuName = "Scriptable Objects/CharacterFeedback", order = 0)]
-    public class CharacterFeedback : ScriptableObject
+    public class CharacterFeedbackSO : ScriptableObject
     {
         public bool useColorFeedback;
         
