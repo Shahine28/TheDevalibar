@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MAS_Table_LV1
-  m_Shader: {fileID: 4800000, guid: 2aa8a029403a56c4dac695cacc2fe8b8, type: 3}
+  m_Shader: {fileID: 4800000, guid: 9522afff35b8be3428066c1dd0fc688d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -179,6 +179,8 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
+    - _StepMax: 1
+    - _StepMin: 0
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1

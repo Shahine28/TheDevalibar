@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Alex_J2
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 65cde88c-1a36-4e8f-9045-d51c9ffdccc8
+  - BaseNodeGuid: 911f5493-9a57-405c-ae65-ad759d6d272a
     PortName: StartPointNode
     TargetNodeGuid: 9872eddd-f1a4-40e1-bb51-355452a25094
     IsNullNode: 0
-  - BaseNodeGuid: 9872eddd-f1a4-40e1-bb51-355452a25094
-    PortName: Null Port
-    TargetNodeGuid: 0643145e-5eca-4d8c-9a82-8c13d9218071
-    IsNullNode: 1
   - BaseNodeGuid: 0643145e-5eca-4d8c-9a82-8c13d9218071
     PortName: Null Port
     TargetNodeGuid: 756b52f7-a5d3-402d-91e7-0c46d9916cca
+    IsNullNode: 1
+  - BaseNodeGuid: 9872eddd-f1a4-40e1-bb51-355452a25094
+    PortName: Null Port
+    TargetNodeGuid: 0643145e-5eca-4d8c-9a82-8c13d9218071
     IsNullNode: 1
   - BaseNodeGuid: 756b52f7-a5d3-402d-91e7-0c46d9916cca
     PortName: Null Port
@@ -33,13 +33,13 @@ MonoBehaviour:
     PortName: Merci, et toi, tu deviens quoi ?
     TargetNodeGuid: 2eecfe6e-d2c0-4f0f-90bf-7440b3a291b6
     IsNullNode: 0
-  - BaseNodeGuid: 2eecfe6e-d2c0-4f0f-90bf-7440b3a291b6
-    PortName: Null Port
-    TargetNodeGuid: 2ec5ac91-7166-42e4-ac71-87dbbfed8d72
-    IsNullNode: 1
   - BaseNodeGuid: 2ec5ac91-7166-42e4-ac71-87dbbfed8d72
     PortName: Null Port
     TargetNodeGuid: 35f72874-93ec-4643-ab84-874c5bd2518b
+    IsNullNode: 1
+  - BaseNodeGuid: 2eecfe6e-d2c0-4f0f-90bf-7440b3a291b6
+    PortName: Null Port
+    TargetNodeGuid: 2ec5ac91-7166-42e4-ac71-87dbbfed8d72
     IsNullNode: 1
   - BaseNodeGuid: 35f72874-93ec-4643-ab84-874c5bd2518b
     PortName: Null Port
@@ -208,7 +208,11 @@ MonoBehaviour:
     DialogueText: "Super ! Bien mousseuse comme j'aime, \xE0 une prochaine !"
     Position: {x: 8438, y: 173}
     StatModifier: 0
-    Ports: []
+    Ports:
+    - PortName: "\xC0 la prochaine !"
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: -167088366, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   ExposedProperties: []

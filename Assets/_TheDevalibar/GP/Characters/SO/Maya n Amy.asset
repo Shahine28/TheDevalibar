@@ -21,6 +21,8 @@ MonoBehaviour:
   CharacterMaterial: {fileID: 2100000, guid: 9be87e3664da80e4982e6ed0f3e98a14, type: 2}
   HasSpecificRuntimeAnimationController: 0
   CharacterRuntimeAnimatorController: {fileID: 0}
+  _hasAFollower: 1
+  _characterFollower: {fileID: 11400000, guid: e872517c39bc5ea4ebedb632f4952411, type: 2}
   Affinity: 50
   NextAffinityValue: 50
   Dialogues:
@@ -102,14 +104,10 @@ MonoBehaviour:
     - 'Maya : On repassera demain'
   constraintDict:
     keys:
-    - "Mobilit\xE9"
-    - "D\xE9ficience visuelle"
-    - "Fatigabilit\xE9 chronique"
     - "D\xE9ficience auditive s\xE9v\xE8re"
-    - "Troubles de l\u2019\xE9quilibre / vertiges"
-    - "Hypersensibilit\xE9 sensorielle"
-    - Douleurs chroniques
-    - "Allergies s\xE9v\xE8res"
-    - "Troubles cognitifs l\xE9gers"
-    - Troubles dermatologiques
-    values: 00000000000000000000
+    - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
+    - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
+    - "Douleurs chroniques l\xE9g\xE8re"
+    - "Troubles cognitifs l\xE9g\xE8re"
+    values: 000001000000

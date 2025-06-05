@@ -14,6 +14,9 @@ public class Table : MonoBehaviour
     private TabsManager _tabsManager;
     public int TableNodeNumber => _tableNodeNumber;
 
+    [SerializeField] private Transform _exitTransform;
+    public Transform ExitTransform => _exitTransform;
+
     [Header("Chairs")] 
     [SerializeField] private Chair _chair1;
     [SerializeField] private Chair _chair2;

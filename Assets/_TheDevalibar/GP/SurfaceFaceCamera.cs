@@ -10,13 +10,7 @@ public class SurfaceFaceCamera : MonoBehaviour
             _mainCamera = Camera.main;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     void LateUpdate()
     {
         if (!_mainCamera) return;
