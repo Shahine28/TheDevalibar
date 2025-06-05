@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class ButtonsBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
+public class ButtonsBehavior : MonoBehaviour
 
 {
     [SerializeField] private Sprite _normalSprite;
@@ -18,57 +19,54 @@ public class ButtonsBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExit
     [SerializeField] private List<ButtonsBehavior> _otherButtonsBehaviors;
     private Button _button;
     private Image _buttonImage;
-    private bool _isPointerDown = false;    
+
 
     void Awake()
     {
         _button = GetComponent<Button>();
         _buttonImage = _button.GetComponent<Image>();
+        if (_buttonText != null) _buttonText.color = _regularTextColor;
     }
     
-    void Start()
+    
+    public void HoverButton()
     {
-        if (_buttonText != null) _buttonText.color = _regularTextColor;
-        _button.onClick.AddListener(UnHoverButton);
-    }
+        if (!_button.interactable)
+            return;
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        HoverButton();
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        UnHoverButton();
-    }
-
-    private void HoverButton()
-    {
-        if (_buttonText != null)
+        if (EventSystem.current != null &&
+            EventSystem.current.currentSelectedGameObject != gameObject)
         {
-            _buttonText.color = _highlightTextColor;
-            _buttonSelectedObject.SetActive(true);
-            _buttonImage.sprite = _hoveredSprite;
-            foreach (var variableButtonsBehavior in _otherButtonsBehaviors)
-            {
-                variableButtonsBehavior.UnHoverButton();
-            }
+            EventSystem.current.SetSelectedGameObject(gameObject);
         }
+        
+        
+         if (_buttonText != null ) _buttonText.color = _highlightTextColor;
+        _buttonSelectedObject?.SetActive(true);
+        if (_buttonImage != null) _buttonImage.sprite = _hoveredSprite;
     }
 
     public void UnHoverButton()
     {
-        if (_buttonText == null || !_button.interactable)
+        if (!_button.interactable)
             return;
 
+        StopAllCoroutines();
+        StartCoroutine(UnhoverDelayed());
+    }
+
+    IEnumerator UnhoverDelayed()
+    {
+        yield return new WaitForEndOfFrame();
         // Si le bouton est toujours sélectionné (clavier/tab ou clic maintenu), on ne change pas la couleur
         if (EventSystem.current != null &&
             EventSystem.current.currentSelectedGameObject == _button.gameObject)
-            return;
+            yield return null;
 
-        _buttonText.color = _regularTextColor;
-        _buttonSelectedObject.SetActive(false);
-        _buttonImage.sprite = _normalSprite;
+        if (_buttonText != null ) _buttonText.color = _regularTextColor;
+        _buttonSelectedObject?.SetActive(false);
+        if (_buttonImage != null) _buttonImage.sprite = _normalSprite;
+        
     }
 
     void OnDisable()
@@ -76,19 +74,5 @@ public class ButtonsBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExit
         if (_buttonText != null) _buttonText.color = _regularTextColor;
         _buttonSelectedObject?.SetActive(false);
         if (_buttonImage != null) _buttonImage.sprite = _normalSprite;
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        _isPointerDown = true;
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        if (_isPointerDown)
-        {
-            _isPointerDown = false;
-            UnHoverButton();
-        }
     }
 }

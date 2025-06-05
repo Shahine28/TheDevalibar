@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace MyUtilities
 {
@@ -26,6 +27,30 @@ namespace MyUtilities
         public static T Get<T>() where T : class
         {
             return services[typeof(T)] as T;
+        }
+        
+        public static void RequireService<T>(Component context, ref T field, string errorMessage) where T : class
+        {
+            if (field == null)
+            {
+                field = Get<T>();
+                if (field == null)
+                {
+                    Debug.LogError(errorMessage, context);
+                }
+            }
+        }
+        
+        public static void RequireComponent<T>(Component context, ref T field, string errorMessage) where T : Component
+        {
+            if (field == null && context != null)
+            {
+                field = context.GetComponent<T>();
+                if (field == null)
+                {
+                    Debug.LogError(errorMessage, context);
+                }
+            }
         }
     }
 }
