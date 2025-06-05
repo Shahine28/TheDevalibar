@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Genevi\xE8ve_J3"
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 93146a7d-e39b-4bd3-8511-5a52b462468d
+  - BaseNodeGuid: b47d394b-33db-4f73-9c09-0f481c7e9d32
     PortName: StartPointNode
     TargetNodeGuid: 53f35bc9-22b8-485b-95a3-8b384872ef11
     IsNullNode: 0
@@ -37,18 +37,10 @@ MonoBehaviour:
     PortName: "Yep ! J'ai rencontr\xE9 Maya et sa fille, elles sont adorables."
     TargetNodeGuid: 4d8ee1e2-4cb6-415e-a99d-83c47f12f784
     IsNullNode: 0
-  - BaseNodeGuid: b2003e09-90d6-4e91-a9ac-fa182a26433d
-    PortName: Null Port
-    TargetNodeGuid: 43b88e33-094f-4e74-a45a-ae02f53df9a2
-    IsNullNode: 1
   - BaseNodeGuid: 43b88e33-094f-4e74-a45a-ae02f53df9a2
     PortName: Null Port
     TargetNodeGuid: 96ff1ba0-c3dc-4e60-a49d-0fbd3ad02b78
     IsNullNode: 1
-  - BaseNodeGuid: 96ff1ba0-c3dc-4e60-a49d-0fbd3ad02b78
-    PortName: "Je pense sinc\xE9rement qu'elle serait fi\xE8re."
-    TargetNodeGuid: b50b0bc1-2f63-471b-8803-eecec3786c45
-    IsNullNode: 0
   - BaseNodeGuid: b50b0bc1-2f63-471b-8803-eecec3786c45
     PortName: Null Port
     TargetNodeGuid: 2cca19ba-3f16-4fba-83ae-f9042191656d
@@ -66,10 +58,6 @@ MonoBehaviour:
       sa passion."
     TargetNodeGuid: 259b1588-0591-4f81-bae8-469469f1242e
     IsNullNode: 0
-  - BaseNodeGuid: 73b883f4-3a0d-495c-91e6-60325c93cffe
-    PortName: Null Port
-    TargetNodeGuid: 8f65e316-0cb3-4039-82f6-92a6dbe69927
-    IsNullNode: 1
   - BaseNodeGuid: 77383ccb-5f22-4ecf-9685-5c9872276a7f
     PortName: Null Port
     TargetNodeGuid: 2cca19ba-3f16-4fba-83ae-f9042191656d
@@ -78,10 +66,6 @@ MonoBehaviour:
     PortName: "Leur apprendre \xE0 \xE9crire leurs propres contes et po\xE8mes ?"
     TargetNodeGuid: a16527f5-9c43-40cc-862e-cb7ffb4c1bfb
     IsNullNode: 0
-  - BaseNodeGuid: a16527f5-9c43-40cc-862e-cb7ffb4c1bfb
-    PortName: Null Port
-    TargetNodeGuid: 53595038-21f2-404a-a895-ba6cb8a5f2b6
-    IsNullNode: 1
   - BaseNodeGuid: 90e9f6de-d1e8-48a6-b7f4-c0c49e3a5fe2
     PortName: Null Port
     TargetNodeGuid: 73b883f4-3a0d-495c-91e6-60325c93cffe
@@ -120,14 +104,6 @@ MonoBehaviour:
       ?"
     TargetNodeGuid: b7e98796-1d04-4102-94f4-2cbc61ecb24b
     IsNullNode: 0
-  - BaseNodeGuid: 2cca19ba-3f16-4fba-83ae-f9042191656d
-    PortName: Null Port
-    TargetNodeGuid: 3a121c0d-3c83-4efc-b867-fc5f199a943a
-    IsNullNode: 1
-  - BaseNodeGuid: c96c6fea-1b38-4d05-a34e-a51b595e6764
-    PortName: Null Port
-    TargetNodeGuid: cf9d6d3f-37d3-4e4a-ac42-4bf3b971fed8
-    IsNullNode: 1
   - BaseNodeGuid: cf9d6d3f-37d3-4e4a-ac42-4bf3b971fed8
     PortName: Null Port
     TargetNodeGuid: 2cca19ba-3f16-4fba-83ae-f9042191656d
@@ -139,6 +115,30 @@ MonoBehaviour:
   - BaseNodeGuid: 0e1da6e8-23af-416c-9633-48051ff67e0d
     PortName: Null Port
     TargetNodeGuid: 2cca19ba-3f16-4fba-83ae-f9042191656d
+    IsNullNode: 1
+  - BaseNodeGuid: b2003e09-90d6-4e91-a9ac-fa182a26433d
+    PortName: Null Port
+    TargetNodeGuid: 43b88e33-094f-4e74-a45a-ae02f53df9a2
+    IsNullNode: 1
+  - BaseNodeGuid: 73b883f4-3a0d-495c-91e6-60325c93cffe
+    PortName: Null Port
+    TargetNodeGuid: 8f65e316-0cb3-4039-82f6-92a6dbe69927
+    IsNullNode: 1
+  - BaseNodeGuid: 96ff1ba0-c3dc-4e60-a49d-0fbd3ad02b78
+    PortName: "Je pense sinc\xE9rement qu'elle serait fi\xE8re."
+    TargetNodeGuid: b50b0bc1-2f63-471b-8803-eecec3786c45
+    IsNullNode: 0
+  - BaseNodeGuid: c96c6fea-1b38-4d05-a34e-a51b595e6764
+    PortName: Null Port
+    TargetNodeGuid: cf9d6d3f-37d3-4e4a-ac42-4bf3b971fed8
+    IsNullNode: 1
+  - BaseNodeGuid: 2cca19ba-3f16-4fba-83ae-f9042191656d
+    PortName: Null Port
+    TargetNodeGuid: 3a121c0d-3c83-4efc-b867-fc5f199a943a
+    IsNullNode: 1
+  - BaseNodeGuid: a16527f5-9c43-40cc-862e-cb7ffb4c1bfb
+    PortName: Null Port
+    TargetNodeGuid: 53595038-21f2-404a-a895-ba6cb8a5f2b6
     IsNullNode: 1
   - BaseNodeGuid: 53595038-21f2-404a-a895-ba6cb8a5f2b6
     PortName: Null Port
