@@ -3541,18 +3541,6 @@ MonoBehaviour:
   OnNewDay:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BubbleSpeechManager, Assembly-CSharp
-        m_MethodName: ResetUsedBubbleSpeechList
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2014900795}
         m_TargetAssemblyTypeName: CharacterSpawnManager, Assembly-CSharp
         m_MethodName: StartSpawning
@@ -27052,7 +27040,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2090073547}
   - component: {fileID: 2090073546}
-  - component: {fileID: 2090073545}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -27060,18 +27047,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2090073545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090073544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52fdd7c0b6150de42b41422db3a8922c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &2090073546
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27085,7 +27060,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 7ec78dafdf52e1b468629d4089684a82, type: 3}
   m_Resource: {fileID: 8300000, guid: 7ec78dafdf52e1b468629d4089684a82, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -29510,7 +29485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4631754065739524617, guid: f826f368b65a99544b82bc8b476c1dd5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4635778226149172124, guid: f826f368b65a99544b82bc8b476c1dd5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -30430,7 +30405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7605589611810090177, guid: f826f368b65a99544b82bc8b476c1dd5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -657
+      value: -636
       objectReference: {fileID: 0}
     - target: {fileID: 7605589611810090177, guid: f826f368b65a99544b82bc8b476c1dd5, type: 3}
       propertyPath: m_AnchoredPosition.y
