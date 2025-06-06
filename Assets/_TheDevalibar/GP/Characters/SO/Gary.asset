@@ -21,6 +21,8 @@ MonoBehaviour:
   CharacterMaterial: {fileID: 2100000, guid: 27a78d9e610f0d64a8444d6efce72f5f, type: 2}
   HasSpecificRuntimeAnimationController: 1
   CharacterRuntimeAnimatorController: {fileID: 22100000, guid: 75108a3e9b42959499f7730ee5c41322, type: 2}
+  _hasAFollower: 0
+  _characterFollower: {fileID: 0}
   Affinity: 50
   NextAffinityValue: 100
   Dialogues:
@@ -68,6 +70,28 @@ MonoBehaviour:
           Value: {fileID: 0}
         - Key: 1
           Value: {fileID: 11400000, guid: 4e1b3f6979ba0432e8587f7e80865fa3, type: 2}
+  - Dialogues:
+    - AffinityName: Angry
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 17697478fdeb844a0b2b1a5c6ee0f895, type: 2}
+    - AffinityName: Neutral
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 17697478fdeb844a0b2b1a5c6ee0f895, type: 2}
+    - AffinityName: Happy
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 17697478fdeb844a0b2b1a5c6ee0f895, type: 2}
   DialogueIndex: 0
   _characterReviews:
     GoodReviews:
