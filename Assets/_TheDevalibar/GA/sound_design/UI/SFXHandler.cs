@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class UpgradeSFX: MonoBehaviour
+public class SFXHandler: MonoBehaviour
 {
     [Header("Sound Setting")]
     [SerializeField] private AudioClip audioClip;
