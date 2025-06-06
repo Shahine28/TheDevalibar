@@ -16,7 +16,7 @@ MonoBehaviour:
   CharacterName: Maya / Amy
   CharacterPseudo: Mayamymya
   CharacterProfilePicture: {fileID: 0}
-  CharacterSprite: {fileID: 21300000, guid: b2178fa39ca014b3db65639f36d7a79c, type: 3}
+  CharacterSprite: {fileID: 21300000, guid: 98c6accd322f57a49aa94dcde132f62c, type: 3}
   CharacterMesh: {fileID: 11203607450732749, guid: 9752fb10ba49f83429e7242a15790995, type: 3}
   CharacterMaterial: {fileID: 2100000, guid: 9be87e3664da80e4982e6ed0f3e98a14, type: 2}
   HasSpecificRuntimeAnimationController: 0
@@ -31,21 +31,21 @@ MonoBehaviour:
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
+          Value: {fileID: 0}
         - Key: 1
           Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
+          Value: {fileID: 0}
         - Key: 1
           Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
+          Value: {fileID: 0}
         - Key: 1
           Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
   - Dialogues:
@@ -53,21 +53,21 @@ MonoBehaviour:
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
+          Value: {fileID: 0}
         - Key: 1
           Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
+          Value: {fileID: 0}
         - Key: 1
           Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
+          Value: {fileID: 0}
         - Key: 1
           Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
   DialogueIndex: 0
