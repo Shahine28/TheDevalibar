@@ -474,6 +474,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 721243960}
   m_SourcePrefab: {fileID: 100100000, guid: 5308f3e668f0c4a4daeddf382d7c68b2, type: 3}
+--- !u!114 &97758869 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8810658222782021097, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 1821794424}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &119371799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1751,7 +1762,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.26069415, y: 0.38916382, z: -0.112745985, w: 0.87628675}
   m_LocalPosition: {x: 40.379734, y: -21.419758, z: 24.752766}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.033305, y: 1.033305, z: 1.033305}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1935,7 +1946,7 @@ MonoBehaviour:
   _movingCameraTransform: {fileID: 808651597}
   _camera: {fileID: 2011821974}
   _zoomSpeed: 25
-  _zoomMinSize: 0.75
+  _zoomMinSize: 3
   _zoomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3082,6 +3093,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5175376052362971502, guid: 616a6c0837e79434fa4300f4730ff5ca, type: 3}
   m_PrefabInstance: {fileID: 437755289}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &443284460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2532609301181862142, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 1821794424}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &465275177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,6 +4238,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 938042634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596498015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 726912086533429398, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 1821794424}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &599546207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5667,7 +5700,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6813,7 +6846,7 @@ Transform:
   m_GameObject: {fileID: 1123710111}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.98297, y: -15.546082, z: 20.012892}
+  m_LocalPosition: {x: 33.98297, y: -15.11, z: 20.012892}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7028,12 +7061,12 @@ MonoBehaviour:
   _dialogueText: {fileID: 1821794438}
   _dialogueButtonTexts:
   - {fileID: 1821794437}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 443284460}
+  - {fileID: 1922415514}
   _buttons:
   - {fileID: 1821794434}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 97758869}
+  - {fileID: 596498015}
   _continueButton: {fileID: 1821794431}
   _continueButtonContainer: {fileID: 1821794430}
   _buttonsContainer: {fileID: 1821794429}
@@ -15264,6 +15297,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1922415514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6014169124505335169, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
+  m_PrefabInstance: {fileID: 1821794424}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1937323725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15655,7 +15699,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 40
-    OrthographicSize: 4
+    OrthographicSize: 3
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -16034,7 +16078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e074b4ecb135c4882fb784e1a99c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerInput: {fileID: 2064419611}
+  _playerInput: {fileID: 0}
   _curentControlScheme: 0
   _scrollValue: 0
   _movementValue: {x: 0, y: 0}
