@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gary_J2
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 08494189-1c48-4eb3-861a-269e9bc33beb
+  - BaseNodeGuid: 17be6da3-cefb-4a32-b317-8ffe1bb9c1e0
     PortName: StartPointNode
     TargetNodeGuid: e9575ac2-efac-4702-aa91-49600134a2dd
     IsNullNode: 0
@@ -200,13 +200,13 @@ MonoBehaviour:
     PortName: Tiens le premier verre est pour moi alors, bon courage
     TargetNodeGuid: e1361052-69be-46bf-afc7-f9b04ba89dbf
     IsNullNode: 0
-  - BaseNodeGuid: 0a5f3d30-d626-4cff-aabf-0aa410742507
-    PortName: Null Port
-    TargetNodeGuid: ea7a36c9-611b-4ed3-ac3c-1a550a2268b2
-    IsNullNode: 1
   - BaseNodeGuid: 6ae7c71a-a070-41a7-af94-4637fee3931b
     PortName: Null Port
     TargetNodeGuid: d835d87b-c0f1-4111-b4fb-602af462fc09
+    IsNullNode: 1
+  - BaseNodeGuid: 0a5f3d30-d626-4cff-aabf-0aa410742507
+    PortName: Null Port
+    TargetNodeGuid: ea7a36c9-611b-4ed3-ac3c-1a550a2268b2
     IsNullNode: 1
   DialogueNodeData:
   - NodeGUID: e9575ac2-efac-4702-aa91-49600134a2dd
@@ -219,7 +219,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 4fcac0a1-631f-4709-97a3-2df506a7c54a
     DialogueText: Oh et puis envoi moi 2 shots de whisky avec tiens.
     Position: {x: 691.5, y: 202}
@@ -234,7 +234,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: fdc4976f-b5da-4ac5-9aa9-e93f9b06a2ed
     DialogueText: Nan, c'est l'cas de l'dire.
     Position: {x: 1317.5, y: 306.5}
@@ -277,18 +277,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
-  - NodeGUID: e897589e-0e00-49ce-ae97-f2f2a02916e3
-    DialogueText: J't'emmerde, j'suis pas venu ici pour qu'on me flic encore plus
-    Position: {x: 1338, y: -193.5}
-    StatModifier: -10
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 1fc151f7-4ac4-45d8-b51f-3be8bc24fe1e
     DialogueText: "Nan, c'est moi, j'suis remont\xE9 en ce moment, j'aurais pas d\xFB
       t'insulter, t'as rien fais de mal."
@@ -312,7 +301,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: f50c2e97-3c9d-47e2-a5cc-fc10d421f7b6
     DialogueText: "Merde, j'suis vieux, si y'a bien un avantage \xE0 \xE7a c'est
       que je peux faire ce que je veux non ?"
@@ -329,7 +318,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
+    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 229e3e83-30b9-4a71-84fc-932c3ab18e4a
     DialogueText: "Une manif qui \xE0 mal tourn\xE9e..."
     Position: {x: 3339.5, y: 246}
@@ -340,7 +329,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 55100a27-8d44-4edd-a549-58195204909a
     DialogueText: "En 92, on s'\xE9tait r\xE9unit avec la DANF, pour essayer de faire
       bouger les choses, c'\xE9tait sens\xE9 \xEAtre une manif calme."
@@ -364,7 +353,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 3144a087-7707-46f7-848d-19d103a63d9a
     DialogueText: "Mais les flics se sont \xE9chauff\xE9s, et ils ont commenc\xE9
       \xE0 taper, comme \xE0 chaque fois qu'ils savent pas quoi dire."
@@ -393,7 +382,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1515829921, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: c6424f35-ac25-414a-9385-d54d0ce78c08
     DialogueText: "Je sais plus combien de jours d'ITT il \xE0 pris, mais moi j'ai
       pris 5 ans fermes."
@@ -417,7 +406,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 0c156583-e5f6-446f-8328-82716a3d877f
     DialogueText: "Pas juste comme \xE7a, pour \xEAtre honn\xEAte y'\xE0 un poulet
       que j'ai pas mal amoch\xE9."
@@ -453,11 +442,11 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 87da2e37-1f86-4980-8e06-40b1730b4817
     DialogueText: "Enfin, c'\xE9tait sens\xE9 \xEAtre du pass\xE9, mais entre cette
       histoire et les quelques autres probl\xE8mes que j'ai eu depuis, ils m'ont
-      flanquer un agent de probation."
+      flanqu\xE9 un agent de probation."
     Position: {x: 8208, y: 277}
     StatModifier: 0
     Ports:
@@ -483,7 +472,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: d5cf50eb-f1d9-4f0f-98a7-da590338dd5d
     DialogueText: "Peut \xEAtre bien, mais quand m\xEAme, il y a des mani\xE8res
       de faire les choses bien."
@@ -507,7 +496,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1515829921, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 69ec3efb-c364-435a-9572-d5a74a524fdc
     DialogueText: "Merci bien, \xE0 force de parler, je commen\xE7ais \xE0 avoir
       grand soif !"
@@ -519,7 +508,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1515829921, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 48bed094-cd4b-439c-97d0-470700ab38ca
     DialogueText: "Ouais ouais, j'suis un grand gar\xE7on, inqui\xE8te toi plut\xF4t
       pour ton bar, c'est d\xE9j\xE0 assez de travaille."
@@ -531,7 +520,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 8979af3c-93e2-45c1-a0ae-991b2530580f
     DialogueText: Bon aller, j'ai soif, donne moi mes boissons, j'vais aller m'asseoir.
     Position: {x: 6083, y: -274.5}
@@ -542,7 +531,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 4dc75e3b4c268422991fe5eb2e1a5a51, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 88a2fd73-5ab1-4a95-a65b-f4f26f49acfa
     DialogueText: Ouais, et c'est moins cool que t'as l'air de le penser.
     Position: {x: 3365, y: 586}
@@ -565,7 +554,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 8a6fa482-475d-4f7d-a408-d28477335565
     DialogueText: "\xE7a s'est am\xE9lior\xE9 apr\xE8s de ce qu'on m'a dit, mais
       ils en ont toujours rien \xE0 faire de nous."
@@ -583,7 +572,7 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 21dba433-b55e-4a63-a64f-ce5592b522b2
-    DialogueText: "5 ans fermes, je devais en prendre 4 mais mon avocat m'avait dis
+    DialogueText: "5 ans fermes, je devais en prendre 4 mais mon avocat m'avait dit
       de plaider la d\xE9mence."
     Position: {x: 5550, y: 587}
     StatModifier: 0
@@ -605,10 +594,10 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 4e6b3da1-f4d5-4853-84bf-44f0c5056db8
-    DialogueText: "j'lui ai mit une claque et ils m'ont rallong\xE9 la peine de 1
-      an"
+    DialogueText: "j'lui ai mit une torgnolle et ils m'ont rallong\xE9 la peine de
+      1 an"
     Position: {x: 7133.5, y: 587.5}
     StatModifier: 0
     Ports:
@@ -687,7 +676,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1515829921, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: d47c1ca4-51f3-409f-9ce6-55b2f89d0eda
     DialogueText: "Mais bon ils ont r\xE9ussi \xE0 m'imposer des agents de probations
       r\xE9guliers, et le dernier me l\xE2che pas."
@@ -715,10 +704,10 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 6ae7c71a-a070-41a7-af94-4637fee3931b
     DialogueText: "Ils ont bien essayer de me foutre dans des institutions, de me
-      cataloguer comme bipolaire ou des \xE9tiquettes du genre,"
+      cataloguer comme borderline ou des \xE9tiquettes du genre,"
     Position: {x: 8796.5, y: 908.5}
     StatModifier: 0
     Ports:
@@ -739,7 +728,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 0a5f3d30-d626-4cff-aabf-0aa410742507
     DialogueText: "Ouais j'esp\xE8re aussi..."
     Position: {x: 12398.5, y: 822.5}
@@ -752,7 +741,7 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: e1361052-69be-46bf-afc7-f9b04ba89dbf
-    DialogueText: "Au merci ! \xE0 ta sant\xE9 alors !"
+    DialogueText: "Oh merci ! \xE0 ta sant\xE9 alors !"
     Position: {x: 12400, y: 1043.5}
     StatModifier: 0
     Ports:
@@ -760,6 +749,17 @@ MonoBehaviour:
       Direction: 1
       Capacity: 0
       IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1515829921, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: e897589e-0e00-49ce-ae97-f2f2a02916e3
+    DialogueText: J't'emmerde, j'suis pas venu ici pour qu'on me flic encore plus
+    Position: {x: 1338, y: -193.5}
+    StatModifier: -10
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   ExposedProperties: []
