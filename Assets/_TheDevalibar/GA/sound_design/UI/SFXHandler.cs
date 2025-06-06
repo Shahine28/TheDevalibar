@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
 
-public class UpgradeSFX: MonoBehaviour
+public class SFXHandler: MonoBehaviour
 {
-    [Header("音频设置")]
+    [Header("Sound Setting")]
     [SerializeField] private AudioClip audioClip;
     [SerializeField] private AudioSource audioSource;
 
-    [Header("播放选项")]
+    [Header("Play Setting")]
     [SerializeField] private bool playOnStart = false;
     [SerializeField] private bool loop = false;
     [SerializeField] private float volume = 1f;
 
     void Start()
     {
-        // 如果没有指定AudioSource，自动获取或创建一个
+        // If AudioSource absent，Create one
         if (audioSource == null)
         {
             audioSource = GetComponent<AudioSource>();
@@ -23,12 +23,12 @@ public class UpgradeSFX: MonoBehaviour
             }
         }
 
-        // 设置AudioSource属性
+        // AudioSource Setting
         audioSource.clip = audioClip;
         audioSource.loop = loop;
         audioSource.volume = volume;
 
-        // 如果设置了开始时播放
+        // If PlayOnStart
         if (playOnStart && audioClip != null)
         {
             PlayClip();
@@ -36,7 +36,7 @@ public class UpgradeSFX: MonoBehaviour
     }
 
     /// <summary>
-    /// 播放音频片段
+    /// Play AudioClip
     /// </summary>
     public void PlayClip()
     {
@@ -51,7 +51,7 @@ public class UpgradeSFX: MonoBehaviour
     }
 
     /// <summary>
-    /// 停止播放音频
+    /// Stop Playing Clip
     /// </summary>
     public void StopClip()
     {
@@ -62,7 +62,7 @@ public class UpgradeSFX: MonoBehaviour
     }
 
     /// <summary>
-    /// 暂停播放音频
+    /// Pause Playing Clip
     /// </summary>
     public void PauseClip()
     {
@@ -73,7 +73,7 @@ public class UpgradeSFX: MonoBehaviour
     }
 
     /// <summary>
-    /// 恢复播放音频
+    /// Resume Playing Clip
     /// </summary>
     public void ResumeClip()
     {
@@ -84,9 +84,9 @@ public class UpgradeSFX: MonoBehaviour
     }
 
     /// <summary>
-    /// 设置音量
+    /// Volume Setting
     /// </summary>
-    /// <param name="newVolume">音量值 (0-1)</param>
+    /// <param name="newVolume">Volume (0-1)</param>
     public void SetVolume(float newVolume)
     {
         volume = Mathf.Clamp01(newVolume);
@@ -97,18 +97,18 @@ public class UpgradeSFX: MonoBehaviour
     }
 
     /// <summary>
-    /// 检查音频是否正在播放
+    /// If Audio Playing
     /// </summary>
-    /// <returns>是否正在播放</returns>
+    /// <returns>If Audio Playing</returns>
     public bool IsPlaying()
     {
         return audioSource != null && audioSource.isPlaying;
     }
 
     /// <summary>
-    /// 设置新的音频片段
+    /// New AudioClip Setting
     /// </summary>
-    /// <param name="newClip">新的音频片段</param>
+    /// <param name="newClip">New AudioClip</param>
     public void SetAudioClip(AudioClip newClip)
     {
         audioClip = newClip;

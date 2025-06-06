@@ -31,23 +31,45 @@ MonoBehaviour:
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
         - Key: 1
           Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
     - AffinityName: Neutral
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
         - Key: 1
           Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
     - AffinityName: Happy
       DialogueContainerFromLanguageCode:
         _serializedList:
         - Key: 0
-          Value: {fileID: 0}
+          Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
         - Key: 1
           Value: {fileID: 11400000, guid: c3a4fb776f9704c9ca1cb285fe78a2ae, type: 2}
+  - Dialogues:
+    - AffinityName: Angry
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
+    - AffinityName: Neutral
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
+    - AffinityName: Happy
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
+        - Key: 1
+          Value: {fileID: 11400000, guid: 834cc6f4bfb76425a880ced756afd573, type: 2}
   DialogueIndex: 0
   _characterReviews:
     GoodReviews:
