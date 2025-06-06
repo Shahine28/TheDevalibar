@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class Chair : MonoBehaviour
 {
     [SerializeField] private GameObject _chair;
+    [SerializeField] private MeshRenderer _meshRenderer;
     [SerializeField] private Vector3 _availablePosition;
     [SerializeField] private Vector3 _takenPosition;
     [SerializeField] private float _movementSpeed;
@@ -61,12 +62,12 @@ public class Chair : MonoBehaviour
 
     public void HideChair()
     {
-        _chair.SetActive(false);
+        _meshRenderer.enabled = false;
     }
 
     public void ShowChair()
     {
-        _chair.SetActive(true);
+        _meshRenderer.enabled = true;
     }
     
     private IEnumerator MoveChair(Vector3 targetPosition)

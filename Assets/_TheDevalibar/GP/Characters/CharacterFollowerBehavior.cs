@@ -2,6 +2,7 @@ using System.Linq;
 using MyUtilities;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 public class CharacterFollowerBehavior : MonoBehaviour
@@ -32,8 +33,9 @@ public class CharacterFollowerBehavior : MonoBehaviour
     private Table _usedTable;
     private Chair _usedChair;
     
+    [FormerlySerializedAs("_animationManager")]
     [Header("Animations")]
-    [SerializeField] private AnimationManager _animationManager;
+    [SerializeField] private CharacterAnimationManager characterAnimationManager;
 
     [SerializeField] private GameObject _wheelChair;
     [SerializeField] private string  _wheelChairDisabiltyName = "Mobilité réduite sévère";
@@ -43,6 +45,10 @@ public class CharacterFollowerBehavior : MonoBehaviour
 
     
     
+    [SerializeField] private CharacterSpawnManager _characterSpawnManager;
+
+    private bool _hasBeenInit;
+    private bool _isMovingToBarExit => _nextNodeIndex == _barNodeExit;
     
     public void OnEnable()
     {
@@ -77,7 +83,18 @@ public class CharacterFollowerBehavior : MonoBehaviour
             _dijkstraPathFollower = GetComponent<DijkstraPathFollower>();
         }
         
-        SetCharacterDisabilities();
+        
+        if (_characterSpawnManager == null)
+        {
+            _characterSpawnManager = ServiceLocator.Get<CharacterSpawnManager>();
+        }
+
+        if (!characterAnimationManager)
+        {
+            characterAnimationManager = GetComponent<CharacterAnimationManager>();
+        }
+        characterAnimationManager.OnCharacterStandUp += OnCharacterStandUp;
+        characterAnimationManager.OnCharacterSitDown += OnCharacterSitDown;
     }
     
     
@@ -88,14 +105,29 @@ public class CharacterFollowerBehavior : MonoBehaviour
         {
             _animationManager?.gameObject.SetActive(false);
         }
-        else
+
+        _barNodeExit = _characterBehavior.CharacterMovement.ExitNodeId;
+        _characterToFollowTransform = _characterBehavior.CharacterFollowerHandler.CharacterFollowerPointToFollow;
+        _characterFollower = _characterBehavior?.Character?.CharacterFollower;
+        
+        characterAnimationManager?.gameObject.SetActive(true);
+        if (_characterFollower != null)
         {
-            _animationManager?.gameObject.SetActive(true);
-            
-            _animationManager?.SetAnimation(_characterFollower.CharacterMesh,
+            if (_characterFollower?.CharacterMesh == null)
+            {
+                Debug.LogWarning("Character Follower is null in CharacterFollowerBehavior");
+                return;
+            }
+            characterAnimationManager?.SetAnimation(_characterFollower.CharacterMesh,
                 _characterFollower.CharacterMaterial,
                 _characterFollower.HasSpecificRuntimeAnimationController ? _characterFollower.CharacterRuntimeAnimatorController : null);
         }
+        else
+        {
+            NPCMeshMaterialController npcMeshMaterialController = _characterSpawnManager.GetRandomNPCAssets();
+            characterAnimationManager?.SetAnimation(npcMeshMaterialController.Mesh, npcMeshMaterialController.Material);
+        }
+        
     }
     
     
@@ -143,14 +175,19 @@ public class CharacterFollowerBehavior : MonoBehaviour
         
         if (_usedChair)
         {
-            _usedChair = null;
+            _isFollowing = true;
+            characterAnimationManager.StartMovement();
         }
     }
 
 
     private void HandlePathEnd()
     {
-        throw new System.NotImplementedException();
+        if (_isFollowing)
+        {
+            _isFollowing = false;
+            characterAnimationManager.StopMovement();
+        }
     }
     
     private void RotateTowardsTarget(Transform self, Transform target, float rotationSpeed = 5f)
@@ -167,11 +204,96 @@ public class CharacterFollowerBehavior : MonoBehaviour
     
     private void MoveToNode(int NodeId)
     {
+        Init();// Sécurité
+        if (_lastNodeIndex == -1)
+        {
+            _lastNodeIndex = _characterBehavior != null ? _characterBehavior.CharacterMovement.LastNodeIndex : GetClosestNode();
+        }
         _nodeManager.SetNewStartAndEndNodes(_lastNodeIndex, NodeId);
         _nextNodeIndex = NodeId;
         _dijkstraPathFollower.FollowPath();
-        _animationManager?.StartMovement();
+        characterAnimationManager?.StartMovement();
     }
+
+    public void MoveToBarExit()
+    {
+        if (_isMovingToBarExit) return;
+        MoveToNode(_barNodeExit);
+    }
+
+    public void MoveToSameTableAsCharacter(Table table)
+    {
+        if (table == null) return;
+        _usedTable = table;
+        _usedChair = table.GetFirstAvailableChair();
+        if (_usedChair == null)
+        {
+            Debug.LogWarning("No available chair found in table");
+            return;
+        }
+        _usedChair.IsChairOccupied = true;
+        MoveToNode(_usedChair.ChairClosestNodeID);
+        
+    }
+    
+     private void HandlePathEnd()
+    {
+        characterAnimationManager.StopMovement();
+        
+        if (_nextNodeIndex != -1)
+        {
+            _lastNodeIndex = _nextNodeIndex;
+            _nextNodeIndex = -1;
+        }
+        
+        if (_usedTable != null && _usedChair != null && _usedChair.ChairClosestNodeID == _lastNodeIndex)
+        {
+            _usedChair.MoveChairToOccupiedPosition();
+            characterAnimationManager?.SitDown();
+            RotateTowardsTarget(_dijkstraPathFollower.ObjectToRotate.transform, _usedTable.transform);
+        }
+
+        if (_lastNodeIndex == _barNodeExit)
+        {
+            Destroy(gameObject);
+        }
+    }
+#endregion
+#region OnCharacterStandUp/SitDown
+    
+    public void OnCharacterSitDown()
+    {
+        
+    }
+    
+    public void ForceCharacterToStandUp()
+    {
+        characterAnimationManager.StandUp();
+    }
+
+    public void OnCharacterStandUp()
+    {
+        _usedChair?.MoveChairToUnoccupiedPosition();
+        
+        if (_usedChair)
+        {
+            _usedChair = null;
+        }
+
+        if (_usedTable != null)
+        {
+            if (_followCoroutine != null)
+                StopCoroutine(_followCoroutine);
+
+            _followCoroutine = StartCoroutine(FollowToPosition(new Vector3(_usedTable.ExitTransform.position.x, transform.position.y,
+                _usedTable.ExitTransform.position.z)));
+        }
+        
+    }
+    
+#endregion
+    
+    
 }    
 
 

@@ -157,7 +157,11 @@ public class CharacterSpawnManager : MonoBehaviour
         CharacterBehavior characterBehavior = characterInstance.GetComponent<CharacterBehavior>();
         if (characterBehavior != null)
         {
-            characterBehavior.Initialize(_dayShifts[_dayIndex].DailyCustomers[_nextCharacterIndex]);
+            characterBehavior.InitVar();
+            Character character = _dayShifts[_dayIndex].DailyCustomers[_nextCharacterIndex];
+            characterBehavior.CharacterAnimationManager.Initialize(character);
+            characterBehavior.SetCharacter(character);
+            characterBehavior.Init();
             _nextCharacterIndex++;
         }
         Debug.Log("Character spawned.");
@@ -175,12 +179,14 @@ public class CharacterSpawnManager : MonoBehaviour
             _characterSpawnPoint.position,
             _characterSpawnPoint.rotation,
             _characterSpawnPoint);
+        CharacterBehavior characterBehavior = NPC.GetComponent<CharacterBehavior>();
+        characterBehavior.InitVar();
+        characterBehavior.Init();
         if (_canNPCHaveFollower && Random.Range(1, 101) < _npcChanceToHaveAFollower)
         {
-            CharacterBehavior characterBehavior = NPC.GetComponent<CharacterBehavior>();
             if (characterBehavior != null)
             {
-                characterBehavior.HasAFollower = true;
+                characterBehavior.CharacterFollowerHandler.HasAFollower = true;
             }
             else
             {

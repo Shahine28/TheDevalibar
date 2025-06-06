@@ -38,10 +38,5 @@ public class TableClickHandler : MonoBehaviour
             }
         }
     }
-
-    private void OnMouseDown()
-    {
-        
-    }
 }
 
