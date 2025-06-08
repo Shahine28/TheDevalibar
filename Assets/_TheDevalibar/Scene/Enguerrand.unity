@@ -315,63 +315,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6607926050785077603, guid: 7926e495afe6d0e4ca3dc1eac4d54177, type: 3}
   m_PrefabInstance: {fileID: 39883550}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &663408780 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3371515116015593921, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
-  m_PrefabInstance: {fileID: 1909585088}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &663408781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663408780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e7ab060545f16e419426a2de71e99e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xbox:
-    buttonSouth: {fileID: 0}
-    buttonNorth: {fileID: 0}
-    buttonEast: {fileID: 0}
-    buttonWest: {fileID: 0}
-    startButton: {fileID: 0}
-    selectButton: {fileID: 0}
-    leftTrigger: {fileID: 0}
-    rightTrigger: {fileID: 0}
-    leftShoulder: {fileID: 0}
-    rightShoulder: {fileID: 0}
-    dpad: {fileID: 0}
-    dpadUp: {fileID: 0}
-    dpadDown: {fileID: 0}
-    dpadLeft: {fileID: 0}
-    dpadRight: {fileID: 0}
-    leftStick: {fileID: 0}
-    rightStick: {fileID: 0}
-    leftStickPress: {fileID: 21300000, guid: 0563d3fbe4f0c1c4db991e6b0b381d4a, type: 3}
-    rightStickPress: {fileID: 21300000, guid: f333c1c84d68e044185777591951016b, type: 3}
-  ps4:
-    buttonSouth: {fileID: 0}
-    buttonNorth: {fileID: 0}
-    buttonEast: {fileID: 0}
-    buttonWest: {fileID: 0}
-    startButton: {fileID: 0}
-    selectButton: {fileID: 0}
-    leftTrigger: {fileID: 0}
-    rightTrigger: {fileID: 0}
-    leftShoulder: {fileID: 0}
-    rightShoulder: {fileID: 0}
-    dpad: {fileID: 0}
-    dpadUp: {fileID: 0}
-    dpadDown: {fileID: 0}
-    dpadLeft: {fileID: 0}
-    dpadRight: {fileID: 0}
-    leftStick: {fileID: 0}
-    rightStick: {fileID: 0}
-    leftStickPress: {fileID: 0}
-    rightStickPress: {fileID: 0}
 --- !u!114 &705379949 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4545709149085578782, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
@@ -1736,6 +1679,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _GameScene: {fileID: 102900000, guid: a5686e408e7ca164d984e29e8822a766, type: 3}
+--- !u!1 &1150105306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 415702548085667717, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
+  m_PrefabInstance: {fileID: 1909585088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1416467873 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4173454288896493136, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
@@ -2391,6 +2339,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2934174028539564886, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
+      propertyPath: m_RebindOverlay
+      value: 
+      objectReference: {fileID: 1150105306}
+    - target: {fileID: 3071443302800168036, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
+      propertyPath: m_RebindOverlay
+      value: 
+      objectReference: {fileID: 1150105306}
     - target: {fileID: 3130663268487585911, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
       propertyPath: m_Name
       value: World Text Line Value
@@ -2739,6 +2695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4983865306185967590, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
+      propertyPath: m_RebindOverlay
+      value: 
+      objectReference: {fileID: 1150105306}
     - target: {fileID: 5076959746207171217, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
       propertyPath: m_Transition
       value: 2
@@ -3003,6 +2963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: World Line Slider
       objectReference: {fileID: 0}
+    - target: {fileID: 6792336110395781031, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
+      propertyPath: m_RebindOverlay
+      value: 
+      objectReference: {fileID: 1150105306}
     - target: {fileID: 6817977462204467449, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3335,14 +3299,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9155652484974483871, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
+      propertyPath: m_RebindOverlay
+      value: 
+      objectReference: {fileID: 1150105306}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7072595267861979590, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3371515116015593921, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 663408781}
     - targetCorrespondingSourceObject: {fileID: 6712489693665255647, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1416467882}

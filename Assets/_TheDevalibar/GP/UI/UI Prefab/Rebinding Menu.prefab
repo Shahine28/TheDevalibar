@@ -534,16 +534,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xbox:
-    buttonSouth: {fileID: 0}
-    buttonNorth: {fileID: 0}
-    buttonEast: {fileID: 0}
-    buttonWest: {fileID: 0}
-    startButton: {fileID: 0}
-    selectButton: {fileID: 0}
-    leftTrigger: {fileID: 0}
-    rightTrigger: {fileID: 0}
-    leftShoulder: {fileID: 0}
-    rightShoulder: {fileID: 0}
+    buttonSouth: {fileID: 21300000, guid: 318b4f084f3d0234c9ad7a3f6016126d, type: 3}
+    buttonNorth: {fileID: 21300000, guid: 7ab2144fb2562f4428c551b71726b5c7, type: 3}
+    buttonEast: {fileID: 21300000, guid: d6237b2b82073914c8513a250d7527bb, type: 3}
+    buttonWest: {fileID: 21300000, guid: 60ddc419b746c8a44bf88085a901e942, type: 3}
+    startButton: {fileID: 21300000, guid: 5e7faff79a0e4484a8b8e5ca94663723, type: 3}
+    selectButton: {fileID: 21300000, guid: 849b40d91edbf1d49be2104d176b75f9, type: 3}
+    leftTrigger: {fileID: 21300000, guid: 91c9298a265ed5a4a9bfde44ee12c3b2, type: 3}
+    rightTrigger: {fileID: 21300000, guid: e762348a9d9e7ab4e92f8786e6a032e1, type: 3}
+    leftShoulder: {fileID: 21300000, guid: 1304c193052878d488be9fa6024ae656, type: 3}
+    rightShoulder: {fileID: 21300000, guid: df6df7ddcac888a41b77eaf761378ec9, type: 3}
     dpad: {fileID: 21300000, guid: 3ede58e3b96a1774693dc5d84c967a5c, type: 3}
     dpadUp: {fileID: 21300000, guid: 4587e4ee4a3f47340aceacd2c6d90fdd, type: 3}
     dpadDown: {fileID: 21300000, guid: 2ad67dd093e0bca449991eb5a18a8754, type: 3}
@@ -554,25 +554,25 @@ MonoBehaviour:
     leftStickPress: {fileID: 21300000, guid: 0563d3fbe4f0c1c4db991e6b0b381d4a, type: 3}
     rightStickPress: {fileID: 21300000, guid: f333c1c84d68e044185777591951016b, type: 3}
   ps4:
-    buttonSouth: {fileID: 0}
-    buttonNorth: {fileID: 0}
-    buttonEast: {fileID: 0}
-    buttonWest: {fileID: 0}
-    startButton: {fileID: 0}
-    selectButton: {fileID: 0}
-    leftTrigger: {fileID: 0}
-    rightTrigger: {fileID: 0}
-    leftShoulder: {fileID: 0}
-    rightShoulder: {fileID: 0}
-    dpad: {fileID: 0}
-    dpadUp: {fileID: 0}
-    dpadDown: {fileID: 0}
-    dpadLeft: {fileID: 0}
-    dpadRight: {fileID: 0}
-    leftStick: {fileID: 0}
-    rightStick: {fileID: 0}
-    leftStickPress: {fileID: 0}
-    rightStickPress: {fileID: 0}
+    buttonSouth: {fileID: 21300000, guid: 9975a39eb63243546bee6026bb0f8cec, type: 3}
+    buttonNorth: {fileID: 21300000, guid: 47d469b52c7284046ad43e362fbcd1be, type: 3}
+    buttonEast: {fileID: 21300000, guid: 72199231b6fa17c4db2cafe0e4914862, type: 3}
+    buttonWest: {fileID: 21300000, guid: b1c27c99f0737c34ea50005ae414e0b8, type: 3}
+    startButton: {fileID: 21300000, guid: 69e14eceaa1f337459f86a95ad3d521f, type: 3}
+    selectButton: {fileID: 21300000, guid: 55f012115f5378445b9dbce2b0990bc6, type: 3}
+    leftTrigger: {fileID: 21300000, guid: d7d67c2dbff953e43bb1e2d6eba4f2cf, type: 3}
+    rightTrigger: {fileID: 21300000, guid: a6dad20fdbf105f4db38f159b6b5f165, type: 3}
+    leftShoulder: {fileID: 21300000, guid: 2204ff23ad8c8bf48b07cdd71d5f2b8e, type: 3}
+    rightShoulder: {fileID: 21300000, guid: 900a46156f2a91f42b18ca81aa69c405, type: 3}
+    dpad: {fileID: 21300000, guid: 5fc58459b7765944bb186eaf88a70b2c, type: 3}
+    dpadUp: {fileID: 21300000, guid: d9df096d2751b974487f380d91ec82e6, type: 3}
+    dpadDown: {fileID: 21300000, guid: 1730539158abf4c40bdb0d83c7de4b76, type: 3}
+    dpadLeft: {fileID: 21300000, guid: d0ad70550e29c2540a14bdba8ead66aa, type: 3}
+    dpadRight: {fileID: 21300000, guid: 17f0f2eaf8f51d041a1e60740d0b5f5c, type: 3}
+    leftStick: {fileID: 21300000, guid: 9af67d37f65f40648bdf1f948509ca06, type: 3}
+    rightStick: {fileID: 21300000, guid: 10a19092bfafcd642ab095d87697cba5, type: 3}
+    leftStickPress: {fileID: 21300000, guid: 9af67d37f65f40648bdf1f948509ca06, type: 3}
+    rightStickPress: {fileID: 21300000, guid: 10a19092bfafcd642ab095d87697cba5, type: 3}
 --- !u!1001 &1442267870630419252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -677,13 +677,49 @@ PrefabInstance:
     - {fileID: 9206716155538320399, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8121967988632379265, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7324458880363046224}
   m_SourcePrefab: {fileID: 100100000, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
 --- !u!224 &5619630879938378254 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6484909128759664954, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
   m_PrefabInstance: {fileID: 1442267870630419252}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7256688946210686133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8121967988632379265, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+  m_PrefabInstance: {fileID: 1442267870630419252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7324458880363046224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256688946210686133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bde7f5fb45462940a774e617f7eceb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Action: {fileID: 0}
+  m_BindingId: 
+  m_DisplayStringOptions: 0
+  m_ActionLabel: {fileID: 0}
+  m_BindingText: {fileID: 0}
+  m_RebindOverlay: {fileID: 0}
+  m_RebindText: {fileID: 0}
+  m_UpdateBindingUIEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RebindStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RebindStopEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &3325521874823849293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -695,7 +731,7 @@ PrefabInstance:
     - target: {fileID: 2622725215723823747, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3764893476396712653}
     - target: {fileID: 6484909128759664954, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -783,13 +819,49 @@ PrefabInstance:
     - target: {fileID: 8244343964817017822, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3764893476396712653}
     m_RemovedComponents:
     - {fileID: 9206716155538320399, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8121967988632379265, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3764893476396712653}
   m_SourcePrefab: {fileID: 100100000, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+--- !u!1 &6814410625761704652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8121967988632379265, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+  m_PrefabInstance: {fileID: 3325521874823849293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3764893476396712653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814410625761704652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bde7f5fb45462940a774e617f7eceb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Action: {fileID: 0}
+  m_BindingId: 
+  m_DisplayStringOptions: 0
+  m_ActionLabel: {fileID: 0}
+  m_BindingText: {fileID: 0}
+  m_RebindOverlay: {fileID: 0}
+  m_RebindText: {fileID: 0}
+  m_UpdateBindingUIEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RebindStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RebindStopEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!224 &8636117348396483703 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6484909128759664954, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
@@ -899,8 +971,44 @@ PrefabInstance:
     - {fileID: 9206716155538320399, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8121967988632379265, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8437986025386263121}
   m_SourcePrefab: {fileID: 100100000, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+--- !u!1 &5041956802041033357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8121967988632379265, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+  m_PrefabInstance: {fileID: 3841471689192107276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8437986025386263121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041956802041033357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bde7f5fb45462940a774e617f7eceb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Action: {fileID: 0}
+  m_BindingId: 
+  m_DisplayStringOptions: 0
+  m_ActionLabel: {fileID: 0}
+  m_BindingText: {fileID: 0}
+  m_RebindOverlay: {fileID: 0}
+  m_RebindText: {fileID: 0}
+  m_UpdateBindingUIEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RebindStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RebindStopEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!224 &7831936066938178614 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6484909128759664954, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
@@ -1010,13 +1118,49 @@ PrefabInstance:
     - {fileID: 9206716155538320399, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8121967988632379265, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4585587106605876162}
   m_SourcePrefab: {fileID: 100100000, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
 --- !u!224 &1759900880824530933 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6484909128759664954, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
   m_PrefabInstance: {fileID: 4725238050196100815}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3541074100885637454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8121967988632379265, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+  m_PrefabInstance: {fileID: 4725238050196100815}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4585587106605876162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3541074100885637454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bde7f5fb45462940a774e617f7eceb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Action: {fileID: 0}
+  m_BindingId: 
+  m_DisplayStringOptions: 0
+  m_ActionLabel: {fileID: 0}
+  m_BindingText: {fileID: 0}
+  m_RebindOverlay: {fileID: 0}
+  m_RebindText: {fileID: 0}
+  m_UpdateBindingUIEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RebindStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RebindStopEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4878761972028805629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1028,7 +1172,7 @@ PrefabInstance:
     - target: {fileID: 2622725215723823747, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 306797346855578715}
     - target: {fileID: 6484909128759664954, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1116,15 +1260,51 @@ PrefabInstance:
     - target: {fileID: 8244343964817017822, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 306797346855578715}
     m_RemovedComponents:
     - {fileID: 9206716155538320399, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8121967988632379265, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 306797346855578715}
   m_SourcePrefab: {fileID: 100100000, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
 --- !u!224 &1894852521975771335 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6484909128759664954, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
   m_PrefabInstance: {fileID: 4878761972028805629}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3676026846089105020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8121967988632379265, guid: fc19d1752c0cfc149abc2f2dcc5ebabb, type: 3}
+  m_PrefabInstance: {fileID: 4878761972028805629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &306797346855578715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3676026846089105020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bde7f5fb45462940a774e617f7eceb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Action: {fileID: 0}
+  m_BindingId: 
+  m_DisplayStringOptions: 0
+  m_ActionLabel: {fileID: 0}
+  m_BindingText: {fileID: 0}
+  m_RebindOverlay: {fileID: 0}
+  m_RebindText: {fileID: 0}
+  m_UpdateBindingUIEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RebindStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_RebindStopEvent:
+    m_PersistentCalls:
+      m_Calls: []
