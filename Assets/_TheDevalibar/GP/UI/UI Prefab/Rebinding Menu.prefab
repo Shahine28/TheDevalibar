@@ -482,6 +482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3270755847021420721}
   - component: {fileID: 8168765122282148857}
+  - component: {fileID: 8129621491330875765}
   m_Layer: 5
   m_Name: Controller Container
   m_TagString: Untagged
@@ -520,6 +521,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9188136117100424351}
   m_CullTransparentMesh: 1
+--- !u!114 &8129621491330875765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9188136117100424351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7ab060545f16e419426a2de71e99e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xbox:
+    buttonSouth: {fileID: 0}
+    buttonNorth: {fileID: 0}
+    buttonEast: {fileID: 0}
+    buttonWest: {fileID: 0}
+    startButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    leftTrigger: {fileID: 0}
+    rightTrigger: {fileID: 0}
+    leftShoulder: {fileID: 0}
+    rightShoulder: {fileID: 0}
+    dpad: {fileID: 21300000, guid: 3ede58e3b96a1774693dc5d84c967a5c, type: 3}
+    dpadUp: {fileID: 21300000, guid: 4587e4ee4a3f47340aceacd2c6d90fdd, type: 3}
+    dpadDown: {fileID: 21300000, guid: 2ad67dd093e0bca449991eb5a18a8754, type: 3}
+    dpadLeft: {fileID: 21300000, guid: 7f321777868f4cd44aefdfd33d348b1e, type: 3}
+    dpadRight: {fileID: 21300000, guid: 2736567483ea1084f88e3542d1d5fda7, type: 3}
+    leftStick: {fileID: 21300000, guid: 0563d3fbe4f0c1c4db991e6b0b381d4a, type: 3}
+    rightStick: {fileID: 21300000, guid: f333c1c84d68e044185777591951016b, type: 3}
+    leftStickPress: {fileID: 21300000, guid: 0563d3fbe4f0c1c4db991e6b0b381d4a, type: 3}
+    rightStickPress: {fileID: 21300000, guid: f333c1c84d68e044185777591951016b, type: 3}
+  ps4:
+    buttonSouth: {fileID: 0}
+    buttonNorth: {fileID: 0}
+    buttonEast: {fileID: 0}
+    buttonWest: {fileID: 0}
+    startButton: {fileID: 0}
+    selectButton: {fileID: 0}
+    leftTrigger: {fileID: 0}
+    rightTrigger: {fileID: 0}
+    leftShoulder: {fileID: 0}
+    rightShoulder: {fileID: 0}
+    dpad: {fileID: 0}
+    dpadUp: {fileID: 0}
+    dpadDown: {fileID: 0}
+    dpadLeft: {fileID: 0}
+    dpadRight: {fileID: 0}
+    leftStick: {fileID: 0}
+    rightStick: {fileID: 0}
+    leftStickPress: {fileID: 0}
+    rightStickPress: {fileID: 0}
 --- !u!1001 &1442267870630419252
 PrefabInstance:
   m_ObjectHideFlags: 0
