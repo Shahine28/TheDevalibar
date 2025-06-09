@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 48, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.5, y: 23.2}
-  m_SizeDelta: {x: 3.61, y: 2.838}
+  m_AnchoredPosition: {x: 44.4, y: 21.4}
+  m_SizeDelta: {x: 5.4, y: 4.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8083097164444983604
 CanvasRenderer:
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.8
+  m_fontSize: 8.95
   m_fontSizeBase: 5.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 3.3013954, y: 5.5937014, z: 3.7188797, w: 3.3693237}
+  m_margin: {x: 17.089691, y: 18.25151, z: 20.154102, w: 18.322548}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1734,7 +1734,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7647040443379961921}
   m_LocalRotation: {x: 0, y: 0.40673664, z: 0, w: 0.9135455}
-  m_LocalPosition: {x: 0, y: 0, z: -0.55}
+  m_LocalPosition: {x: 0, y: 0, z: -3.52}
   m_LocalScale: {x: 0.09103443, y: 0.09103443, z: 0.09103443}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1744,8 +1744,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 48, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.32, y: 3.439}
-  m_SizeDelta: {x: 79.294, y: 33.939}
+  m_AnchoredPosition: {x: 2.36, y: 3.77}
+  m_SizeDelta: {x: 106.214, y: 49.555}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1887175132520643479
 CanvasRenderer:
@@ -1768,15 +1768,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 98a09bae0dc512442a8ec5b95b7a7bd8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
