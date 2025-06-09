@@ -43,12 +43,18 @@ public class InputValuesManager : MonoBehaviour
     [Header("Drag Click")] 
     [SerializeField, ReadOnly] private bool _isDragClickPressed;
     public bool IsDragClickPressed => _isDragClickPressed;
-    
+
+    [Header("pause")]
+    [SerializeField] InputActionReference _pauseMenu;
+    [SerializeField] UIManager _menu;
+    [SerializeField] bool _isPaused;
     
     void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
         ServiceLocator.Register(this);
+        _pauseMenu.action.performed += OnPause;
+        _pauseMenu.action.canceled += OnPause;
     }
 
     public void OnControlSchemeChanged(PlayerInput input)
@@ -110,6 +116,21 @@ public class InputValuesManager : MonoBehaviour
     public void OnInputMiddleClick(InputAction.CallbackContext context)
     {
         _isDragClickPressed = context.ReadValueAsButton();
+    }
+
+    void OnPause(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed) return; //only react when key pressed;
+        if (!_isPaused)
+        {
+            _menu.OnPause();
+            _isPaused = true;
+        }
+        else
+        {
+            _menu.resume();
+            _isPaused = false;
+        }
     }
 }
 
