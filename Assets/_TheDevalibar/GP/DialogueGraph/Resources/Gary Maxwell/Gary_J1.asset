@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gary_J1
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 17be6da3-cefb-4a32-b317-8ffe1bb9c1e0
+  - BaseNodeGuid: 3b26e0df-4a8a-4e24-84d1-f1f4306563ac
     PortName: StartPointNode
     TargetNodeGuid: e9575ac2-efac-4702-aa91-49600134a2dd
     IsNullNode: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
     TargetNodeGuid: e1cb4546-25cf-4b08-9534-0e25e95f7657
     IsNullNode: 1
   - BaseNodeGuid: e1cb4546-25cf-4b08-9534-0e25e95f7657
-    PortName: Haha, normal, c'est la moindre des choses
+    PortName: Haha, normal, c'est la moindre des choses.
     TargetNodeGuid: e38636f6-d2c5-45f3-82ec-5f16d53330b2
     IsNullNode: 0
   - BaseNodeGuid: e1cb4546-25cf-4b08-9534-0e25e95f7657
@@ -95,13 +95,13 @@ MonoBehaviour:
     IsNullNode: 0
   - BaseNodeGuid: dbd68ce1-e2f4-4fa5-8166-a7ec254317ee
     PortName: " J'suis content d'avoir pens\xE9 \xE0 la rampe, \xE7a me fera moins
-      de vitres \xE0 r\xE9parer"
+      de vitres \xE0 r\xE9parer."
     TargetNodeGuid: 48df3361-4fc2-4878-9715-0ca7228d100e
     IsNullNode: 0
   DialogueNodeData:
   - NodeGUID: e9575ac2-efac-4702-aa91-49600134a2dd
-    DialogueText: Bien le bonjour l'ami.
-    Position: {x: 247, y: 201}
+    DialogueText: Bien le bonjour l'amie.
+    Position: {x: 247.33333, y: 201.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -111,7 +111,7 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 1b84a277-ed98-4425-8c49-f72a43ff5fae
-    DialogueText: "Sympa ton rade ! \xE7a me rappel les vieilles caves du 13\xE8me."
+    DialogueText: "Sympa ton rade ! Ca me rappelle les vieilles caves du 13\xE8me."
     Position: {x: 716, y: 200}
     StatModifier: 0
     Ports:
@@ -124,7 +124,7 @@ MonoBehaviour:
   - NodeGUID: 4c52517d-2174-4dca-abab-4e2f65ed05cf
     DialogueText: "En plus accessible quand m\xEAme. Bien vu pour la rampe d'ailleurs
       !"
-    Position: {x: 1352, y: 198.5}
+    Position: {x: 1352, y: 198.66667}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -134,12 +134,12 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: e1cb4546-25cf-4b08-9534-0e25e95f7657
-    DialogueText: "\xE7a fait des ann\xE9es que je veux venir ici, mais l'ex-patron
+    DialogueText: "Ca fait des ann\xE9es que je veux venir ici, mais l'ex-patron
       \xE9tait un connard."
-    Position: {x: 2026.5, y: 200}
+    Position: {x: 2026.6666, y: 200}
     StatModifier: 0
     Ports:
-    - PortName: Haha, normal, c'est la moindre des choses
+    - PortName: Haha, normal, c'est la moindre des choses.
       Direction: 1
       Capacity: 0
       IsPortNull: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: e38636f6-d2c5-45f3-82ec-5f16d53330b2
     DialogueText: Ouais, pas pour tout le monde.
-    Position: {x: 2686.5, y: 40}
+    Position: {x: 2686.6667, y: 40}
     StatModifier: 5
     Ports:
     - PortName: Null Port
@@ -163,7 +163,7 @@ MonoBehaviour:
   - NodeGUID: 7c4176ae-ce5f-46c9-adda-802471870e6e
     DialogueText: "C'est vrai qu'il sent le renferm\xE9, mais c'\xE9tait le bar o\xF9
       mon vieux venait."
-    Position: {x: 2702.5, y: 285.5}
+    Position: {x: 2702.6667, y: 285.33334}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -174,7 +174,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 9fb6623b-117e-47f7-8709-2a13a87cf850
     DialogueText: Bon, donne moi 2 verres s'il te plait, j'vais prendre une place.
-    Position: {x: 3202.5, y: 33.5}
+    Position: {x: 3202.6667, y: 33.333332}
     StatModifier: 0
     Ports:
     - PortName: 2 verres ? Putain t'as bien soif.
@@ -190,7 +190,7 @@ MonoBehaviour:
   - NodeGUID: 9cf0a52e-6781-47e0-8238-551f6bf204f1
     DialogueText: "Ce vieux rat passait son temps ici, mais c'\xE9tait un bon bougre,
       qu'il repose en paix."
-    Position: {x: 3350.5, y: 289}
+    Position: {x: 3350.6667, y: 289.33334}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -202,7 +202,7 @@ MonoBehaviour:
   - NodeGUID: 5f68734f-5bdd-4bef-b55f-510051cd46a2
     DialogueText: "Haha, non, le deuxi\xE8me c'est pour mon vieux, paix \xE0 son
       \xE2me."
-    Position: {x: 3762.5, y: -150.5}
+    Position: {x: 3762.6667, y: -150.66666}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -212,8 +212,8 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 1515829921, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 2ccb66c5-27b5-499e-ba98-a4cec1f5f7aa
-    DialogueText: "Il vennait ici quand j'\xE9tais petiot, mais j'ai jamais pu l'accompagner"
-    Position: {x: 4380, y: -151}
+    DialogueText: "Il venait ici quand j'\xE9tais petiot, mais j'ai jamais pu l'accompagner."
+    Position: {x: 4380, y: -150.66666}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -223,8 +223,8 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 5594627e-4377-4422-b66c-774ca718b9d8
-    DialogueText: "Bonne journ\xE9e, j'boirais pour toi aussi, haha."
-    Position: {x: 4341, y: 73.5}
+    DialogueText: "Bonne journ\xE9e, j'boirai pour toi aussi, haha."
+    Position: {x: 4341.3335, y: 73.333336}
     StatModifier: 0
     Ports:
     - PortName: Haha
@@ -234,8 +234,8 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 20868fc1-4c0e-4673-9038-283ab9e18aba
-    DialogueText: "\xE0 cause de ce foutu barman."
-    Position: {x: 4968, y: -153}
+    DialogueText: A cause de ce foutu barman.
+    Position: {x: 4968, y: -152.66666}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -247,7 +247,7 @@ MonoBehaviour:
   - NodeGUID: 4ec8c817-00bd-4687-916a-6eaffb575b8a
     DialogueText: "Ouais, tous les soirs, il s'asseyait toujours \xE0 la m\xEAme
       table \xE0 l'\xE9tage, \xE0 droite."
-    Position: {x: 6878.5, y: -15}
+    Position: {x: 6878.6665, y: -14.666667}
     StatModifier: 10
     Ports:
     - PortName: Null Port
@@ -259,7 +259,7 @@ MonoBehaviour:
   - NodeGUID: 5b31dc55-a9ff-4fd5-b6eb-a105fe32cd43
     DialogueText: "Je le voyais perdre au poker par la fen\xEAtre depuis la rue quand
       je jouais avec mes copains."
-    Position: {x: 7562.5, y: -11}
+    Position: {x: 7562.6665, y: -10.666667}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -271,10 +271,10 @@ MonoBehaviour:
   - NodeGUID: 89dc25a3-bb39-4c66-9e52-270aad7e3ccf
     DialogueText: "J'aurais bien aim\xE9 faire une partie avec lui, j'suis s\xFBr
       que je l'aurais plum\xE9."
-    Position: {x: 8331, y: -9.5}
+    Position: {x: 8331.333, y: -9.333334}
     StatModifier: 0
     Ports:
-    - PortName: J'en doute pas une seconde
+    - PortName: J'en doute pas une seconde.
       Direction: 1
       Capacity: 0
       IsPortNull: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 48df3361-4fc2-4878-9715-0ca7228d100e
     DialogueText: "T'as pas de soucis \xE0 te faire, tu m'as l'air sympa."
-    Position: {x: 6983, y: -344}
+    Position: {x: 6983.3335, y: -344}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -291,20 +291,9 @@ MonoBehaviour:
       IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 1515829921, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
-  - NodeGUID: b0fb13ce-398a-45d3-9f5b-57accccfe80f
-    DialogueText: "Mais j't'ai \xE0 l'oeil quand m\xEAme..."
-    Position: {x: 7665.5, y: -351}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 43cfc125-4072-4797-af6f-0ca989c51b98
-    DialogueText: "J'rigole Hahahaha ! Si t'avais vu ta t\xEAte hahaha!"
-    Position: {x: 8125, y: -352}
+    DialogueText: "J'rigole, ahahahah ! Si t'avais vu ta t\xEAte ahahah !"
+    Position: {x: 8125.3335, y: -352}
     StatModifier: 0
     Ports:
     - PortName: Ouf, j'ai eu peur.
@@ -314,9 +303,9 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 1515829921, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 72765767-d5d9-41c6-a6c8-dc567ff67150
-    DialogueText: "il \xE0 jamais rien fait pour que je puisse rentrer, m\xEAme quand
+    DialogueText: "Il a jamais rien fait pour que je puisse rentrer, m\xEAme quand
       j'ai grandi. "
-    Position: {x: 5417.5, y: -159}
+    Position: {x: 5417.3335, y: -158.66667}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -326,13 +315,13 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: dbd68ce1-e2f4-4fa5-8166-a7ec254317ee
-    DialogueText: "Ducoup on lui p\xE9tait ses fen\xEAtres \xE0 coup de caillasse
-      avec mes potes haha"
-    Position: {x: 6064, y: -163}
+    DialogueText: "Du coup on lui p\xE9tait ses fen\xEAtres \xE0 coup de caillasse
+      avec mes potes, ahah."
+    Position: {x: 6064, y: -162.66667}
     StatModifier: 0
     Ports:
     - PortName: " J'suis content d'avoir pens\xE9 \xE0 la rampe, \xE7a me fera moins
-        de vitres \xE0 r\xE9parer"
+        de vitres \xE0 r\xE9parer."
       Direction: 1
       Capacity: 0
       IsPortNull: 0
@@ -342,5 +331,16 @@ MonoBehaviour:
       IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 1515829921, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: b0fb13ce-398a-45d3-9f5b-57accccfe80f
+    DialogueText: "Mais j't'ai \xE0 l'oeil quand m\xEAme..."
+    Position: {x: 7570, y: -353.33334}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   ExposedProperties: []
   CommentBlockData: []
