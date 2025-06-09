@@ -86,6 +86,14 @@ public class Tab : MonoBehaviour
                 _upgradePanelManager.SetUpElevatorUpgradePanel(elevatorManager);
                 break;
             }
+            case ObjectType.Stairs:
+            {
+                break;
+            }
+            case ObjectType.WC:
+            {
+                break;
+            }
         }
     }
 }
