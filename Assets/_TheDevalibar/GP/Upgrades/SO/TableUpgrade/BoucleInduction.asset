@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13f1edc776b448f9bc3401150e361524, type: 3}
-  m_Name: Porte Agrandie
+  m_Name: BoucleInduction
   m_EditorClassIdentifier: 
-  UpgradeSprite: {fileID: 21300000, guid: 686ec4a9795fad441aa16100d2a5e7ce, type: 3}
-  UpgradeName: Porte agrandie
-  UpgradeDescription: "Une porte d\xE9sign\xE9 pour un acc\xE8s adapt\xE9 aux toilettes
-    aux personnes PMR. Un logo fauteuil roulant y est inscrit."
-  UpgradeCost: 0
+  UpgradeSprite: {fileID: 21300000, guid: 65024ebe8dd5b3247a6d71de92940824, type: 3}
+  UpgradeName: "Boucle \xE0 Induction Magn\xE9tique"
+  UpgradeDescription: "L'appareil envoie des ondes sonores directement dans l'appareil
+    auditif. Le son est clair, sans interf\xE9rences et bruits parasites. La discussion
+    entre individus devient plus fluide."
+  UpgradeCost: 210
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
@@ -25,7 +26,7 @@ MonoBehaviour:
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 010000000000
+    values: 000001000000
   OnUpgrade:
     m_PersistentCalls:
       m_Calls: []
@@ -35,4 +36,4 @@ MonoBehaviour:
   NewUpgradeChair1Material: {fileID: 0}
   NewUpgradeChair2Mesh: {fileID: 0}
   NewUpgradeChair2Material: {fileID: 0}
-  AccessibilityUpgrade: 0
+  AccessibilityUpgrade: 5

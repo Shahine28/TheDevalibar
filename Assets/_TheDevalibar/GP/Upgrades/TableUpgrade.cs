@@ -25,5 +25,6 @@ public enum AccessibilityUpgrade
     ArticulatedArmRest,
     NoiseCancellingHeadphones,
     BrailleMenu,
-    InductionLoopSystem
+    InductionLoopSystem,
+    PodotactileCircle
 }

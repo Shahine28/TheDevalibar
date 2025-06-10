@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AmyMaya_J2
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 894bf143-2886-41a7-a84b-3265c9c784e0
+  - BaseNodeGuid: 3b26e0df-4a8a-4e24-84d1-f1f4306563ac
     PortName: StartPointNode
     TargetNodeGuid: 3cfeb682-a349-45e9-878c-bbd10179b560
     IsNullNode: 0
@@ -26,17 +26,21 @@ MonoBehaviour:
     TargetNodeGuid: 37dc34b8-3d86-474b-85d6-0af348f84dba
     IsNullNode: 1
   - BaseNodeGuid: 37dc34b8-3d86-474b-85d6-0af348f84dba
-    PortName: Ah ? Alors Amy qu'est ce qu'il t'arrive ?
+    PortName: Ah ? Alors Amy, qu'est-ce qu'il t'arrive ?
     TargetNodeGuid: 6213fb71-9e05-4f06-b317-74aab5177731
     IsNullNode: 0
   - BaseNodeGuid: 37dc34b8-3d86-474b-85d6-0af348f84dba
-    PortName: Houla on dirait que quelqu'un veut son jus de fruit favori.
+    PortName: Houla, on dirait que quelqu'un veut son jus de fruit favori.
     TargetNodeGuid: 311aa6b6-69f6-48b9-b8b5-e07a1a7ef8f6
     IsNullNode: 0
-  - BaseNodeGuid: 6213fb71-9e05-4f06-b317-74aab5177731
-    PortName: Null Port
-    TargetNodeGuid: aac4902d-5c3c-425c-9301-87134866251a
-    IsNullNode: 1
+  - BaseNodeGuid: 311aa6b6-69f6-48b9-b8b5-e07a1a7ef8f6
+    PortName: "D\xE9sol\xE9e, Amy."
+    TargetNodeGuid: 91b9af88-71e1-4173-9ef6-d44cc10c2084
+    IsNullNode: 0
+  - BaseNodeGuid: 311aa6b6-69f6-48b9-b8b5-e07a1a7ef8f6
+    PortName: Pardonne moi super-Amy, tu as des soucis avec le Joker encore ?
+    TargetNodeGuid: 5445ba89-8bac-475b-9e61-46ba45031599
+    IsNullNode: 0
   - BaseNodeGuid: aac4902d-5c3c-425c-9301-87134866251a
     PortName: Null Port
     TargetNodeGuid: 81d8c8b4-21a9-46af-9e00-6995e72b8601
@@ -45,6 +49,15 @@ MonoBehaviour:
     PortName: "Te laisse pas avoir Amy, d\xE9gomme le la prochaine fois !"
     TargetNodeGuid: ec9e470f-726a-4bb3-aec2-116b2489464d
     IsNullNode: 0
+  - BaseNodeGuid: 81d8c8b4-21a9-46af-9e00-6995e72b8601
+    PortName: "T'as qu'\xE0 tenter une reprise australienne pour contrer son ouverture
+      russe."
+    TargetNodeGuid: c2c783e1-d853-4670-84b0-f0ca269272db
+    IsNullNode: 0
+  - BaseNodeGuid: c2c783e1-d853-4670-84b0-f0ca269272db
+    PortName: Null Port
+    TargetNodeGuid: 4c5d39e5-4551-4849-be3a-e2fe220e489c
+    IsNullNode: 1
   - BaseNodeGuid: ec9e470f-726a-4bb3-aec2-116b2489464d
     PortName: Null Port
     TargetNodeGuid: db8f9a79-9706-4c4c-a4f3-bde21e236a41
@@ -69,12 +82,8 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: 3d583419-a45f-49b8-b4d2-b98f14a26fa5
     IsNullNode: 1
-  - BaseNodeGuid: c2c783e1-d853-4670-84b0-f0ca269272db
-    PortName: Null Port
-    TargetNodeGuid: 4c5d39e5-4551-4849-be3a-e2fe220e489c
-    IsNullNode: 1
   - BaseNodeGuid: 4c5d39e5-4551-4849-be3a-e2fe220e489c
-    PortName: "J'ai juste dis un truc au pif, je ne sais pas si \xE7a existe."
+    PortName: "J'ai juste dit un truc au pif, je ne sais pas si \xE7a existe."
     TargetNodeGuid: 3605fba6-416b-4116-befe-0d0cbe5cf7f8
     IsNullNode: 0
   - BaseNodeGuid: 3605fba6-416b-4116-befe-0d0cbe5cf7f8
@@ -82,30 +91,17 @@ MonoBehaviour:
     TargetNodeGuid: 53c508d8-5a32-46ad-941f-8e78d1874023
     IsNullNode: 1
   - BaseNodeGuid: 53c508d8-5a32-46ad-941f-8e78d1874023
-    PortName: "J'ai un nouveau cocktail dans le menu, il te plairait \xE0 coup s\xFBr"
+    PortName: "J'ai un nouveau cocktail dans le menu, il te plaira \xE0 coup s\xFBr."
     TargetNodeGuid: d9768ed4-adac-4676-a6d6-2dc2f6b76930
-    IsNullNode: 0
-  - BaseNodeGuid: d9768ed4-adac-4676-a6d6-2dc2f6b76930
-    PortName: Null Port
-    TargetNodeGuid: fbec664f-e0b9-44d6-97b7-320434ddc288
-    IsNullNode: 1
-  - BaseNodeGuid: fbec664f-e0b9-44d6-97b7-320434ddc288
-    PortName: Null Port
-    TargetNodeGuid: db391390-0d16-464d-a7fa-cfd5ecc3050f
-    IsNullNode: 1
-  - BaseNodeGuid: 311aa6b6-69f6-48b9-b8b5-e07a1a7ef8f6
-    PortName: "D\xE9sol\xE9e, Amy."
-    TargetNodeGuid: 91b9af88-71e1-4173-9ef6-d44cc10c2084
     IsNullNode: 0
   - BaseNodeGuid: 91b9af88-71e1-4173-9ef6-d44cc10c2084
     PortName: Null Port
     TargetNodeGuid: 4551bff0-91d5-4aa7-a37a-9c7f175296e1
     IsNullNode: 1
-  - BaseNodeGuid: 81d8c8b4-21a9-46af-9e00-6995e72b8601
-    PortName: "T'as qu'\xE0 tenter une reprise australienne pour contrer son ouverture
-      russe."
-    TargetNodeGuid: c2c783e1-d853-4670-84b0-f0ca269272db
-    IsNullNode: 0
+  - BaseNodeGuid: 6213fb71-9e05-4f06-b317-74aab5177731
+    PortName: Null Port
+    TargetNodeGuid: aac4902d-5c3c-425c-9301-87134866251a
+    IsNullNode: 1
   - BaseNodeGuid: 4551bff0-91d5-4aa7-a37a-9c7f175296e1
     PortName: "C'est class\xE9 Secret D\xE9fense, d\xE9sol\xE9 !"
     TargetNodeGuid: 77848e15-63fc-4362-956a-d9358dc0cae1
@@ -126,10 +122,6 @@ MonoBehaviour:
     PortName: "Pas de soucis, et voil\xE0 pour toi."
     TargetNodeGuid: dbfc007a-5b54-4110-aa47-925b8b5aefc9
     IsNullNode: 0
-  - BaseNodeGuid: 311aa6b6-69f6-48b9-b8b5-e07a1a7ef8f6
-    PortName: Pardonne moi super-Amy, tu as des soucis avec le Joker encore ?
-    TargetNodeGuid: 5445ba89-8bac-475b-9e61-46ba45031599
-    IsNullNode: 0
   - BaseNodeGuid: 5445ba89-8bac-475b-9e61-46ba45031599
     PortName: Alors qui ? Freezer ? Godzilla ? Elon Musk ?
     TargetNodeGuid: 2e655276-fa5b-4105-be6d-96d7c3bd3306
@@ -146,13 +138,13 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: db86dfea-dca1-43f5-832a-7e29b45c409a
     IsNullNode: 1
-  - BaseNodeGuid: db86dfea-dca1-43f5-832a-7e29b45c409a
-    PortName: Null Port
-    TargetNodeGuid: eb1138c7-f424-4b7b-b8e1-d16796a2230f
-    IsNullNode: 1
   - BaseNodeGuid: eb1138c7-f424-4b7b-b8e1-d16796a2230f
     PortName: Null Port
     TargetNodeGuid: 0765cab7-4829-4e8b-9e56-7e4784a90241
+    IsNullNode: 1
+  - BaseNodeGuid: db86dfea-dca1-43f5-832a-7e29b45c409a
+    PortName: Null Port
+    TargetNodeGuid: eb1138c7-f424-4b7b-b8e1-d16796a2230f
     IsNullNode: 1
   - BaseNodeGuid: 0765cab7-4829-4e8b-9e56-7e4784a90241
     PortName: Null Port
@@ -174,14 +166,22 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: 2fce0502-a0f7-4699-803d-4f203136eebb
     IsNullNode: 1
-  - BaseNodeGuid: 2fce0502-a0f7-4699-803d-4f203136eebb
+  - BaseNodeGuid: d9768ed4-adac-4676-a6d6-2dc2f6b76930
+    PortName: Null Port
+    TargetNodeGuid: db391390-0d16-464d-a7fa-cfd5ecc3050f
+    IsNullNode: 1
+  - BaseNodeGuid: 9fc1449d-1fd3-4e61-9023-ab836d2384b0
     PortName: "Yes, j'ai. Je te sers \xE7a tout de suite !"
     TargetNodeGuid: 256d7480-5036-4e66-9e4c-f36810178587
     IsNullNode: 0
+  - BaseNodeGuid: 2fce0502-a0f7-4699-803d-4f203136eebb
+    PortName: Null Port
+    TargetNodeGuid: 9fc1449d-1fd3-4e61-9023-ab836d2384b0
+    IsNullNode: 1
   DialogueNodeData:
   - NodeGUID: 3cfeb682-a349-45e9-878c-bbd10179b560
-    DialogueText: Saluuuuut madame Baaaaaaar !
-    Position: {x: 287, y: 200}
+    DialogueText: Saluuuuut Madame baaaaaaar !
+    Position: {x: 287.33334, y: 200}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -193,7 +193,7 @@ MonoBehaviour:
   - NodeGUID: 20bb4731-117b-4927-aa78-33d0412889a7
     DialogueText: "Elle est comme \xE7a parce que tu es l\xE0, elle a boud\xE9 toute
       la matin\xE9e."
-    Position: {x: 771, y: 200}
+    Position: {x: 771.3333, y: 200}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -204,14 +204,14 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
   - NodeGUID: 37dc34b8-3d86-474b-85d6-0af348f84dba
     DialogueText: C'est pas vrai, je boudais pas, tu comprends rien maman !
-    Position: {x: 1451, y: 200}
+    Position: {x: 1451.3334, y: 200}
     StatModifier: 0
     Ports:
-    - PortName: Ah ? Alors Amy qu'est ce qu'il t'arrive ?
+    - PortName: Ah ? Alors Amy, qu'est-ce qu'il t'arrive ?
       Direction: 1
       Capacity: 0
       IsPortNull: 0
-    - PortName: Houla on dirait que quelqu'un veut son jus de fruit favori.
+    - PortName: Houla, on dirait que quelqu'un veut son jus de fruit favori.
       Direction: 1
       Capacity: 0
       IsPortNull: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
   - NodeGUID: 311aa6b6-69f6-48b9-b8b5-e07a1a7ef8f6
     DialogueText: "Pourquoi tu me parles comme si j'\xE9tais une gamine ? Je veux
-      bien quand m\xEAme, mais je le boirais en te boudant. "
+      bien quand m\xEAme, mais je le boirai en te boudant. "
     Position: {x: 2272, y: 242}
     StatModifier: 0
     Ports:
@@ -236,7 +236,7 @@ MonoBehaviour:
   - NodeGUID: aac4902d-5c3c-425c-9301-87134866251a
     DialogueText: "Mais non ma ch\xE9rie ! \xC7a arrive de perdre dans la vie, c'est
       pas si grave !"
-    Position: {x: 3232, y: 107}
+    Position: {x: 3232, y: 107.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -247,7 +247,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
   - NodeGUID: 81d8c8b4-21a9-46af-9e00-6995e72b8601
     DialogueText: "Le tout c'est de t'am\xE9liorer et d'apprendre."
-    Position: {x: 3904, y: 107}
+    Position: {x: 3904, y: 107.33333}
     StatModifier: 0
     Ports:
     - PortName: "Te laisse pas avoir Amy, d\xE9gomme le la prochaine fois !"
@@ -262,9 +262,9 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: c2c783e1-d853-4670-84b0-f0ca269272db
-    DialogueText: "Oh mais bien s\xFBr ! Bien jou\xE9 madame bar, je vais lui montrer
-      tout de suite a ce vieux schnock, \xE0 plus !"
-    Position: {x: 4678, y: 175}
+    DialogueText: "Oh mais bien s\xFBr ! Bien jou\xE9 Madame bar, je vais lui montrer
+      tout de suite \xE0 ce vieux schnock, \xE0 plus !"
+    Position: {x: 4678, y: 175.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -274,8 +274,8 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
   - NodeGUID: ec9e470f-726a-4bb3-aec2-116b2489464d
-    DialogueText: "Hahaha ! Je vais lui faire mordre la poussi\xE8re, muahaha ! Il
-      va d\xE9couvrir la peur de combattre Dark Amy, la plus dangereuse des joueurs
+    DialogueText: "Hahaha ! Je vais lui faire mordre la poussi\xE8re, mouahaha !
+      Il va d\xE9couvrir la peur de combattre Dark Amy, la plus dangereuse des joueurs
       d'\xE9checs !"
     Position: {x: 4678, y: 8}
     StatModifier: 0
@@ -288,8 +288,8 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
   - NodeGUID: db8f9a79-9706-4c4c-a4f3-bde21e236a41
     DialogueText: "Oh, j'aime pas quand elle fait \xE7a. Amy ! Je t'ai d\xE9j\xE0
-      dis qu'il n'y avait rien de bien \xE0 \xEAtre la m\xE9chante."
-    Position: {x: 5811, y: 8}
+      dit qu'il n'y avait rien de bien \xE0 \xEAtre la m\xE9chante."
+    Position: {x: 5811.3335, y: 8}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -300,9 +300,9 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
   - NodeGUID: 1304add5-2b1e-41fd-855e-ad6dadbdf365
     DialogueText: "Il me faut quelque chose de fort pour oublier ma col\xE8re et
-      mon d\xE9sespoir, passes moi une pinte de shots de Vodka, comme le vieux Gary,
-      Mme la Barmaid... S'il te pla\xEEt !"
-    Position: {x: 6681, y: 8}
+      mon d\xE9sespoir, passe moi une pinte de shots de Vodka, comme le vieux Gary,
+      Madame la Barmaid... S'il te pla\xEEt !"
+    Position: {x: 6681.3335, y: 8}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -313,7 +313,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
   - NodeGUID: 5c0e0448-7ee4-487b-a9b6-660bb4d5c4e8
     DialogueText: "AMYYY ! T'arr\xEAtes ce cin\xE9ma ridicule tout de suite !! Et
-      va t'asseoir, t'auras droit qu'\xE0 du jus de gingembre."
+      vas t'asseoir, t'auras droit qu'\xE0 du jus de gingembre."
     Position: {x: 7984, y: 8}
     StatModifier: 0
     Ports:
@@ -325,8 +325,8 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
   - NodeGUID: 6bd0a0b6-80b4-41e5-9890-4b455e003020
     DialogueText: QUOOOIII ? NAAAN ?! PAS MON NEMESIS !... D'accord Maman... Bye
-      bye Mme la Barmaid ! (Dark Amy aura sa revanche !)
-    Position: {x: 8911, y: 8}
+      bye Madame la Barmaid ! (Dark Amy aura sa revanche !)
+    Position: {x: 8911.333, y: 8}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -336,10 +336,10 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
   - NodeGUID: 9eadf2cb-74eb-4073-98a5-1ab0ae1528d5
-    DialogueText: "D\xE9sol\xE9e, \xE7a lui arrive des fois. Sers moi un Chardonnet
-      s'il te pla\xEEt et un diabolo cerise, pas de jus de gingembre aujourd'hui
-      hehe."
-    Position: {x: 9953, y: 8}
+    DialogueText: "D\xE9sol\xE9e, \xE7a lui arrive des fois. Sers moi un Chardonnay
+      s'il te pla\xEEt, et un diabolo cerise, pas de jus de gingembre aujourd'hui
+      h\xE9h\xE9."
+    Position: {x: 9953.333, y: 8}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -351,7 +351,7 @@ MonoBehaviour:
   - NodeGUID: 3d583419-a45f-49b8-b4d2-b98f14a26fa5
     DialogueText: "Bonne journ\xE9e \xE0 toi, et encore merci, \xE7a va devenir l'endroit
       pr\xE9f\xE9r\xE9 d'Amy."
-    Position: {x: 11097, y: 8}
+    Position: {x: 11097.333, y: 8}
     StatModifier: 0
     Ports:
     - PortName: "J'esp\xE8re que oui."
@@ -361,11 +361,11 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: 4c5d39e5-4551-4849-be3a-e2fe220e489c
-    DialogueText: "Oh wow, je savais pas que tu \xE9tais joueuse d'\xE9checs !"
-    Position: {x: 5579, y: 175}
+    DialogueText: "Oh wow, je ne savais pas que tu \xE9tais joueuse d'\xE9checs !"
+    Position: {x: 5579.3335, y: 175.33333}
     StatModifier: 0
     Ports:
-    - PortName: "J'ai juste dis un truc au pif, je ne sais pas si \xE7a existe."
+    - PortName: "J'ai juste dit un truc au pif, je ne sais pas si \xE7a existe."
       Direction: 1
       Capacity: 0
       IsPortNull: 0
@@ -373,8 +373,8 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
   - NodeGUID: 3605fba6-416b-4116-befe-0d0cbe5cf7f8
     DialogueText: "Ah... bon bah j'esp\xE8re que \xE7a l'a inspir\xE9e, sinon elle
-      va \xEAtre invivable ce soir haha !"
-    Position: {x: 6337, y: 175}
+      va \xEAtre invivable ce soir ahah !"
+    Position: {x: 6337.3335, y: 175.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -386,51 +386,15 @@ MonoBehaviour:
   - NodeGUID: 53c508d8-5a32-46ad-941f-8e78d1874023
     DialogueText: "D'mon c\xF4t\xE9, j'vais me lire un bon petit chef d'oeuvre que
       la biblioth\xE9caire du coin m'a conseill\xE9e. "
-    Position: {x: 7121, y: 175}
+    Position: {x: 7121.3335, y: 175.33333}
     StatModifier: 0
     Ports:
-    - PortName: "J'ai un nouveau cocktail dans le menu, il te plairait \xE0 coup
-        s\xFBr"
+    - PortName: "J'ai un nouveau cocktail dans le menu, il te plaira \xE0 coup s\xFBr."
       Direction: 1
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
-  - NodeGUID: d9768ed4-adac-4676-a6d6-2dc2f6b76930
-    DialogueText: "Ah, je suis d\xE9sol\xE9 mais pas d'alcool pour moi ce soir. Amy
-      a un devoir \xE0 rendre pour demain. "
-    Position: {x: 7968, y: 175}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
-  - NodeGUID: fbec664f-e0b9-44d6-97b7-320434ddc288
-    DialogueText: "Ah, je suis d\xE9sol\xE9 mais pas d'alcool pour moi ce soir. Amy
-      a un devoir \xE0 rendre pour demain. "
-    Position: {x: 8831, y: 175}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
-  - NodeGUID: db391390-0d16-464d-a7fa-cfd5ecc3050f
-    DialogueText: Sur ce, bisous et bon courage pour le service.
-    Position: {x: 9677, y: 175}
-    StatModifier: 0
-    Ports:
-    - PortName: Merciii, bon courage avec Amy.
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
   - NodeGUID: 91b9af88-71e1-4173-9ef6-d44cc10c2084
     DialogueText: "Huuuuum trop bon ce jus de fruit ! Il est d\xE9licieux ! Faut
       que Gary go\xFBte \xE7a ! "
@@ -446,7 +410,7 @@ MonoBehaviour:
   - NodeGUID: 6213fb71-9e05-4f06-b317-74aab5177731
     DialogueText: "J'ai perdu hier contre Gary aux \xE9checs ! J'ai pas venu venir
       son ouverture russe... je suis vraiment une quiche..."
-    Position: {x: 2272, y: 107}
+    Position: {x: 2272, y: 107.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -456,9 +420,9 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
   - NodeGUID: 4551bff0-91d5-4aa7-a37a-9c7f175296e1
-    DialogueText: "Wow, elle \xE0 l'air d'aller beaucoup mieux ! Il faut absolument
-      que tu me donnes la recette de ton jus !"
-    Position: {x: 3967, y: 329}
+    DialogueText: Wow, elle a l'air d'aller beaucoup mieux ! Il faut absolument que
+      tu me donnes la recette de ton jus !
+    Position: {x: 3967.3333, y: 329.33334}
     StatModifier: 0
     Ports:
     - PortName: "C'est class\xE9 Secret D\xE9fense, d\xE9sol\xE9 !"
@@ -468,8 +432,8 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
   - NodeGUID: 77848e15-63fc-4362-956a-d9358dc0cae1
-    DialogueText: Je te la piquerais, un de ces jours. Fais attention !
-    Position: {x: 4912, y: 329}
+    DialogueText: Je te la piquerai, un de ces jours. Fais attention !
+    Position: {x: 4912, y: 329.33334}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -479,9 +443,9 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: c7375a5c-fa47-4e49-9f99-5d1c0e363381
-    DialogueText: "Sinon, t'inqui\xE8tes pas pour Amy, elle a perdue face \xE0 Gary
+    DialogueText: "Sinon, t'inqui\xE8te pas pour Amy, elle a perdu face \xE0 Gary
       aux \xE9checs."
-    Position: {x: 5551, y: 329}
+    Position: {x: 5551.3335, y: 329.33334}
     StatModifier: 0
     Ports:
     - PortName: Oh, rien de grave finalement.
@@ -493,7 +457,7 @@ MonoBehaviour:
   - NodeGUID: 4c7ab603-50de-4116-8787-d72242f8027e
     DialogueText: "L'\xE9chec, c'est sa passion du moment. Et je pr\xE9f\xE8re que
       \xE7a le reste, une passion, pas une source de stress."
-    Position: {x: 6261, y: 329}
+    Position: {x: 6261.3335, y: 329.33334}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -505,7 +469,7 @@ MonoBehaviour:
   - NodeGUID: c042d73a-ad56-45d9-880c-b63b6aa008de
     DialogueText: "En parlant de stress, tu voudrais bien me servir ? J'ai eu une
       grosse journ\xE9e au taff."
-    Position: {x: 7197, y: 329}
+    Position: {x: 7197.3335, y: 329.33334}
     StatModifier: 0
     Ports:
     - PortName: "Pas de soucis, et voil\xE0 pour toi."
@@ -516,7 +480,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: dbfc007a-5b54-4110-aa47-925b8b5aefc9
     DialogueText: "Merci, on reviendra s\xFBrement demain apr\xE8s le cours d'Amy. "
-    Position: {x: 8012, y: 329}
+    Position: {x: 8012, y: 329.33334}
     StatModifier: 0
     Ports:
     - PortName: "\xC0 demain, d\xE9j\xE0 h\xE2te de vous revoir."
@@ -526,7 +490,7 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: 5445ba89-8bac-475b-9e61-46ba45031599
-    DialogueText: Le Joker ? Pffff ce petit looser ne vaut rien...
+    DialogueText: Le Joker ? Pffff ce petit loser ne vaut rien...
     Position: {x: 3264, y: 398}
     StatModifier: 0
     Ports:
@@ -539,7 +503,7 @@ MonoBehaviour:
   - NodeGUID: 2e655276-fa5b-4105-be6d-96d7c3bd3306
     DialogueText: "Naaaaaan, tous des m\xE9chants de pacotille... c'est plus compliqu\xE9
       que \xE7a..."
-    Position: {x: 3903, y: 482}
+    Position: {x: 3903.3333, y: 482}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -550,7 +514,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: cc29e7bf-beeb-4494-9589-3507166e3702
     DialogueText: "Tu peux essayer de nous expliquer quand m\xEAme ma ch\xE9rie ?"
-    Position: {x: 4625, y: 482}
+    Position: {x: 4625.3335, y: 482}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -561,7 +525,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
   - NodeGUID: 3f23135a-0de0-44e0-bf28-d2a8063cf685
     DialogueText: "Ahlala, les adultes... Tous les m\xEAmes. "
-    Position: {x: 5271, y: 482}
+    Position: {x: 5271.3335, y: 482}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -585,7 +549,7 @@ MonoBehaviour:
   - NodeGUID: db86dfea-dca1-43f5-832a-7e29b45c409a
     DialogueText: "Oh ! je sais, tu boudes parce que tu as perdu hier contre Gary
       aux \xE9checs ? C'est pas si grave tu sais. "
-    Position: {x: 5831, y: 482}
+    Position: {x: 5831.3335, y: 482}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -632,7 +596,7 @@ MonoBehaviour:
   - NodeGUID: 688e81cc-56c2-486c-aca1-22c74b3db9a3
     DialogueText: "Maintenant, va commencer tes devoirs pour demain. Je vais te commander
       ta boisson pr\xE9f\xE9r\xE9e, de mon c\xF4t\xE9."
-    Position: {x: 9677, y: 482}
+    Position: {x: 9677.333, y: 482}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -652,9 +616,56 @@ MonoBehaviour:
       IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+  - NodeGUID: d9768ed4-adac-4676-a6d6-2dc2f6b76930
+    DialogueText: "Ah, je suis d\xE9sol\xE9e mais pas d'alcool pour moi ce soir.
+      Amy a un devoir \xE0 rendre pour demain. "
+    Position: {x: 7976.6665, y: 170.66667}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: db391390-0d16-464d-a7fa-cfd5ecc3050f
+    DialogueText: Sur ce, bisous et bon courage pour le service.
+    Position: {x: 8776, y: 171.33333}
+    StatModifier: 0
+    Ports:
+    - PortName: Merciii, bon courage avec Amy!
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+  - NodeGUID: 2fce0502-a0f7-4699-803d-4f203136eebb
+    DialogueText: "\"Super m\xE9ga grave\" et elle est d\xE9j\xE0 pass\xE9e \xE0
+      autre chose, je l'adore cette gamine. "
+    Position: {x: 11214, y: 459.33334}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+  - NodeGUID: 9fc1449d-1fd3-4e61-9023-ab836d2384b0
+    DialogueText: "Bref, d\xE9sol\xE9e de te prendre de ton temps, je vais te prendre
+      un cocktail de jus de fruit et un... Cura\xE7ao, si t'as."
+    Position: {x: 11998.667, y: 452}
+    StatModifier: 0
+    Ports:
+    - PortName: "Yes, j'ai. Je te sers \xE7a tout de suite !"
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
   - NodeGUID: 256d7480-5036-4e66-9e4c-f36810178587
     DialogueText: Excellent, j'y vais alors.
-    Position: {x: 12617, y: 482}
+    Position: {x: 12837.333, y: 450}
     StatModifier: 0
     Ports:
     - PortName: Bye bye !
@@ -663,18 +674,5 @@ MonoBehaviour:
       IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
-  - NodeGUID: 2fce0502-a0f7-4699-803d-4f203136eebb
-    DialogueText: "\"Super mega grave\" et elle est d\xE9j\xE0 pass\xE9e \xE0 autre
-      chose, je l'adore cette gamine. Bref, d\xE9sol\xE9 de te prendre de ton temps,
-      je vais te prendre un cocktail de jus de fruit et un... Cura\xE7ao, si t'as."
-    Position: {x: 11197, y: 482}
-    StatModifier: 0
-    Ports:
-    - PortName: "Yes, j'ai. Je te sers \xE7a tout de suite !"
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
   ExposedProperties: []
   CommentBlockData: []

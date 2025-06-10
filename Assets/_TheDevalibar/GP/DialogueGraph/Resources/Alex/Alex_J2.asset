@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Alex_J2
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 911f5493-9a57-405c-ae65-ad759d6d272a
+  - BaseNodeGuid: 3b26e0df-4a8a-4e24-84d1-f1f4306563ac
     PortName: StartPointNode
     TargetNodeGuid: 9872eddd-f1a4-40e1-bb51-355452a25094
     IsNullNode: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   DialogueNodeData:
   - NodeGUID: 0643145e-5eca-4d8c-9a82-8c13d9218071
     DialogueText: "On dirait le Camdem de l'\xE9poque des anciens."
-    Position: {x: 782, y: 173}
+    Position: {x: 782, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -79,7 +79,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: -1581459269, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 9872eddd-f1a4-40e1-bb51-355452a25094
     DialogueText: "Salut, chef ! C'est styl\xE9 ici !"
-    Position: {x: 286, y: 173}
+    Position: {x: 286, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -90,7 +90,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 326382544, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 756b52f7-a5d3-402d-91e7-0c46d9916cca
     DialogueText: "Alors, \xE7a fait quoi de beau en ce moment ?"
-    Position: {x: 1314, y: 173}
+    Position: {x: 1314, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -101,7 +101,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: 4cedb7cf-16cf-4cb2-983a-8a99c1c546f1
     DialogueText: "Question b\xEAte, en fait. T'as grave la classe en Barmaid ! "
-    Position: {x: 1862, y: 173}
+    Position: {x: 1862, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Merci, et toi, tu deviens quoi ?
@@ -113,7 +113,7 @@ MonoBehaviour:
   - NodeGUID: 2ec5ac91-7166-42e4-ac71-87dbbfed8d72
     DialogueText: J'ai un groupe aussi, qui tabasse. Tu devrais passer un de ces
       jours !
-    Position: {x: 3371, y: 173}
+    Position: {x: 3371.3333, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -123,9 +123,9 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: 2eecfe6e-d2c0-4f0f-90bf-7440b3a291b6
-    DialogueText: "Eh bah, j'ai continu\xE9 la voix de la musique et c'est devenu
+    DialogueText: "Eh bah, j'ai continu\xE9 la voie de la musique et c'est devenu
       mon taff. \xC7a paie m\xEAme mon loyer."
-    Position: {x: 2502, y: 173}
+    Position: {x: 2502, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -136,8 +136,8 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: 35f72874-93ec-4643-ab84-874c5bd2518b
     DialogueText: "Et bien s\xFBr, Griboulle est toujours avec moi, il adorerait
-      te revoir haha !"
-    Position: {x: 4078, y: 173}
+      te revoir ahah !"
+    Position: {x: 4078, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -149,7 +149,7 @@ MonoBehaviour:
   - NodeGUID: f3232019-a324-4ee2-a8e9-b677a378567b
     DialogueText: "En tout cas, l'endroit est cool, on le voit direct \xE0 la rampe
       \xE0 l'entr\xE9e."
-    Position: {x: 4782, y: 173}
+    Position: {x: 4782, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -160,7 +160,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: -1581459269, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 26a02825-43db-4e46-a8f7-6439fc71efcb
     DialogueText: La musique est cool aussi. T'sais... euh...
-    Position: {x: 5489, y: 173}
+    Position: {x: 5489.3335, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -172,7 +172,7 @@ MonoBehaviour:
   - NodeGUID: 16d8d7d1-d55b-4747-89fe-c8872c9a681e
     DialogueText: "Avec mon groupe, on fait du rock alternatif et peut-\xEAtre que
       si t'es chaud, on pourrait se repr\xE9senter ici ?"
-    Position: {x: 6009, y: 173}
+    Position: {x: 6009.3335, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -182,8 +182,8 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: 21c92a20-62ae-4b46-bc12-5c57f320e25c
-    DialogueText: "Mais ouai, c'est juste une id\xE9e comme \xE7a !"
-    Position: {x: 6975, y: 173}
+    DialogueText: "Mais ouais, c'est juste une id\xE9e comme \xE7a !"
+    Position: {x: 6975.3335, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -195,7 +195,7 @@ MonoBehaviour:
   - NodeGUID: a2959edc-cb92-4e2e-9f19-5c371ecb80ec
     DialogueText: "Ah merde, \xE0 force de raconter ma vie je vais prendre du retard.
       Tu me sers une belle pinte, s'teu pla\xEEt ?"
-    Position: {x: 7530, y: 173}
+    Position: {x: 7530, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -206,7 +206,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: -1581459269, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 324a4442-f06a-428d-8d56-152bb15bc6fb
     DialogueText: "Super ! Bien mousseuse comme j'aime, \xE0 une prochaine !"
-    Position: {x: 8438, y: 173}
+    Position: {x: 8438, y: 173.33333}
     StatModifier: 0
     Ports:
     - PortName: "\xC0 la prochaine !"
