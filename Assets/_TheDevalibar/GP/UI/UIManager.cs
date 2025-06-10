@@ -3,6 +3,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
@@ -37,19 +38,27 @@ public class UIManager : MonoBehaviour
         _settingsMenus.SetActive(false);
         _previousSelected = _selected.firstSelectedGameObject;
     }
-
-    void Update()
+    
+    public void PauseResume(InputAction.CallbackContext context)
     {
-        
+        if (!context.performed) return;
+        if (_pauseMenus.gameObject.activeInHierarchy)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
     }
 
-    public void OnPause()
+    public void Pause()
     {
         _pauseMenus?.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    public void resume()
+    public void Resume()
     {
         _pauseMenus?.SetActive(false);
         Time.timeScale = 1f;
@@ -79,7 +88,6 @@ public class UIManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.01f);
         _selected.SetSelectedGameObject(_newSelected);
-
     }
 
     public void GoBackToPause()

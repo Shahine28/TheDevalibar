@@ -21,8 +21,7 @@ public class TextResizer : MonoBehaviour
     [SerializeField] TextMeshProUGUI _UISpaceWordVal;
     [SerializeField] TextMeshProUGUI _UISpaceLineVal;
 
-    [Header("UI Color")]
-    [SerializeField] Color _UITextColor;
+
 
     [Header("UI Text param")]
     [RangeAttribute(0,100)]
@@ -43,9 +42,7 @@ public class TextResizer : MonoBehaviour
     [SerializeField] TextMeshProUGUI _worldSpaceLetterVal;
     [SerializeField] TextMeshProUGUI _worldSpaceWordVal;
     [SerializeField] TextMeshProUGUI _worldSpaceLineVal;
-
-    [Header("Color Param")]
-    [SerializeField] Color _worldTextColor;
+    
 
     [Header("World Text param")]
     [RangeAttribute(0, 100)]
@@ -213,7 +210,6 @@ public class TextResizer : MonoBehaviour
         foreach (var text in allUIText)
         {
             text.fontSize = _UITextSize; //change UI text size
-            text.color = _UITextColor; //change UI text color
 
             //---- Text Spacing settings ----//
             text.characterSpacing = _UIspaceInbetweenLetter;
@@ -225,7 +221,6 @@ public class TextResizer : MonoBehaviour
         foreach (var text in allWorldText)
         {
             text.fontSize = _worldTextSize; // change non UI Text size
-            text.color = _worldTextColor; //change non UI Color
 
             //---- Text Spacing settings ----//
             text.characterSpacing = _worldSpaceInbetweenLetter;
