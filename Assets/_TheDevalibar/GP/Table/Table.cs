@@ -47,7 +47,7 @@ public class Table : MonoBehaviour
     [SerializeField] private MeshFilter _chairMesh2Filter;
     [SerializeField] private MeshRenderer _chairMeshRenderer2;
 
-    [SerializedDictionary("Unlockable Item", "Accessibility Upgrade Type")]
+    [SerializedDictionary("Accessibility Upgrade Type", "Unlockable Item")]
     public SerializedDictionary<AccessibilityUpgrade, GameObject> UnloclableItems = new SerializedDictionary<AccessibilityUpgrade, GameObject>();
 
     void Awake()
