@@ -15,9 +15,9 @@ MonoBehaviour:
   UpgradeSprite: {fileID: 21300000, guid: 65024ebe8dd5b3247a6d71de92940824, type: 3}
   UpgradeName: "Boucle \xE0 Induction Magn\xE9tique"
   UpgradeDescription: "L'appareil envoie des ondes sonores directement dans l'appareil
-    auditif. Le son est clair, sans interf\xE9rances et bruits parasites. La discussion
+    auditif. Le son est clair, sans interf\xE9rences et bruits parasites. La discussion
     entre individus devient plus fluide."
-  UpgradeCost: 0
+  UpgradeCost: 210
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
@@ -26,7 +26,7 @@ MonoBehaviour:
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 010000000000
+    values: 000001000000
   OnUpgrade:
     m_PersistentCalls:
       m_Calls: []

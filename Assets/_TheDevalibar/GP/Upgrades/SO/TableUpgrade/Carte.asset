@@ -16,7 +16,7 @@ MonoBehaviour:
   UpgradeName: Carte en Braille
   UpgradeDescription: "Carte en relief, elle est r\xE9dig\xE9e en braille. l'entieret\xE9
     de cette derni\xE8re peut-\xEAtre lue avec l'index."
-  UpgradeCost: 0
+  UpgradeCost: 30
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
@@ -25,7 +25,7 @@ MonoBehaviour:
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 010000000000
+    values: 000100000000
   OnUpgrade:
     m_PersistentCalls:
       m_Calls: []

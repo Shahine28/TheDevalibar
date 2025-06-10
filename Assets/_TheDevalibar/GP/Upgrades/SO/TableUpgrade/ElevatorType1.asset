@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeSprite: {fileID: 21300000, guid: 5e7f901c39d0c984283faae055877c3a, type: 3}
   UpgradeName: Ascenceur Type 1
-  UpgradeDescription: "Un ascenceur classique, du rez-de-chaussez jusqu'\xE0 l'\xE9tage
+  UpgradeDescription: "Un ascenseur classique, du rez-de-chauss\xE9e jusqu'\xE0 l'\xE9tage
     1, avec une limite d'une personne en fauteuil roulant."
-  UpgradeCost: 0
+  UpgradeCost: 1000
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "D\xE9ficience auditive s\xE9v\xE8re"
@@ -25,7 +25,7 @@ MonoBehaviour:
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 000000000000
+    values: 000100000000
   OnUpgrade:
     m_PersistentCalls:
       m_Calls: []

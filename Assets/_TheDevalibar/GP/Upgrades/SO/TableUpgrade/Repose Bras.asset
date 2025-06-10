@@ -17,7 +17,7 @@ MonoBehaviour:
   UpgradeDescription: "Un repose bras totalement movible. Retire l'effort sur le
     bras, la nuque et les \xE9paules. Aucune fatigue, douleur ou tension durant son
     utilisation."
-  UpgradeCost: 0
+  UpgradeCost: 130
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
@@ -26,7 +26,7 @@ MonoBehaviour:
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 010000000000
+    values: 000000000100
   OnUpgrade:
     m_PersistentCalls:
       m_Calls: []

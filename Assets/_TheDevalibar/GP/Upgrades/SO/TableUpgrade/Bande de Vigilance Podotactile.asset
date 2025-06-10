@@ -16,7 +16,7 @@ MonoBehaviour:
   UpgradeName: Bande de Vigilance Podotactile
   UpgradeDescription: "Une bande pr\xE9sente avant l'escalier pour informer de sa
     pr\xE9sence. La bande est lisible au toucher du pied ou \xE0 la canne."
-  UpgradeCost: 0
+  UpgradeCost: 55
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
@@ -25,7 +25,7 @@ MonoBehaviour:
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 010000000000
+    values: 000100000000
   OnUpgrade:
     m_PersistentCalls:
       m_Calls: []

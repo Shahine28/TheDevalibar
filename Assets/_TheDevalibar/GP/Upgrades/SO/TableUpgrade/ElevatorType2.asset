@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeSprite: {fileID: 21300000, guid: 5e7f901c39d0c984283faae055877c3a, type: 3}
   UpgradeName: Ascenceur Type 2
-  UpgradeDescription: "Un ascenceur moderne, offrant l'acc\xE8s \xE0 l'\xE9tage \xE0
+  UpgradeDescription: "Un ascenseur moderne, offrant l'acc\xE8s \xE0 l'\xE9tage \xE0
     une personne en fauteuil roulant et un ou plusieurs passagers. "
-  UpgradeCost: 0
+  UpgradeCost: 3000
   AccessibiltiesToAddWithUpgrade:
     keys:
     - "Mobilit\xE9"
@@ -29,7 +29,7 @@ MonoBehaviour:
     - "Allergies s\xE9v\xE8res"
     - "Troubles cognitifs l\xE9gers"
     - Troubles dermatologiques
-    values: 00010000000000000000
+    values: 01000000000000000000
   OnUpgrade:
     m_PersistentCalls:
       m_Calls: []
