@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject _rebindMenus;
     [SerializeField] GameObject _audioMenu;
     [SerializeField] GameObject _textSettingsMenu;
+    [SerializeField] GameObject _keyboardDisplay;
+    [SerializeField] GameObject _mouseDisplay;
+    [SerializeField] GameObject _controllerDisplay;
 
     [Header("Parameters")]
     //[SerializeField] bool _isPaused = false;
@@ -20,6 +23,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] bool _isAudioDisplay = false;
     [SerializeField] bool _isRebindDisplay = false;
     [SerializeField] bool _isTextSettingsDisplay = false;
+    [SerializeField] bool _isKeyboardControlDisplay = false;
+    [SerializeField] bool _isMouseControlDisplay = false;
+    [SerializeField] bool _isControlerControlDisplay = false;
 
     [Header("Controller Selection")]
     [SerializeField] EventSystem _selected;
@@ -120,6 +126,47 @@ public class UIManager : MonoBehaviour
         else
         {
             _rebindMenus?.SetActive(false);
+        }
+    }
+
+    public void DisplayKeyboardRebind()
+    {
+        if (!_isKeyboardControlDisplay)
+        {
+            _keyboardDisplay?.SetActive(true);
+            _controllerDisplay?.SetActive(false);
+            _mouseDisplay?.SetActive(false);
+        }
+        else
+        {
+            _keyboardDisplay?.SetActive(false);
+        }
+    }
+
+    public void DisplayMouseRebind()
+    {
+        if (!_isMouseControlDisplay)
+        {
+            _mouseDisplay?.SetActive(true);
+            _keyboardDisplay?.SetActive(false);
+            _controllerDisplay?.SetActive(false);
+        }
+        else
+        {
+            _mouseDisplay?.SetActive(false);
+        }
+    }
+    public void DisplayControllerRebind()
+    {
+        if (!_isControlerControlDisplay)
+        {
+            _controllerDisplay?.SetActive(true);
+            _mouseDisplay?.SetActive(false);
+            _keyboardDisplay?.SetActive(false);
+        }
+        else
+        {
+            _controllerDisplay?.SetActive(false);
         }
     }
 
