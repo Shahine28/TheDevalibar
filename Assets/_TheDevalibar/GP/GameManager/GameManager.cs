@@ -7,8 +7,7 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-
-
+    
     [Header("Data")] 
     public GameData GameData;
 
@@ -47,6 +46,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject); // Évite les doublons
         }
 
+        if (GameData)
+        {
+            GameData.DayIndex = -1;
+        }
         ServiceLocator.Register(this);
     }
 

@@ -103,6 +103,8 @@ public class CharacterBehavior : MonoBehaviour
     {
         _character = character;
     }
+
+    
 }
 
 public enum CharacterState

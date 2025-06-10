@@ -9,6 +9,7 @@ public class ShowHideUI : MonoBehaviour
     [SerializeField] private List<MoveUI> _UIElementsToMove = new List<MoveUI>();
     private CameraZoomToTarget _cameraZoomToTarget;
     private CameraMovementAndZoomControl _cameraMovementAndZoomControl;
+    public bool IsUIShown { get; private set; }
 
     public event Action OnUIShowed;
     public event Action OnUIHided;
@@ -31,6 +32,8 @@ public class ShowHideUI : MonoBehaviour
         {
             transform.gameObject.SetActive(false);
         }
+
+        IsUIShown = false;
         OnUIHided?.Invoke();
     }
 
@@ -64,6 +67,8 @@ public class ShowHideUI : MonoBehaviour
         {
             transform.gameObject.SetActive(true);
         }
+
+        IsUIShown = true;
         OnUIShowed?.Invoke();
     }
 }   
