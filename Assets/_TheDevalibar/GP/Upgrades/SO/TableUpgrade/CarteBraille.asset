@@ -10,29 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13f1edc776b448f9bc3401150e361524, type: 3}
-  m_Name: ElevatorType1
+  m_Name: CarteBraille
   m_EditorClassIdentifier: 
-  UpgradeSprite: {fileID: 21300000, guid: 5e7f901c39d0c984283faae055877c3a, type: 3}
-  UpgradeName: Ascenceur Type 1
-  UpgradeDescription: "Un ascenceur classique, du rez-de-chaussez jusqu'\xE0 l'\xE9tage
-    1, avec une limite d'une personne en fauteuil roulant."
-  UpgradeCost: 0
+  UpgradeSprite: {fileID: 21300000, guid: e2a092678554a364e9a33349c39b9d9e, type: 3}
+  UpgradeName: Carte en Braille
+  UpgradeDescription: "Carte en relief, elle est r\xE9dig\xE9e en braille. l'entieret\xE9
+    de cette derni\xE8re peut-\xEAtre lue avec l'index."
+  UpgradeCost: 30
   AccessibiltiesToAddWithUpgrade:
     keys:
-    - "D\xE9ficience auditive s\xE9v\xE8re"
     - "Mobilit\xE9 r\xE9duite s\xE9v\xE8re"
     - "D\xE9ficience visuelle s\xE9v\xE8re"
+    - "D\xE9ficience auditive s\xE9v\xE8re"
     - "Mobilit\xE9 r\xE9duite l\xE9g\xE8re"
     - "Douleurs chroniques l\xE9g\xE8re"
     - "Troubles cognitifs l\xE9g\xE8re"
-    values: 000000000000
+    values: 000100000000
   OnUpgrade:
     m_PersistentCalls:
       m_Calls: []
   NewUpgradeTableMesh: {fileID: 6623375816794612673, guid: dcf713db8fac09641ad8d82f1a3f1d8e, type: 3}
-  NewUpgradeTableMaterial: {fileID: 0}
+  NewUpgradeTableMaterial: {fileID: 2100000, guid: ed74ac5ce8fbb904a9295d3e0333c57f, type: 2}
   NewUpgradeChair1Mesh: {fileID: 0}
   NewUpgradeChair1Material: {fileID: 0}
   NewUpgradeChair2Mesh: {fileID: 0}
   NewUpgradeChair2Material: {fileID: 0}
-  AccessibilityUpgrade: 0
+  AccessibilityUpgrade: 4
