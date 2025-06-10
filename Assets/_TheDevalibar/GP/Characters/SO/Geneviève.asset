@@ -15,12 +15,14 @@ MonoBehaviour:
   AffinityManager: {fileID: 11400000, guid: 23b23b1f68a494d4d8c5ef607d2d0298, type: 2}
   CharacterName: "Genevi\xE8ve Gueye"
   CharacterPseudo: Queen_Gueye
-  CharacterProfilePicture: {fileID: 21300000, guid: 1d2c103791467ca4ea491a8eca6332de, type: 3}
-  CharacterSprite: {fileID: 21300000, guid: ad706a90293fb486bade25d279cf303e, type: 3}
+  CharacterProfilePicture: {fileID: 21300000, guid: 453f8495fb049344ca4f6da8bbadf4e0, type: 3}
+  CharacterSprite: {fileID: 21300000, guid: a1fb84884f2ac48019f7e73024a8598b, type: 3}
   CharacterMesh: {fileID: 4308864938498054788, guid: fbfb58d0a9f74de43bb10d97efdbfb13, type: 3}
   CharacterMaterial: {fileID: 2100000, guid: 87795aecd181c7942a131f2da0993689, type: 2}
   HasSpecificRuntimeAnimationController: 0
   CharacterRuntimeAnimatorController: {fileID: 0}
+  _hasAFollower: 0
+  _characterFollower: {fileID: 0}
   Affinity: 50
   NextAffinityValue: 100
   Dialogues:
@@ -67,7 +69,29 @@ MonoBehaviour:
         - Key: 0
           Value: {fileID: 0}
         - Key: 1
+          Value: {fileID: 11400000, guid: b151514de296f423fa5e256b148d6471, type: 2}
+  - Dialogues:
+    - AffinityName: Angry
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
           Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: be0ddd510a9364ee28bb7c2dee737cb1, type: 2}
+    - AffinityName: Neutral
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: be0ddd510a9364ee28bb7c2dee737cb1, type: 2}
+    - AffinityName: Happy
+      DialogueContainerFromLanguageCode:
+        _serializedList:
+        - Key: 0
+          Value: {fileID: 0}
+        - Key: 1
+          Value: {fileID: 11400000, guid: be0ddd510a9364ee28bb7c2dee737cb1, type: 2}
   DialogueIndex: 0
   _characterReviews:
     GoodReviews:

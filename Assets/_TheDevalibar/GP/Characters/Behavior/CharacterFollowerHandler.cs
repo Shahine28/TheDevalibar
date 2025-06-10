@@ -88,7 +88,7 @@ public class CharacterFollowerHandler : CharacterComponent
         }
         else if (HasAFollower)
         {
-            Debug.LogError("CharacterFollower is NULL");
+            Debug.LogWarning("CharacterFollower is NULL");
         }
     }
 }
