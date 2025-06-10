@@ -58,6 +58,19 @@ public class CharacterBehavior : MonoBehaviour
     public CharacterWaiting CharacterWaiting => _characterWaiting;
     
     
+    private TextResizer _textResizer;
+
+    void Start()
+    {
+        _textResizer = ServiceLocator.Get<TextResizer>();
+        _textResizer?.UpdateTextRegistry();
+    }
+
+    private void OnDestroy()
+    {
+        _textResizer?.UpdateTextRegistry();
+    }
+
     public void InitVar()
     {
         ServiceLocator.RequireComponent(this, ref _characterAnimationManager, "No Character Animation Found");
