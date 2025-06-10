@@ -50,6 +50,11 @@ public class Tab : MonoBehaviour
             Debug.LogError("CameraZoomToTarget is null");
             return;
         }
+        if (_upgradePanelManager == null)
+        {
+            Debug.LogError("There is no upgrade panel manager in the scene.");
+            return;
+        }
         switch (_objectType)
         {
             case ObjectType.Table:
@@ -61,11 +66,6 @@ public class Tab : MonoBehaviour
                     return;
                 }
                 _cameraZoomToTarget.ZoomTo(tablesManager.Tables[_tabID].gameObject.transform);
-                if (_upgradePanelManager == null)
-                {
-                    Debug.LogError("There is no upgrade panel manager in the scene.");
-                    return;
-                }
                 _upgradePanelManager.SetUpTableUpgradePanels(tablesManager.Tables[_tabID]);
                 break;
             }
@@ -78,20 +78,32 @@ public class Tab : MonoBehaviour
                     return;
                 }
                 _cameraZoomToTarget.ZoomTo(elevatorManager.ElevatorGameObject.gameObject.transform);
-                if (_upgradePanelManager == null)
-                {
-                    Debug.LogError("There is no upgrade panel manager in the scene.");
-                    return;
-                }
                 _upgradePanelManager.SetUpElevatorUpgradePanel(elevatorManager);
                 break;
             }
             case ObjectType.Stairs:
             {
+                StairsManager stairsManager = ServiceLocator.Get<StairsManager>();
+                if (stairsManager == null)
+                {
+                    Debug.LogError("There is no stairs manager in the scene.");
+                    return;
+                }
+
+                _cameraZoomToTarget.ZoomTo(stairsManager.transform);
+                _upgradePanelManager.SetUpPropsUpgradePanel(stairsManager, ObjectType.Stairs);
                 break;
             }
             case ObjectType.WC:
             {
+                WCManager wcManager = ServiceLocator.Get<WCManager>();
+                if (wcManager == null)
+                {
+                    Debug.LogError("There is no wc manager in the scene.");
+                    return;
+                }
+                _cameraZoomToTarget.ZoomTo(wcManager.transform);
+                _upgradePanelManager.SetUpPropsUpgradePanel(wcManager, ObjectType.WC);
                 break;
             }
         }

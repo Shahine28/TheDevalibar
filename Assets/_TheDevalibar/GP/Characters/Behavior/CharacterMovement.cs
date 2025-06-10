@@ -410,12 +410,13 @@ public class CharacterMovement : CharacterComponent
                 gameManager.UpdateGoldValue();
             }
             
-            
             if (_characterSpawnManager && _characterSpawnManager.HaveAllCharactersAndNCPBeenSpawned && _characterSpawnManager.CharacterSpawnPoint.childCount.Equals(1))
             {
                 _tablesManager?.ShowUpgradeButtonTables();
                 _showHideUI?.ShowUI();
                 reviewManager?.SetReviews();
+                DayNightManager dayNightManager = ServiceLocator.Get<DayNightManager>();
+                dayNightManager?.StartToNightTransition();
             }
             
             _characterFollowerHandler.ForeCharacterFollowerToMoveToBarExit();
