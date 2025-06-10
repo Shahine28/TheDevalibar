@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18e3a317d118bc94dbb48fe0d762e73f, type: 3}
-  m_Name: AL.-dialogue_intro_proto
+  m_Name: Alex_J1
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 3b26e0df-4a8a-4e24-84d1-f1f4306563ac
+  - BaseNodeGuid: cff71386-033c-422f-9316-9e1867a96b9a
     PortName: StartPointNode
     TargetNodeGuid: d03dfe1c-0843-484c-be44-cf45304ad321
     IsNullNode: 0
@@ -37,10 +37,6 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: c5462026-8fcf-4013-82b9-fbbb0edd343b
     IsNullNode: 1
-  - BaseNodeGuid: 9ddc020b-24d5-4be6-9ba9-c58cce6103cf
-    PortName: Null Port
-    TargetNodeGuid: a0b16146-f4bc-4020-b804-f50f42efc3cf
-    IsNullNode: 1
   - BaseNodeGuid: c28e8ecd-c56e-4104-8c5a-9851917104b4
     PortName: Null Port
     TargetNodeGuid: c71531ad-10db-433c-924e-4afb130c95fe
@@ -53,11 +49,15 @@ MonoBehaviour:
     PortName: "Alex? Wow, \xE7a fait un bail !"
     TargetNodeGuid: 9ddc020b-24d5-4be6-9ba9-c58cce6103cf
     IsNullNode: 0
+  - BaseNodeGuid: 9ddc020b-24d5-4be6-9ba9-c58cce6103cf
+    PortName: Null Port
+    TargetNodeGuid: a0b16146-f4bc-4020-b804-f50f42efc3cf
+    IsNullNode: 1
   DialogueNodeData:
   - NodeGUID: 63466a38-9c2f-40d0-8c30-e8d68538969c
-    DialogueText: "Cest cool, on va enfin pouvoir se la mettre sans avoir \xE0 aller
-      jusqu'au centre-ville."
-    Position: {x: 705.3333, y: 190}
+    DialogueText: "C'est cool, on va enfin pouvoir se la mettre sans avoir \xE0 aller
+      jusqu'\xE0 Bastille."
+    Position: {x: 705.5, y: 190}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -69,7 +69,7 @@ MonoBehaviour:
   - NodeGUID: a0b16146-f4bc-4020-b804-f50f42efc3cf
     DialogueText: "Tu te rappelles des cours de chimie de Madame Lou ? T'avais foutu
       le feu \xE0 ta blouse !"
-    Position: {x: 2392, y: 301.33334}
+    Position: {x: 2392, y: 301.5}
     StatModifier: 0
     Ports:
     - PortName: "Ouais, j'avais eu la peur de ma vie, h\xE9h\xE9h\xE9 !"
@@ -85,7 +85,7 @@ MonoBehaviour:
   - NodeGUID: c71531ad-10db-433c-924e-4afb130c95fe
     DialogueText: "Je vais aller m'asseoir, mais j'esp\xE8re qu'on pourra reparler
       !"
-    Position: {x: 3759.3333, y: 301.33334}
+    Position: {x: 3759.5, y: 301.5}
     StatModifier: 0
     Ports:
     - PortName: Avec Plaisir !
@@ -107,7 +107,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 326382544, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: c5462026-8fcf-4013-82b9-fbbb0edd343b
     DialogueText: Je vais te prendre une limonade, s'il te plait.
-    Position: {x: 2493.3333, y: 97.333336}
+    Position: {x: 2493.5, y: 97.5}
     StatModifier: 0
     Ports:
     - PortName: "Je te pr\xE9pare \xE7a"
@@ -118,7 +118,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: -1581459269, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 207e77ce-91df-4ea5-82cb-9008e366650f
     DialogueText: "Ah, j'ai d\xFB confondre alors..."
-    Position: {x: 1971.3334, y: 97.333336}
+    Position: {x: 1971.5, y: 97.5}
     StatModifier: -10
     Ports:
     - PortName: Null Port
@@ -130,7 +130,7 @@ MonoBehaviour:
   - NodeGUID: c28e8ecd-c56e-4104-8c5a-9851917104b4
     DialogueText: "Tu m'\xE9tonnes, en tout cas c'est cool de te revoir dans le coin
       !"
-    Position: {x: 3149.3333, y: 298}
+    Position: {x: 3149.5, y: 298}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -141,7 +141,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 326382544, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: adb0b62c-1f6c-4a22-b774-533d2d09a3c3
     DialogueText: "H\xE9 mais attends, on se conna\xEEt non ?"
-    Position: {x: 1381.3334, y: 186.66667}
+    Position: {x: 1381.5, y: 186.5}
     StatModifier: 0
     Ports:
     - PortName: Non, je t'ai jamais vu de ma vie.
@@ -156,7 +156,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: -1581459269, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 9ddc020b-24d5-4be6-9ba9-c58cce6103cf
     DialogueText: "Putain ouais, depuis le lyc\xE9e ahah !"
-    Position: {x: 1954, y: 299.33334}
+    Position: {x: 1954, y: 299.5}
     StatModifier: 10
     Ports:
     - PortName: Null Port
