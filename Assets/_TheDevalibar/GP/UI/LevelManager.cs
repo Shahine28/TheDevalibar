@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] SceneAsset _GameScene;
-
-    public void Play()
+    
+    public void LoadScene()
     {
         SceneManager.LoadScene(_GameScene.name);
     }
-
-    public void QuitToMain()
+    
+    public void LoadSceneAsync()
     {
-        SceneManager.LoadScene(_GameScene.name);
+        SceneManager.LoadSceneAsync(_GameScene.name);
     }
 }
