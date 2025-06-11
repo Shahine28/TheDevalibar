@@ -56,6 +56,7 @@ public class UIManager : MonoBehaviour
     public void ShowSettings()
     {
         _settingsMenus?.SetActive(true);
+        _mainMenu?.SetActive(false);
         _audioMenu?.SetActive(true);
         _pauseMenus?.SetActive(false);
         _rebindMenus?.SetActive(false);

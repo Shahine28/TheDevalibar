@@ -11,17 +11,19 @@ using FontStyles = TMPro.FontStyles;
 public class TextResizer : MonoBehaviour
 {
 
+    [Header("UI Text")]
     [SerializeField] private TextSettingContainer _uiFontSize;
     [SerializeField] private TextSettingContainer _uiCharacterSpacing;
     [SerializeField] private TextSettingContainer _uiWordSpacing;
     [SerializeField] private TextSettingContainer _uiLineSpacing;
     
+    [Header("World Text")]
     [SerializeField] private TextSettingContainer _worldFontSize;
     [SerializeField] private TextSettingContainer _worldCharacterSpacing;
     [SerializeField] private TextSettingContainer _worldWordSpacing;
     [SerializeField] private TextSettingContainer _worldLineSpacing;
     
-    [Header("FontStyle")]
+    [Header("Text Fonts")]
     [SerializeField] TMP_FontAsset _openDys;
     [SerializeField] TMP_FontAsset _robotCondensed;
     
