@@ -57,20 +57,16 @@ public class UIManager : MonoBehaviour
     {
         _settingsMenus?.SetActive(true);
         _audioMenu?.SetActive(true);
-        //_mainMenu?.SetActive(false);
-        _pauseMenus.SetActive(false);
+        _pauseMenus?.SetActive(false);
         _rebindMenus?.SetActive(false);
         _textSettingsMenu?.SetActive(false);
         StartCoroutine(coucou());
-        //set the first selected obj when using controller
-        // _selected.SetSelectedGameObject(_newSelected);
-        //_selected.firstSelectedGameObject = _newSelected;
     }
 
     IEnumerator coucou()
     {
         yield return new WaitForSecondsRealtime(0.01f);
-        _selected.SetSelectedGameObject(_newSelected);
+        _selected?.SetSelectedGameObject(_newSelected);
     }
 
     public void GoBackToPause()
@@ -78,9 +74,9 @@ public class UIManager : MonoBehaviour
         _settingsMenus?.SetActive(false);
         /*_audioMenu?.SetActive(false);
         _rebindMenus?.SetActive(false);*/
-        _pauseMenus.SetActive(true);
-        _selected.SetSelectedGameObject(_previousSelected);
-        _selected.firstSelectedGameObject = _previousSelected;
+        _pauseMenus?.SetActive(true);
+        _selected?.SetSelectedGameObject(_previousSelected);
+        if (_selected != null) _selected.firstSelectedGameObject = _previousSelected;
     }
 
     public void GoBackToMain()
@@ -96,7 +92,7 @@ public class UIManager : MonoBehaviour
         _audioMenu?.SetActive(true);
         _rebindMenus?.SetActive(false);
         _textSettingsMenu?.SetActive(false);
-        _mainMenu.SetActive(false);
+        _mainMenu?.SetActive(false);
         _keyboardDisplay?.SetActive(false);
         _mouseDisplay?.SetActive(false);
         _controllerDisplay?.SetActive(false);
