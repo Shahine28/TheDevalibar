@@ -412,14 +412,6 @@ MonoBehaviour:
   _mouseDisplay: {fileID: 825126467372628144}
   _controllerDisplay: {fileID: 1467224272727067448}
   _DeviceDispaly: {fileID: 323409353791922534}
-  _isSettingsDisplay: 0
-  _isAudioDisplay: 0
-  _isRebindDisplay: 0
-  _isTextSettingsDisplay: 0
-  _isKeyboardControlDisplay: 0
-  _isMouseControlDisplay: 0
-  _isControlerControlDisplay: 0
-  _isDeviceDisplay: 0
   _selected: {fileID: 0}
   _newSelected: {fileID: 858783102866130107}
   _previousSelected: {fileID: 0}
@@ -4461,6 +4453,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResetToDefault
       objectReference: {fileID: 0}
+    - target: {fileID: 3820879838524471208, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
+      propertyPath: _scrollRect
+      value: 
+      objectReference: {fileID: 351055368875286551}
     - target: {fileID: 3879347340442041968, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -5814,6 +5810,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &351055368875286551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4488282804388119278, guid: 8253af4d86ad56e4d9299223ed532c38, type: 3}
+  m_PrefabInstance: {fileID: 4221745943013384953}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1467224272727067448 stripped
