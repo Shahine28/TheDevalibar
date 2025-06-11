@@ -18,6 +18,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject _mouseDisplay;
     [SerializeField] GameObject _controllerDisplay;
 
+    [Header("device container")]
+    [SerializeField] GameObject _DeviceDispaly;
+
     [Header("Parameters")]
     //[SerializeField] bool _isPaused = false;
     [SerializeField] bool _isSettingsDisplay = false;
@@ -27,6 +30,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] bool _isKeyboardControlDisplay = false;
     [SerializeField] bool _isMouseControlDisplay = false;
     [SerializeField] bool _isControlerControlDisplay = false;
+    [SerializeField] bool _isDeviceDisplay = false;
 
     [Header("Controller Selection")]
     [SerializeField] EventSystem _selected;
@@ -116,6 +120,9 @@ public class UIManager : MonoBehaviour
             _rebindMenus?.SetActive(false);
             _textSettingsMenu?.SetActive(false);
             _mainMenu.SetActive(false);
+            _keyboardDisplay?.SetActive(false);
+            _mouseDisplay?.SetActive(false);
+            _controllerDisplay?.SetActive(false);
         }
         else
         {
@@ -128,53 +135,70 @@ public class UIManager : MonoBehaviour
         if (!_isRebindDisplay)
         {
             _rebindMenus?.SetActive(true);
+            _DeviceDispaly?.SetActive(true);
+
             _audioMenu?.SetActive(false);
             _textSettingsMenu?.SetActive(false);
+            _keyboardDisplay?.SetActive(false);
+            _mouseDisplay?.SetActive(false);
+            _controllerDisplay?.SetActive(false);
         }
         else
         {
             _rebindMenus?.SetActive(false);
+            _DeviceDispaly?.SetActive(false);
         }
     }
 
+    //---- Keyboard ----//
     public void DisplayKeyboardRebind()
     {
         if (!_isKeyboardControlDisplay)
         {
             _keyboardDisplay?.SetActive(true);
+            _DeviceDispaly?.SetActive(false);
+
             _controllerDisplay?.SetActive(false);
             _mouseDisplay?.SetActive(false);
         }
         else
         {
             _keyboardDisplay?.SetActive(false);
+            _DeviceDispaly?.SetActive(true);
         }
     }
 
+    //---- Mouse ----//
     public void DisplayMouseRebind()
     {
         if (!_isMouseControlDisplay)
         {
             _mouseDisplay?.SetActive(true);
+            _DeviceDispaly?.SetActive(false);
             _keyboardDisplay?.SetActive(false);
             _controllerDisplay?.SetActive(false);
         }
         else
         {
             _mouseDisplay?.SetActive(false);
+            _DeviceDispaly?.SetActive(true);
         }
     }
+
+    //---- Controller ----//
     public void DisplayControllerRebind()
     {
         if (!_isControlerControlDisplay)
         {
             _controllerDisplay?.SetActive(true);
+            _DeviceDispaly?.SetActive(false);
             _mouseDisplay?.SetActive(false);
             _keyboardDisplay?.SetActive(false);
         }
         else
         {
             _controllerDisplay?.SetActive(false);
+            _DeviceDispaly?.SetActive(true);
         }
     }
 
@@ -185,6 +209,9 @@ public class UIManager : MonoBehaviour
             _textSettingsMenu?.SetActive(true);
             _audioMenu?.SetActive(false);
             _rebindMenus?.SetActive(false);
+            _keyboardDisplay?.SetActive(false);
+            _mouseDisplay?.SetActive(false);
+            _controllerDisplay?.SetActive(false);
         }
         else
         {

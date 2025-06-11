@@ -4,11 +4,8 @@ using System.Linq;
 using MyUtilities;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 using NaughtyAttributes;
-using Unity.Android.Gradle.Manifest;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 using FontStyles = TMPro.FontStyles;
 
 public class TextResizer : MonoBehaviour
