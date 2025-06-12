@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gary_J2
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 599b7756-5030-43fb-bf75-e2278db2aaf6
+  - BaseNodeGuid: 8c6de513-5a64-450e-8377-e800dcfdbcb9
     PortName: StartPointNode
     TargetNodeGuid: e9575ac2-efac-4702-aa91-49600134a2dd
     IsNullNode: 0
@@ -107,10 +107,6 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: b3954ba5-84a3-47fa-9073-45290ba27d5d
     IsNullNode: 1
-  - BaseNodeGuid: 87da2e37-1f86-4980-8e06-40b1730b4817
-    PortName: Null Port
-    TargetNodeGuid: 723cd4d0-d723-4854-8a98-c7b91ab7a186
-    IsNullNode: 1
   - BaseNodeGuid: 723cd4d0-d723-4854-8a98-c7b91ab7a186
     PortName: "Tu te fais peut-\xEAtre des id\xE9es, c'est pas son boulot d'\xEAtre
       gentil."
@@ -168,25 +164,9 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: d2a72bee-2975-487f-a070-9181f829c513
     IsNullNode: 1
-  - BaseNodeGuid: d47c1ca4-51f3-409f-9ce6-55b2f89d0eda
-    PortName: Null Port
-    TargetNodeGuid: 569bd412-41ac-49cf-bdb8-1f75ca122285
-    IsNullNode: 1
-  - BaseNodeGuid: 569bd412-41ac-49cf-bdb8-1f75ca122285
-    PortName: "J'esp\xE8re que \xE7a va se calmer alors."
-    TargetNodeGuid: 0a5f3d30-d626-4cff-aabf-0aa410742507
-    IsNullNode: 0
-  - BaseNodeGuid: 569bd412-41ac-49cf-bdb8-1f75ca122285
-    PortName: Tiens le premier verre est pour moi alors, bon courage.
-    TargetNodeGuid: e1361052-69be-46bf-afc7-f9b04ba89dbf
-    IsNullNode: 0
   - BaseNodeGuid: 6ae7c71a-a070-41a7-af94-4637fee3931b
     PortName: Null Port
     TargetNodeGuid: d835d87b-c0f1-4111-b4fb-602af462fc09
-    IsNullNode: 1
-  - BaseNodeGuid: 0a5f3d30-d626-4cff-aabf-0aa410742507
-    PortName: Null Port
-    TargetNodeGuid: ea7a36c9-611b-4ed3-ac3c-1a550a2268b2
     IsNullNode: 1
   - BaseNodeGuid: e897589e-0e00-49ce-ae97-f2f2a02916e3
     PortName: Null Port
@@ -212,9 +192,33 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: c996b063-c657-4c72-94e2-93c922fb1459
     IsNullNode: 1
+  - BaseNodeGuid: d47c1ca4-51f3-409f-9ce6-55b2f89d0eda
+    PortName: Null Port
+    TargetNodeGuid: 569bd412-41ac-49cf-bdb8-1f75ca122285
+    IsNullNode: 1
+  - BaseNodeGuid: 569bd412-41ac-49cf-bdb8-1f75ca122285
+    PortName: "J'esp\xE8re que \xE7a va se calmer alors."
+    TargetNodeGuid: 0a5f3d30-d626-4cff-aabf-0aa410742507
+    IsNullNode: 0
+  - BaseNodeGuid: 569bd412-41ac-49cf-bdb8-1f75ca122285
+    PortName: Tiens le premier verre est pour moi alors, bon courage.
+    TargetNodeGuid: e1361052-69be-46bf-afc7-f9b04ba89dbf
+    IsNullNode: 0
+  - BaseNodeGuid: 0a5f3d30-d626-4cff-aabf-0aa410742507
+    PortName: Null Port
+    TargetNodeGuid: ea7a36c9-611b-4ed3-ac3c-1a550a2268b2
+    IsNullNode: 1
   - BaseNodeGuid: c996b063-c657-4c72-94e2-93c922fb1459
     PortName: Null Port
     TargetNodeGuid: d47c1ca4-51f3-409f-9ce6-55b2f89d0eda
+    IsNullNode: 1
+  - BaseNodeGuid: 87da2e37-1f86-4980-8e06-40b1730b4817
+    PortName: Null Port
+    TargetNodeGuid: b105a906-a46f-4037-9b68-7265a57c15f3
+    IsNullNode: 1
+  - BaseNodeGuid: b105a906-a46f-4037-9b68-7265a57c15f3
+    PortName: Null Port
+    TargetNodeGuid: 723cd4d0-d723-4854-8a98-c7b91ab7a186
     IsNullNode: 1
   DialogueNodeData:
   - NodeGUID: e9575ac2-efac-4702-aa91-49600134a2dd
@@ -440,9 +444,7 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 87da2e37-1f86-4980-8e06-40b1730b4817
-    DialogueText: "Enfin, c'\xE9tait cens\xE9 \xEAtre du pass\xE9, mais entre cette
-      histoire et les quelques autres probl\xE8mes que j'ai eu depuis, ils m'ont
-      flanqu\xE9 un agent de probation."
+    DialogueText: "Enfin, c'\xE9tait cens\xE9 \xEAtre du pass\xE9."
     Position: {x: 8208, y: 277.5}
     StatModifier: 0
     Ports:
@@ -452,23 +454,6 @@ MonoBehaviour:
       IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
-  - NodeGUID: 723cd4d0-d723-4854-8a98-c7b91ab7a186
-    DialogueText: "Il est cens\xE9 s'assurer que je ne \"retombe pas dans mes travers\",
-      mais en r\xE9alit\xE9 il me d\xE9teste, je sais pas pourquoi."
-    Position: {x: 9498, y: 269.5}
-    StatModifier: 0
-    Ports:
-    - PortName: "Tu te fais peut-\xEAtre des id\xE9es, c'est pas son boulot d'\xEAtre
-        gentil."
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    - PortName: Dur l'ami... tiens, bois pour te requinquer.
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: ea7a36c9-611b-4ed3-ac3c-1a550a2268b2
     DialogueText: "Enfin bref, assez parl\xE9, j'ai la gorge s\xE8che, \xE0 tout
       \xE0 l'heure peut \xEAtre."
@@ -545,7 +530,7 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 274264386, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 21dba433-b55e-4a63-a64f-ce5592b522b2
-    DialogueText: "5 ans ferme, je devais en prendre 4 mais mon avocat m'avait dit
+    DialogueText: "5 ans fermes, je devais en prendre 4 mais mon avocat m'avait dit
       de plaider la d\xE9mence."
     Position: {x: 5550, y: 587.5}
     StatModifier: 0
@@ -791,5 +776,34 @@ MonoBehaviour:
       IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: b105a906-a46f-4037-9b68-7265a57c15f3
+    DialogueText: "Mais entre cette histoire et les quelques autres probl\xE8mes
+      que j'ai eu depuis, ils m'ont flanqu\xE9 un agent de probation."
+    Position: {x: 8659, y: 283}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 723cd4d0-d723-4854-8a98-c7b91ab7a186
+    DialogueText: "Il est cens\xE9 s'assurer que je ne \"retombe pas dans mes travers\",
+      mais en r\xE9alit\xE9 il me d\xE9teste, je sais pas pourquoi."
+    Position: {x: 9547, y: 283.5}
+    StatModifier: 0
+    Ports:
+    - PortName: "Tu te fais peut-\xEAtre des id\xE9es, c'est pas son boulot d'\xEAtre
+        gentil."
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: Dur l'ami... tiens, bois pour te requinquer.
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1860064851, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   ExposedProperties: []
   CommentBlockData: []

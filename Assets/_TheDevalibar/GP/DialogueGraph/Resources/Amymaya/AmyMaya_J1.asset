@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AmyMaya_J1
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: e0177e13-115f-451a-980a-6d1d89fa82b8
+  - BaseNodeGuid: 8c6de513-5a64-450e-8377-e800dcfdbcb9
     PortName: StartPointNode
     TargetNodeGuid: bc898d01-6ee9-4c70-96e5-0f7c7c22c351
     IsNullNode: 0
@@ -144,11 +144,7 @@ MonoBehaviour:
     IsNullNode: 1
   - BaseNodeGuid: 0f004b3d-0199-470c-a97f-01c2d03a3c24
     PortName: Null Port
-    TargetNodeGuid: 402459cd-6726-4967-9f72-a574fde9dc82
-    IsNullNode: 1
-  - BaseNodeGuid: 402459cd-6726-4967-9f72-a574fde9dc82
-    PortName: Null Port
-    TargetNodeGuid: ad00e503-1161-4118-b33c-5c575ac8dc25
+    TargetNodeGuid: 59828d2e-fc76-477c-afda-538f20df02ec
     IsNullNode: 1
   - BaseNodeGuid: 50820f33-e305-491c-ae75-1dc24b7c6745
     PortName: Null Port
@@ -180,7 +176,7 @@ MonoBehaviour:
     IsNullNode: 1
   - BaseNodeGuid: 90a73757-2d59-42c4-b963-d6015177f00c
     PortName: Null Port
-    TargetNodeGuid: e63222a7-8d24-417c-a808-9f7cef2a1e82
+    TargetNodeGuid: b4916c05-746a-4a7d-a969-91f2d79e8d90
     IsNullNode: 1
   - BaseNodeGuid: bc898d01-6ee9-4c70-96e5-0f7c7c22c351
     PortName: Null Port
@@ -231,13 +227,9 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: e3e99e74-0cb1-42d7-9b60-c999ceae9f1c
     IsNullNode: 1
-  - BaseNodeGuid: 5f196dcd-6969-4f60-ae09-8c88156dc9e2
+  - BaseNodeGuid: 373f4989-2bf8-44af-8ca0-bd6a5b27d1f0
     PortName: Null Port
-    TargetNodeGuid: 14de26d7-a841-4c99-8d18-190bcdb11a2d
-    IsNullNode: 1
-  - BaseNodeGuid: 14de26d7-a841-4c99-8d18-190bcdb11a2d
-    PortName: Null Port
-    TargetNodeGuid: 999db375-4663-4e21-a7c4-14ce62b6bda5
+    TargetNodeGuid: 9deeb5b9-5eeb-4007-9c27-023731403768
     IsNullNode: 1
   - BaseNodeGuid: a350ad0e-0782-412f-b869-e583bd28541f
     PortName: Null Port
@@ -259,13 +251,29 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: e63222a7-8d24-417c-a808-9f7cef2a1e82
     IsNullNode: 1
-  - BaseNodeGuid: 373f4989-2bf8-44af-8ca0-bd6a5b27d1f0
+  - BaseNodeGuid: 5f196dcd-6969-4f60-ae09-8c88156dc9e2
     PortName: Null Port
-    TargetNodeGuid: 9deeb5b9-5eeb-4007-9c27-023731403768
+    TargetNodeGuid: 14de26d7-a841-4c99-8d18-190bcdb11a2d
+    IsNullNode: 1
+  - BaseNodeGuid: 14de26d7-a841-4c99-8d18-190bcdb11a2d
+    PortName: Null Port
+    TargetNodeGuid: 999db375-4663-4e21-a7c4-14ce62b6bda5
     IsNullNode: 1
   - BaseNodeGuid: 9deeb5b9-5eeb-4007-9c27-023731403768
     PortName: Null Port
     TargetNodeGuid: 5f196dcd-6969-4f60-ae09-8c88156dc9e2
+    IsNullNode: 1
+  - BaseNodeGuid: 59828d2e-fc76-477c-afda-538f20df02ec
+    PortName: Null Port
+    TargetNodeGuid: 402459cd-6726-4967-9f72-a574fde9dc82
+    IsNullNode: 1
+  - BaseNodeGuid: 402459cd-6726-4967-9f72-a574fde9dc82
+    PortName: Null Port
+    TargetNodeGuid: ad00e503-1161-4118-b33c-5c575ac8dc25
+    IsNullNode: 1
+  - BaseNodeGuid: b4916c05-746a-4a7d-a969-91f2d79e8d90
+    PortName: Null Port
+    TargetNodeGuid: e63222a7-8d24-417c-a808-9f7cef2a1e82
     IsNullNode: 1
   DialogueNodeData:
   - NodeGUID: 55cbac03-298c-407a-aa37-fec03b209ed4
@@ -514,7 +522,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 88afd91bbc053204fb7b818558b762b4, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 9c582e1bcff37fc4a9dd4598d0d38dbc, type: 3}
   - NodeGUID: e8386b96-e737-4ca6-b49b-3768ca5a7178
     DialogueText: 'HIYAAAA ! POW!! BIM!! HIIIIIIIIIIIIIH ! '
     Position: {x: 6106.5, y: 188}
@@ -598,10 +606,9 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 9c582e1bcff37fc4a9dd4598d0d38dbc, type: 3}
   - NodeGUID: 0f004b3d-0199-470c-a97f-01c2d03a3c24
-    DialogueText: "Amy est absolument fan de ses anim\xE9s, mangas et comics, elle
-      passe son temps \xE0 en lire, regarder ou \xE0 jouer \xE0 la super h\xE9ro\xEFne."
+    DialogueText: "Amy est absolument fan de ses anim\xE9s, mangas et comics."
     Position: {x: 4563.5, y: 631.5}
     StatModifier: 0
     Ports:
@@ -611,17 +618,6 @@ MonoBehaviour:
       IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
-  - NodeGUID: 402459cd-6726-4967-9f72-a574fde9dc82
-    DialogueText: Je ne joue pas maman, la justice ne joue jamais...
-    Position: {x: 5569.5, y: 629.5}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
   - NodeGUID: 50820f33-e305-491c-ae75-1dc24b7c6745
     DialogueText: 'Woooooow il est trop coooool !  '
     Position: {x: 3651.5, y: 628.5}
@@ -632,7 +628,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 88afd91bbc053204fb7b818558b762b4, type: 3}
   - NodeGUID: c4f50108-cb38-4514-a53c-bc71277c6abe
     DialogueText: "Pas possible, c'est ma m\xE8re la meilleure du monde."
     Position: {x: 4837.5, y: 420}
@@ -708,8 +704,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: -752886933, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 90a73757-2d59-42c4-b963-d6015177f00c
     DialogueText: "J'aime beaucoup ce que tu fais avec le bar en tout cas, ce vieux
-      b\xE2timent tombait en ruine, je suis contente que quelqu'un de la communaut\xE9
-      l'ait r\xE9cup\xE9r\xE9. "
+      b\xE2timent tombait en ruine."
     Position: {x: 11024.5, y: 164}
     StatModifier: 0
     Ports:
@@ -948,6 +943,40 @@ MonoBehaviour:
     DialogueText: J'entendais les cris, les explosions et les coups depuis l'appartement
       de mes parents.
     Position: {x: 14617.5, y: -267.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 59828d2e-fc76-477c-afda-538f20df02ec
+    DialogueText: "Elle passe son temps \xE0 en lire, regarder ou \xE0 jouer \xE0
+      la super h\xE9ro\xEFne."
+    Position: {x: 5153.5, y: 626}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 402459cd-6726-4967-9f72-a574fde9dc82
+    DialogueText: Je ne joue pas maman, la justice ne joue jamais...
+    Position: {x: 5841, y: 624}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+  - NodeGUID: b4916c05-746a-4a7d-a969-91f2d79e8d90
+    DialogueText: "je suis contente que quelqu'un de la communaut\xE9 l'ait r\xE9cup\xE9r\xE9. "
+    Position: {x: 11919.5, y: 163}
     StatModifier: 0
     Ports:
     - PortName: Null Port

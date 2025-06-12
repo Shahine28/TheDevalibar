@@ -13,17 +13,13 @@ MonoBehaviour:
   m_Name: "Genevie\u0300ve_J1"
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: cff71386-033c-422f-9316-9e1867a96b9a
+  - BaseNodeGuid: 8c6de513-5a64-450e-8377-e800dcfdbcb9
     PortName: StartPointNode
     TargetNodeGuid: 5c1e0141-c3b4-4c22-a861-3c2f5ede6873
     IsNullNode: 0
   - BaseNodeGuid: 5c1e0141-c3b4-4c22-a861-3c2f5ede6873
     PortName: Null Port
     TargetNodeGuid: b7c0bf92-9e0e-4ce6-a557-ff39482bda85
-    IsNullNode: 1
-  - BaseNodeGuid: b7c0bf92-9e0e-4ce6-a557-ff39482bda85
-    PortName: Null Port
-    TargetNodeGuid: 65ce6d88-cf8e-434e-8aa4-120d75164089
     IsNullNode: 1
   - BaseNodeGuid: 65ce6d88-cf8e-434e-8aa4-120d75164089
     PortName: "Arf, une vraie gal\xE8re. Tout est mal foutu et rien d'adapt\xE9..."
@@ -85,6 +81,10 @@ MonoBehaviour:
     PortName: Merci pour l'encouragement, je t'offre le verre pour l'occasion.
     TargetNodeGuid: 426e3114-dcf9-455e-800f-0c158741fe45
     IsNullNode: 0
+  - BaseNodeGuid: 80daf32e-94d8-4e0c-8d92-8a6f4b775811
+    PortName: Null Port
+    TargetNodeGuid: b2fbe046-4400-4b8e-902a-09a87e1f0d6c
+    IsNullNode: 1
   - BaseNodeGuid: 36d53418-e624-4f65-a704-3fa3843dbadb
     PortName: Null Port
     TargetNodeGuid: 05b77607-bba0-4552-bcbd-3b052809ce7a
@@ -92,10 +92,6 @@ MonoBehaviour:
   - BaseNodeGuid: 05b77607-bba0-4552-bcbd-3b052809ce7a
     PortName: Null Port
     TargetNodeGuid: 6a535c4c-353a-4717-9f32-2cd037c29709
-    IsNullNode: 1
-  - BaseNodeGuid: 3f7c7237-a0d4-4ffd-982d-7e1bcaaa8c5e
-    PortName: Null Port
-    TargetNodeGuid: ac797d11-35e6-4b2b-bd8b-b144dea336be
     IsNullNode: 1
   - BaseNodeGuid: b0dd9af9-c39c-4cfd-8b18-52a36678f0d3
     PortName: Merci pour l'encouragement, je t'offre le verre pour l'occasion.
@@ -113,60 +109,27 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: af3e5541-0307-4252-a0e7-bab956bf6448
     IsNullNode: 1
+  - BaseNodeGuid: 3f7c7237-a0d4-4ffd-982d-7e1bcaaa8c5e
+    PortName: Null Port
+    TargetNodeGuid: ac797d11-35e6-4b2b-bd8b-b144dea336be
+    IsNullNode: 1
   - BaseNodeGuid: af3e5541-0307-4252-a0e7-bab956bf6448
     PortName: Null Port
     TargetNodeGuid: 3f7c7237-a0d4-4ffd-982d-7e1bcaaa8c5e
-    IsNullNode: 1
-  - BaseNodeGuid: 80daf32e-94d8-4e0c-8d92-8a6f4b775811
-    PortName: Null Port
-    TargetNodeGuid: b2fbe046-4400-4b8e-902a-09a87e1f0d6c
     IsNullNode: 1
   - BaseNodeGuid: b2fbe046-4400-4b8e-902a-09a87e1f0d6c
     PortName: Null Port
     TargetNodeGuid: ac797d11-35e6-4b2b-bd8b-b144dea336be
     IsNullNode: 1
+  - BaseNodeGuid: b7c0bf92-9e0e-4ce6-a557-ff39482bda85
+    PortName: Null Port
+    TargetNodeGuid: 7cb78fe1-74d1-440d-b934-13ea88c67a19
+    IsNullNode: 1
+  - BaseNodeGuid: 7cb78fe1-74d1-440d-b934-13ea88c67a19
+    PortName: Null Port
+    TargetNodeGuid: 65ce6d88-cf8e-434e-8aa4-120d75164089
+    IsNullNode: 1
   DialogueNodeData:
-  - NodeGUID: 5c1e0141-c3b4-4c22-a861-3c2f5ede6873
-    DialogueText: "Oh, bonjour ma petite ! Quel nostalgie de voir ce bar rouvrir
-      apr\xE8s si longtemps..."
-    Position: {x: 293.5, y: 199.5}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
-  - NodeGUID: b7c0bf92-9e0e-4ce6-a557-ff39482bda85
-    DialogueText: "A l'\xE9poque, je venais souvent noyer mes probl\xE8mes en compagnie
-      de ta m\xE8re, si tu l'avais vu \xE0 l'\xE9poque, une vraie boit-sans-soif
-      !"
-    Position: {x: 1026, y: 198}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
-  - NodeGUID: 65ce6d88-cf8e-434e-8aa4-120d75164089
-    DialogueText: "M'enfin, c'est pas ta m\xE8re le sujet aujourd'hui ! Mais bien
-      TOI. Alors... t'en penses quoi de ce bar ?"
-    Position: {x: 2062, y: 197.5}
-    StatModifier: 0
-    Ports:
-    - PortName: "Arf, une vraie gal\xE8re. Tout est mal foutu et rien d'adapt\xE9..."
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    - PortName: "Eh bah, j'aime bien la d\xE9co et le c\xF4t\xE9 authentique du lieu."
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 0
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: 7515aac4-e947-4c4a-9fce-e25df02f047a
     DialogueText: "Hahaha, ma pauvre, c'est vrai que l'ancien proprio n'\xE9tait
       pas l'homme le plus pointilleux qui soit mais on ne peut pas lui reprocher
@@ -425,5 +388,56 @@ MonoBehaviour:
       IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 65ce6d88-cf8e-434e-8aa4-120d75164089
+    DialogueText: "M'enfin, c'est pas ta m\xE8re le sujet aujourd'hui ! Mais bien
+      TOI. Alors... t'en penses quoi de ce bar ?"
+    Position: {x: 2160.5, y: 195}
+    StatModifier: 0
+    Ports:
+    - PortName: "Arf, une vraie gal\xE8re. Tout est mal foutu et rien d'adapt\xE9..."
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: "Eh bah, j'aime bien la d\xE9co et le c\xF4t\xE9 authentique du lieu."
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: 7cb78fe1-74d1-440d-b934-13ea88c67a19
+    DialogueText: "Si tu l'avais vu \xE0 l'\xE9poque, une vraie boit-sans-soif !"
+    Position: {x: 1647.5, y: 193.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: b7c0bf92-9e0e-4ce6-a557-ff39482bda85
+    DialogueText: "A l'\xE9poque, je venais souvent noyer mes probl\xE8mes en compagnie
+      de ta m\xE8re."
+    Position: {x: 986, y: 193.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: 5c1e0141-c3b4-4c22-a861-3c2f5ede6873
+    DialogueText: "Oh, bonjour ma petite ! Quelle nostalgie de voir ce bar rouvrir
+      apr\xE8s si longtemps..."
+    Position: {x: 296, y: 195}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   ExposedProperties: []
   CommentBlockData: []
