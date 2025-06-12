@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -41,12 +42,29 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (EventSystem.current != null &&
+            EventSystem.current.currentSelectedGameObject != gameObject)
+        {
+            EventSystem.current.SetSelectedGameObject(gameObject);
+        }
         OnItemHovered?.Invoke();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         if (IsSelected) return;
+        if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == gameObject)
+            return;
+        OnItemUnhovered?.Invoke();
+        // StopAllCoroutines();
+        // StartCoroutine(OnPointerExitDelayed());
+    }
+
+    public IEnumerator OnPointerExitDelayed()
+    {
+        yield return new WaitForEndOfFrame();
+        if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == gameObject)
+            yield return null;
         OnItemUnhovered?.Invoke();
     }
 }

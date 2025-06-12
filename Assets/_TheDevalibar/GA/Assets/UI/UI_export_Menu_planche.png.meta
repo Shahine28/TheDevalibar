@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -205,10 +205,10 @@ TextureImporter:
       name: UI_export_Menu_planche_3
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1242
-        width: 153
-        height: 136
+        x: 779
+        y: 1247
+        width: 142
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: UI_export_Menu_planche_4
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1242
-        width: 168
-        height: 144
+        x: 1015
+        y: 1249
+        width: 142
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: UI_export_Menu_planche_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1165
-        width: 811
-        height: 77
+        x: 43
+        y: 1183
+        width: 731
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: UI_export_Menu_planche_7
       rect:
         serializedVersion: 2
-        x: 43
-        y: 1003
-        width: 768
-        height: 88
+        x: 45
+        y: 1026
+        width: 731
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: UI_export_Menu_planche_9
       rect:
         serializedVersion: 2
-        x: 930
-        y: 986
-        width: 436
-        height: 183
+        x: 954
+        y: 1007
+        width: 373
+        height: 136
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: UI_export_Menu_planche_10
       rect:
         serializedVersion: 2
-        x: 27
-        y: 760
-        width: 497
-        height: 226
+        x: 120
+        y: 791
+        width: 326
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,9 +381,9 @@ TextureImporter:
       name: UI_export_Menu_planche_14
       rect:
         serializedVersion: 2
-        x: 984
+        x: 993
         y: 821
-        width: 382
+        width: 373
         height: 136
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -403,10 +403,10 @@ TextureImporter:
       name: UI_export_Menu_planche_15
       rect:
         serializedVersion: 2
-        x: 38
-        y: 527
-        width: 670
-        height: 203
+        x: 11
+        y: 591
+        width: 501
+        height: 97
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,9 +425,9 @@ TextureImporter:
       name: UI_export_Menu_planche_19
       rect:
         serializedVersion: 2
-        x: 854
-        y: 474
-        width: 428
+        x: 845
+        y: 530
+        width: 350
         height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -448,9 +448,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 372
+        y: 422
         width: 501
-        height: 92
+        height: 97
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,8 +469,8 @@ TextureImporter:
       name: UI_export_Menu_planche_22
       rect:
         serializedVersion: 2
-        x: 1081
-        y: 218
+        x: 1072
+        y: 300
         width: 199
         height: 157
       alignment: 0
@@ -531,6 +531,182 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_export_Menu_planche_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 253
+        width: 373
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e353fffa6b0e6438bf5c635cffcaa1
+      internalID: -1959821810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_export_Menu_planche_16
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 74
+        width: 382
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605edb064e89de2479ecca20771fdb98
+      internalID: -506819509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_export_Menu_planche_17
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 266
+        width: 373
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752a4a3a35886774aa93b016f6910158
+      internalID: -585889123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_export_Menu_planche_18
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 87
+        width: 382
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d07cb8e0825a5247ac15e1e87d6b869
+      internalID: -1312750304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_export_Menu_planche_21
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 530
+        width: 77
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83724da639d41fd40829aea66f57590d
+      internalID: 1665517629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_export_Menu_planche_23
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 119
+        width: 199
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb19b286a2c513b4f870f8bc951bdae0
+      internalID: -1643634789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_export_Menu_planche_24
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 665
+        width: 77
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a07f51ecd9f7145b59c3a18a3b6092
+      internalID: -356206768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_export_Menu_planche_25
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 665
+        width: 350
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bceacf98fe2834a9a21cde29c53bb5
+      internalID: 1082090545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -561,6 +737,9 @@ TextureImporter:
       UI_export_Menu_planche_20: 2010225493
       UI_export_Menu_planche_21: 1665517629
       UI_export_Menu_planche_22: -1750417966
+      UI_export_Menu_planche_23: -1643634789
+      UI_export_Menu_planche_24: -356206768
+      UI_export_Menu_planche_25: 1082090545
       UI_export_Menu_planche_3: -1440119200
       UI_export_Menu_planche_4: 1445941105
       UI_export_Menu_planche_5: -1622713129

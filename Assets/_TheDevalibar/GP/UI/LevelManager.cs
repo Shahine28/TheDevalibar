@@ -4,15 +4,28 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager instance;
     [SerializeField] SceneAsset _GameScene;
 
-    public void Play()
+    public void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    public void LoadScene()
     {
         SceneManager.LoadScene(_GameScene.name);
     }
-
-    public void QuitToMain()
+    
+    public void LoadSceneAsync()
     {
-        SceneManager.LoadScene(_GameScene.name);
+        SceneManager.LoadSceneAsync(_GameScene.name);
     }
 }
