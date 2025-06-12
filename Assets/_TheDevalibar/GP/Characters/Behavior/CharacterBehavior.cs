@@ -58,11 +58,11 @@ public class CharacterBehavior : MonoBehaviour
     public CharacterWaiting CharacterWaiting => _characterWaiting;
     
     
-    private TextResizer _textResizer;
+    private TextResizerManager _textResizer;
 
     void Start()
     {
-        _textResizer = ServiceLocator.Get<TextResizer>();
+        _textResizer = ServiceLocator.Get<TextResizerManager>();
         _textResizer?.UpdateTextRegistry();
     }
 
