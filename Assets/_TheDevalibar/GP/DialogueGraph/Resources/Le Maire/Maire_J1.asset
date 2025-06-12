@@ -1,0 +1,429 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e3a317d118bc94dbb48fe0d762e73f, type: 3}
+  m_Name: Maire_J1
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: cff71386-033c-422f-9316-9e1867a96b9a
+    PortName: StartPointNode
+    TargetNodeGuid: 5c1e0141-c3b4-4c22-a861-3c2f5ede6873
+    IsNullNode: 0
+  - BaseNodeGuid: 5c1e0141-c3b4-4c22-a861-3c2f5ede6873
+    PortName: Null Port
+    TargetNodeGuid: b7c0bf92-9e0e-4ce6-a557-ff39482bda85
+    IsNullNode: 1
+  - BaseNodeGuid: b7c0bf92-9e0e-4ce6-a557-ff39482bda85
+    PortName: Null Port
+    TargetNodeGuid: 65ce6d88-cf8e-434e-8aa4-120d75164089
+    IsNullNode: 1
+  - BaseNodeGuid: 65ce6d88-cf8e-434e-8aa4-120d75164089
+    PortName: "Arf, une vraie gal\xE8re. Tout est mal foutu et rien d'adapt\xE9..."
+    TargetNodeGuid: 7515aac4-e947-4c4a-9fce-e25df02f047a
+    IsNullNode: 0
+  - BaseNodeGuid: 65ce6d88-cf8e-434e-8aa4-120d75164089
+    PortName: "Eh bah, j'aime bien la d\xE9co et le c\xF4t\xE9 authentique du lieu."
+    TargetNodeGuid: c459f405-13ca-4eb7-98e8-c631e41bab62
+    IsNullNode: 0
+  - BaseNodeGuid: 7515aac4-e947-4c4a-9fce-e25df02f047a
+    PortName: Null Port
+    TargetNodeGuid: 061a1183-e9fd-44bd-b7ab-528fbcb99f79
+    IsNullNode: 1
+  - BaseNodeGuid: 57d9e67c-3e2f-48a2-854d-29d1e1dd3fec
+    PortName: Null Port
+    TargetNodeGuid: fef2e544-0827-4385-a57e-eb9ceeb07a9e
+    IsNullNode: 1
+  - BaseNodeGuid: 061a1183-e9fd-44bd-b7ab-528fbcb99f79
+    PortName: Null Port
+    TargetNodeGuid: 57d9e67c-3e2f-48a2-854d-29d1e1dd3fec
+    IsNullNode: 1
+  - BaseNodeGuid: c459f405-13ca-4eb7-98e8-c631e41bab62
+    PortName: Null Port
+    TargetNodeGuid: eae1ee1c-49f9-4733-865e-de8eeda58ca4
+    IsNullNode: 1
+  - BaseNodeGuid: eae1ee1c-49f9-4733-865e-de8eeda58ca4
+    PortName: "Excellente id\xE9e, je note \xE7a de suite !"
+    TargetNodeGuid: fef2e544-0827-4385-a57e-eb9ceeb07a9e
+    IsNullNode: 0
+  - BaseNodeGuid: eae1ee1c-49f9-4733-865e-de8eeda58ca4
+    PortName: 'Ouai, je compte taffer dessus, le but : un bar 100% inclusif.'
+    TargetNodeGuid: 189685c9-3c86-459d-a73f-e4526a0a94ad
+    IsNullNode: 0
+  - BaseNodeGuid: 189685c9-3c86-459d-a73f-e4526a0a94ad
+    PortName: Un bar cent pour cent inclusif!
+    TargetNodeGuid: 1b032a2a-d39e-470f-ae8f-40608aa7582b
+    IsNullNode: 0
+  - BaseNodeGuid: 1b032a2a-d39e-470f-ae8f-40608aa7582b
+    PortName: Null Port
+    TargetNodeGuid: fef2e544-0827-4385-a57e-eb9ceeb07a9e
+    IsNullNode: 1
+  - BaseNodeGuid: fef2e544-0827-4385-a57e-eb9ceeb07a9e
+    PortName: "Merci, \xE7a fait vraiment plaisir \xE0 entendre."
+    TargetNodeGuid: 36d53418-e624-4f65-a704-3fa3843dbadb
+    IsNullNode: 0
+  - BaseNodeGuid: fef2e544-0827-4385-a57e-eb9ceeb07a9e
+    PortName: Tu penses ?
+    TargetNodeGuid: 851c529d-2c12-4336-9c05-7d45f04eeb77
+    IsNullNode: 0
+  - BaseNodeGuid: 851c529d-2c12-4336-9c05-7d45f04eeb77
+    PortName: Null Port
+    TargetNodeGuid: 49a8caa5-b463-4bff-a2d6-be497c1ab6fb
+    IsNullNode: 1
+  - BaseNodeGuid: 49a8caa5-b463-4bff-a2d6-be497c1ab6fb
+    PortName: Null Port
+    TargetNodeGuid: b0dd9af9-c39c-4cfd-8b18-52a36678f0d3
+    IsNullNode: 1
+  - BaseNodeGuid: 089220fc-da33-49a6-a367-d1b830692cec
+    PortName: Merci pour l'encouragement, je t'offre le verre pour l'occasion.
+    TargetNodeGuid: 426e3114-dcf9-455e-800f-0c158741fe45
+    IsNullNode: 0
+  - BaseNodeGuid: 36d53418-e624-4f65-a704-3fa3843dbadb
+    PortName: Null Port
+    TargetNodeGuid: 05b77607-bba0-4552-bcbd-3b052809ce7a
+    IsNullNode: 1
+  - BaseNodeGuid: 05b77607-bba0-4552-bcbd-3b052809ce7a
+    PortName: Null Port
+    TargetNodeGuid: 6a535c4c-353a-4717-9f32-2cd037c29709
+    IsNullNode: 1
+  - BaseNodeGuid: 3f7c7237-a0d4-4ffd-982d-7e1bcaaa8c5e
+    PortName: Null Port
+    TargetNodeGuid: ac797d11-35e6-4b2b-bd8b-b144dea336be
+    IsNullNode: 1
+  - BaseNodeGuid: b0dd9af9-c39c-4cfd-8b18-52a36678f0d3
+    PortName: Merci pour l'encouragement, je t'offre le verre pour l'occasion.
+    TargetNodeGuid: 089220fc-da33-49a6-a367-d1b830692cec
+    IsNullNode: 0
+  - BaseNodeGuid: b0dd9af9-c39c-4cfd-8b18-52a36678f0d3
+    PortName: "Tiens... \xE7a me rassure pas \xE7a..."
+    TargetNodeGuid: 80daf32e-94d8-4e0c-8d92-8a6f4b775811
+    IsNullNode: 0
+  - BaseNodeGuid: 426e3114-dcf9-455e-800f-0c158741fe45
+    PortName: Null Port
+    TargetNodeGuid: 6a535c4c-353a-4717-9f32-2cd037c29709
+    IsNullNode: 1
+  - BaseNodeGuid: 6a535c4c-353a-4717-9f32-2cd037c29709
+    PortName: Null Port
+    TargetNodeGuid: af3e5541-0307-4252-a0e7-bab956bf6448
+    IsNullNode: 1
+  - BaseNodeGuid: af3e5541-0307-4252-a0e7-bab956bf6448
+    PortName: Null Port
+    TargetNodeGuid: 3f7c7237-a0d4-4ffd-982d-7e1bcaaa8c5e
+    IsNullNode: 1
+  - BaseNodeGuid: 80daf32e-94d8-4e0c-8d92-8a6f4b775811
+    PortName: Null Port
+    TargetNodeGuid: b2fbe046-4400-4b8e-902a-09a87e1f0d6c
+    IsNullNode: 1
+  - BaseNodeGuid: b2fbe046-4400-4b8e-902a-09a87e1f0d6c
+    PortName: Null Port
+    TargetNodeGuid: ac797d11-35e6-4b2b-bd8b-b144dea336be
+    IsNullNode: 1
+  DialogueNodeData:
+  - NodeGUID: 5c1e0141-c3b4-4c22-a861-3c2f5ede6873
+    DialogueText: "Oh, bonjour ma petite ! Quel nostalgie de voir ce bar rouvrir
+      apr\xE8s si longtemps..."
+    Position: {x: 293.5, y: 199.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: b7c0bf92-9e0e-4ce6-a557-ff39482bda85
+    DialogueText: "A l'\xE9poque, je venais souvent noyer mes probl\xE8mes en compagnie
+      de ta m\xE8re, si tu l'avais vu \xE0 l'\xE9poque, une vraie boit-sans-soif
+      !"
+    Position: {x: 1026, y: 198}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: 65ce6d88-cf8e-434e-8aa4-120d75164089
+    DialogueText: "M'enfin, c'est pas ta m\xE8re le sujet aujourd'hui ! Mais bien
+      TOI. Alors... t'en penses quoi de ce bar ?"
+    Position: {x: 2062, y: 197.5}
+    StatModifier: 0
+    Ports:
+    - PortName: "Arf, une vraie gal\xE8re. Tout est mal foutu et rien d'adapt\xE9..."
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: "Eh bah, j'aime bien la d\xE9co et le c\xF4t\xE9 authentique du lieu."
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: 7515aac4-e947-4c4a-9fce-e25df02f047a
+    DialogueText: "Hahaha, ma pauvre, c'est vrai que l'ancien proprio n'\xE9tait
+      pas l'homme le plus pointilleux qui soit mais on ne peut pas lui reprocher
+      l'effort sur la d\xE9co."
+    Position: {x: 2934.5, y: 88}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: 57d9e67c-3e2f-48a2-854d-29d1e1dd3fec
+    DialogueText: "Mais toi, t'as l'air d'\xEAtre une personne totalement diff\xE9rente."
+    Position: {x: 4939.5, y: 93.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: 061a1183-e9fd-44bd-b7ab-528fbcb99f79
+    DialogueText: "En plus, il avait du mal avec les gens de couleur dans son bar.
+      C'\xE9tait pas un type tr\xE8s agr\xE9able en somme."
+    Position: {x: 4054, y: 90}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: -1892083817, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
+  - NodeGUID: c459f405-13ca-4eb7-98e8-c631e41bab62
+    DialogueText: "C'est vrai que la d\xE9co sort tout droit des ann\xE9es 90, \xE7a
+      plaira aux gens d'ici."
+    Position: {x: 2965.5, y: 347.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: eae1ee1c-49f9-4733-865e-de8eeda58ca4
+    DialogueText: "Mais il est \xE9vident qu'il manque d'accessibilit\xE9... Par
+      exemple, je serais pas contre un moyen de mieux t'entendre..."
+    Position: {x: 3764, y: 343.5}
+    StatModifier: 0
+    Ports:
+    - PortName: "Excellente id\xE9e, je note \xE7a de suite !"
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: 'Ouai, je compte taffer dessus, le but : un bar 100% inclusif.'
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: -1892083817, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
+  - NodeGUID: 189685c9-3c86-459d-a73f-e4526a0a94ad
+    DialogueText: "Je n'ai pas tr\xE8s bien entendu, un bar comment ? "
+    Position: {x: 4761.5, y: 559.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Un bar cent pour cent inclusif!
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: -1892083817, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
+  - NodeGUID: 1b032a2a-d39e-470f-ae8f-40608aa7582b
+    DialogueText: "Aaah... oui \xE9videmment !"
+    Position: {x: 5343.5, y: 562}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: fef2e544-0827-4385-a57e-eb9ceeb07a9e
+    DialogueText: "Quoiqu'il advienne, j'pense que ce que tu t'appr\xE8tes \xE0 cr\xE9er
+      avec ce bar va beaucoup aider les gens de Camdem."
+    Position: {x: 5854.5, y: 352.5}
+    StatModifier: 0
+    Ports:
+    - PortName: "Merci, \xE7a fait vraiment plaisir \xE0 entendre."
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: Tu penses ?
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: 851c529d-2c12-4336-9c05-7d45f04eeb77
+    DialogueText: "C'te petite ville a toujours \xE9t\xE9 tr\xE8s engag\xE9e et un
+      petit lieu de rassemblement o\xF9 tous peuvent se sentir \xE0 l'aise..."
+    Position: {x: 6779.5, y: 452.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: 49a8caa5-b463-4bff-a2d6-be497c1ab6fb
+    DialogueText: "\xE7a serait l'id\xE9al !"
+    Position: {x: 7649.5, y: 454}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: 089220fc-da33-49a6-a367-d1b830692cec
+    DialogueText: "Excuses moi ma ch\xE9rie, tu peux r\xE9p\xE9ter ?"
+    Position: {x: 8823.5, y: 617.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Merci pour l'encouragement, je t'offre le verre pour l'occasion.
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: -1892083817, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
+  - NodeGUID: 80daf32e-94d8-4e0c-8d92-8a6f4b775811
+    DialogueText: "D\xE9sol\xE9e, c'\xE9tait pas mon but. Par contre, je vais devoir
+      y aller, le maire m'attend. "
+    Position: {x: 8823.5, y: 417.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: -1892083817, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
+  - NodeGUID: 36d53418-e624-4f65-a704-3fa3843dbadb
+    DialogueText: De rien, ma petite. Cela me fait tout aussi plaisir de voir ce
+      bar reprendre forme.
+    Position: {x: 6778, y: 230.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: 05b77607-bba0-4552-bcbd-3b052809ce7a
+    DialogueText: "Maintenant, moins de bla bla et plus de glou glou. Sers moi un
+      verre, j'ai besoin de me d\xE9contracter avant d'aller rencontrer le maire."
+    Position: {x: 7511.5, y: 229.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: ac797d11-35e6-4b2b-bd8b-b144dea336be
+    DialogueText: "Tout devrait bien se passer cependant, enfin j'esp\xE8re. Je t'embrasse
+      ma belle, bon courage avec ce bar !"
+    Position: {x: 10178.5, y: 366.5}
+    StatModifier: 0
+    Ports:
+    - PortName: "A bient\xF4t, Genevi\xE8ve!"
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: b0dd9af9-c39c-4cfd-8b18-52a36678f0d3
+    DialogueText: "Mais pas facile, \xE7a je peux te l'assurer."
+    Position: {x: 8076, y: 453.5}
+    StatModifier: 0
+    Ports:
+    - PortName: "Tiens... \xE7a me rassure pas \xE7a..."
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: Merci pour l'encouragement, je t'offre le verre pour l'occasion.
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: -1892083817, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
+  - NodeGUID: 426e3114-dcf9-455e-800f-0c158741fe45
+    DialogueText: "Tu es bien la fille de ta m\xE8re, \xE7a se voit. En plus \xE7a
+      tombe bien, j'en ai besoin de ce verre car juste apr\xE8s, direction le bureau
+      du maire !"
+    Position: {x: 9574, y: 621.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 409024050, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: 6a535c4c-353a-4717-9f32-2cd037c29709
+    DialogueText: "Je lis d\xE9j\xE0 la surprise sur ton visage. Pour la faire rapide,"
+    Position: {x: 8481, y: 228}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: 3f7c7237-a0d4-4ffd-982d-7e1bcaaa8c5e
+    DialogueText: "Pour faire des cours \xE0 des enfants..."
+    Position: {x: 9825.5, y: 212.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 1408394351, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: af3e5541-0307-4252-a0e7-bab956bf6448
+    DialogueText: " le maire est co-directeur d'une association souhaitant entamer
+      une collaboration avec ma biblioth\xE8que."
+    Position: {x: 9017.5, y: 218}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: b2fbe046-4400-4b8e-902a-09a87e1f0d6c
+    DialogueText: "Il me reste pr\xE9cis\xE9ment 5 minutes pour profiter d'un de
+      tes cocktails."
+    Position: {x: 9545.5, y: 420}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  ExposedProperties: []
+  CommentBlockData: []
