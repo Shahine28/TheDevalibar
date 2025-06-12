@@ -426,6 +426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 886425028}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -959,6 +961,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -1392,6 +1396,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 3731786495109841353}
   _moveUI: {fileID: 3731786495109841352}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -1896,6 +1902,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 3731786495109841353}
   _moveUI: {fileID: 3731786495109841352}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -2453,6 +2461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 3731786495109841353}
   _moveUI: {fileID: 3731786495109841352}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -3100,6 +3110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 886425028}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -3633,6 +3645,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -4269,6 +4283,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -4702,6 +4718,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 3731786495109841353}
   _moveUI: {fileID: 3731786495109841352}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -5283,6 +5301,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -6017,6 +6037,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 3731786495109841353}
   _moveUI: {fileID: 3731786495109841352}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -7188,6 +7210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 886425028}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -7732,6 +7756,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -8253,6 +8279,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -8776,6 +8804,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 3731786495109841353}
   _moveUI: {fileID: 3731786495109841352}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -8884,17 +8914,6 @@ MonoBehaviour:
   OnItemClicked:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &560481855 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 173554617356642108, guid: 51a78457d32ce814b9ab3f5dcff55d3a, type: 3}
-  m_PrefabInstance: {fileID: 3365719709407975972}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dd0923301c6f64baf292a7fc6a1df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &563799467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9191,6 +9210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 886425028}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -9975,6 +9996,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 886425028}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -10508,6 +10531,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -11088,6 +11113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -11729,6 +11756,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -12250,6 +12279,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -12683,6 +12714,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 3731786495109841353}
   _moveUI: {fileID: 3731786495109841352}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -12820,17 +12853,6 @@ MonoBehaviour:
   _nightLightColor: {r: 0.13333334, g: 0.13725491, b: 0.14901961, a: 1}
   _nightLightIntensity: -1
   _nightLightRange: -1
---- !u!114 &790954884 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6445481445034363514, guid: 51a78457d32ce814b9ab3f5dcff55d3a, type: 3}
-  m_PrefabInstance: {fileID: 3365719709407975972}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dd0923301c6f64baf292a7fc6a1df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &808651594
 GameObject:
   m_ObjectHideFlags: 0
@@ -13308,17 +13330,6 @@ Transform:
   - {fileID: 1552646589}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &954690346 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6826511809143582218, guid: 51a78457d32ce814b9ab3f5dcff55d3a, type: 3}
-  m_PrefabInstance: {fileID: 3365719709407975972}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dd0923301c6f64baf292a7fc6a1df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &959906256
 GameObject:
   m_ObjectHideFlags: 0
@@ -13933,6 +13944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 3731786495109841353}
   _moveUI: {fileID: 3731786495109841352}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -14879,6 +14892,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -15631,6 +15646,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -15679,17 +15696,6 @@ MonoBehaviour:
   OnItemClicked:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1298181746 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5584129907587140990, guid: 51a78457d32ce814b9ab3f5dcff55d3a, type: 3}
-  m_PrefabInstance: {fileID: 3365719709407975972}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dd0923301c6f64baf292a7fc6a1df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1302659165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15811,17 +15817,6 @@ MonoBehaviour:
   OnItemUnhovered:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1329113358 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5786228075031480833, guid: 51a78457d32ce814b9ab3f5dcff55d3a, type: 3}
-  m_PrefabInstance: {fileID: 3365719709407975972}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dd0923301c6f64baf292a7fc6a1df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1339740778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16118,6 +16113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 886425028}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -16760,6 +16757,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -17467,6 +17466,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 3731786495109841353}
   _moveUI: {fileID: 3731786495109841352}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -18126,6 +18127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -21741,6 +21744,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 886425028}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -21879,17 +21884,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c9fb1fb5d24319b4ba8d622ea48dc9ae, type: 3}
   m_PrefabInstance: {fileID: 1634867096}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1635642944 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1434191958270393000, guid: 51a78457d32ce814b9ab3f5dcff55d3a, type: 3}
-  m_PrefabInstance: {fileID: 3365719709407975972}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dd0923301c6f64baf292a7fc6a1df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1647126789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22028,17 +22022,6 @@ MonoBehaviour:
   OnItemUnhovered:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1662078791 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 135190013356258321, guid: 51a78457d32ce814b9ab3f5dcff55d3a, type: 3}
-  m_PrefabInstance: {fileID: 3365719709407975972}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dd0923301c6f64baf292a7fc6a1df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1673699391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22512,6 +22495,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -22949,6 +22934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 886425028}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -23513,6 +23500,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -23970,6 +23959,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 886425028}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -24564,7 +24555,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -226
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4057088797394298865, guid: f1b9a1d7195ee1f43844947ead9393cd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -24723,17 +24715,6 @@ MonoBehaviour:
   _nightLightColor: {r: 1, g: 0.38039216, b: 0.39215687, a: 1}
   _nightLightIntensity: -1
   _nightLightRange: -1
---- !u!114 &1829777327 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5189031672563493603, guid: 51a78457d32ce814b9ab3f5dcff55d3a, type: 3}
-  m_PrefabInstance: {fileID: 3365719709407975972}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dd0923301c6f64baf292a7fc6a1df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1841138149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25302,6 +25283,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 3731786495109841353}
   _moveUI: {fileID: 3731786495109841352}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -25986,6 +25969,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -26507,6 +26492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -27028,6 +27015,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -27302,7 +27291,6 @@ GameObject:
   - component: {fileID: 2064419608}
   - component: {fileID: 2064419612}
   - component: {fileID: 2064419611}
-  - component: {fileID: 2064419613}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -27557,28 +27545,6 @@ MonoBehaviour:
   _mousePosition: {x: 0, y: 0}
   _deltaMousePosition: {x: 0, y: 0}
   _isDragClickPressed: 0
---- !u!114 &2064419613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064419607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fcc213f6e0521d448e7a551dae2f277, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _uiFontSize: {fileID: 1662078791}
-  _uiCharacterSpacing: {fileID: 1329113358}
-  _uiWordSpacing: {fileID: 560481855}
-  _uiLineSpacing: {fileID: 1829777327}
-  _worldFontSize: {fileID: 954690346}
-  _worldCharacterSpacing: {fileID: 1635642944}
-  _worldWordSpacing: {fileID: 1298181746}
-  _worldLineSpacing: {fileID: 790954884}
-  _openDys: {fileID: 11400000, guid: 4ae8a24ff156f044ca16850dd6089beb, type: 2}
-  _robotCondensed: {fileID: 11400000, guid: b09411baa2318044ea0ece89a9a298e8, type: 2}
 --- !u!1001 &2069886689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27875,6 +27841,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 886425028}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -28571,6 +28539,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -29092,6 +29062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 1946190579}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:

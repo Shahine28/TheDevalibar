@@ -11,11 +11,16 @@ public class ScrollFocusHelper : MonoBehaviour, ISelectHandler, IDeselectHandler
     private Navigation _originalNavigation;
     
     [SerializeField] private MoveUI _moveUI;
-        
+    [SerializeField] private bool _disableNavigationAtStart = true;
+    [SerializeField] private bool _useShowHideUI = true;
+    
+    
     public UnityEvent OnItemSelected;
     public UnityEvent OnItemDeselected;
     public UnityEvent OnItemSubmitted;
     public UnityEvent OnItemClicked;
+    
+    
 
     private void Awake()
     {
@@ -26,14 +31,15 @@ public class ScrollFocusHelper : MonoBehaviour, ISelectHandler, IDeselectHandler
 
     void Start()
     {
-        DisableNavigation();
+        if (_disableNavigationAtStart) DisableNavigation();
         if (_moveUI)
         {
             _moveUI.OnUIMoveToTarget += EnableDisableNavigation;
         }
-        else
+        else if (_useShowHideUI)
         {
             ShowHideUI showHideUI = ServiceLocator.Get<ShowHideUI>();
+            if (showHideUI == null) return;
             showHideUI.OnUIShowed += EnableNavigation;
             showHideUI.OnUIHided += DisableNavigation;
         }

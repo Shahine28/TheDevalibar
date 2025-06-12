@@ -26,7 +26,10 @@ namespace MyUtilities
     
         public static T Get<T>() where T : class
         {
-            return services[typeof(T)] as T;
+            object service = services[typeof(T)];
+            if (service == null) return default;
+            T t = service as T;
+            return t;
         }
         
         public static void RequireService<T>(Component context, ref T field, string errorMessage) where T : class
