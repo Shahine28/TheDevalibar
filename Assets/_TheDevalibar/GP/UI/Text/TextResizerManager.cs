@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using MyUtilities;
@@ -6,11 +6,11 @@ using UnityEngine;
 using TMPro;
 using NaughtyAttributes;
 using UnityEngine.Events;
-using FontStyles = TMPro.FontStyles;
 
-public class TextResizer : MonoBehaviour
+public class TextResizerManager : MonoBehaviour
 {
-
+    public static TextResizerManager Instance;
+    
     [Header("UI Text")]
     [SerializeField] private TextSettingContainer _uiFontSize;
     [SerializeField] private TextSettingContainer _uiCharacterSpacing;
@@ -24,8 +24,9 @@ public class TextResizer : MonoBehaviour
     [SerializeField] private TextSettingContainer _worldLineSpacing;
     
     [Header("Text Fonts")]
-    [SerializeField] TMP_FontAsset _openDys;
-    [SerializeField] TMP_FontAsset _robotCondensed;
+    [SerializeField] TMP_FontAsset _defaultFont;
+    [SerializeField] TMP_FontAsset _openDysFont;
+    [SerializeField] TMP_FontAsset _robotCondensedFont;
     
     
     private List<TMP_Text> _cachedUIText;
@@ -42,7 +43,15 @@ public class TextResizer : MonoBehaviour
     private UnityAction<float> _worldLineSpacingListener;
     private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         ServiceLocator.Register(this);
     }
 
@@ -136,46 +145,32 @@ public class TextResizer : MonoBehaviour
 
     #region Button
     [Button]
-    public void OnBoldText()
+    public void ChangeFontToDefault()
     {
-        foreach (var text in _cachedUIText)
-        {
-            text.fontStyle = FontStyles.Bold;
-            if(text.fontStyle == FontStyles.Bold) { text.fontStyle = FontStyles.Normal; }
-        }
-        
-        foreach (var text in _cachedWorldText)
-        {
-            text.fontStyle = FontStyles.Bold;
-            if (text.fontStyle == FontStyles.Bold) { text.fontStyle = FontStyles.Normal; }
-        }
+        ChangeFont(_defaultFont);   
     }
-
     [Button]
-    public void ChangeFontToOpenDyslexique()
+    public void ChangeFontToOpenDyslexic()
     {
-        foreach (var text in _cachedUIText)
-        {
-            text.font = _openDys; // change non UI Text font style
-        }
-
-        foreach(var text in _cachedWorldText)
-        {
-            text.font = _openDys; // change non UI Text font style
-        }        
+        ChangeFont(_openDysFont);   
     }
 
     [Button]
     public void ChangeFontToRobotoCondensed()
     {
+        ChangeFont(_robotCondensedFont);
+    }
+
+    private void ChangeFont(TMP_FontAsset newFont)
+    {
         foreach (var text in _cachedUIText)
         {
-            text.font = _robotCondensed;
+            text.font = newFont;
         }
 
         foreach (var text in _cachedWorldText)
         {
-            text.font = _robotCondensed;
+            text.font = newFont;
         }
     }
     #endregion

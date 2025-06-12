@@ -25,15 +25,13 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        ServiceLocator.Register(this);
     }
     
     private void Start()
     {
-        _musicSetting.UpdateValue(_musicSource.volume * 100);
-        _sfxSetting.UpdateValue(_sfxSource.volume * 100);
-        PlayMusic("DefaultTheme");
+        _musicSetting?.UpdateValue(_musicSource.volume);
+        _sfxSetting?.UpdateValue(_sfxSource.volume);
+        // PlayMusic("DefaultTheme");
     }
     
 #region Music

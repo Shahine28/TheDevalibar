@@ -25,7 +25,7 @@ public class AudioSettingContainer : MonoBehaviour
         SettingSlider.minValue = SettingRangeValue.x;
         SettingSlider.maxValue = SettingRangeValue.y;
         SettingSlider.value = SettingValue;
-        SettingValueText.text = SettingValue.ToString();
+        SettingValueText.text = (SettingValue*100).ToString();
     }
 
 
