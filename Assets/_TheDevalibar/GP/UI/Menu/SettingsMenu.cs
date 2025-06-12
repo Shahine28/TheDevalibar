@@ -9,12 +9,7 @@ public class SettingsMenu : MonoBehaviour
 {
     [SerializedDictionary("Menu Type", "GameObject"), SerializeField]
     private SerializedDictionary<MenuType, GameObject> _settingsMenus = new SerializedDictionary<MenuType,  GameObject>();
-
-    private void Start()
-    {
-        gameObject.SetActive(false);
-    }
-
+    
     public void ShowSettingsMenuByType(MenuType rebindMenuType)
     {
         _settingsMenus[rebindMenuType]?.gameObject.SetActive(true);

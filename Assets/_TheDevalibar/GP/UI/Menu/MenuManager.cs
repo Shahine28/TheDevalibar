@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
-    [Header("UI Elements")]
+    [Header("Menu Elements")]
     [SerializeField] GameObject _mainMenu;
     
     [SerializeField] SettingsMenu _settingsMenus;
@@ -41,13 +41,13 @@ public class MenuManager : MonoBehaviour
 
     public void ShowSettings()
     {
-        _settingsMenus?.gameObject.SetActive(true);
+        _settingsMenus.gameObject.SetActive(true);
         _mainMenu?.SetActive(false);
     }
     
     public void GoBackToMainMenu()
     {
-        _settingsMenus?.gameObject.SetActive(false);
+        _settingsMenus.gameObject.SetActive(false);
         _mainMenu?.SetActive(true);
     }
 
