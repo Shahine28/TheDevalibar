@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Maire_J1
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 5402cdd7-c36f-440f-b59a-f01b81d2ee77
+  - BaseNodeGuid: c7ab4524-439b-4eb9-ae59-dfe65f9777fe
     PortName: StartPointNode
     TargetNodeGuid: 11e8d911-a5a0-4175-bb29-b46e6f6c4abf
     IsNullNode: 0
   - BaseNodeGuid: 11e8d911-a5a0-4175-bb29-b46e6f6c4abf
-    PortName: "Bonjour Monsieur le Maire, le bar est bien mieux maintenant que je
-      l'ai retap\xE9."
+    PortName: "Bonjour Monsieur le Maire ! Ce bar m'en a fait bav\xE9 mais oui, je
+      suis fier de son look."
     TargetNodeGuid: d3009ead-68f0-4027-8318-b51094c9a0b1
     IsNullNode: 0
   - BaseNodeGuid: d3009ead-68f0-4027-8318-b51094c9a0b1
@@ -38,6 +38,34 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: 307f53ca-10f2-4dee-9dbe-d602d62fa99e
     IsNullNode: 1
+  - BaseNodeGuid: 307f53ca-10f2-4dee-9dbe-d602d62fa99e
+    PortName: Oui ?
+    TargetNodeGuid: eebe7a4a-eb21-4501-a336-5cd4430b7379
+    IsNullNode: 0
+  - BaseNodeGuid: eebe7a4a-eb21-4501-a336-5cd4430b7379
+    PortName: Null Port
+    TargetNodeGuid: 2cb97709-3b3b-4f4f-8dda-40a73e0d2c9a
+    IsNullNode: 1
+  - BaseNodeGuid: 2cb97709-3b3b-4f4f-8dda-40a73e0d2c9a
+    PortName: Null Port
+    TargetNodeGuid: 2e354c80-3364-4e86-a1e9-d3fbc977ea54
+    IsNullNode: 1
+  - BaseNodeGuid: 2e354c80-3364-4e86-a1e9-d3fbc977ea54
+    PortName: "Oui, \xE0 propos de-"
+    TargetNodeGuid: e5454db1-e504-4436-bf4b-8a830dcc3459
+    IsNullNode: 0
+  - BaseNodeGuid: 2e354c80-3364-4e86-a1e9-d3fbc977ea54
+    PortName: Je me demandais...-
+    TargetNodeGuid: e5454db1-e504-4436-bf4b-8a830dcc3459
+    IsNullNode: 0
+  - BaseNodeGuid: 2e354c80-3364-4e86-a1e9-d3fbc977ea54
+    PortName: J'ai une question sur-
+    TargetNodeGuid: e5454db1-e504-4436-bf4b-8a830dcc3459
+    IsNullNode: 0
+  - BaseNodeGuid: e5454db1-e504-4436-bf4b-8a830dcc3459
+    PortName: Null Port
+    TargetNodeGuid: 6631fbcf-2ffe-452f-979c-48699fa151af
+    IsNullNode: 1
   DialogueNodeData:
   - NodeGUID: 11e8d911-a5a0-4175-bb29-b46e6f6c4abf
     DialogueText: "Bonjour ! La nouvelle g\xE9rante, je suppose. Le bar vous convient
@@ -45,13 +73,13 @@ MonoBehaviour:
     Position: {x: 299, y: 200}
     StatModifier: 0
     Ports:
-    - PortName: "Bonjour Monsieur le Maire, le bar est bien mieux maintenant que
-        je l'ai retap\xE9."
+    - PortName: "Bonjour Monsieur le Maire ! Ce bar m'en a fait bav\xE9 mais oui,
+        je suis fier de son look."
       Direction: 1
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: -765967762, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
   - NodeGUID: d3009ead-68f0-4027-8318-b51094c9a0b1
     DialogueText: "\xC7a se voit pas mal, en effet. Rien \xE0 voir avec avant."
     Position: {x: 1109, y: 200}
@@ -64,8 +92,8 @@ MonoBehaviour:
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: c38d5918-c9eb-42a3-89f2-b007cf9a2a92
-    DialogueText: "Les clients affluent d\xE9j\xE0, il va y avoir pas mal de taff
-      \xE0 faire niveau accessibilit\xE9, surtout au\tniveau des tables. Vous vous
+    DialogueText: "Les clients affluent d\xE9j\xE0, il va y avoir pas mal de taf
+      \xE0 faire niveau accessibilit\xE9, surtout au niveau des tables. Vous vous
       en sentez capable ?"
     Position: {x: 1740, y: 200}
     StatModifier: 0
@@ -78,8 +106,74 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: e521fd5d-0292-4c2f-89fc-2d7d029820a7
     DialogueText: Parfait, j'compte sur vous pour faire de ce bar un lieu influent
-      du quartier.
+      d'la ville.
     Position: {x: 2903, y: 200}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 307f53ca-10f2-4dee-9dbe-d602d62fa99e
+    DialogueText: Au fait...
+    Position: {x: 4778, y: 199}
+    StatModifier: 0
+    Ports:
+    - PortName: Oui ?
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: eebe7a4a-eb21-4501-a336-5cd4430b7379
+    DialogueText: "Dans 4 jours, je repasserais pour v\xE9rifier l'\xE9volution de
+      votre commerce."
+    Position: {x: 5213, y: 199}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 2cb97709-3b3b-4f4f-8dda-40a73e0d2c9a
+    DialogueText: "Bien s\xFBr, aucune pression ! Simplement, vous avez fait des
+      promesses et elles doivent \xEAtre tenues."
+    Position: {x: 5923, y: 201}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 2e354c80-3364-4e86-a1e9-d3fbc977ea54
+    DialogueText: Des questions ?
+    Position: {x: 6755, y: 205}
+    StatModifier: 0
+    Ports:
+    - PortName: "Oui, \xE0 propos de-"
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: Je me demandais...-
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    - PortName: J'ai une question sur-
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: e5454db1-e504-4436-bf4b-8a830dcc3459
+    DialogueText: "Pas de questions ? Parfait ! Je suis press\xE9 de go\xFBter votre
+      chocolat viennois et d'autres clients attendent."
+    Position: {x: 7213, y: 214}
     StatModifier: 0
     Ports:
     - PortName: Null Port
@@ -90,7 +184,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: 0}
   - NodeGUID: d79eb05b-fd94-4e45-9002-4a0d9badd5f6
     DialogueText: "Pensez aussi \xE0 discuter avec les habitants du quartier, je
-      suis s\xFBr qu'ils vont apporteront beaucoup, les gens ici sont passionnants."
+      suis s\xFBr qu'ils vous apporteront beaucoup, les gens ici sont passionnants."
     Position: {x: 3678, y: 200}
     StatModifier: 0
     Ports:
@@ -100,11 +194,16 @@ MonoBehaviour:
       IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
-  - NodeGUID: 307f53ca-10f2-4dee-9dbe-d602d62fa99e
-    DialogueText: Dialogue Node
-    Position: {x: 4778, y: 200}
+  - NodeGUID: 6631fbcf-2ffe-452f-979c-48699fa151af
+    DialogueText: "Je vous dis donc, au revoir et \xE0 dans 4 jours, Madame la G\xE9rante
+      !"
+    Position: {x: 8179, y: 212}
     StatModifier: 0
-    Ports: []
+    Ports:
+    - PortName: "Au revoi- Et il est d\xE9j\xE0 parti..."
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 0}
   ExposedProperties: []
