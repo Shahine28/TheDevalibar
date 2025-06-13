@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class SettingsMenu : MonoBehaviour
 {
     [SerializedDictionary("Menu Type", "GameObject"), SerializeField]
     private SerializedDictionary<MenuType, GameObject> _settingsMenus = new SerializedDictionary<MenuType,  GameObject>();
+    
     
     public void ShowSettingsMenuByType(MenuType rebindMenuType)
     {
@@ -31,6 +33,7 @@ public class SettingsMenu : MonoBehaviour
     public void ShowRebindMenu()
     {
         ShowSettingsMenuByType(MenuType.Rebind);
+        _settingsMenus[MenuType.Rebind]?.GetComponent<RebindMenu>()?.ResetRebindMenu();
     }
     
     public void ShowTextMenu()

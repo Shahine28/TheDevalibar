@@ -1,4 +1,5 @@
 using System.Collections;
+using MyUtilities;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -17,6 +18,12 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
     public UnityEvent OnItemUnhovered;
 
     public bool IsSelected {get; private set; }
+    private InputValuesManager inputValuesManager;
+
+    private void Start()
+    {
+        inputValuesManager = ServiceLocator.Get<InputValuesManager>();
+    }
 
     public void OnSelect(BaseEventData eventData)
     {
@@ -42,6 +49,7 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (inputValuesManager!= null && !inputValuesManager._isMouseUsed) return;
         if (EventSystem.current != null &&
             EventSystem.current.currentSelectedGameObject != gameObject)
         {
@@ -52,6 +60,7 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (inputValuesManager!= null && !inputValuesManager._isMouseUsed) return;
         if (IsSelected) return;
         if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == gameObject)
             return;

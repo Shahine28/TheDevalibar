@@ -1,3 +1,5 @@
+using System;
+using MyUtilities;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
@@ -15,6 +17,8 @@ public class AudioSettingContainer : MonoBehaviour
     
     public UnityEvent<float> OnSettingValueChanged;
     
+    public AudioType AudioType;
+    
     private void OnValidate()
     {
         SettingValue = Mathf.Clamp(SettingValue, SettingRangeValue.x, SettingRangeValue.y);
@@ -28,7 +32,11 @@ public class AudioSettingContainer : MonoBehaviour
         SettingValueText.text = (SettingValue*100).ToString();
     }
 
-
+    void Start()
+    {
+        RebindToAudioManager();
+    }
+    
     public void UpdateValue(float newValue)
     {
         if (newValue == SettingValue) return;
@@ -38,4 +46,28 @@ public class AudioSettingContainer : MonoBehaviour
         SettingValueText.text = NewValue.ToString();
         OnSettingValueChanged?.Invoke(SettingValue);
     }
+
+
+    public void RebindToAudioManager()
+    {
+        AudioManager audioManager = ServiceLocator.Get<AudioManager>();
+        if (audioManager == null) return;
+
+        if (AudioType == AudioType.Music)
+        {
+            OnSettingValueChanged?.AddListener(audioManager.UpdateMusicVolume);  
+        }
+        else if (AudioType == AudioType.Sfx)
+        {
+            OnSettingValueChanged?.AddListener(audioManager.UpdateSfxVolume);  
+        }
+        
+    }
+}
+
+[Serializable]
+public enum AudioType
+{
+    Music,
+    Sfx,
 }

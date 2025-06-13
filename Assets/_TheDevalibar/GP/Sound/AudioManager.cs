@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
     {
         _musicSetting?.UpdateValue(_musicSource.volume);
         _sfxSetting?.UpdateValue(_sfxSource.volume);
-        // PlayMusic("DefaultTheme");
+        PlayMusic("DefaultTheme");
     }
     
 #region Music

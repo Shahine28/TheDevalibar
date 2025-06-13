@@ -57,18 +57,15 @@ public class CharacterBehavior : MonoBehaviour
     [SerializeField] private CharacterWaiting _characterWaiting;
     public CharacterWaiting CharacterWaiting => _characterWaiting;
     
-    
-    private TextResizerManager _textResizer;
 
     void Start()
     {
-        _textResizer = ServiceLocator.Get<TextResizerManager>();
-        _textResizer?.UpdateTextRegistry();
+        TextResizerManager.Instance?.UpdateTextRegistry();
     }
 
     private void OnDestroy()
     {
-        _textResizer?.UpdateTextRegistry();
+        TextResizerManager.Instance?.UpdateTextRegistry();
     }
 
     public void InitVar()
