@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Slider))]

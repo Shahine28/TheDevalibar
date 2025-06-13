@@ -1,10 +1,8 @@
-using System;
+
 using MyUtilities;
 using NaughtyAttributes;
 using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 public class CameraMovementAndZoomControl : MonoBehaviour
 {

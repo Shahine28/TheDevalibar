@@ -4,10 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
-
 public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmitHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public UnityEvent OnItemSelected;
@@ -49,7 +45,8 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (OnItemHovered == null) return;
+        if (OnItemHovered.GetPersistentEventCount() == 0) return;
+        Debug.Log("Item Hovered");
         if (inputValuesManager!= null && !inputValuesManager._isMouseUsed) return;
         if (EventSystem.current != null &&
             EventSystem.current.currentSelectedGameObject != gameObject)
@@ -61,7 +58,8 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (OnItemUnhovered == null) return;
+        if (OnItemUnhovered.GetPersistentEventCount() == 0) return;
+        Debug.Log("Item UnHovered");
         if (inputValuesManager!= null && !inputValuesManager._isMouseUsed) return;
         if (IsSelected) return;
         if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == gameObject)

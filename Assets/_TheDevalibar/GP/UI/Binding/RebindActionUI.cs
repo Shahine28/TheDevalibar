@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 ////TODO: localization support
 ////TODO: deal with composites that have parts bound in different control schemes

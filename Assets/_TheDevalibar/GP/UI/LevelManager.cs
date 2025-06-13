@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
-    [SerializeField] SceneAsset _MainMenuScene;
-    [SerializeField] SceneAsset _GameScene;
+    [SerializeField] string _mainMenuScene = "Main Menu";
+    [SerializeField] string _gameScene = "Shahine";
 
     
     public UnityEvent<Scene> OnSceneLoaded;
@@ -42,11 +42,11 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMainMenuScene()
     {
-        SceneManager.LoadScene(_MainMenuScene.name);
+        SceneManager.LoadScene(_mainMenuScene);
     }
     public void LoadGameScene()
     {
-        SceneManager.LoadScene(_GameScene.name);
+        SceneManager.LoadScene(_gameScene);
     }
     
     private void OnSceneLoadedCallback(Scene scene, LoadSceneMode mode)
@@ -62,12 +62,12 @@ public class LevelManager : MonoBehaviour
 
     public void CheckForGameObjectToShowOrHide()
     {
-        if (SceneManager.GetActiveScene().name == _MainMenuScene.name)
+        if (SceneManager.GetActiveScene().name == _mainMenuScene)
         {
             GameObjectsSpecificToMainMenuScene.ForEach(obj => obj.SetActive(true));
             GameObjectsSpecificToGameScene.ForEach(obj => obj.SetActive(false));
         }
-        else if (SceneManager.GetActiveScene().name == _GameScene.name)
+        else if (SceneManager.GetActiveScene().name == _gameScene)
         {
             GameObjectsSpecificToMainMenuScene.ForEach(obj => obj.SetActive(false));
             GameObjectsSpecificToGameScene.ForEach(obj => obj.SetActive(true));
@@ -76,12 +76,12 @@ public class LevelManager : MonoBehaviour
     
     public void CheckForGameObjectToShowOrHide(Scene scene)
     {
-        if (scene.name == _MainMenuScene.name)
+        if (scene.name == _mainMenuScene)
         {
             GameObjectsSpecificToMainMenuScene.ForEach(obj => obj.SetActive(true));
             GameObjectsSpecificToGameScene.ForEach(obj => obj.SetActive(false));
         }
-        else if (scene.name == _GameScene.name)
+        else if (scene.name == _gameScene)
         {
             GameObjectsSpecificToMainMenuScene.ForEach(obj => obj.SetActive(false));
             GameObjectsSpecificToGameScene.ForEach(obj => obj.SetActive(true));

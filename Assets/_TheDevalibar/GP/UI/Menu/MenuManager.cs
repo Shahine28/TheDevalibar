@@ -1,4 +1,3 @@
-using System;
 using MyUtilities;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,6 +13,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] MainMenu _mainMenu;
     [SerializeField] SettingsMenu _settingsMenus;
 
+    
+    [SerializeField] private Animator BGAnimator;
     void Awake()
     {
         if (Instance == null)
