@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AmyMaya_J1
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: a96299eb-2e04-4076-8924-769d10e6b131
+  - BaseNodeGuid: 8c6de513-5a64-450e-8377-e800dcfdbcb9
     PortName: StartPointNode
     TargetNodeGuid: bc898d01-6ee9-4c70-96e5-0f7c7c22c351
     IsNullNode: 0
@@ -82,21 +82,13 @@ MonoBehaviour:
     PortName: La DANF ?
     TargetNodeGuid: 9fd85407-eafb-4e12-8119-25f15f95a254
     IsNullNode: 0
-  - BaseNodeGuid: f0ca15de-6a69-457f-840c-722dc22e3228
+  - BaseNodeGuid: 680c2547-d36d-4418-9935-7af702eea659
     PortName: Null Port
-    TargetNodeGuid: 4cbd3f05-0277-456e-9b9c-71f7f5dc8bba
+    TargetNodeGuid: a350ad0e-0782-412f-b869-e583bd28541f
     IsNullNode: 1
-  - BaseNodeGuid: 4cbd3f05-0277-456e-9b9c-71f7f5dc8bba
+  - BaseNodeGuid: 9fd85407-eafb-4e12-8119-25f15f95a254
     PortName: Null Port
-    TargetNodeGuid: 999db375-4663-4e21-a7c4-14ce62b6bda5
-    IsNullNode: 1
-  - BaseNodeGuid: 373f4989-2bf8-44af-8ca0-bd6a5b27d1f0
-    PortName: Null Port
-    TargetNodeGuid: 5f196dcd-6969-4f60-ae09-8c88156dc9e2
-    IsNullNode: 1
-  - BaseNodeGuid: 5f196dcd-6969-4f60-ae09-8c88156dc9e2
-    PortName: Null Port
-    TargetNodeGuid: 14de26d7-a841-4c99-8d18-190bcdb11a2d
+    TargetNodeGuid: 1308aaf4-8784-4e41-916f-68f97e8450f9
     IsNullNode: 1
   - BaseNodeGuid: a106dd16-5f2b-4687-92da-722fd3cd29ad
     PortName: "J'ai toujours ador\xE9 l'ambiance du quartier, et je voulais y participer."
@@ -109,10 +101,6 @@ MonoBehaviour:
   - BaseNodeGuid: 9172ddae-f3a8-4067-8850-18e629186f71
     PortName: Null Port
     TargetNodeGuid: eb564f69-1267-44b4-8be6-ad91badedffe
-    IsNullNode: 1
-  - BaseNodeGuid: 999db375-4663-4e21-a7c4-14ce62b6bda5
-    PortName: Null Port
-    TargetNodeGuid: e63222a7-8d24-417c-a808-9f7cef2a1e82
     IsNullNode: 1
   - BaseNodeGuid: 7368a6f6-cfa1-4a71-b70d-b80ee596256f
     PortName: Null Port
@@ -156,11 +144,7 @@ MonoBehaviour:
     IsNullNode: 1
   - BaseNodeGuid: 0f004b3d-0199-470c-a97f-01c2d03a3c24
     PortName: Null Port
-    TargetNodeGuid: 402459cd-6726-4967-9f72-a574fde9dc82
-    IsNullNode: 1
-  - BaseNodeGuid: 402459cd-6726-4967-9f72-a574fde9dc82
-    PortName: Null Port
-    TargetNodeGuid: ad00e503-1161-4118-b33c-5c575ac8dc25
+    TargetNodeGuid: 59828d2e-fc76-477c-afda-538f20df02ec
     IsNullNode: 1
   - BaseNodeGuid: 50820f33-e305-491c-ae75-1dc24b7c6745
     PortName: Null Port
@@ -192,7 +176,7 @@ MonoBehaviour:
     IsNullNode: 1
   - BaseNodeGuid: 90a73757-2d59-42c4-b963-d6015177f00c
     PortName: Null Port
-    TargetNodeGuid: e63222a7-8d24-417c-a808-9f7cef2a1e82
+    TargetNodeGuid: b4916c05-746a-4a7d-a969-91f2d79e8d90
     IsNullNode: 1
   - BaseNodeGuid: bc898d01-6ee9-4c70-96e5-0f7c7c22c351
     PortName: Null Port
@@ -243,25 +227,53 @@ MonoBehaviour:
     PortName: Null Port
     TargetNodeGuid: e3e99e74-0cb1-42d7-9b60-c999ceae9f1c
     IsNullNode: 1
-  - BaseNodeGuid: 14de26d7-a841-4c99-8d18-190bcdb11a2d
+  - BaseNodeGuid: 373f4989-2bf8-44af-8ca0-bd6a5b27d1f0
     PortName: Null Port
-    TargetNodeGuid: 999db375-4663-4e21-a7c4-14ce62b6bda5
+    TargetNodeGuid: 9deeb5b9-5eeb-4007-9c27-023731403768
     IsNullNode: 1
-  - BaseNodeGuid: 9fd85407-eafb-4e12-8119-25f15f95a254
+  - BaseNodeGuid: a350ad0e-0782-412f-b869-e583bd28541f
     PortName: Null Port
-    TargetNodeGuid: 1308aaf4-8784-4e41-916f-68f97e8450f9
+    TargetNodeGuid: 373f4989-2bf8-44af-8ca0-bd6a5b27d1f0
     IsNullNode: 1
   - BaseNodeGuid: 1308aaf4-8784-4e41-916f-68f97e8450f9
     PortName: Null Port
     TargetNodeGuid: f0ca15de-6a69-457f-840c-722dc22e3228
     IsNullNode: 1
-  - BaseNodeGuid: 680c2547-d36d-4418-9935-7af702eea659
+  - BaseNodeGuid: f0ca15de-6a69-457f-840c-722dc22e3228
     PortName: Null Port
-    TargetNodeGuid: a350ad0e-0782-412f-b869-e583bd28541f
+    TargetNodeGuid: 4cbd3f05-0277-456e-9b9c-71f7f5dc8bba
     IsNullNode: 1
-  - BaseNodeGuid: a350ad0e-0782-412f-b869-e583bd28541f
+  - BaseNodeGuid: 4cbd3f05-0277-456e-9b9c-71f7f5dc8bba
     PortName: Null Port
-    TargetNodeGuid: 373f4989-2bf8-44af-8ca0-bd6a5b27d1f0
+    TargetNodeGuid: 999db375-4663-4e21-a7c4-14ce62b6bda5
+    IsNullNode: 1
+  - BaseNodeGuid: 999db375-4663-4e21-a7c4-14ce62b6bda5
+    PortName: Null Port
+    TargetNodeGuid: e63222a7-8d24-417c-a808-9f7cef2a1e82
+    IsNullNode: 1
+  - BaseNodeGuid: 5f196dcd-6969-4f60-ae09-8c88156dc9e2
+    PortName: Null Port
+    TargetNodeGuid: 14de26d7-a841-4c99-8d18-190bcdb11a2d
+    IsNullNode: 1
+  - BaseNodeGuid: 14de26d7-a841-4c99-8d18-190bcdb11a2d
+    PortName: Null Port
+    TargetNodeGuid: 999db375-4663-4e21-a7c4-14ce62b6bda5
+    IsNullNode: 1
+  - BaseNodeGuid: 9deeb5b9-5eeb-4007-9c27-023731403768
+    PortName: Null Port
+    TargetNodeGuid: 5f196dcd-6969-4f60-ae09-8c88156dc9e2
+    IsNullNode: 1
+  - BaseNodeGuid: 59828d2e-fc76-477c-afda-538f20df02ec
+    PortName: Null Port
+    TargetNodeGuid: 402459cd-6726-4967-9f72-a574fde9dc82
+    IsNullNode: 1
+  - BaseNodeGuid: 402459cd-6726-4967-9f72-a574fde9dc82
+    PortName: Null Port
+    TargetNodeGuid: ad00e503-1161-4118-b33c-5c575ac8dc25
+    IsNullNode: 1
+  - BaseNodeGuid: b4916c05-746a-4a7d-a969-91f2d79e8d90
+    PortName: Null Port
+    TargetNodeGuid: e63222a7-8d24-417c-a808-9f7cef2a1e82
     IsNullNode: 1
   DialogueNodeData:
   - NodeGUID: 55cbac03-298c-407a-aa37-fec03b209ed4
@@ -318,7 +330,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 9c582e1bcff37fc4a9dd4598d0d38dbc, type: 3}
   - NodeGUID: 6d5c204e-ab74-428f-9b7b-3f9fa7590662
     DialogueText: "Ouais ! J'vais le d\xE9foncer !"
     Position: {x: 6860, y: 39.5}
@@ -329,7 +341,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 88afd91bbc053204fb7b818558b762b4, type: 3}
   - NodeGUID: 1470db98-243e-423b-9b57-b8d1fc82c3f4
     DialogueText: 'Depuis que je suis petite. '
     Position: {x: 8129.5, y: 159.5}
@@ -409,7 +421,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 1709912276, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: -752886933, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: c8ea3b29-e5f8-4bf2-9ebc-cc3cecd34526
     DialogueText: "Ah, \xE7a oui, surtout depuis la DANF et la manifestation de 92."
     Position: {x: 11798, y: -364}
@@ -510,7 +522,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 9c582e1bcff37fc4a9dd4598d0d38dbc, type: 3}
   - NodeGUID: e8386b96-e737-4ca6-b49b-3768ca5a7178
     DialogueText: 'HIYAAAA ! POW!! BIM!! HIIIIIIIIIIIIIH ! '
     Position: {x: 6106.5, y: 188}
@@ -521,7 +533,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 88afd91bbc053204fb7b818558b762b4, type: 3}
   - NodeGUID: ded71261-aca2-4693-96df-7225f9c70aaa
     DialogueText: Amy attention, tu vas casser quelque chose. Mais qu'est-ce que
       tu fais ?
@@ -533,7 +545,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 906b4783680bb68459ddc2a385c12e1d, type: 3}
   - NodeGUID: 839cc16d-7c17-4d24-aff0-ee6b922e6cf8
     DialogueText: JE CHARGE MON KI MAMAN !!!  HYAAAAAAAAAAAH !!!
     Position: {x: 7251.5, y: 184.5}
@@ -544,7 +556,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 04526d1672fde7242a85b40f208399f7, type: 3}
   - NodeGUID: b970fd00-3cec-4ab5-86c2-d2dd9c976a76
     DialogueText: "Oh mon dieu ! Quand elle est comme \xE7a elle casse toujours quelque-chose
       ! Il faut la calmer !"
@@ -560,7 +572,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 04526d1672fde7242a85b40f208399f7, type: 3}
   - NodeGUID: 2ff85200-0659-4783-9d62-d47212489511
     DialogueText: Woooooow, c'est vrai tu me donnes ton pin's ? Rien que pour moi
       ? Woooooow, trop cool ! Merci !
@@ -594,10 +606,9 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 9c582e1bcff37fc4a9dd4598d0d38dbc, type: 3}
   - NodeGUID: 0f004b3d-0199-470c-a97f-01c2d03a3c24
-    DialogueText: "Amy est absolument fan de ses anim\xE9s, mangas et comics, elle
-      passe son temps \xE0 en lire, regarder ou \xE0 jouer \xE0 la super h\xE9ro\xEFne."
+    DialogueText: "Amy est absolument fan de ses anim\xE9s, mangas et comics."
     Position: {x: 4563.5, y: 631.5}
     StatModifier: 0
     Ports:
@@ -607,17 +618,6 @@ MonoBehaviour:
       IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
-  - NodeGUID: 402459cd-6726-4967-9f72-a574fde9dc82
-    DialogueText: Je ne joue pas maman, la justice ne joue jamais...
-    Position: {x: 5569.5, y: 629.5}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
   - NodeGUID: 50820f33-e305-491c-ae75-1dc24b7c6745
     DialogueText: 'Woooooow il est trop coooool !  '
     Position: {x: 3651.5, y: 628.5}
@@ -628,7 +628,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 88afd91bbc053204fb7b818558b762b4, type: 3}
   - NodeGUID: c4f50108-cb38-4514-a53c-bc71277c6abe
     DialogueText: "Pas possible, c'est ma m\xE8re la meilleure du monde."
     Position: {x: 4837.5, y: 420}
@@ -650,7 +650,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 2a8dffb6cb886174cbe8139f060b97d8, type: 3}
   - NodeGUID: d79bf283-8d6a-4cb9-bfb9-fbef9a528b96
     DialogueText: Oh, Amy, mon petit chat... je... je...
     Position: {x: 5380, y: 421.5}
@@ -661,7 +661,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 906b4783680bb68459ddc2a385c12e1d, type: 3}
   - NodeGUID: a63a20e5-cf26-4207-9aec-4b49de33eeff
     DialogueText: "Oulahlah, \xE7a va barder pour Gary... attends maman, tu as oubli\xE9
       ta canne ! A plus Madame le bar, j'vous aime bien !"
@@ -673,7 +673,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: -381520328, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+    CharacterMoodSprite: {fileID: 262358714, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 17cfa6dd-219c-4932-8df2-44978b2c98c9
     DialogueText: "Amy ! On dit pas ce genre de choses, on dit \"je vais le battre\",
       et rends moi ma canne avant de partir ma ch\xE9rie. "
@@ -704,8 +704,7 @@ MonoBehaviour:
     CharacterMoodSprite: {fileID: -752886933, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 90a73757-2d59-42c4-b963-d6015177f00c
     DialogueText: "J'aime beaucoup ce que tu fais avec le bar en tout cas, ce vieux
-      b\xE2timent tombait en ruine, je suis contente que quelqu'un de la communaut\xE9
-      l'ait r\xE9cup\xE9r\xE9. "
+      b\xE2timent tombait en ruine."
     Position: {x: 11024.5, y: 164}
     StatModifier: 0
     Ports:
@@ -737,7 +736,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 88afd91bbc053204fb7b818558b762b4, type: 3}
   - NodeGUID: 9d50ab0f-6eef-4a2b-9bf6-f33aa90ee935
     DialogueText: "Woooooooow trop styl\xE9s tes cheveux, t'es n\xE9e comme \xE7a
       ?! "
@@ -761,7 +760,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 21300000, guid: 88afd91bbc053204fb7b818558b762b4, type: 3}
   - NodeGUID: 3aeeed14-4c47-486d-972e-33055d3db442
     DialogueText: "D'ailleurs j'aime bien ce que tu as fais avec ce bar, \xE7a match
       tr\xE8s bien avec l'ambiance."
@@ -842,11 +841,10 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: -73371771, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 906b4783680bb68459ddc2a385c12e1d, type: 3}
   - NodeGUID: 373f4989-2bf8-44af-8ca0-bd6a5b27d1f0
     DialogueText: "Ce jour l\xE0 \xE9tait terrible, je me rappelle, j'\xE9tais toute
-      petite, j'entendais les cris, les explosions et les coups depuis l'appartement
-      de mes parents."
+      petite."
     Position: {x: 14023.5, y: -271}
     StatModifier: 0
     Ports:
@@ -856,30 +854,6 @@ MonoBehaviour:
       IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: -73371771, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
-  - NodeGUID: 5f196dcd-6969-4f60-ae09-8c88156dc9e2
-    DialogueText: "Beaucoup de gens d'ici sont marqu\xE9s dans leur esprit comme
-      dans leur corps par cet \xE9v\xEAnement. "
-    Position: {x: 15075, y: -269.5}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: -73371771, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
-  - NodeGUID: 14de26d7-a841-4c99-8d18-190bcdb11a2d
-    DialogueText: "Le quartier lui-m\xEAme d'ailleurs, la fontaine de la place Charlotte
-      Puiseux est cass\xE9e depuis ce jour l\xE0."
-    Position: {x: 15873, y: -269.5}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
   - NodeGUID: a350ad0e-0782-412f-b869-e583bd28541f
     DialogueText: "Mais \xE0 l'\xE9poque les flics \xE9taient remont\xE9s, on sortait
       d'une grosse p\xE9riode de manifs."
@@ -891,7 +865,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: -73371771, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
   - NodeGUID: 1308aaf4-8784-4e41-916f-68f97e8450f9
     DialogueText: "Ils \xE9taient tr\xE8s nombreux dans la fin des ann\xE9es 80.
       Ils \xE9taient m\xEAme en contact avec les Anglais. "
@@ -941,5 +915,75 @@ MonoBehaviour:
       IsPortNull: 1
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: -752886933, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+  - NodeGUID: 5f196dcd-6969-4f60-ae09-8c88156dc9e2
+    DialogueText: "Beaucoup de gens d'ici sont marqu\xE9s dans leur esprit comme
+      dans leur corps par cet \xE9v\xEAnement. "
+    Position: {x: 15405.5, y: -266.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: -73371771, guid: d44458c217ae1fe4fb7d358a6bb1776d, type: 3}
+  - NodeGUID: 14de26d7-a841-4c99-8d18-190bcdb11a2d
+    DialogueText: "Le quartier lui-m\xEAme d'ailleurs, la fontaine de la place Charlotte
+      Puiseux est cass\xE9e depuis ce jour l\xE0."
+    Position: {x: 16203.5, y: -266.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 9deeb5b9-5eeb-4007-9c27-023731403768
+    DialogueText: J'entendais les cris, les explosions et les coups depuis l'appartement
+      de mes parents.
+    Position: {x: 14617.5, y: -267.5}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 59828d2e-fc76-477c-afda-538f20df02ec
+    DialogueText: "Elle passe son temps \xE0 en lire, regarder ou \xE0 jouer \xE0
+      la super h\xE9ro\xEFne."
+    Position: {x: 5153.5, y: 626}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
+  - NodeGUID: 402459cd-6726-4967-9f72-a574fde9dc82
+    DialogueText: Je ne joue pas maman, la justice ne joue jamais...
+    Position: {x: 5841, y: 624}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+  - NodeGUID: b4916c05-746a-4a7d-a969-91f2d79e8d90
+    DialogueText: "je suis contente que quelqu'un de la communaut\xE9 l'ait r\xE9cup\xE9r\xE9. "
+    Position: {x: 11919.5, y: 163}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 0}
   ExposedProperties: []
   CommentBlockData: []

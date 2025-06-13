@@ -13,18 +13,14 @@ MonoBehaviour:
   m_Name: AmyMaya_J2
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 9569c8d7-bc6d-4194-af65-fb0895285c81
+  - BaseNodeGuid: 599b7756-5030-43fb-bf75-e2278db2aaf6
     PortName: StartPointNode
     TargetNodeGuid: 3cfeb682-a349-45e9-878c-bbd10179b560
     IsNullNode: 0
   - BaseNodeGuid: 3cfeb682-a349-45e9-878c-bbd10179b560
-    PortName: Null Port
+    PortName: Wow ! t'es en pleine forme Amy !
     TargetNodeGuid: 20bb4731-117b-4927-aa78-33d0412889a7
-    IsNullNode: 1
-  - BaseNodeGuid: 20bb4731-117b-4927-aa78-33d0412889a7
-    PortName: Null Port
-    TargetNodeGuid: 37dc34b8-3d86-474b-85d6-0af348f84dba
-    IsNullNode: 1
+    IsNullNode: 0
   - BaseNodeGuid: 37dc34b8-3d86-474b-85d6-0af348f84dba
     PortName: Ah ? Alors Amy, qu'est-ce qu'il t'arrive ?
     TargetNodeGuid: 6213fb71-9e05-4f06-b317-74aab5177731
@@ -178,30 +174,22 @@ MonoBehaviour:
     PortName: "Yes, j'ai. Je te sers \xE7a tout de suite !"
     TargetNodeGuid: 256d7480-5036-4e66-9e4c-f36810178587
     IsNullNode: 0
+  - BaseNodeGuid: 20bb4731-117b-4927-aa78-33d0412889a7
+    PortName: Null Port
+    TargetNodeGuid: 37dc34b8-3d86-474b-85d6-0af348f84dba
+    IsNullNode: 1
   DialogueNodeData:
   - NodeGUID: 3cfeb682-a349-45e9-878c-bbd10179b560
     DialogueText: Saluuuuut Madame baaaaaaar !
     Position: {x: 287.5, y: 200}
     StatModifier: 0
     Ports:
-    - PortName: Null Port
+    - PortName: Wow ! t'es en pleine forme Amy !
       Direction: 1
       Capacity: 0
-      IsPortNull: 1
+      IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
-  - NodeGUID: 20bb4731-117b-4927-aa78-33d0412889a7
-    DialogueText: "Elle est comme \xE7a parce que tu es l\xE0, elle a boud\xE9 toute
-      la matin\xE9e."
-    Position: {x: 771.5, y: 200}
-    StatModifier: 0
-    Ports:
-    - PortName: Null Port
-      Direction: 1
-      Capacity: 0
-      IsPortNull: 1
-    TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 88afd91bbc053204fb7b818558b762b4, type: 3}
   - NodeGUID: 37dc34b8-3d86-474b-85d6-0af348f84dba
     DialogueText: C'est pas vrai, je boudais pas, tu comprends rien maman !
     Position: {x: 1451.5, y: 200}
@@ -216,7 +204,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 2a8dffb6cb886174cbe8139f060b97d8, type: 3}
   - NodeGUID: 311aa6b6-69f6-48b9-b8b5-e07a1a7ef8f6
     DialogueText: "Pourquoi tu me parles comme si j'\xE9tais une gamine ? Je veux
       bien quand m\xEAme, mais je le boirai en te boudant. "
@@ -232,7 +220,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 2a8dffb6cb886174cbe8139f060b97d8, type: 3}
   - NodeGUID: aac4902d-5c3c-425c-9301-87134866251a
     DialogueText: "Mais non ma ch\xE9rie ! \xC7a arrive de perdre dans la vie, c'est
       pas si grave !"
@@ -272,7 +260,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 04526d1672fde7242a85b40f208399f7, type: 3}
   - NodeGUID: ec9e470f-726a-4bb3-aec2-116b2489464d
     DialogueText: "Hahaha ! Je vais lui faire mordre la poussi\xE8re, mouahaha !
       Il va d\xE9couvrir la peur de combattre Dark Amy, la plus dangereuse des joueurs
@@ -285,7 +273,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 04526d1672fde7242a85b40f208399f7, type: 3}
   - NodeGUID: db8f9a79-9706-4c4c-a4f3-bde21e236a41
     DialogueText: "Oh, j'aime pas quand elle fait \xE7a. Amy ! Je t'ai d\xE9j\xE0
       dit qu'il n'y avait rien de bien \xE0 \xEAtre la m\xE9chante."
@@ -297,11 +285,11 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 906b4783680bb68459ddc2a385c12e1d, type: 3}
   - NodeGUID: 1304add5-2b1e-41fd-855e-ad6dadbdf365
-    DialogueText: "Il me faut quelque chose de fort pour oublier ma col\xE8re et
-      mon d\xE9sespoir, passe moi une pinte de shots de Vodka, comme le vieux Gary,
-      Madame la Barmaid... S'il te pla\xEEt !"
+    DialogueText: "Il me faut quelque chose de fort pour oublier ma col\xE8re, passe
+      moi une pinte de shots de Vodka, comme le vieux Gary, Madame la Barmaid...
+      S'il te pla\xEEt !"
     Position: {x: 6681.5, y: 8}
     StatModifier: 0
     Ports:
@@ -310,7 +298,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 04526d1672fde7242a85b40f208399f7, type: 3}
   - NodeGUID: 5c0e0448-7ee4-487b-a9b6-660bb4d5c4e8
     DialogueText: "AMYYY ! T'arr\xEAtes ce cin\xE9ma ridicule tout de suite !! Et
       vas t'asseoir, t'auras droit qu'\xE0 du jus de gingembre."
@@ -334,7 +322,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 2a8dffb6cb886174cbe8139f060b97d8, type: 3}
   - NodeGUID: 9eadf2cb-74eb-4073-98a5-1ab0ae1528d5
     DialogueText: "D\xE9sol\xE9e, \xE7a lui arrive des fois. Sers moi un Chardonnay
       s'il te pla\xEEt, et un diabolo cerise, pas de jus de gingembre aujourd'hui
@@ -347,7 +335,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: -752886933, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 3d583419-a45f-49b8-b4d2-b98f14a26fa5
     DialogueText: "Bonne journ\xE9e \xE0 toi, et encore merci, \xE7a va devenir l'endroit
       pr\xE9f\xE9r\xE9 d'Amy."
@@ -359,7 +347,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: -752886933, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
   - NodeGUID: 4c5d39e5-4551-4849-be3a-e2fe220e489c
     DialogueText: "Oh wow, je ne savais pas que tu \xE9tais joueuse d'\xE9checs !"
     Position: {x: 5579.5, y: 175.5}
@@ -406,9 +394,9 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 21300000, guid: 88afd91bbc053204fb7b818558b762b4, type: 3}
   - NodeGUID: 6213fb71-9e05-4f06-b317-74aab5177731
-    DialogueText: "J'ai perdu hier contre Gary aux \xE9checs ! J'ai pas venu venir
+    DialogueText: "J'ai perdu hier contre Gary aux \xE9checs ! J'ai pas vu venir
       son ouverture russe... je suis vraiment une quiche..."
     Position: {x: 2272, y: 107.5}
     StatModifier: 0
@@ -418,7 +406,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 2a8dffb6cb886174cbe8139f060b97d8, type: 3}
   - NodeGUID: 4551bff0-91d5-4aa7-a37a-9c7f175296e1
     DialogueText: Wow, elle a l'air d'aller beaucoup mieux ! Il faut absolument que
       tu me donnes la recette de ton jus !
@@ -430,7 +418,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: -752886933, guid: f5be363a0a827a240829d00242d3cb22, type: 3}
+    CharacterMoodSprite: {fileID: 21300000, guid: 9c582e1bcff37fc4a9dd4598d0d38dbc, type: 3}
   - NodeGUID: 77848e15-63fc-4362-956a-d9358dc0cae1
     DialogueText: Je te la piquerai, un de ces jours. Fais attention !
     Position: {x: 4912, y: 329.5}
@@ -499,7 +487,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 0
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
   - NodeGUID: 2e655276-fa5b-4105-be6d-96d7c3bd3306
     DialogueText: "Naaaaaan, tous des m\xE9chants de pacotille... c'est plus compliqu\xE9
       que \xE7a..."
@@ -511,7 +499,7 @@ MonoBehaviour:
       Capacity: 0
       IsPortNull: 1
     TriggersEvent: 0
-    CharacterMoodSprite: {fileID: 0}
+    CharacterMoodSprite: {fileID: 21300000, guid: e161027f882ca2f46b68aa1766c57e11, type: 3}
   - NodeGUID: cc29e7bf-beeb-4494-9589-3507166e3702
     DialogueText: "Tu peux essayer de nous expliquer quand m\xEAme ma ch\xE9rie ?"
     Position: {x: 4625.5, y: 482}
@@ -674,5 +662,17 @@ MonoBehaviour:
       IsPortNull: 0
     TriggersEvent: 0
     CharacterMoodSprite: {fileID: 1709912276, guid: b2aae9ff2a6c0ae49807513f7b7788f6, type: 3}
+  - NodeGUID: 20bb4731-117b-4927-aa78-33d0412889a7
+    DialogueText: "Elle est comme \xE7a parce que tu es l\xE0, elle a boud\xE9 toute
+      la matin\xE9e."
+    Position: {x: 868, y: 199}
+    StatModifier: 0
+    Ports:
+    - PortName: Null Port
+      Direction: 1
+      Capacity: 0
+      IsPortNull: 1
+    TriggersEvent: 0
+    CharacterMoodSprite: {fileID: 21300000, guid: 6a6457857e2e47c4190aac2d928aac82, type: 3}
   ExposedProperties: []
   CommentBlockData: []
