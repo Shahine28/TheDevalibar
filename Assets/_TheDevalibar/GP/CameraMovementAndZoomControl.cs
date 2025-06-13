@@ -47,7 +47,11 @@ public class CameraMovementAndZoomControl : MonoBehaviour
     }
     public void Update()
     {
-        if (!_inputValuesManager) return;
+        if (!_inputValuesManager)
+        {
+            _inputValuesManager = ServiceLocator.Get<InputValuesManager>();
+            if (!_inputValuesManager) return;
+        }
 
         if (GetZoomPercentage() > 0.2f)
         {

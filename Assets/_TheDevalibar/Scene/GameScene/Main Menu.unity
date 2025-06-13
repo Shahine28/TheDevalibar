@@ -686,6 +686,10 @@ PrefabInstance:
       propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2575037613159727884, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: GameObjectsSpecificToGameScene.Array.size
       value: 3
@@ -700,7 +704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneLoaded.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -716,7 +720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneChanged.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneLoaded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -733,7 +737,7 @@ PrefabInstance:
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneChanged.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1029831191}
+      objectReference: {fileID: 1001946622}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneLoaded.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -764,7 +768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneChanged.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetTrigger
+      value: UpdateTextRegistry
       objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneLoaded.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -780,7 +784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneChanged.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.Animator, UnityEngine
+      value: TextResizerManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneLoaded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -792,7 +796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneChanged.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: Reset
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2652513673178624576, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: OnSceneLoaded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -944,6 +948,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7199672863390316116, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558611700468876419, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
+      propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8210684672773062712, guid: 7dd6ac046b2c50a4ab8bfd481ed16e6f, type: 3}
