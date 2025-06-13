@@ -20,6 +20,8 @@ public class AudioManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this);
+            
+            ServiceLocator.Register(this);
         }
         else
         {

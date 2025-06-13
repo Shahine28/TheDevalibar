@@ -49,6 +49,7 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (OnItemHovered == null) return;
         if (inputValuesManager!= null && !inputValuesManager._isMouseUsed) return;
         if (EventSystem.current != null &&
             EventSystem.current.currentSelectedGameObject != gameObject)
@@ -60,6 +61,7 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (OnItemUnhovered == null) return;
         if (inputValuesManager!= null && !inputValuesManager._isMouseUsed) return;
         if (IsSelected) return;
         if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == gameObject)
