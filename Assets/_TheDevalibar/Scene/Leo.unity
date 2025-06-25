@@ -350,6 +350,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399072}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -778,6 +780,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -1194,6 +1198,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -1473,6 +1479,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399072}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -1901,6 +1909,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -2317,6 +2327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -5120,6 +5132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399072}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -5548,6 +5562,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -5827,6 +5843,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399072}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -6118,6 +6136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399072}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -6656,6 +6676,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399072}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -7084,6 +7106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -7363,6 +7387,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399072}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -7515,6 +7541,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb743d258f628c408153037773120bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
+  audioSource: {fileID: 0}
+  playOnStart: 0
+  loop: 0
+  volume: 1
 --- !u!1001 &1870177770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7883,6 +7914,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -8299,6 +8332,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -8578,6 +8613,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399072}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -9006,6 +9043,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -9285,6 +9324,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399072}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -9713,6 +9754,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -9992,6 +10035,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399072}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:
@@ -10420,6 +10465,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollViewAutoScroll: {fileID: 486399066}
   _moveUI: {fileID: 0}
+  _disableNavigationAtStart: 1
+  _useShowHideUI: 1
   OnItemSelected:
     m_PersistentCalls:
       m_Calls:

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using MyUtilities;
 using NaughtyAttributes;
@@ -110,6 +111,11 @@ public class InputValuesManager : MonoBehaviour
     public void OnInputMiddleClick(InputAction.CallbackContext context)
     {
         _isDragClickPressed = context.ReadValueAsButton();
+    }
+
+    private void OnDisable()
+    {
+        ServiceLocator.Unregister(this);
     }
 }
 

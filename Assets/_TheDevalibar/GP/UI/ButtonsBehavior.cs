@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
@@ -14,9 +13,10 @@ public class ButtonsBehavior : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _buttonText;
     [SerializeField] private GameObject _buttonSelectedObject;
     
-    [SerializeField] private Color _regularTextColor = Color.white;
-    [SerializeField] private Color _highlightTextColor = Color.yellow;
-    [SerializeField] private List<ButtonsBehavior> _otherButtonsBehaviors;
+    private bool _isButtonTextAssigned => _buttonText != null;
+    
+    [SerializeField, ShowIf("_isButtonTextAssigned")] private Color _regularTextColor = Color.white;
+    [SerializeField, ShowIf("_isButtonTextAssigned")] private Color _highlightTextColor = Color.yellow;
     private Button _button;
     private Image _buttonImage;
 
@@ -25,7 +25,10 @@ public class ButtonsBehavior : MonoBehaviour
     {
         _button = GetComponent<Button>();
         _buttonImage = _button.GetComponent<Image>();
+        
         if (_buttonText != null) _buttonText.color = _regularTextColor;
+        if (_buttonSelectedObject != null) _buttonSelectedObject.SetActive(false);
+        if (_buttonImage != null) _buttonImage.sprite = _normalSprite;
     }
     
     
@@ -33,16 +36,9 @@ public class ButtonsBehavior : MonoBehaviour
     {
         if (!_button.interactable)
             return;
-
-        if (EventSystem.current != null &&
-            EventSystem.current.currentSelectedGameObject != gameObject)
-        {
-            EventSystem.current.SetSelectedGameObject(gameObject);
-        }
         
-        
-         if (_buttonText != null ) _buttonText.color = _highlightTextColor;
-        _buttonSelectedObject?.SetActive(true);
+        if (_buttonText != null ) _buttonText.color = _highlightTextColor;
+        if (_buttonSelectedObject != null ) _buttonSelectedObject.SetActive(true);
         if (_buttonImage != null) _buttonImage.sprite = _hoveredSprite;
     }
 
@@ -50,29 +46,17 @@ public class ButtonsBehavior : MonoBehaviour
     {
         if (!_button.interactable)
             return;
-
-        StopAllCoroutines();
-        StartCoroutine(UnhoverDelayed());
-    }
-
-    IEnumerator UnhoverDelayed()
-    {
-        yield return new WaitForEndOfFrame();
-        // Si le bouton est toujours sélectionné (clavier/tab ou clic maintenu), on ne change pas la couleur
-        if (EventSystem.current != null &&
-            EventSystem.current.currentSelectedGameObject == _button.gameObject)
-            yield return null;
-
-        if (_buttonText != null ) _buttonText.color = _regularTextColor;
-        _buttonSelectedObject?.SetActive(false);
-        if (_buttonImage != null) _buttonImage.sprite = _normalSprite;
         
+        if (_buttonText != null ) _buttonText.color = _regularTextColor;
+        if (_buttonSelectedObject != null ) _buttonSelectedObject.SetActive(false);
+        if (_buttonImage != null) _buttonImage.sprite = _normalSprite;
     }
+    
 
     void OnDisable()
     {
         if (_buttonText != null) _buttonText.color = _regularTextColor;
-        _buttonSelectedObject?.SetActive(false);
+        if (_buttonSelectedObject != null ) _buttonSelectedObject.SetActive(false);
         if (_buttonImage != null) _buttonImage.sprite = _normalSprite;
     }
 }

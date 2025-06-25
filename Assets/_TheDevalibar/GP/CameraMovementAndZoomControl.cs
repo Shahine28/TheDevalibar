@@ -1,10 +1,8 @@
-using System;
+
 using MyUtilities;
 using NaughtyAttributes;
 using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 public class CameraMovementAndZoomControl : MonoBehaviour
 {
@@ -49,7 +47,11 @@ public class CameraMovementAndZoomControl : MonoBehaviour
     }
     public void Update()
     {
-        if (!_inputValuesManager) return;
+        if (!_inputValuesManager)
+        {
+            _inputValuesManager = ServiceLocator.Get<InputValuesManager>();
+            if (!_inputValuesManager) return;
+        }
 
         if (GetZoomPercentage() > 0.2f)
         {

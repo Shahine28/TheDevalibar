@@ -1,7 +1,5 @@
-using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
-
+using System.Collections;
+using MyUtilities;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -16,6 +14,12 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
     public UnityEvent OnItemUnhovered;
 
     public bool IsSelected {get; private set; }
+    private InputValuesManager inputValuesManager;
+
+    private void Start()
+    {
+        inputValuesManager = ServiceLocator.Get<InputValuesManager>();
+    }
 
     public void OnSelect(BaseEventData eventData)
     {
@@ -41,12 +45,35 @@ public class InteractableObserver : MonoBehaviour, ISelectHandler, IDeselectHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (OnItemHovered.GetPersistentEventCount() == 0) return;
+        Debug.Log("Item Hovered");
+        if (inputValuesManager!= null && !inputValuesManager._isMouseUsed) return;
+        if (EventSystem.current != null &&
+            EventSystem.current.currentSelectedGameObject != gameObject)
+        {
+            EventSystem.current.SetSelectedGameObject(gameObject);
+        }
         OnItemHovered?.Invoke();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (OnItemUnhovered.GetPersistentEventCount() == 0) return;
+        Debug.Log("Item UnHovered");
+        if (inputValuesManager!= null && !inputValuesManager._isMouseUsed) return;
         if (IsSelected) return;
+        if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == gameObject)
+            return;
+        OnItemUnhovered?.Invoke();
+        // StopAllCoroutines();
+        // StartCoroutine(OnPointerExitDelayed());
+    }
+
+    public IEnumerator OnPointerExitDelayed()
+    {
+        yield return new WaitForEndOfFrame();
+        if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == gameObject)
+            yield return null;
         OnItemUnhovered?.Invoke();
     }
 }
