@@ -189,10 +189,10 @@ public class CharacterFollowerBehavior : MonoBehaviour
     private IEnumerator FollowWithDelay()
     {
         StartMovement();
-
-        while (Vector3.Distance(transform.position, _characterToFollowTransform.position) > _followThreshold)
+        Vector3 targetPos = Vector3.zero;
+        while (_characterToFollowTransform != null && Vector3.Distance(transform.position, _characterToFollowTransform.position) > _followThreshold)
         {
-            Vector3 targetPos = _characterToFollowTransform.position;
+            targetPos = _characterToFollowTransform.position;
             Vector3 direction = (targetPos - transform.position).normalized;
             
             // Déplacement
@@ -208,8 +208,14 @@ public class CharacterFollowerBehavior : MonoBehaviour
             }
             yield return null;
         }
-
         StopMovement();
+        if (_characterFollower == null)
+        {
+            if (_followCoroutine != null)
+                StopCoroutine(_followCoroutine);
+
+            _followCoroutine = StartCoroutine(FollowToPosition(targetPos));
+        }
     }
     
     private IEnumerator FollowToPosition(Vector3 targetPos)

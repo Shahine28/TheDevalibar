@@ -64,7 +64,7 @@ public class TabsManager : MonoBehaviour
 
     IEnumerator CheckIfSelectedGameObjectIsNullCoroutine()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         if (EventSystem.current.currentSelectedGameObject == null)
         {
             SelectFirstTabs();
@@ -107,6 +107,32 @@ public class TabsManager : MonoBehaviour
         if (elevator == null) return;
         tab.Initialize(_elevatorSprite, ObjectType.Elevator);
         tab.gameObject.SetActive(true);
+        
+        // Stairs
+        // tab = Instantiate(TabPrefab, transform).GetComponent<Tab>();
+        tab = _tabs.FirstOrDefault(x => !x.gameObject.activeInHierarchy);
+        if (tab == null)
+        {
+            Debug.LogWarning("There is no TabPrefab available");
+            return;
+        }
+        StairsManager stair = ServiceLocator.Get<StairsManager>();
+        if (stair == null) return;
+        tab.Initialize(_stairSprite, ObjectType.Stairs);
+        tab.gameObject.SetActive(true);
+        
+        // Stairs
+        // tab = Instantiate(TabPrefab, transform).GetComponent<Tab>();
+        tab = _tabs.FirstOrDefault(x => !x.gameObject.activeInHierarchy);
+        if (tab == null)
+        {
+            Debug.LogWarning("There is no TabPrefab available");
+            return;
+        }
+        WCManager wc = ServiceLocator.Get<WCManager>();
+        if (wc == null) return;
+        tab.Initialize(_wcSprite, ObjectType.WC);
+        tab.gameObject.SetActive(true);
     }
 
     void ClearTabs()
@@ -125,6 +151,13 @@ public class TabsManager : MonoBehaviour
     {
         _cameraZoom.ResetCamera(); // Appelle la fonction de retour caméra
         _upgradePanelManager.ClearUpgradePanels(true);
+        ShowHideUI showHideUI = ServiceLocator.Get<ShowHideUI>();
+        if (showHideUI != null && showHideUI.IsUIShown)
+        {
+            if (_tabs.Count == 0) return;
+            EventSystem.current.SetSelectedGameObject(_tabs[0].gameObject); 
+        }
+        
     }
 
     public void FocusCameraOnTab(int TabID)
@@ -138,10 +171,5 @@ public class TabsManager : MonoBehaviour
             }
         }
         Debug.LogError("There is no tab with the ID " + TabID);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

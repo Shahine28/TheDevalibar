@@ -172,12 +172,45 @@ public class UpgradePanelManager : MonoBehaviour
                 return;
             }
 
-            upgradePanel.SetUpPanel(elevatorManager.ElevatorUpgrade, null, elevatorManager);
+            upgradePanel.SetUpPanel(elevatorManager.ElevatorUpgrade, null, ObjectType.Elevator);
             upgradePanel.transform.parent.gameObject.SetActive(true);
             
             // _upgradePanels.Add(upgradePanel);
         }
     }
     
-    
+    public void SetUpPropsUpgradePanel(UpgradablePropsManager upgradablePropsManager, ObjectType objectType)
+    {
+        if (!_moveUI.IsUIAtTargetPoint())
+        {
+            _moveUI.LaunchMoveUI();
+        }
+        if (upgradablePropsManager == null || _upgradePanelPrefab == null)
+        {
+            Debug.LogError("Upgradable Props Manager is null or no upgrade panel prefab found!");
+            return;
+        }
+        
+        ClearUpgradePanels(); // pour éviter les doublons
+        
+        for  (int i = 0; i <upgradablePropsManager.PurchasedUpgrades.Count; i++)
+        {
+            var purchasedUpgrade = upgradablePropsManager.PurchasedUpgrades.ElementAt(i);
+            if (!purchasedUpgrade.Value)
+            {
+                UpgradePanel upgradePanel = _upgradePanels[i];
+                if (!upgradePanel)
+                {
+                    Debug.LogWarning($"No UpgradePanel component found on instance at index {0}");
+                    return;
+                }
+
+                upgradePanel.SetUpPanel(purchasedUpgrade.Key.upgrade, null, objectType);
+                upgradePanel.transform.parent.gameObject.SetActive(true);
+            
+                // _upgradePanels.Add(upgradePanel);
+            }
+        }
+        
+    }
 }

@@ -23,7 +23,7 @@ public class CameraMovementAndZoomControl : MonoBehaviour
     [SerializeField] private CinemachineCamera _camera;
     [SerializeField] private float _zoomSpeed = 25;
     [SerializeField] private float _zoomMinSize = 1f;
-    private float _zoomMaxSize = 4;
+    private float _zoomMaxSize = 3;
     [SerializeField] private AnimationCurve _zoomCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     [SerializeField] private Transform _cameraContainerTransform;
     [SerializeField] private float _maxContainerScale;

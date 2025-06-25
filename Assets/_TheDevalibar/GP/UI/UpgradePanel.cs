@@ -99,7 +99,7 @@ public class UpgradePanel : MonoBehaviour
         IsPanelTransitioning = false;
     }
 
-    public void SetUpPanel(Upgrade upgrade, Table table = null, ElevatorManager elevatorManager = null)
+    public void SetUpPanel(Upgrade upgrade, Table table = null, ObjectType objectType = ObjectType.None)
     {
         if (!upgrade)
         {
@@ -109,17 +109,18 @@ public class UpgradePanel : MonoBehaviour
         _upgradeImage.sprite = upgrade.UpgradeSprite;
         _upgradeTitleText.text = upgrade.UpgradeName;
         _upgradeDescriptionText.text = upgrade.UpgradeDescription;
-        _upgradePriceText.text = upgrade.UpgradeCost.ToString() + "€";
+        _upgradePriceText.text = upgrade.UpgradeCost + "€";
         _currentUpgrade = upgrade;
         if (table != null)
         {
             _currentObjectType = ObjectType.Table;
             _currentTable = table;
         }
-        else if (elevatorManager != null)
+        else if (objectType != ObjectType.None)
         {
-            _currentObjectType = ObjectType.Elevator;
+            _currentObjectType = objectType;
         }
+        
         
     }
 
@@ -159,28 +160,19 @@ public class UpgradePanel : MonoBehaviour
                     }
                     break;
                 }
-                case ObjectType.Stairs :
-                    break;
-                case ObjectType.Elevator:
+                default:
                 {
-                    ElevatorManager elevatorManager = ServiceLocator.Get<ElevatorManager>();
-                    if (elevatorManager != null)
-                    {
-                        _currentUpgrade.InvokeUpgrade();
-                    }
+                    _currentUpgrade.InvokeUpgrade();
                     break;
                 }
                     
-                case ObjectType.WC:
-                    break;
-                default:
-                    break;
             }
             
             // Destroy(gameObject.transform.parent.gameObject); // On détruit le panel quand il est acheté
             _upgradePanelManager?.ResetCurrentUpgradePanel(this);
             ResetUpgradePanelPosition();
             gameObject.transform.parent.gameObject.SetActive(false);
+            _upgradePanelManager?.SelectFirstAvailableUpgradePanel();
         }
         else
         {
